@@ -28,6 +28,7 @@ import {
   BookOpen,
   ChevronDown,
   ArrowRight,
+  Infinity,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -41,19 +42,26 @@ export default function Navbar() {
       icon: Bug,
       label: "Bugv",
       description: "Crowdsourced security platform",
-      href: "https://bugv.io",
+      // href: "https://bugv.io",
+      href: "/products/bugv",
     },
     {
       icon: Radar,
       label: "Vigile.AI",
       description: "Attack surface intelligence",
-      href: "https://vigile.ai",
+      href: "/products/vigile",
     },
     {
       icon: Shield,
       label: "Red Team",
       description: "Adversary simulation services",
       href: "/products/red-team",
+    },
+    {
+      icon: Infinity,
+      label: "Falcon",
+      description: "Continuous security Monitoring",
+      href: "/products/falcon",
     },
   ];
 
@@ -122,7 +130,6 @@ export default function Navbar() {
               alt="Cynical Tech Logo"
               width={190}
               height={90}
-              // className="scale-160"
             />
           </Link>
 
@@ -134,7 +141,7 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Products</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[400px] gap-3 p-4">
+                    <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
                       {products.map((item) => (
                         <NavItemCard key={item.label} {...item} />
                       ))}
@@ -146,7 +153,7 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[400px] gap-3 p-4">
+                    <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
                       {solutions.map((item) => (
                         <NavItemCard key={item.label} {...item} />
                       ))}
@@ -158,7 +165,7 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <div className="grid w-[400px] gap-3 p-4">
+                    <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
                       {resources.map((item) => (
                         <NavItemCard key={item.label} {...item} />
                       ))}

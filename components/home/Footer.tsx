@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const footerLinks = {
@@ -64,7 +65,12 @@ const Footer = () => {
           {/* Brand Column - Takes 2 columns on large screens */}
           <div className="col-span-2">
             <Link href="/" className="text-2xl font-bold mb-6 block">
-              cynical
+              <Image
+                src={"/logo.svg"}
+                alt="Cynical Tech Logo"
+                width={190}
+                height={90}
+              />
             </Link>
             <p className="text-sm text-muted-foreground mb-6 font-body max-w-xs leading-relaxed">
               Built by hackers. Trusted by institutions. Enterprise security
