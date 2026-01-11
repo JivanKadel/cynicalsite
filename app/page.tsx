@@ -1,10 +1,13 @@
+import HeroSection from "@/components/home/HeroSection";
+import Products from "@/components/home/Products";
+import Solutions from "@/components/home/Solutions";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <h1 className="text-8xl font-light text-center">
-        This is for testing font
-      </h1>
-      <p className="text-center">This is for testing font as wells</p>
+      <HeroSection />
+      <Products />
+      <Solutions />
     </div>
   );
 }

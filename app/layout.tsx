@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${cabin.variable} ${inter.variable} antialiased`}>
         <Navbar />
-        <div className="mt-16 lg:mt-20 py-8">{children}</div>
+        <div className="mt-16 lg:mt-20">{children}</div>
       </body>
     </html>
   );

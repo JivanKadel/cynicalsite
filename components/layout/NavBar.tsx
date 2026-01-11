@@ -27,6 +27,7 @@ import {
   FileText,
   BookOpen,
   ChevronDown,
+  ArrowRight,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -196,9 +197,10 @@ export default function Navbar() {
             </Button>
             <Button
               size="sm"
-              className="bg-foreground text-background hover:bg-foreground/90"
+              className="bg-foreground text-background hover:bg-foreground/90 flex items-center gap-2 group"
             >
               Schedule a Call
+              <ArrowRight className="w-4 h-4 transform transition-transform duration-600 group-hover:translate-x-1" />
             </Button>
           </div>
 

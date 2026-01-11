@@ -1,0 +1,49 @@
+import { ArrowRight, LucideProps } from "lucide-react";
+import { ForwardRefExoticComponent, RefAttributes } from "react";
+export type SolutionCardProps = {
+  Icon: ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
+  title: string;
+  description: string;
+  features: string[];
+};
+export default function SolutionCard({
+  Icon,
+  title,
+  description,
+  features,
+  index,
+}: SolutionCardProps & { index: number }) {
+  return (
+    <div
+      key={title}
+      className="group relative rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:bg-card/80 hover:border-border transition-all duration-300 animate-fade-up"
+      style={{ animationDelay: `${index * 0.1}s` }}
+    >
+      <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-foreground/10 transition-colors">
+        <Icon className="w-6 h-6 text-foreground" />
+      </div>
+
+      <h3 className="text-xl font-semibold mb-3">{title}</h3>
+      <p className="text-muted-foreground text-sm font-body mb-5 leading-relaxed">
+        {description}
+      </p>
+
+      <div className="flex flex-wrap gap-2">
+        {features.map((feature) => (
+          <span
+            key={feature}
+            className="text-xs px-3 py-1.5 rounded-full bg-secondary text-muted-foreground"
+          >
+            {feature}
+          </span>
+        ))}
+      </div>
+
+      <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
+        <ArrowRight className="w-5 h-5 text-muted-foreground" />
+      </div>
+    </div>
+  );
+}
