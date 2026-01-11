@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cabin, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/NavBar";
+import Footer from "@/components/home/Footer";
 
 const cabin = Cabin({
   variable: "--font-cabin",
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`${cabin.variable} ${inter.variable} antialiased`}>
         <Navbar />
         <div className="mt-16 lg:mt-20">{children}</div>
+        <Footer />
       </body>
     </html>
   );

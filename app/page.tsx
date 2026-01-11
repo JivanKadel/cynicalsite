@@ -19,7 +19,6 @@ export default function Home() {
       <Testimonials />
       <Research />
       <CTA />
-      <Footer />
     </div>
   );
 }
