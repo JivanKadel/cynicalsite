@@ -120,8 +120,9 @@ export default function Navbar() {
             <Image
               src={"/logo.svg"}
               alt="Cynical Tech Logo"
-              width={120}
-              height={50}
+              width={190}
+              height={90}
+              // className="scale-160"
             />
           </Link>
 
