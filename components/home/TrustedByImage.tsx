@@ -20,11 +20,11 @@ export function TrustedByImage({ name, logo, link }: TrustedByProps) {
       <Image
         src={logo}
         alt={name}
-        width={48}
+        width={120}
         height={48}
-        className="object-contain hover:scale-102 transition-transform grayscale-100 hover:grayscale-0 opacity-85 hover:opacity-100"
+        className="object-contain hover:scale-102 transition-transform grayscale-10 hover:grayscale-0 opacity-85 hover:opacity-100"
       />
-      <p className="text-muted-foreground">{name}</p>
+      {/* <p className="text-muted-foreground">{name}</p> */}
     </Link>
   );
 }

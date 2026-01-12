@@ -1,29 +1,36 @@
 import { TrustedByImage } from "./TrustedByImage";
 
 export default function HeroSection() {
-  const logos = ["Deloitte", "Accenture", "McKinsey", "KPMG", "EY", "PwC"];
-
   const trustedBy = [
     {
-      name: "TripAdvisor",
-      image: "/brands/tripadvisor.svg",
-      link: "https://tripadvisor.com",
+      name: "E-Sewa",
+      image: "/brands/esewa.png",
+      link: "https://esewa.com.np",
     },
     {
-      name: "Atlassian",
-      image: "/brands/atlassian.svg",
-      link: "https://atlassian.com",
+      name: "Himalayan Life Insurance",
+      image: "/brands/himalayan_life_insurance.png",
+      link: "https://himalayanlife.com.np",
     },
     {
-      name: "Facebook",
-      image: "/brands/facebook.svg",
-      link: "https://facebook.com",
+      name: "WorldLink",
+      image: "/brands/worldlink.svg",
+      link: "https://worldlink.com.np",
     },
-    { name: "Google", image: "/brands/google.svg", link: "https://google.com" },
     {
-      name: "Mastercard",
-      image: "/brands/mastercard.svg",
-      link: "https://mastercard.com",
+      name: "Mero Job",
+      image: "/brands/mero_job.svg",
+      link: "https://merojob.com",
+    },
+    {
+      name: "FonePay",
+      image: "/brands/fonepay.webp",
+      link: "https://fonepay.com",
+    },
+    {
+      name: "Global Ime Bank",
+      image: "/brands/global_ime_bank.svg",
+      link: "https://globalimebank.com",
     },
   ];
 
