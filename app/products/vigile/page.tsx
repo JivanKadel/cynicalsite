@@ -18,18 +18,16 @@ import {
   Link2,
   Type,
   CheckCircle,
-  Scan,
   Bell,
   BarChart3,
   Download,
   LogIn,
-  UserCheck,
   ShieldAlert,
   Workflow,
-  Navigation,
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
 import Link from "next/link";
+import Image from "next/image";
 
 const Vigile = () => {
   const stats = [
@@ -164,7 +162,7 @@ const Vigile = () => {
         />
 
         <div className="container mx-auto px-6 relative">
-          <div className="max-w-4xl">
+          <div>
             <Link
               href="/#products"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
@@ -172,39 +170,30 @@ const Vigile = () => {
               ← Back to Products
             </Link>
 
-            <div className="flex items-center gap-4 mb-6">
-              {/* <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-secondary to-secondary/50 border border-border/50 flex items-center justify-center">
-                <Eye className="w-8 h-8 text-foreground" />
-              </div> */}
-              <div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="flex flex-col gap-4">
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">
                   Product
                 </span>
                 <h1 className="text-4xl md:text-5xl font-bold">Vigile.AI</h1>
+                <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90 mb-4">
+                  Discover Employee Data Breaches Before They Happen
+                </h2>
+
+                <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-body leading-relaxed ">
+                  Your team&apos;s credentials are a prime target. Vigile
+                  detects credential theft, prevents account takeovers, and
+                  blocks unauthorized access across your organization.
+                </p>
               </div>
-            </div>
-
-            <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90 mb-4">
-              Discover Employee Data Breaches Before They Happen
-            </h2>
-
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-body leading-relaxed max-w-3xl">
-              Your team&apos;s credentials are a prime target. Vigile detects
-              credential theft, prevents account takeovers, and blocks
-              unauthorized access across your organization.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90"
-              >
-                Start Free Trial
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button size="lg" variant="outline">
-                Request Demo
-              </Button>
+              <div className="-rotate-15">
+                <Image
+                  src={"/vigile.webp"}
+                  width={1920}
+                  height={924}
+                  alt="Vigile.AI Logo"
+                />
+              </div>
             </div>
           </div>
         </div>
