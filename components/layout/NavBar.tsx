@@ -41,26 +41,21 @@ export default function Navbar() {
     {
       icon: Bug,
       label: "Bugv",
-      description: "Crowdsourced security platform",
+      description: "World's No 1. Crowdsourced security platform",
       // href: "https://bugv.io",
       href: "/products/bugv",
     },
     {
       icon: Radar,
       label: "Vigile.AI",
-      description: "Attack surface intelligence",
+      description:
+        "Protect your organization from leaked credentials & breaches",
       href: "/products/vigile",
-    },
-    {
-      icon: Shield,
-      label: "Red Team",
-      description: "Adversary simulation services",
-      href: "/products/red-team",
     },
     {
       icon: Infinity,
       label: "Falcon",
-      description: "Continuous security Monitoring",
+      description: "Continuous security and Uptime Monitoring",
       href: "/products/falcon",
     },
   ];
@@ -70,7 +65,7 @@ export default function Navbar() {
       icon: Code,
       label: "Application Security",
       description: "Web, API & mobile testing",
-      href: "/solutions/appsec",
+      href: "/solutions/app-security",
     },
     {
       icon: Cloud,
@@ -97,25 +92,25 @@ export default function Navbar() {
       icon: FileText,
       label: "Documentation",
       description: "Guides and API reference",
-      href: "/docs",
+      href: "/resources/docs",
     },
     {
       icon: BookOpen,
       label: "Blog",
       description: "Security insights & research",
-      href: "/blog",
+      href: "/resources/blog",
     },
     {
       icon: Shield,
       label: "Security Advisories",
       description: "Latest vulnerability disclosures",
-      href: "/advisories",
+      href: "/resources/advisories",
     },
     {
       icon: Users,
       label: "Case Studies",
       description: "Customer success stories",
-      href: "/case-studies",
+      href: "/resources/case-studies",
     },
   ];
 
@@ -135,12 +130,11 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <NavigationMenu>
+            <NavigationMenu className="opacity-99">
               <NavigationMenuList>
-                {/* Products */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="border-8 border-background">
                     <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
                       {products.map((item) => (
                         <NavItemCard key={item.label} {...item} />
@@ -149,10 +143,9 @@ export default function Navbar() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                {/* Solutions */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="border-8 border-background blur-xsm">
                     <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
                       {solutions.map((item) => (
                         <NavItemCard key={item.label} {...item} />
@@ -164,7 +157,7 @@ export default function Navbar() {
                 {/* Resources */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                  <NavigationMenuContent>
+                  <NavigationMenuContent className="border-8 border-background blur-xsm">
                     <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
                       {resources.map((item) => (
                         <NavItemCard key={item.label} {...item} />
@@ -175,23 +168,15 @@ export default function Navbar() {
 
                 {/* Pricing */}
                 <NavigationMenuItem>
-                  <Link href="/pricing">
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Pricing
-                    </NavigationMenuLink>
+                  <Link href="/pricing" className="bg-transparent">
+                    <NavigationMenuLink>Pricing</NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
 
                 {/* Contact */}
                 <NavigationMenuItem>
                   <Link href="/contact">
-                    <NavigationMenuLink
-                      className={navigationMenuTriggerStyle()}
-                    >
-                      Contact
-                    </NavigationMenuLink>
+                    <NavigationMenuLink>Contact</NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>
               </NavigationMenuList>

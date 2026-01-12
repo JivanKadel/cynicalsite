@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Cabin, Inter } from "next/font/google";
+import { Cabin, Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/NavBar";
 import Footer from "@/components/home/Footer";
 
-const cabin = Cabin({
-  variable: "--font-cabin",
+const jakarta = Plus_Jakarta_Sans({
+  variable: "--font-jakarta",
   subsets: ["latin"],
   display: "swap",
 });
@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${cabin.variable} ${inter.variable} antialiased`}>
+      <body className={`${jakarta.variable} ${inter.variable} antialiased`}>
         <Navbar />
         <div className="mt-16 lg:mt-20">{children}</div>
         <Footer />

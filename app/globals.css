@@ -36,8 +36,6 @@
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.32 0 0);
   --sidebar-ring: oklch(0.72 0 0);
-  --font-cabin: Cabin, -apple-system, Arial, sans-serif;
-  --font-inter: Inter, -apple-system, Arial, sans-serif;
   --radius: 0.5rem;
   --shadow-x: 0px;
   --shadow-y: 1px;
@@ -94,9 +92,6 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-cabin: var(--font-cabin);
-  --font-inter: var(--font-inter);
-
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -110,14 +105,6 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
-}
-
-body {
-  font-family: var(--font-cabin);
-}
-
-p {
-  font-family: var(--font-cabin);
 }
 
 @layer base {
