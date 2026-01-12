@@ -1,97 +1,98 @@
+import { caseStudies } from "@/data/casestudies.data";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-const caseStudies = [
-  {
-    logo: "🏦",
-    company: "Global Investment Bank",
-    industry: "Financial Services",
-    tags: ["Penetration Testing", "Red Team", "Compliance"],
-    metrics: [
-      { value: "94%", label: "Faster Detection" },
-      { value: "2.3K", label: "Vulnerabilities Found" },
-      { value: "Zero", label: "Breaches Post-Deployment" },
-    ],
-    quote:
-      "Cynical's adversarial approach uncovered vulnerabilities our internal team missed for years.",
-    gradient: "from-blue-600/20 to-cyan-600/20",
-    link: "/case-studies/global-investment-bank",
-  },
-  {
-    logo: "🛒",
-    company: "E-Commerce Platform",
-    industry: "Retail Technology",
-    tags: ["API Security", "Cloud Security", "DevSecOps"],
-    metrics: [
-      { value: "99.9%", label: "Uptime Maintained" },
-      { value: "850+", label: "APIs Secured" },
-      { value: "45%", label: "Cost Reduction" },
-    ],
-    quote:
-      "They transformed our security posture while we scaled from 1M to 50M users.",
-    gradient: "from-emerald-600/20 to-teal-600/20",
-    link: "/case-studies/ecommerce-platform",
-  },
-  {
-    logo: "✈️",
-    company: "National Airline",
-    industry: "Aviation",
-    tags: ["Infrastructure Security", "IoT", "Threat Modeling"],
-    metrics: [
-      { value: "100%", label: "Critical Systems Tested" },
-      { value: "37", label: "Zero-Days Discovered" },
-      { value: "A+", label: "Security Rating" },
-    ],
-    quote:
-      "Cynical's team thinks like nation-state attackers. Exactly what we needed.",
-    gradient: "from-purple-600/20 to-pink-600/20",
-    link: "/case-studies/national-airline",
-  },
-  {
-    logo: "🏥",
-    company: "Healthcare Provider",
-    industry: "Healthcare",
-    tags: ["HIPAA Compliance", "Medical Devices", "Network Security"],
-    metrics: [
-      { value: "100%", label: "HIPAA Compliant" },
-      { value: "156", label: "Devices Secured" },
-      { value: "Zero", label: "PHI Exposures" },
-    ],
-    quote:
-      "Patient data security is non-negotiable. Cynical delivered beyond expectations.",
-    gradient: "from-rose-600/20 to-orange-600/20",
-    link: "/case-studies/healthcare-provider",
-  },
-  {
-    logo: "🔌",
-    company: "Energy Corporation",
-    industry: "Critical Infrastructure",
-    tags: ["OT Security", "SCADA", "Incident Response"],
-    metrics: [
-      { value: "24/7", label: "Monitoring Active" },
-      { value: "12", label: "Substations Protected" },
-      { value: "99.99%", label: "Grid Reliability" },
-    ],
-    quote:
-      "Protecting critical infrastructure requires the best. We found them in Cynical.",
-    gradient: "from-amber-600/20 to-yellow-600/20",
-    link: "/case-studies/energy-corporation",
-  },
-  {
-    logo: "🎮",
-    company: "Gaming Studio",
-    industry: "Entertainment",
-    tags: ["Anti-Cheat", "DDoS Protection", "Account Security"],
-    metrics: [
-      { value: "87%", label: "Cheating Reduced" },
-      { value: "50M+", label: "Accounts Protected" },
-      { value: "99.5%", label: "Uptime During Attacks" },
-    ],
-    quote: "Our players trust us because we trust Cynical with our security.",
-    gradient: "from-indigo-600/20 to-violet-600/20",
-    link: "/case-studies/gaming-studio",
-  },
-];
+// const caseStudies = [
+//   {
+//     logo: "🏦",
+//     company: "Global Investment Bank",
+//     industry: "Financial Services",
+//     tags: ["Penetration Testing", "Red Team", "Compliance"],
+//     metrics: [
+//       { value: "94%", label: "Faster Detection" },
+//       { value: "2.3K", label: "Vulnerabilities Found" },
+//       { value: "Zero", label: "Breaches Post-Deployment" },
+//     ],
+//     quote:
+//       "Cynical's adversarial approach uncovered vulnerabilities our internal team missed for years.",
+//     gradient: "from-blue-600/20 to-cyan-600/20",
+//     link: "/case-studies/global-investment-bank",
+//   },
+//   {
+//     logo: "🛒",
+//     company: "E-Commerce Platform",
+//     industry: "Retail Technology",
+//     tags: ["API Security", "Cloud Security", "DevSecOps"],
+//     metrics: [
+//       { value: "99.9%", label: "Uptime Maintained" },
+//       { value: "850+", label: "APIs Secured" },
+//       { value: "45%", label: "Cost Reduction" },
+//     ],
+//     quote:
+//       "They transformed our security posture while we scaled from 1M to 50M users.",
+//     gradient: "from-emerald-600/20 to-teal-600/20",
+//     link: "/case-studies/ecommerce-platform",
+//   },
+//   {
+//     logo: "✈️",
+//     company: "National Airline",
+//     industry: "Aviation",
+//     tags: ["Infrastructure Security", "IoT", "Threat Modeling"],
+//     metrics: [
+//       { value: "100%", label: "Critical Systems Tested" },
+//       { value: "37", label: "Zero-Days Discovered" },
+//       { value: "A+", label: "Security Rating" },
+//     ],
+//     quote:
+//       "Cynical's team thinks like nation-state attackers. Exactly what we needed.",
+//     gradient: "from-purple-600/20 to-pink-600/20",
+//     link: "/case-studies/national-airline",
+//   },
+//   {
+//     logo: "🏥",
+//     company: "Healthcare Provider",
+//     industry: "Healthcare",
+//     tags: ["HIPAA Compliance", "Medical Devices", "Network Security"],
+//     metrics: [
+//       { value: "100%", label: "HIPAA Compliant" },
+//       { value: "156", label: "Devices Secured" },
+//       { value: "Zero", label: "PHI Exposures" },
+//     ],
+//     quote:
+//       "Patient data security is non-negotiable. Cynical delivered beyond expectations.",
+//     gradient: "from-rose-600/20 to-orange-600/20",
+//     link: "/case-studies/healthcare-provider",
+//   },
+//   {
+//     logo: "🔌",
+//     company: "Energy Corporation",
+//     industry: "Critical Infrastructure",
+//     tags: ["OT Security", "SCADA", "Incident Response"],
+//     metrics: [
+//       { value: "24/7", label: "Monitoring Active" },
+//       { value: "12", label: "Substations Protected" },
+//       { value: "99.99%", label: "Grid Reliability" },
+//     ],
+//     quote:
+//       "Protecting critical infrastructure requires the best. We found them in Cynical.",
+//     gradient: "from-amber-600/20 to-yellow-600/20",
+//     link: "/case-studies/energy-corporation",
+//   },
+//   {
+//     logo: "🎮",
+//     company: "Gaming Studio",
+//     industry: "Entertainment",
+//     tags: ["Anti-Cheat", "DDoS Protection", "Account Security"],
+//     metrics: [
+//       { value: "87%", label: "Cheating Reduced" },
+//       { value: "50M+", label: "Accounts Protected" },
+//       { value: "99.5%", label: "Uptime During Attacks" },
+//     ],
+//     quote: "Our players trust us because we trust Cynical with our security.",
+//     gradient: "from-indigo-600/20 to-violet-600/20",
+//     link: "/case-studies/gaming-studio",
+//   },
+// ];
 
 const CaseStudies = () => {
   return (
@@ -165,9 +166,12 @@ const CaseStudies = () => {
             {caseStudies.map((study, index) => (
               <Link
                 key={index}
-                href={study.link}
-                className={`group block p-8 rounded-2xl border border-border bg-linear-to-br ${study.gradient} hover:border-primary/50 transition-all duration-300`}
+                href={study.link || "#"}
+                className="relative group block p-8 border-2 border-border rounded-2xl transition-all duration-300"
               >
+                <div
+                  className={`absolute rounded-2xl inset-0 bg-linear-to-br ${study.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <span className="text-4xl mb-4 block">{study.logo}</span>

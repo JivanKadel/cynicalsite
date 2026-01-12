@@ -35,7 +35,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="container mx-auto relative z-10 pt-4 md:pt-6">
+    <section className="container mx-auto relative z-10 pt-4 md:pt-6 pb-8">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8">
         <div className="animate-fade-up">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-secondary/30 text-sm text-muted-foreground">
@@ -76,7 +76,6 @@ export default function HeroSection() {
             />
           ))}
         </div>
-        <hr className="border-t-2 max-w-4xl mx-auto mt-2" />
       </div>
     </section>
   );

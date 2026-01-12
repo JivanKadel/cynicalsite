@@ -31,6 +31,7 @@ export default function Solutions() {
         "Business logic testing",
         "Auth/session attacks",
       ],
+      gradient: "from-violet-500/20 to-blue-500/10",
     },
     {
       icon: Cloud,
@@ -38,6 +39,7 @@ export default function Solutions() {
       description:
         "Privilege escalation paths, misconfigured IAM policies, and lateral movement opportunities across AWS, GCP, and Azure environments.",
       features: ["IAM policy review", "Container escapes", "Secrets exposure"],
+      gradient: "from-emerald-500/20 to-cyan-500/10",
     },
     {
       icon: Network,
@@ -45,6 +47,7 @@ export default function Solutions() {
       description:
         "Full-scope adversary simulation. We compromise your environment the way APT groups would—phishing, initial access, persistence, and data exfiltration.",
       features: ["Initial access", "Persistence", "Objective completion"],
+      gradient: "from-orange-500/20 to-red-500/10",
     },
     {
       icon: AlertTriangle,
@@ -56,6 +59,7 @@ export default function Solutions() {
         "Malware analysis",
         "Legal-ready reports",
       ],
+      gradient: "from-pink-500/20 to-purple-500/10",
     },
     {
       icon: Bot,
@@ -63,6 +67,7 @@ export default function Solutions() {
       description:
         "Adversarial attacks on your models: prompt injection, training data extraction, model inversion, and API abuse testing for LLMs and ML systems.",
       features: ["Prompt injection", "Model extraction", "Data poisoning"],
+      gradient: "from-blue-500/20 to-indigo-500/10",
     },
     {
       icon: Search,
@@ -74,6 +79,7 @@ export default function Solutions() {
         "Credential alerts",
         "Brand impersonation",
       ],
+      gradient: "from-slate-500/20 to-gray-500/10",
     },
   ];
 
@@ -126,6 +132,7 @@ export default function Solutions() {
               title={solution.title}
               description={solution.description}
               features={solution.features}
+              gradient={solution.gradient}
               index={index}
             />
           ))}
