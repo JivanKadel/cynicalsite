@@ -34,7 +34,7 @@ const CTA = () => {
               </div>
 
               {/* Headline */}
-              <h2 className="text-display-md lg:text-display-xl font-bold mb-6">
+              <h2 className="text-2xl md:text-4xl font-noto mb-6">
                 Find out what your
                 <span className="block gradient-text">
                   current vendors are missing.

@@ -11,7 +11,7 @@ export default function CaseStudies() {
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Case Studies
             </span>
-            <h2 className="text-display-md font-bold mb-4">
+            <h2 className="text-display-md font-noto mb-4">
               Real engagements. Real findings.
             </h2>
             <p className="text-lg text-muted-foreground font-body">

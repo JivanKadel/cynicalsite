@@ -1,6 +1,5 @@
 import CaseStudies from "@/components/home/CaseStudies";
 import CTA from "@/components/home/CTA";
-import Footer from "@/components/home/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import Products from "@/components/home/Products";
 import Research from "@/components/home/Research";

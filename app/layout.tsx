@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Cabin, Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/NavBar";
 import Footer from "@/components/home/Footer";
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const noto = Noto_Serif({
+  variable: "--font-noto",
   subsets: ["latin"],
   display: "swap",
 });
@@ -27,8 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${jakarta.variable} ${inter.variable} antialiased`}>
+    <html
+      lang="en"
+      className={`${noto.variable} ${inter.variable} antialiased`}
+    >
+      <body>
         <Navbar />
         <div className="mt-16 lg:mt-20">{children}</div>
         <Footer />

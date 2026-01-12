@@ -43,7 +43,7 @@ export default function HeroSection() {
             47 critical vulnerabilities found this month
           </span>
         </div>
-        <h1 className="text-3xl sm:text-5xl md:text-[80px] font-bold font-jakarta">
+        <h1 className="text-3xl sm:text-5xl md:text-[80px] font-noto">
           Offensive Security
           <br />
           <span>Built by Attackers.</span>

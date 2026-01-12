@@ -111,7 +111,7 @@ export default function Solutions() {
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             Services
           </span>
-          <h2 className="text-2xl sm:text-5xl md:text-7xl font-semibold">
+          <h2 className="text-2xl sm:text-5xl md:text-7xl font-noto">
             We break in.
             <span className="block gradient-text-accent">
               You fix the gaps.
@@ -153,10 +153,10 @@ export default function Solutions() {
             {capabilities.map((capability, index) => (
               <div
                 key={capability.text}
-                className="flex items-center gap-3 p-4 rounded-xl border border-border/30 bg-background/50 hover:bg-background hover:border-border/50 transition-all duration-300 animate-fade-up"
+                className="flex items-center gap-3 p-4 rounded-xl border border-border/30 bg-secondary hover:bg-background/90 hover:border-border/50 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.03}s` }}
               >
-                <capability.icon className="w-4 h-4 text-foreground/70 flex-shrink-0" />
+                <capability.icon className="w-4 h-4 text-foreground/70 shrink-0" />
                 <span className="text-sm font-medium">{capability.text}</span>
               </div>
             ))}

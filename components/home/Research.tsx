@@ -37,7 +37,7 @@ const Research = () => {
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Research
             </span>
-            <h2 className="text-display-md font-bold">
+            <h2 className="text-2xl md:text-4xl font-noto">
               We publish what we find.
             </h2>
           </div>

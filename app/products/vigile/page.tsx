@@ -176,8 +176,8 @@ const Vigile = () => {
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">
                   Product
                 </span>
-                <h1 className="text-4xl md:text-5xl font-bold">Vigile.AI</h1>
-                <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90 mb-4">
+                <h1 className="text-4xl md:text-5xl font-noto">Vigile.AI</h1>
+                <h2 className="text-2xl md:text-3xl font-noto text-foreground/90 mb-4">
                   Discover Employee Data Breaches Before They Happen
                 </h2>
 
@@ -263,7 +263,7 @@ const Vigile = () => {
                 <span className="text-sm font-medium">Core Integration</span>
               </div>
 
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl md:text-5xl font-noto mb-6">
                 Office 365 Integration
                 <span className="block text-muted-foreground text-2xl md:text-3xl mt-2">
                   Powered by Microsoft Graph API
@@ -375,7 +375,7 @@ const Vigile = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Platform Modules
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-noto mb-4">
               Enterprise breach intelligence
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -458,7 +458,7 @@ const Vigile = () => {
               <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
                 Reporting
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-noto mb-4">
                 Full Detailed PDF Reports
               </h2>
               <p className="text-lg text-muted-foreground font-body mb-8 leading-relaxed">
@@ -503,7 +503,7 @@ const Vigile = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Use Cases
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-noto mb-4">
               Protect what matters most
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -539,7 +539,7 @@ const Vigile = () => {
               <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
                 Integrations
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl font-noto mb-4">
                 Seamless connectivity
               </h2>
               <p className="text-lg text-muted-foreground font-body">

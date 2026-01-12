@@ -218,7 +218,7 @@ const IncidentResponse = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 animate-fade-up stagger-2 text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-noto tracking-tight mb-6 text-balance">
               Respond to incidents
               <span className="block text-muted-foreground">
                 with speed and precision
@@ -277,7 +277,7 @@ const IncidentResponse = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Capabilities
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
               End-to-end incident response
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -315,7 +315,7 @@ const IncidentResponse = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Response Phases
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
               Systematic response approach
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -362,7 +362,7 @@ const IncidentResponse = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Our Process
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
                 NIST-aligned response methodology
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
@@ -410,7 +410,7 @@ const IncidentResponse = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Why Cynical
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
               Rapid response, proven results
             </h2>
           </div>
@@ -444,7 +444,7 @@ const IncidentResponse = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Incident Types
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
                 Specialized response for all incident types
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">

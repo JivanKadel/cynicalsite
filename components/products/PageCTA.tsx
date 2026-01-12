@@ -59,7 +59,7 @@ const PageCTA = ({
               </div>
 
               {/* Headline */}
-              <h2 className="text-display-md lg:text-display-xl font-bold mb-6">
+              <h2 className="text-display-md lg:text-display-xl font-noto mb-6">
                 {headline}
                 <span className="block gradient-text">{highlightedText}</span>
               </h2>

@@ -83,7 +83,7 @@ const Contact = () => {
               <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-4">
                 Security Inquiry
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl font-noto mb-6 bg-linear-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                 Request a Security Assessment
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -117,7 +117,7 @@ const Contact = () => {
               <div className="lg:col-span-2">
                 <div className="p-8 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl">
                   <div className="mb-6">
-                    <h2 className="text-2xl font-bold mb-2">Get In Touch</h2>
+                    <h2 className="text-2xl font-noto mb-2">Get In Touch</h2>
                     <p className="text-muted-foreground">
                       Fill out the form below and we&apos;ll get back to you
                       within 24 hours.

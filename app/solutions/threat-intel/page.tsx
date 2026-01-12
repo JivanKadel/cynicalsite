@@ -216,7 +216,7 @@ const ThreatIntelligence = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 animate-fade-up stagger-2 text-balance">
+            <h1 className="font-noto text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight mb-6 text-balance">
               Stay ahead of threats
               <span className="block text-muted-foreground">
                 with actionable intelligence
@@ -275,7 +275,7 @@ const ThreatIntelligence = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Capabilities
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
               Multi-dimensional threat intelligence
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -313,7 +313,7 @@ const ThreatIntelligence = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Intelligence Types
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
               Strategic, tactical & operational
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -360,7 +360,7 @@ const ThreatIntelligence = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Our Process
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
                 Intelligence-driven security operations
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
@@ -407,7 +407,7 @@ const ThreatIntelligence = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Why Cynical
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
               Intelligence that drives action
             </h2>
           </div>
@@ -441,7 +441,7 @@ const ThreatIntelligence = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Coverage
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
                 Complete threat landscape coverage
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">

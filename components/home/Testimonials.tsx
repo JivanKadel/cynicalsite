@@ -75,7 +75,7 @@ const Testimonials = () => {
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Client Results
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-noto">
               What we found.
               <br />
               What we fixed.
