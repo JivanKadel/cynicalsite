@@ -55,7 +55,7 @@ const Research = () => {
             <Link
               key={item.title}
               href={item.link}
-              className="group card-elevated p-8 hover-lift block animate-fade-up"
+              className="group rounded-2xl bg-background/80 border-2 border-border/50 p-8 block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center gap-3 mb-4">

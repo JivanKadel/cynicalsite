@@ -20,11 +20,11 @@ export default function SolutionCard({
   return (
     <div
       key={title}
-      className="group relative rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:bg-card/80 hover:border-border transition-all duration-300 animate-fade-up"
+      className="group relative rounded-2xl border-2 border-border bg-card/50 backdrop-blur-sm p-8 hover:bg-card/80 hover:border-border transition-all duration-300 animate-fade-up"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div
-        className={`absolute inset-0 bg-linear-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+        className={`absolute rounded-2xl inset-0 bg-linear-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
       />
       <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-foreground/10 transition-colors">
         <Icon className="w-6 h-6 text-foreground" />

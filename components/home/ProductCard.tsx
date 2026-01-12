@@ -28,12 +28,12 @@ export function ProductCard({
   cta,
 }: ProductCardProps) {
   return (
-    <div className="group relative animate-fade-up">
-      <div className="relative h-full rounded-xl border border-secondary backdrop-blur-md overflow-hidden transition-all duration-30">
+    <div className="group relative">
+      <div className="relative h-full rounded-xl border-2 border-border rounded-tr-[48px] backdrop-blur-md overflow-hidden transition-all duration-30">
         <div className="p-6 flex flex-col h-full text-white">
           <div className="flex items-start justify-between mb-6">
             <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center transition-colors">
-              <Image src={icon} alt={name} width={24} height={24} />
+              <Image src={icon} alt={name} width={48} height={40} />
             </div>
             <div className="text-right">
               <p className="text-xl font-bold">{stats.value}</p>
@@ -64,11 +64,10 @@ export function ProductCard({
             ))}
           </div>
 
-          {/* CTA */}
           <Button
             variant="outline"
             size="sm"
-            className="w-full border-2 border-background/30 transition-all duration-300"
+            className="w-full border-2 border-border py-5 transition-all duration-300"
           >
             {cta}
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

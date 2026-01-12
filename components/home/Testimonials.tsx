@@ -70,7 +70,7 @@ const Testimonials = () => {
     <section className="py-12 bg-background overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="flex items-end justify-between mb-20">
+        <div className="flex items-end justify-between mb-12">
           <div>
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Client Results
@@ -107,11 +107,11 @@ const Testimonials = () => {
           <div className="lg:col-span-7">
             <div className="relative">
               {/* Large quote mark */}
-              <span className="absolute -top-8 -left-4 text-[120px] font-serif text-foreground/5 leading-none select-none">
+              <span className="absolute -top-10 -left-4 text-[120px] font-serif text-foreground/30 leading-none select-none">
                 &quot;
               </span>
 
-              <blockquote className="text-2xl md:text-3xl lg:text-4xl font-normal leading-snug tracking-tight relative z-10">
+              <blockquote className="text-2xl md:text-3xl font-normal relative z-10">
                 {testimonials[activeIndex].quote}
               </blockquote>
 

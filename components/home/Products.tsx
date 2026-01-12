@@ -3,7 +3,7 @@ import { ProductCard } from "./ProductCard";
 const Products = () => {
   const products = [
     {
-      icon: "logo.svg",
+      icon: "/products/bugv_logo.png",
       name: "Bugv",
       tagline: "Offensive Security Network",
       description:
@@ -17,7 +17,7 @@ const Products = () => {
       cta: "See Sample Findings",
     },
     {
-      icon: "logo.svg",
+      icon: "/products/vigile_logo.png",
       name: "Vigile.AI",
       tagline: "Attack Surface Reconnaissance",
       description:

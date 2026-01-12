@@ -140,7 +140,7 @@ export default function Solutions() {
 
         <div className="rounded-2xl border border-border/30 bg-secondary/20 p-8 lg:p-12">
           <div className="text-center mb-10">
-            <h3 className="text-display-sm font-bold mb-4">
+            <h3 className="text-xl md:text-3xl font-noto mb-4">
               Technical Capabilities
             </h3>
             <p className="text-muted-foreground font-body max-w-2xl mx-auto">
@@ -153,7 +153,7 @@ export default function Solutions() {
             {capabilities.map((capability, index) => (
               <div
                 key={capability.text}
-                className="flex items-center gap-3 p-4 rounded-xl border border-border/30 bg-secondary hover:bg-background/90 hover:border-border/50 transition-all duration-300"
+                className="flex items-center gap-3 p-4 rounded-xl border border-border/30 bg-secondary/40 hover:bg-background/90 hover:border-border/50 transition-all duration-300"
                 style={{ animationDelay: `${index * 0.03}s` }}
               >
                 <capability.icon className="w-4 h-4 text-foreground/70 shrink-0" />
