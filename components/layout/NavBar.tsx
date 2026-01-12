@@ -135,9 +135,13 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Products</NavigationMenuTrigger>
                   <NavigationMenuContent className="border-8 border-background">
-                    <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
+                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                       {products.map((item) => (
-                        <NavItemCard key={item.label} {...item} />
+                        <NavItemCard
+                          key={item.label}
+                          {...item}
+                          className="hover:bg-background"
+                        />
                       ))}
                     </div>
                   </NavigationMenuContent>
@@ -146,9 +150,13 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
                   <NavigationMenuContent className="border-8 border-background blur-xsm">
-                    <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
+                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                       {solutions.map((item) => (
-                        <NavItemCard key={item.label} {...item} />
+                        <NavItemCard
+                          key={item.label}
+                          {...item}
+                          className="hover:bg-background"
+                        />
                       ))}
                     </div>
                   </NavigationMenuContent>
@@ -158,9 +166,13 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                   <NavigationMenuContent className="border-8 border-background blur-xsm">
-                    <div className="grid sm:grid-cols-2 w-[400px] sm:w-[600px] gap-3 p-4">
+                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                       {resources.map((item) => (
-                        <NavItemCard key={item.label} {...item} />
+                        <NavItemCard
+                          key={item.label}
+                          {...item}
+                          className="hover:bg-background"
+                        />
                       ))}
                     </div>
                   </NavigationMenuContent>
@@ -242,19 +254,27 @@ export default function Navbar() {
 interface NavItemProps {
   icon: React.ComponentType<{ className?: string }>;
   label: string;
+  className?: string;
   description: string;
   href: string;
 }
 
-function NavItemCard({ icon: Icon, label, description, href }: NavItemProps) {
+function NavItemCard({
+  icon: Icon,
+  label,
+  description,
+  href,
+  className = "",
+}: NavItemProps) {
   return (
     <Link
       href={href}
       className={cn(
-        "flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors group"
+        "flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors group",
+        className
       )}
     >
-      <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-foreground/10 transition-colors">
+      <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0 group-hover:bg-foreground/10 transition-colors">
         <Icon className="w-5 h-5 text-foreground/70" />
       </div>
       <div>
