@@ -28,6 +28,7 @@ import {
 import PageCTA from "@/components/products/PageCTA";
 import Link from "next/link";
 import Image from "next/image";
+import ParallaxImage from "@/components/image/ParallaxImage";
 
 const Vigile = () => {
   const stats = [
@@ -170,8 +171,8 @@ const Vigile = () => {
               ← Back to Products
             </Link>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+              <div className="col-span-2 flex flex-col gap-4">
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">
                   Product
                 </span>
@@ -186,13 +187,45 @@ const Vigile = () => {
                   blocks unauthorized access across your organization.
                 </p>
               </div>
-              <div className="-rotate-15">
-                <Image
-                  src={"/vigile.webp"}
-                  width={1920}
-                  height={924}
-                  alt="Vigile.AI Logo"
-                />
+              {/* <div className="col-span-3 transform-[translate(2%)_scale(1.25)_rotateX(47deg)_rotateY(31deg)_rotate(324deg)]">
+                <ParallaxImage>
+                  <Image
+                    src={"/vigile.webp"}
+                    width={1920}
+                    height={924}
+                    alt="Vigile.AI Logo"
+                  />
+                </ParallaxImage>
+              </div> */}
+              <div className="relative col-span-3 transform-[translate(2%)_scale(1.25)_rotateX(47deg)_rotateY(31deg)_rotate(324deg)]">
+                <ParallaxImage>
+                  <Image
+                    src="/vigile.webp"
+                    width={1920}
+                    height={924}
+                    alt="Vigile.AI Logo"
+                    className="block"
+                  />
+                </ParallaxImage>
+
+                {/* Fade overlay */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
+              </div>
+            </div>
+            <div className="mt-12 mb-12">
+              <div className="relative col-span-3 transform-[translate(2%)_scale(1.25)_rotateX(47deg)_rotateY(31deg)_rotate(324deg)]">
+                <ParallaxImage>
+                  <Image
+                    src="/vigile.webp"
+                    width={1920}
+                    height={924}
+                    alt="Vigile.AI Logo"
+                    className="block"
+                  />
+                </ParallaxImage>
+
+                {/* Fade overlay */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
               </div>
             </div>
           </div>
