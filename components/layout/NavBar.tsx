@@ -71,7 +71,7 @@ export default function Navbar() {
       icon: Cloud,
       label: "Cloud Security",
       description: "AWS, GCP, Azure assessments",
-      href: "/solutions/cloud",
+      href: "/solutions/cloud-security",
     },
     {
       icon: Search,
@@ -185,13 +185,7 @@ export default function Navbar() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Sign in
-            </Button>
-            <Button
-              size="sm"
-              className="bg-foreground text-background hover:bg-foreground/90 flex items-center gap-2 group"
-            >
+            <Button className="bg-border text-foreground hover:outline-2 hover:outline-solid hover:outline-foreground/40 hover:bg-background group transition-all">
               Schedule a Call
               <ArrowRight className="w-4 h-4 transform transition-transform duration-600 group-hover:translate-x-1" />
             </Button>
@@ -235,12 +229,7 @@ export default function Navbar() {
               </Link>
 
               <div className="flex flex-col gap-3 pt-4 mt-2 border-t border-border">
-                <Button variant="ghost" className="justify-start">
-                  Sign in
-                </Button>
-                <Button className="bg-foreground text-background hover:bg-foreground/90">
-                  Schedule a Call
-                </Button>
+                <Button className="bg-background">Schedule a Call</Button>
               </div>
             </div>
           </div>
