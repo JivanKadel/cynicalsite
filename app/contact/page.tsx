@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   Mail,
-  Shield,
   Clock,
   Building2,
   Phone,
@@ -226,7 +225,7 @@ const Contact = () => {
 
                     <Button
                       size="lg"
-                      className="w-full text-foreground group bg-linear-to-r from-background via-background/90 to-background hover:from-background/95 hover:via-background/85 hover:to-background/95 border border-border transition-all"
+                      className="w-full text-foreground group bg-linear-to-r from-background via-background/90 to-background hover:from-background/95 hover:via-background/85 hover:to-background/95 border border-border duration-500 transition-colors"
                     >
                       Submit Inquiry
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
