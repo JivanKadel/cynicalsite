@@ -39,7 +39,7 @@ const PageCTA = ({
       <div className="container mx-auto px-6">
         <div className="relative overflow-hidden rounded-3xl border border-border/30">
           {/* Background Layers */}
-          <div className="absolute inset-0 bg-gradient-to-br from-secondary via-background to-secondary" />
+          <div className="absolute inset-0 bg-linear-to-br from-secondary via-background to-secondary" />
           <div className="absolute inset-0 opacity-30">
             <div
               className="absolute inset-0"

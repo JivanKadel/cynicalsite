@@ -187,16 +187,7 @@ const Vigile = () => {
                   blocks unauthorized access across your organization.
                 </p>
               </div>
-              {/* <div className="col-span-3 transform-[translate(2%)_scale(1.25)_rotateX(47deg)_rotateY(31deg)_rotate(324deg)]">
-                <ParallaxImage>
-                  <Image
-                    src={"/vigile.webp"}
-                    width={1920}
-                    height={924}
-                    alt="Vigile.AI Logo"
-                  />
-                </ParallaxImage>
-              </div> */}
+
               <div className="relative col-span-3 transform-[translate(2%)_scale(1.25)_rotateX(47deg)_rotateY(31deg)_rotate(324deg)]">
                 <ParallaxImage>
                   <Image
@@ -208,31 +199,13 @@ const Vigile = () => {
                   />
                 </ParallaxImage>
 
-                {/* Fade overlay */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
-              </div>
-            </div>
-            <div className="mt-12 mb-12">
-              <div className="relative col-span-3 transform-[translate(2%)_scale(1.25)_rotateX(47deg)_rotateY(31deg)_rotate(324deg)]">
-                <ParallaxImage>
-                  <Image
-                    src="/vigile.webp"
-                    width={1920}
-                    height={924}
-                    alt="Vigile.AI Logo"
-                    className="block"
-                  />
-                </ParallaxImage>
-
-                {/* Fade overlay */}
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/80" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-16 border-y border-border/50 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">

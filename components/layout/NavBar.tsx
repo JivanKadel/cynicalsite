@@ -29,6 +29,8 @@ import {
   ChevronDown,
   ArrowRight,
   Infinity,
+  MessageCircleQuestionMark,
+  BriefcaseBusiness,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -112,6 +114,18 @@ export default function Navbar() {
       description: "Customer success stories",
       href: "/resources/case-studies",
     },
+    {
+      icon: MessageCircleQuestionMark,
+      label: "About Us",
+      description: "Learn more about Cynical Tech",
+      href: "/about",
+    },
+    {
+      icon: BriefcaseBusiness,
+      label: "Careers",
+      description: "Join our team",
+      href: "/careers",
+    },
   ];
 
   return (
@@ -135,7 +149,7 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Products</NavigationMenuTrigger>
                   <NavigationMenuContent className="border-8 border-background">
-                    <div className="grid sm:grid-cols-2 w-100 sm:w-200 gap-3 p-4">
+                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                       {products.map((item) => (
                         <NavItemCard
                           key={item.label}
