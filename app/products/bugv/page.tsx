@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
 import Link from "next/link";
+import Image from "next/image";
 
 const Bugv = () => {
   const stats = [
@@ -166,22 +167,17 @@ const Bugv = () => {
 
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl">
-            <Link
-              href="/#products"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-            >
-              ← Back to Products
-            </Link>
-
             <div className="flex items-center gap-4 mb-6">
-              {/* <div className="w-16 h-16 rounded-2xl bg-secondary border border-border/50 flex items-center justify-center">
-                <Bug className="w-8 h-8 text-foreground" />
-              </div> */}
               <div>
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">
-                  Product
+                  <Image
+                    width={50}
+                    height={30}
+                    src={"/products/bugv_logo.png"}
+                    alt="Bugv Logo"
+                  />
                 </span>
-                <h1 className="text-4xl md:text-5xl font-noto">Bugv</h1>
+                <h1 className="text-4xl md:text-5xl font-noto mt-4">Bugv</h1>
               </div>
             </div>
 

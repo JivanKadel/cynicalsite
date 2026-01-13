@@ -164,17 +164,22 @@ const Vigile = () => {
 
         <div className="container mx-auto px-6 relative">
           <div>
-            <Link
+            {/* <Link
               href="/#products"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
             >
               ← Back to Products
-            </Link>
+            </Link> */}
 
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
               <div className="col-span-2 flex flex-col gap-4">
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">
-                  Product
+                  <Image
+                    width={80}
+                    height={30}
+                    src={"/products/vigile_logo.png"}
+                    alt="Vigile Logo"
+                  />
                 </span>
                 <h1 className="text-4xl md:text-5xl font-noto">Vigile.AI</h1>
                 <h2 className="text-2xl md:text-3xl font-noto text-foreground/90 mb-4">
@@ -188,7 +193,7 @@ const Vigile = () => {
                 </p>
               </div>
 
-              <div className="relative col-span-3 transform-[translate(2%)_scale(1.25)_rotateX(47deg)_rotateY(31deg)_rotate(324deg)]">
+              <div className="relative col-span-3 transform-[translate(5%)_scale(1.25)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)]">
                 <ParallaxImage>
                   <Image
                     src="/vigile.webp"

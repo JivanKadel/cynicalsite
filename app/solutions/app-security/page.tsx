@@ -222,15 +222,8 @@ const ApplicationSecurity = () => {
                 size="lg"
                 className="bg-foreground text-background hover:bg-foreground/90 px-8"
               >
-                Request Assessment
+                Download Sample Report
                 <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border hover:bg-secondary/50"
-              >
-                View Methodology
               </Button>
             </div>
           </div>
@@ -356,10 +349,6 @@ const ApplicationSecurity = () => {
                 techniques developed through years of offensive security
                 experience.
               </p>
-              <Button className="bg-foreground text-background hover:bg-foreground/90">
-                Download Methodology Guide
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
             </div>
 
             <div className="space-y-6">

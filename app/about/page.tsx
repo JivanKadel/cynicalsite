@@ -208,7 +208,7 @@ const AboutUs = () => {
                   <span className="text-sm font-medium">About Cynical</span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-noto tracking-tight text-balance">
                   Securing the digital world
                   <span className="block text-muted-foreground">
                     with elite expertise
@@ -281,7 +281,7 @@ const AboutUs = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Why Choose Cynical
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
               The Cynical difference
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -320,7 +320,7 @@ const AboutUs = () => {
               <span className="text-sm font-medium">Our Mission</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
               Making the digital world safer
             </h2>
 
@@ -366,7 +366,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
               Brands that trust our cybersecurity competence
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -397,7 +397,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
               Awards & Recognition
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -432,7 +432,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
               Meet our leadership team
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -607,7 +607,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
               Ready to secure your future?
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">

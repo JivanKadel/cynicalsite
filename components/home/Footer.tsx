@@ -1,12 +1,4 @@
-import {
-  ArrowRight,
-  Github,
-  Linkedin,
-  Twitter,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -121,27 +113,12 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Certifications Bar */}
-      <div className="border-t border-border">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-12 text-xs text-muted-foreground">
-            <span className="font-medium">SOC 2 Type II</span>
-            <span className="font-medium">ISO 27001</span>
-            <span className="font-medium">GDPR Compliant</span>
-            <span className="font-medium">PCI DSS</span>
-            <span className="font-medium">HIPAA Ready</span>
-          </div>
-        </div>
-      </div>
-
       {/* Bottom Bar */}
       <div className="border-t border-border">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span className="w-2 h-2 rounded-full bg-green-500" />
-              <span>All systems operational</span>
-              <span className="mx-2">•</span>
               <span>© {new Date().getFullYear()} Cynical Technology, Inc.</span>
             </div>
 
