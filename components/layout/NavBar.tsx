@@ -135,12 +135,12 @@ export default function Navbar() {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Products</NavigationMenuTrigger>
                   <NavigationMenuContent className="border-8 border-background">
-                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
+                    <div className="grid sm:grid-cols-2 w-100 sm:w-200 gap-3 p-4">
                       {products.map((item) => (
                         <NavItemCard
                           key={item.label}
                           {...item}
-                          className="hover:bg-background"
+                          className="hover:bg-background border border-border/50"
                         />
                       ))}
                     </div>
@@ -155,7 +155,7 @@ export default function Navbar() {
                         <NavItemCard
                           key={item.label}
                           {...item}
-                          className="hover:bg-background"
+                          className="hover:bg-background border border-border/50"
                         />
                       ))}
                     </div>
@@ -171,7 +171,7 @@ export default function Navbar() {
                         <NavItemCard
                           key={item.label}
                           {...item}
-                          className="hover:bg-background"
+                          className="hover:bg-background border border-border/50"
                         />
                       ))}
                     </div>
@@ -241,7 +241,7 @@ export default function Navbar() {
               </Link>
 
               <div className="flex flex-col gap-3 pt-4 mt-2 border-t border-border">
-                <Button className="bg-background">Schedule a Call</Button>
+                <Button>Schedule a Call</Button>
               </div>
             </div>
           </div>

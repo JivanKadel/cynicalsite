@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Cynical Tech",
+  title: "Cynical Technology - Revolutionizing and Empowering Cybersecurity",
   description: "Securing your digital space",
 };
 
