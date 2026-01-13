@@ -113,7 +113,6 @@ const AboutUs = () => {
       bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and BugV to bring enterprise-grade security to organizations worldwide.",
       social: {
         linkedin: "https://www.linkedin.com/in/nareshlamgade/",
-        twitter: "https://twitter.com/sarah_mitchell",
       },
       isFeatured: true,
     },

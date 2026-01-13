@@ -124,7 +124,7 @@ export default function Navbar() {
       icon: BriefcaseBusiness,
       label: "Careers",
       description: "Join our team",
-      href: "/careers",
+      href: "/career",
     },
   ];
 
