@@ -20,7 +20,7 @@ export default function CaseStudies() {
             </p>
           </div>
           <Link
-            href="/case-studies"
+            href="/resources/case-studies"
             className="flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all group"
           >
             View all case studies

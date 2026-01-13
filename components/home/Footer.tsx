@@ -1,4 +1,12 @@
-import { Github, Linkedin, Twitter, Mail, MapPin, Phone } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  MapPin,
+  Phone,
+  Facebook,
+} from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -39,13 +47,20 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Twitter, href: "https://twitter.com/cynical", label: "Twitter" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/cynicaltechnology",
+      label: "Facebook",
+      hoverColor: "hover:text-blue-600",
+      hoverBg: "hover:bg-blue-600/10",
+    },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/company/cynical",
+      href: "https://www.linkedin.com/company/cynicaltechnology/",
       label: "LinkedIn",
+      hoverColor: "hover:text-blue-700",
+      hoverBg: "hover:bg-blue-700/10",
     },
-    { icon: Github, href: "https://github.com/cynical", label: "GitHub" },
   ];
 
   return (
@@ -67,15 +82,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>security@cynical.tech</span>
+                <span>info@cynicaltechnology.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 000-0000</span>
+                <span>+977-01-4530730</span>
               </div>
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <MapPin className="w-8 h-8" />
+                <span>Sharada Bhawan, Maitidevi Marg, Kathmandu, Nepal</span>
               </div>
             </div>
 
@@ -84,10 +99,12 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center hover:bg-foreground/10 transition-colors"
+                  className={`w-10 h-10 rounded-lg bg-secondary flex items-center justify-center ${social.hoverBg} transition-colors`}
                   aria-label={social.label}
                 >
-                  <social.icon className="w-4 h-4 text-muted-foreground" />
+                  <social.icon
+                    className={`w-6 h-6 text-muted-foreground ${social.hoverColor}`}
+                  />
                 </a>
               ))}
             </div>

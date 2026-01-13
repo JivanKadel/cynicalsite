@@ -225,16 +225,20 @@ const AboutUs = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button
-                  size="lg"
-                  className="bg-foreground text-background hover:bg-foreground/90"
-                >
-                  Meet Our Team
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-                <Button size="lg" variant="outline">
-                  View Our Services
-                </Button>
+                <Link href="#our-team">
+                  <Button
+                    size="lg"
+                    className="bg-foreground text-background hover:bg-foreground/90"
+                  >
+                    Meet Our Team
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </Link>
+                <Link href={"/#solutions"}>
+                  <Button size="lg" variant="outline">
+                    View Our Services
+                  </Button>
+                </Link>
               </div>
 
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
@@ -429,7 +433,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 lg:py-32 bg-secondary/20">
+      <section className="py-20 lg:py-32 bg-secondary/20" id="our-team">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
