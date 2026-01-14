@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const Testimonials = () => {
@@ -72,13 +73,13 @@ const Testimonials = () => {
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
+            <span className="text-md text-muted-foreground uppercase tracking-widest mb-4 block">
               Client Results
             </span>
-            <h2 className="text-4xl md:text-5xl font-noto">
+            <h2 className="text-4xl md:text-6xl">
               What we found.
               <br />
-              What we fixed.
+              <span className="text-slate-500">What we fixed.</span>
             </h2>
           </div>
 
@@ -106,23 +107,21 @@ const Testimonials = () => {
           {/* Quote */}
           <div className="lg:col-span-7">
             <div className="relative">
-              {/* Large quote mark */}
-              <span className="absolute -top-10 -left-4 text-[120px] font-serif text-foreground/30 leading-none select-none">
-                &quot;
+              <span className="absolute -top-12 -left-6 text-8xl font-serif text-primary opacity-20 select-none">
+                “
               </span>
-
-              <blockquote className="text-2xl md:text-3xl font-normal relative z-10">
+              <blockquote className="text-2xl md:text-3xl font-normal relative z-10 font-aeonik">
                 {testimonials[activeIndex].quote}
               </blockquote>
-
               {/* Author */}
               <div className="mt-10 flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-secondary border border-border flex items-center justify-center text-lg font-bold">
-                  {testimonials[activeIndex].author
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </div>
+                <Image
+                  src={"/people/guy.png"}
+                  width={48}
+                  height={48}
+                  alt={testimonials[activeIndex].author}
+                  className="w-14 h-14 rounded-full border-2 border-blue-500"
+                />
                 <div>
                   <p className="font-semibold text-lg">
                     {testimonials[activeIndex].author}
@@ -136,17 +135,28 @@ const Testimonials = () => {
           </div>
 
           {/* Metric */}
-          <div className="lg:col-span-5">
-            <div className="relative p-10 lg:p-14 rounded-3xl bg-secondary/50 border border-border">
-              <div className="text-center">
-                <span className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter gradient-text-accent">
+          <div className="lg:col-span-5 relative">
+            <div className="glow-border relative z-20 rounded-2xl p-8 lg:p-12 overflow-hidden aspect-square flex flex-col items-center justify-center shadow-2xl bg-white/5 dark:bg-slate-900/50 backdrop-blur-sm border border-white/10">
+              <div className="absolute inset-0 flex items-center justify-center metric-bg-text font-display font-extrabold text-slate-900 dark:text-white">
+                48
+              </div>
+              <div className="relative z-10 text-center space-y-2">
+                <div className="text-7xl lg:text-9xl font-display font-extrabold tracking-tighter text-[#3b82f6]">
                   {testimonials[activeIndex].metric}
-                </span>
-                <p className="text-lg text-muted-foreground mt-2">
+                </div>
+                <p className="text-sm font-bold tracking-[0.3em] uppercase text-[#3b82f6]">
                   {testimonials[activeIndex].metricLabel}
                 </p>
               </div>
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+                <div
+                  className="w-64 h-64 border border-primary rounded-full animate-ping"
+                  style={{ animationDuration: "4s" }}
+                ></div>
+                <div className="absolute w-48 h-48 border border-primary/40 rounded-full animate-pulse"></div>
+              </div>
             </div>
+            <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full z-10 pointer-events-none"></div>
           </div>
         </div>
 

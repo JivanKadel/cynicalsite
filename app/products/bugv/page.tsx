@@ -177,7 +177,7 @@ const Bugv = () => {
                     alt="Bugv Logo"
                   />
                 </span>
-                <h1 className="text-4xl md:text-5xl font-noto mt-4">Bugv</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mt-4">Bugv</h1>
               </div>
             </div>
 
@@ -229,7 +229,7 @@ const Bugv = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               How It Works
             </span>
-            <h2 className="text-3xl md:text-4xl font-noto mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               From launch to remediation
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -275,7 +275,7 @@ const Bugv = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Platform Features
             </span>
-            <h2 className="text-3xl md:text-4xl font-noto mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Enterprise-grade bug bounty
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -310,7 +310,7 @@ const Bugv = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Program Options
             </span>
-            <h2 className="text-3xl md:text-4xl font-noto mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Choose your approach
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -372,7 +372,7 @@ const Bugv = () => {
               <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
                 Proven Results
               </span>
-              <h2 className="text-3xl md:text-4xl font-noto mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Real vulnerabilities.
                 <span className="block text-muted-foreground">
                   Real impact.
@@ -430,7 +430,7 @@ const Bugv = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Integrations
             </span>
-            <h2 className="text-3xl md:text-4xl font-noto mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Fits into your workflow
             </h2>
             <p className="text-lg text-muted-foreground font-body">

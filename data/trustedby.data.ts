@@ -14,11 +14,11 @@ export const trustedBy = [
     image: "/brands/worldlink.svg",
     link: "https://worldlink.com.np",
   },
-  // {
-  //   name: "Mero Job",
-  //   image: "/brands/mero_job.svg",
-  //   link: "https://merojob.com",
-  // },
+  {
+    name: "Mero Job",
+    image: "/brands/mero_job.svg",
+    link: "https://merojob.com",
+  },
 
   // {
   //   name: "WorldBank",

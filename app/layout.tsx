@@ -4,6 +4,7 @@ import { Inter, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/NavBar";
 import Footer from "@/components/home/Footer";
+import { Suspense } from "react";
 
 const noto = Noto_Serif({
   variable: "--font-noto",
@@ -40,6 +41,9 @@ const aeonik = localFont({
       style: "bold",
     },
   ],
+  variable: "--font-aeonik",
+  display: "swap",
+  fallback: ["system-ui", "arial"],
 });
 
 export const metadata: Metadata = {
@@ -58,9 +62,11 @@ export default function RootLayout({
       className={`${noto.variable} ${inter.variable} antialiased ${aeonik.className}`}
     >
       <body>
-        <Navbar />
-        <div className="mt-16 lg:mt-20">{children}</div>
-        <Footer />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar />
+          <div className="mt-16 lg:mt-20">{children}</div>
+          <Footer />
+        </Suspense>
       </body>
     </html>
   );

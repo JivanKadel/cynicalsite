@@ -214,9 +214,9 @@ const CloudSecurity = () => {
               </span>
             </div>
 
-            <h1 className="font-noto text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
               Secure your cloud infrastructure
-              <span className="block text-muted-foreground">
+              <span className="block text-slate-500">
                 before threats emerge
               </span>
             </h1>
@@ -256,7 +256,7 @@ const CloudSecurity = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Capabilities
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Comprehensive cloud security coverage
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -294,7 +294,7 @@ const CloudSecurity = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Multi-Cloud Expertise
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Certified across all major clouds
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -341,7 +341,7 @@ const CloudSecurity = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Our Process
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Cloud-native security methodology
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
@@ -388,7 +388,7 @@ const CloudSecurity = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Why Cynical
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Enterprise cloud security, delivered
             </h2>
           </div>
@@ -422,7 +422,7 @@ const CloudSecurity = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Compliance
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Aligned with leading frameworks
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">

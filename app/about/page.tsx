@@ -208,9 +208,9 @@ const AboutUs = () => {
                   <span className="text-sm font-medium">About Cynical</span>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-noto tracking-tight text-balance">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance">
                   Securing the digital world
-                  <span className="block text-muted-foreground">
+                  <span className="block text-slate-500">
                     with elite expertise
                   </span>
                 </h1>
@@ -244,19 +244,17 @@ const AboutUs = () => {
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
                 <div>
                   <div className="text-2xl font-bold gradient-text">500+</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-slate-500">
                     Clients Protected
                   </div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold gradient-text">200+</div>
-                  <div className="text-sm text-muted-foreground">
-                    Team Members
-                  </div>
+                  <div className="text-sm text-slate-500">Team Members</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold gradient-text">6+</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="text-sm text-slate-500">
                     Years of Excellence
                   </div>
                 </div>
@@ -285,7 +283,7 @@ const AboutUs = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Why Choose Cynical
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               The Cynical difference
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -324,7 +322,7 @@ const AboutUs = () => {
               <span className="text-sm font-medium">Our Mission</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Making the digital world safer
             </h2>
 
@@ -370,7 +368,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
               Brands that trust our cybersecurity competence
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -403,7 +401,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
               Awards & Recognition
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -438,7 +436,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32 bg-secondary/20" id="our-team">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
               Meet our leadership team
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -613,7 +611,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
               Ready to secure your future?
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">

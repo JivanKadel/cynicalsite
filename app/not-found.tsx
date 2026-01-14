@@ -10,11 +10,11 @@ export default function NotFound() {
       <div className="flex flex-col items-center justify-center px-6 text-center space-y-8">
         {/* Animated 404 */}
         <div className="flex items-center space-x-4">
-          <h1 className="text-8xl tracking-tight font-noto">404</h1>
+          <h1 className="text-8xl tracking-tight font-aeonik font-bold">404</h1>
         </div>
 
         {/* Headline */}
-        <h2 className="text-2xl font-noto">Page Not Found</h2>
+        <h2 className="text-2xl font-aeonik font-bold">Page Not Found</h2>
         <p className="text-gray-400 max-w-lg">
           The resource you requested is unavailable or restricted under our
           security policy.

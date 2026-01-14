@@ -204,9 +204,9 @@ const ApplicationSecurity = () => {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-noto mb-6 text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
               Secure your applications
-              <span className="block text-muted-foreground">
+              <span className="block text-slate-500">
                 before attackers exploit them
               </span>
             </h1>
@@ -255,7 +255,7 @@ const ApplicationSecurity = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Capabilities
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Full-spectrum application security
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -293,7 +293,7 @@ const ApplicationSecurity = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Testing Approaches
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Tailored testing methodologies
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -340,7 +340,7 @@ const ApplicationSecurity = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Our Process
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Rigorous methodology, proven results
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
@@ -384,7 +384,7 @@ const ApplicationSecurity = () => {
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Why Cynical
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Enterprise-grade security, delivered
             </h2>
           </div>
@@ -418,7 +418,7 @@ const ApplicationSecurity = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Coverage
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-noto tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Complete OWASP Top 10 coverage
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">

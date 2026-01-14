@@ -111,7 +111,7 @@ export default function Solutions() {
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             Services
           </span>
-          <h2 className="text-2xl sm:text-5xl md:text-7xl font-noto">
+          <h2 className="text-2xl sm:text-5xl md:text-7xl font-bold">
             We break in.
             <span className="block gradient-text-accent">
               You fix the gaps.
@@ -140,7 +140,7 @@ export default function Solutions() {
 
         <div className="rounded-2xl border border-border/30 bg-secondary/20 p-8 lg:p-12">
           <div className="text-center mb-10">
-            <h3 className="text-xl md:text-3xl font-noto mb-4">
+            <h3 className="text-xl md:text-3xl font-bold mb-4">
               Technical Capabilities
             </h3>
             <p className="text-muted-foreground font-body max-w-2xl mx-auto">

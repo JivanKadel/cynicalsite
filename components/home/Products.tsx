@@ -56,7 +56,7 @@ const Products = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             Products
           </span>
-          <h2 className="text-2xl sm:text-5xl md:text-7xl font-noto">
+          <h2 className="text-2xl sm:text-5xl md:text-7xl font-bold">
             Offense-first platforms.
             <span className="block gradient-text-accent">
               Defense-grade results.
