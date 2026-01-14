@@ -18,10 +18,28 @@ const inter = Inter({
 });
 
 const aeonik = localFont({
-  src: "./font/Aeonik-Light.ttf",
-  variable: "--font-aeonik",
-  display: "swap",
-  fallback: ["system-ui", "arial"],
+  // src: "./font/Aeonik-Light.ttf",
+  // variable: "--font-aeonik",
+  // display: "swap",
+  // fallback: ["system-ui", "arial"],
+
+  src: [
+    {
+      path: "./font/Aeonik-Light.ttf",
+      weight: "300",
+      style: "light",
+    },
+    {
+      path: "./font/Aeonik-Medium.ttf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "./font/Aeonik-Bold.ttf",
+      weight: "700",
+      style: "bold",
+    },
+  ],
 });
 
 export const metadata: Metadata = {

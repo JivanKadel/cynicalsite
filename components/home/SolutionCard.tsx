@@ -20,7 +20,7 @@ export default function SolutionCard({
   return (
     <div
       key={title}
-      className="group relative rounded-2xl border-2 border-border bg-card/50 backdrop-blur-sm p-8 hover:bg-card/80 hover:border-border transition-all duration-300 animate-fade-up"
+      className="group relative rounded-2xl border-2 border-border/30 bg-card/50 backdrop-blur-sm p-8 hover:bg-card/60 hover:border-border/80 transition-all duration-300 animate-fade-up"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div

@@ -64,9 +64,10 @@ const CaseStudies = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {caseStudies.map((study, index) => (
               <Link
+                id={study.link ? study.link.split("#")[1] : ""}
                 key={index}
                 href={study.link || "#"}
-                className="relative group block p-8 border-2 border-border rounded-2xl transition-all duration-300"
+                className="relative group block p-8 border-2 border-border/30 rounded-2xl transition-all duration-300"
               >
                 <div
                   className={`absolute rounded-2xl inset-0 bg-linear-to-br ${study.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}

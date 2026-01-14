@@ -193,16 +193,16 @@ const Vigile = () => {
                 </p>
               </div>
 
-              <div className="relative col-span-3 transform-[translate(5%)_scale(1.25)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)]">
-                <ParallaxImage>
-                  <Image
-                    src="/vigile.webp"
-                    width={1920}
-                    height={924}
-                    alt="Vigile.AI Logo"
-                    className="block"
-                  />
-                </ParallaxImage>
+              <div className="relative col-span-3 transform-[translateY(25%)_translateX(30%)_scale(1.7)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)]">
+                {/* <ParallaxImage> */}
+                <Image
+                  src="/vigile.webp"
+                  width={1920}
+                  height={924}
+                  alt="Vigile.AI Logo"
+                  className="block"
+                />
+                {/* </ParallaxImage> */}
 
                 <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/80" />
               </div>

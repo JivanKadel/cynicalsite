@@ -1,44 +1,7 @@
+import { trustedBy } from "@/data/trustedby.data";
 import { TrustedByImage } from "./TrustedByImage";
 
 export default function HeroSection() {
-  const trustedBy = [
-    {
-      name: "E-Sewa",
-      image: "/brands/esewa.png",
-      link: "https://esewa.com.np",
-    },
-    {
-      name: "Himalayan Life Insurance",
-      image: "/brands/himalayan_life_insurance.png",
-      link: "https://himalayanlife.com.np",
-    },
-    {
-      name: "WorldLink",
-      image: "/brands/worldlink.svg",
-      link: "https://worldlink.com.np",
-    },
-    // {
-    //   name: "Mero Job",
-    //   image: "/brands/mero_job.svg",
-    //   link: "https://merojob.com",
-    // },
-    {
-      name: "FonePay",
-      image: "/brands/fonepay.webp",
-      link: "https://fonepay.com",
-    },
-    // {
-    //   name: "WorldBank",
-    //   image: "/brands/worldbank.svg",
-    //   link: "https://worldbank.org",
-    // },
-    {
-      name: "Ncell",
-      image: "/brands/ncell.svg",
-      link: "https://ncell.com",
-    },
-  ];
-
   return (
     <section className="container mx-auto relative z-10 pt-4 md:pt-6 pb-8">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8">
@@ -48,12 +11,11 @@ export default function HeroSection() {
             47 critical vulnerabilities found this month
           </span>
         </div>
-        <h1 className="font-aeonik  leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%]">
-          {/* Offensive  */}
+        {/* class="text-[2.7rem] font-light leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] font-aeonik max-w-2xl xl:max-w-4xl text-balance text-center md:text-left" */}
+        <h1 className="text-[2.7rem] font-aeonik leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
           <span className="text-[#BBDEF2]">Offensive</span> Security
           <br />
           <span>Built by Attackers.</span>
-          {/* Breakthrough AI from Data to Deployment */}
         </h1>
 
         <p className="my-6 font-sans text-base text-white/80 sm:px-0 font-normal lg:my-[22px] lg:text-lg md:max-w-[780px] mx-auto text-balance text-center">

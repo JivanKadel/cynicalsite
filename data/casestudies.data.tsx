@@ -21,7 +21,7 @@ export const caseStudies = [
     quote:
       "Their red team bypassed our entire security stack in 4 hours. Our MSSP never found these issues.",
     gradient: "from-violet-500/20 to-blue-500/10",
-    link: "/case-studies/global-investment-bank",
+    link: "/case-studies/#global-investment-bank",
   },
   {
     logo: <ShoppingCart className="w-8 h-8" />,
@@ -36,6 +36,7 @@ export const caseStudies = [
     quote:
       "Bugv researchers found IDOR flaws affecting 4M customer records. Our annual pen test missed them.",
     gradient: "from-emerald-500/20 to-cyan-500/10",
+    link: "/case-studies/#e-commerce-platform",
   },
   {
     logo: <Plane className="w-8 h-8" />,
@@ -50,6 +51,7 @@ export const caseStudies = [
     quote:
       "We had 12,000 internet-facing assets we didn't know existed. Vigile found them. So could attackers.",
     gradient: "from-orange-500/20 to-red-500/10",
+    link: "/case-studies/#national-airline-carrier",
   },
   {
     logo: <HeartPulse className="w-8 h-8" />,
@@ -64,6 +66,7 @@ export const caseStudies = [
     quote:
       "They found a path to PHI access through our AWS environment. Previous auditors cleared us.",
     gradient: "from-pink-500/20 to-purple-500/10",
+    link: "/case-studies/#healthcare-technology-provider",
   },
   {
     logo: <Cpu className="w-8 h-8" />,
@@ -78,6 +81,7 @@ export const caseStudies = [
     quote:
       "They extracted our proprietary model weights through the API. We fixed it before launch.",
     gradient: "from-blue-500/20 to-indigo-500/10",
+    link: "/case-studies/#ai-infrastructure-startup",
   },
   {
     logo: <Building2 className="w-8 h-8" />,
@@ -92,5 +96,6 @@ export const caseStudies = [
     quote:
       "They achieved domain admin with zero detection. Our SOC was watching the wrong things.",
     gradient: "from-slate-500/20 to-gray-500/10",
+    link: "/case-studies/#federal-government-agency",
   },
 ];

@@ -202,11 +202,19 @@ export default function Navbar() {
           </div>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Button className="bg-border text-foreground hover:outline-2 hover:outline-solid hover:outline-foreground/40 hover:bg-background group transition-all">
-              Schedule a Call
-              <ArrowRight className="w-4 h-4 transform transition-transform duration-600 group-hover:translate-x-1" />
-            </Button>
+          <div className="hidden lg:block">
+            <Link
+              href={""}
+              className="bg-primary text-background rounded-[8px] group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2"
+            >
+              <div className="font-medium text-sm font-inter">
+                Schedule a Call
+                <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-inter">
+                  →
+                </span>
+              </div>
+              {/* <ArrowRight className="w-4 h-4 transform transition-transform duration-600 group-hover:translate-x-1" /> */}
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

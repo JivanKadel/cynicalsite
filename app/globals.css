@@ -123,6 +123,10 @@ h2,
 h3 {
   font-family: var(--font-aeonik);
 }
+h1,
+h2 {
+  font-weight: 300;
+}
 
 p {
   font-family: var(--font-inter);

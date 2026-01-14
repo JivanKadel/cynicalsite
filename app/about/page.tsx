@@ -1,4 +1,6 @@
+import { TrustedByImage } from "@/components/home/TrustedByImage";
 import { Button } from "@/components/ui/button";
+import { trustedBy } from "@/data/trustedby.data";
 import {
   Users,
   Award,
@@ -118,18 +120,17 @@ const AboutUs = () => {
     },
     {
       name: "Ravi Lamgade",
-      role: "Human Resources Manager",
+      role: "Founded & Office Admin",
       image: "/people/mr_ravi.jpeg",
-      bio: "Former Google security architect and Stanford PhD. Leads our innovation lab developing next-generation security technologies.",
+      bio: "Co-founder with a passion for cybersecurity and business development. Drives company growth and strategic partnerships.",
       social: {
         linkedin: "https://www.linkedin.com/in/ravi-lamgade-3422ab190/",
-        twitter: "https://twitter.com/david_chen",
       },
     },
     {
       name: "Mr. Ram",
       role: "Sales and Marketing Head",
-      image: "/people/mr_naresh.png",
+      image: "/people/placeholder_person.jpg",
       bio: "HR executive with 15+ years building high-performance security teams. Champions our culture of excellence and continuous learning.",
       social: {
         linkedin: "https://linkedin.com/in/maria-rodriguez",
@@ -138,7 +139,7 @@ const AboutUs = () => {
     {
       name: "Shyam",
       role: "VP of Sales & Marketing",
-      image: "/people/mr_naresh.png",
+      image: "/people/placeholder_person.jpg",
       bio: "Cybersecurity sales veteran who has scaled multiple security companies. Drives our global expansion and client relationships.",
       social: {
         linkedin: "https://linkedin.com/in/james-thompson",
@@ -148,7 +149,7 @@ const AboutUs = () => {
     {
       name: "Hari",
       role: "Chief Security Officer",
-      image: "/people/mr_naresh.png",
+      image: "/people/placeholder_person.jpg",
       bio: "Former FBI cybercrime investigator and forensic expert. Leads our security research and incident response teams.",
       social: {
         linkedin: "https://linkedin.com/in/emily-watson",
@@ -157,7 +158,7 @@ const AboutUs = () => {
     {
       name: "Sushil",
       role: "Head of Development",
-      image: "/people/mr_naresh.png",
+      image: "/people/placeholder_person.jpg",
       bio: "Full-stack development expert with focus on security tooling. Manages our engineering teams building cutting-edge security platforms.",
       social: {
         linkedin: "https://linkedin.com/in/michael-park",
@@ -263,15 +264,15 @@ const AboutUs = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden bg-linear-to-br from-secondary to-background">
-                <Image
-                  src={"/about/cynical_hero.jpg"}
-                  width={800}
-                  height={600}
-                  className="flex"
-                  alt="Cynical Logo on a dark background"
-                />
-              </div>
+              {/* <div className="aspect-square rounded-2xl overflow-hidden bg-linear-to-br from-secondary to-background"> */}
+              <Image
+                src={"/about/cynical_hero.jpg"}
+                width={800}
+                height={600}
+                className="flex"
+                alt="Cynical Logo on a dark background"
+              />
+              {/* </div> */}
             </div>
           </div>
         </div>
@@ -378,21 +379,23 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {trustedBrands.map((brand, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center group"
-              >
-                <Image
-                  src={brand.logo}
-                  width={100}
-                  height={40}
-                  alt={brand.name}
-                  className="group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
+          <div className="flex flex-wrap justify-center items-end gap-x-12 gap-y-6">
+            {trustedBy.map((brand) => (
+              <TrustedByImage
+                key={brand.name}
+                name={brand.name}
+                logo={brand.image}
+                link={brand.link}
+              />
             ))}
+
+            <TrustedByImage
+              width={50}
+              height={50}
+              name="Nagarik App"
+              logo="/brands/nagarik_app.png"
+              link="https://nagarikapp.com"
+            />
           </div>
         </div>
       </section>

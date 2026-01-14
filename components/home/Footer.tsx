@@ -64,33 +64,59 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="px-2 border-t border-border bg-secondary/20">
+    <footer>
       {/* Main Footer */}
-      <div className="container mx-auto py-16 lg:py-20">
+      <div className="container mx-auto py-16 lg:py-20 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 content-start">
           {/* Brand Column - Takes 2 columns on large screens */}
-          <div className="col-span-1">
-            <Link href="/" className="text-2xl font-bold mb-6 block">
+
+          {/* Link Columns */}
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category}>
+              <h3 className="mb-4 text-xs font-medium tracking-widest uppercase text-neutral-400 sm:text-sm md:mb-6">
+                {category}
+              </h3>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li
+                    key={link.label}
+                    className="flex mb-3 text-xs md:text-sm md:mb-4"
+                  >
+                    <a
+                      href={link.href}
+                      className="font-inter font-normal text-neutral-400 hover:text-white"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          <div className="col-span-1 self-start">
+            <Link href="/" className="text-2xl font-bold mb-2 block md:-mt-8">
               <Image
                 src={"/logo.svg"}
                 alt="Cynical Tech Logo"
                 width={190}
                 height={90}
-                // objectFit="cover"
               />
             </Link>
             <div className="space-y-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>info@cynicaltechnology.com</span>
+                <span className="font-inter">info@cynicaltechnology.com</span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+977-01-4530730</span>
+                <span className="font-inter">+977-01-4530730</span>
               </div>
               <div className="flex items-center gap-2">
                 <MapPin className="w-8 h-8" />
-                <span>Sharada Bhawan, Maitidevi Marg, Kathmandu, Nepal</span>
+                <span className="font-inter">
+                  Sharada Bhawan, Maitidevi Marg, Kathmandu, Nepal
+                </span>
               </div>
             </div>
 
@@ -109,37 +135,22 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          {/* Link Columns */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="font-semibold text-sm mb-4">{category}</h4>
-              <ul className="space-y-3">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-base text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border">
-        <div className="container mx-auto px-6 py-6">
+      <div className="pb-24 md:mx-20 border-t border-border">
+        <div className="container mx-auto py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="w-2 h-2 rounded-full bg-green-500" />
-              <span>© {new Date().getFullYear()} Cynical Technology, Inc.</span>
+              {/* <span className="w-2 h-2 rounded-full bg-green-500" /> */}
+              <span className="font-inter">
+                Copyright © {new Date().getFullYear()} Cynical Technology. All
+                Rights Reserved.
+              </span>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-inter">
               <a
                 href="/privacy"
                 className="hover:text-foreground transition-colors"
