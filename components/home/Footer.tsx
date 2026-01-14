@@ -76,7 +76,7 @@ const Footer = () => {
                 alt="Cynical Tech Logo"
                 width={190}
                 height={90}
-                objectFit="cover"
+                // objectFit="cover"
               />
             </Link>
             <div className="space-y-3 text-sm text-muted-foreground">
