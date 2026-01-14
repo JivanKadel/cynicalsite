@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Inter, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/NavBar";
@@ -16,6 +17,13 @@ const inter = Inter({
   display: "swap",
 });
 
+const aeonik = localFont({
+  src: "./font/Aeonik-Light.ttf",
+  variable: "--font-aeonik",
+  display: "swap",
+  fallback: ["system-ui", "arial"],
+});
+
 export const metadata: Metadata = {
   title: "Cynical Technology - Revolutionizing and Empowering Cybersecurity",
   description: "Securing your digital space",
@@ -29,7 +37,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${noto.variable} ${inter.variable} antialiased`}
+      className={`${noto.variable} ${inter.variable} antialiased ${aeonik.className}`}
     >
       <body>
         <Navbar />

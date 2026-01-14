@@ -118,6 +118,16 @@
     0 32px 64px -16px transparent;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-aeonik);
+}
+
+p {
+  font-family: var(--font-inter);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

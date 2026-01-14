@@ -132,7 +132,6 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
               src={"/logo.svg"}
@@ -144,18 +143,14 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:block">
-            <NavigationMenu className="opacity-99">
+            <NavigationMenu className="opacity-99 border-none outline-none shadow-none">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                  <NavigationMenuContent className="border-8 border-background">
-                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
+                  <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
+                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-1">
                       {products.map((item) => (
-                        <NavItemCard
-                          key={item.label}
-                          {...item}
-                          className="hover:bg-background border border-border/50"
-                        />
+                        <NavItemCard key={item.label} {...item} />
                       ))}
                     </div>
                   </NavigationMenuContent>
@@ -163,14 +158,10 @@ export default function Navbar() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-                  <NavigationMenuContent className="border-8 border-background blur-xsm">
+                  <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
                     <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                       {solutions.map((item) => (
-                        <NavItemCard
-                          key={item.label}
-                          {...item}
-                          className="hover:bg-background border border-border/50"
-                        />
+                        <NavItemCard key={item.label} {...item} />
                       ))}
                     </div>
                   </NavigationMenuContent>
@@ -179,14 +170,10 @@ export default function Navbar() {
                 {/* Resources */}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                  <NavigationMenuContent className="border-8 border-background blur-xsm">
+                  <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
                     <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                       {resources.map((item) => (
-                        <NavItemCard
-                          key={item.label}
-                          {...item}
-                          className="hover:bg-background border border-border/50"
-                        />
+                        <NavItemCard key={item.label} {...item} />
                       ))}
                     </div>
                   </NavigationMenuContent>
@@ -194,16 +181,21 @@ export default function Navbar() {
 
                 {/* Pricing */}
                 <NavigationMenuItem>
-                  <Link href="/pricing" className="bg-transparent">
-                    <NavigationMenuLink>Pricing</NavigationMenuLink>
-                  </Link>
+                  <NavigationMenuLink
+                    href="/pricing"
+                    className="bg-transparent px-4"
+                  >
+                    Pricing
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
-
                 {/* Contact */}
                 <NavigationMenuItem>
-                  <Link href="/contact">
-                    <NavigationMenuLink>Contact</NavigationMenuLink>
-                  </Link>
+                  <NavigationMenuLink
+                    href="/contact"
+                    className="bg-transparent px-4"
+                  >
+                    Contact
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -283,17 +275,16 @@ function NavItemCard({
   return (
     <Link
       href={href}
-      className={cn(
-        "flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/50 transition-colors group",
-        className
-      )}
+      className={cn("flex items-start gap-3 p-3 group", className)}
     >
-      <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0 group-hover:bg-foreground/10 transition-colors">
-        <Icon className="w-5 h-5 text-foreground/70" />
+      <div className="w-10 h-10 flex items-center justify-center self-center shrink-0">
+        <Icon className="w-6 h-6 text-foreground/70" />
       </div>
       <div>
-        <p className="font-medium text-sm">{label}</p>
-        <p className="text-xs text-muted-foreground">{description}</p>
+        <p className="font-medium text-foreground/70 group-hover:text-foreground/90">
+          {label}
+        </p>
+        <p className="text-muted-foreground text-sm">{description}</p>
       </div>
     </Link>
   );

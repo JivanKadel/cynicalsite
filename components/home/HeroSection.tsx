@@ -43,13 +43,15 @@ export default function HeroSection() {
             47 critical vulnerabilities found this month
           </span>
         </div>
-        <h1 className="text-3xl sm:text-5xl md:text-[80px] font-noto">
-          Offensive Security
+        <h1 className="font-aeonik  leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%]">
+          {/* Offensive  */}
+          <span className="text-[#BBDEF2]">Offensive</span> Security
           <br />
           <span>Built by Attackers.</span>
+          {/* Breakthrough AI from Data to Deployment */}
         </h1>
 
-        <p className="text-lg sm:text-xl font-extralight text-muted-foreground max-w-2xl mx-auto">
+        <p className="my-6 font-sans text-base text-white/80 sm:px-0 font-normal lg:my-[22px] lg:text-lg md:max-w-[780px] mx-auto text-balance text-center">
           We found them. Our team of former red teamer, exploit developers, and
           threat researchers test your systems the way real attackers do. No
           checklists. No compliance theater.
