@@ -96,7 +96,8 @@ export default function CaseStudies() {
             return study.link ? (
               <Link
                 key={study.company}
-                href={`/resources${study.link}`}
+                // href={`/resources${study.link}`}
+                href="/resources/case-studies"
                 className={className}
                 style={style}
               >
