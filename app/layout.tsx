@@ -6,6 +6,8 @@ import Navbar from "@/components/layout/NavBar";
 import Footer from "@/components/home/Footer";
 import { LoadingProvider } from "@/context/LoadingProvider";
 import LoadingOverlay from "@/components/loading/LoadingOverlay";
+import LayoutClient from "./layout-client";
+// import { ProgressProvider } from "@bprogress/next/app";
 
 const noto = Noto_Serif({
   variable: "--font-noto",
@@ -58,14 +60,16 @@ export default function RootLayout({
       className={`${noto.variable} ${inter.variable} ${aeonik.className} antialiased`}
     >
       <body>
-        <LoadingProvider>
-          <LoadingOverlay />
+        {/* <LoadingProvider>
+          <LoadingOverlay /> */}
+        <LayoutClient>
           <div>
             <Navbar />
             <div className="mt-16 lg:mt-20">{children}</div>
             <Footer />
           </div>
-        </LoadingProvider>
+        </LayoutClient>
+        {/* </LoadingProvider> */}
       </body>
     </html>
   );
