@@ -5,9 +5,10 @@ import { ProgressProvider } from "@bprogress/next/app";
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <ProgressProvider
-      height="4px"
-      color="#fffd00"
-      options={{ showSpinner: false }}
+      height="5px"
+      color="#675DD8"
+      options={{ showSpinner: true }}
+      spinnerPosition="top-left"
       shallowRouting
     >
       {children}
