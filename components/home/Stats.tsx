@@ -16,12 +16,10 @@ const Stats = () => {
               className="bg-background p-8 lg:p-12 text-center animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl sm:text-5xl font-bold mb-4 gradient-text">
+              <div className="text-4xl sm:text-5xl font-bold mb-4 text-blue">
                 {stat.value}
               </div>
-              <p className="text-sm text-muted-foreground font-body">
-                {stat.label}
-              </p>
+              <p className="text-muted-foreground">{stat.label}</p>
             </div>
           ))}
         </div>

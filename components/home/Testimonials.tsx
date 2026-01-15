@@ -110,7 +110,7 @@ const Testimonials = () => {
               <span className="absolute -top-12 -left-6 text-8xl font-serif text-primary opacity-20 select-none">
                 “
               </span>
-              <blockquote className="text-2xl md:text-3xl font-normal relative z-10 font-aeonik">
+              <blockquote className="text-2xl md:text-3xl text-foreground/70 relative z-10 font-aeonik">
                 {testimonials[activeIndex].quote}
               </blockquote>
               {/* Author */}
@@ -137,14 +137,11 @@ const Testimonials = () => {
           {/* Metric */}
           <div className="lg:col-span-5 relative">
             <div className="glow-border relative z-20 rounded-2xl p-8 lg:p-12 overflow-hidden aspect-square flex flex-col items-center justify-center shadow-2xl bg-white/5 dark:bg-slate-900/50 backdrop-blur-sm border border-white/10">
-              <div className="absolute inset-0 flex items-center justify-center metric-bg-text font-display font-extrabold text-slate-900 dark:text-white">
-                48
-              </div>
               <div className="relative z-10 text-center space-y-2">
-                <div className="text-7xl lg:text-9xl font-display font-extrabold tracking-tighter text-[#3b82f6]">
+                <div className="text-7xl lg:text-9xl font-display font-extrabold tracking-tighter text-blue">
                   {testimonials[activeIndex].metric}
                 </div>
-                <p className="text-sm font-bold tracking-[0.3em] uppercase text-[#3b82f6]">
+                <p className="text-sm font-bold tracking-[0.3em] uppercase text-blue">
                   {testimonials[activeIndex].metricLabel}
                 </p>
               </div>

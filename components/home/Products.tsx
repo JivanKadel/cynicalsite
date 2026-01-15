@@ -15,6 +15,7 @@ const Products = () => {
       ],
       stats: { value: "47", label: "Avg criticals per engagement" },
       cta: "See Sample Findings",
+      gradient: "from-violet-500/20 to-blue-500/10",
     },
     {
       icon: "/products/vigile_logo.png",
@@ -29,9 +30,10 @@ const Products = () => {
       ],
       stats: { value: "12K", label: "Avg assets discovered" },
       cta: "Run Free Exposure Scan",
+      gradient: "from-emerald-500/20 to-cyan-500/10",
     },
     {
-      icon: "logo.svg",
+      icon: "/products/vigile_logo.png",
       name: "Falcon",
       tagline: "Continuous Security Monitoring",
       description:
@@ -43,6 +45,7 @@ const Products = () => {
       ],
       stats: { value: "<4h", label: "Mean time to detect" },
       cta: "Start Free Trial",
+      gradient: "from-orange-500/20 to-red-500/10",
     },
   ];
 
@@ -80,6 +83,7 @@ const Products = () => {
               stats={product.stats}
               features={product.features}
               cta={product.cta}
+              gradient={product.gradient}
             />
           ))}
         </div>
@@ -92,7 +96,7 @@ const Products = () => {
             { value: "24/7", label: "Active threat monitoring" },
           ].map((stat) => (
             <div key={stat.label} className="text-center lg:text-left">
-              <p className="text-3xl lg:text-4xl font-bold mb-1">
+              <p className="text-3xl lg:text-4xl font-bold mb-1 text-blue">
                 {stat.value}
               </p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>

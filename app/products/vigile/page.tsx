@@ -26,9 +26,10 @@ import {
   Workflow,
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
-import ParallaxImage from "@/components/image/ParallaxImage";
+// import ParallaxImage from "@/components/image/ParallaxImage";
+import DataFlow from "./DataFlow";
 
 const Vigile = () => {
   const stats = [
@@ -164,13 +165,6 @@ const Vigile = () => {
 
         <div className="container mx-auto px-6 relative">
           <div>
-            {/* <Link
-              href="/#products"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-            >
-              ← Back to Products
-            </Link> */}
-
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
               <div className="col-span-2 flex flex-col gap-4">
                 <span className="text-sm text-muted-foreground uppercase tracking-widest">
@@ -193,8 +187,7 @@ const Vigile = () => {
                 </p>
               </div>
 
-              <div className="relative col-span-3 transform-[translateY(25%)_translateX(30%)_scale(1.7)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)]">
-                {/* <ParallaxImage> */}
+              <div className="relative col-span-3 transform-[translateY(25%)_translateX(30%)_scale(1.7)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)] xl:ml-8">
                 <Image
                   src="/vigile.webp"
                   width={1920}
@@ -202,8 +195,6 @@ const Vigile = () => {
                   alt="Vigile.AI Logo"
                   className="block"
                 />
-                {/* </ParallaxImage> */}
-
                 <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/80" />
               </div>
             </div>
@@ -216,8 +207,8 @@ const Vigile = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="w-12 h-12 rounded-xl bg-background border border-border/50 flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-6 h-6 text-foreground/70" />
+                <div className="w-12 h-12 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-6 h-6 text-blue/70" />
                 </div>
                 <p className="text-3xl md:text-4xl font-bold mb-1">
                   {stat.value}
@@ -229,8 +220,10 @@ const Vigile = () => {
         </div>
       </section>
 
+      <DataFlow />
+
       {/* Outlook Integration - Main Focus Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="pb-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-b from-background via-secondary/20 to-background" />
 
         <div className="container mx-auto px-6 relative">
@@ -307,8 +300,8 @@ const Vigile = () => {
 
                 {/* Office 365 Logo Representation */}
                 <div className="flex items-center justify-center mb-8">
-                  <div className="w-20 h-20 rounded-2xl bg-foreground/10 border border-border flex items-center justify-center">
-                    <Mail className="w-10 h-10 text-foreground" />
+                  <div className="w-20 h-20 rounded-2xl bg-cyan-500/10 border border-border flex items-center justify-center">
+                    <Mail className="w-10 h-10 text-cyan-500/70" />
                   </div>
                   <div className="mx-4 flex items-center gap-1">
                     <Workflow className="w-6 h-6 text-muted-foreground" />
@@ -316,8 +309,8 @@ const Vigile = () => {
                     <div className="w-2 h-2 rounded-full bg-foreground animate-pulse" />
                     <div className="w-8 h-px bg-border" />
                   </div>
-                  <div className="w-20 h-20 rounded-2xl bg-foreground/10 border border-border flex items-center justify-center">
-                    <Eye className="w-10 h-10 text-foreground" />
+                  <div className="w-20 h-20 rounded-2xl bg-cyan-500/10 border border-border flex items-center justify-center">
+                    <Eye className="w-10 h-10 text-cyan-500/70" />
                   </div>
                 </div>
 

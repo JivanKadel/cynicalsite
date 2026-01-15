@@ -32,6 +32,7 @@ export default function Solutions() {
         "Auth/session attacks",
       ],
       gradient: "from-violet-500/20 to-blue-500/10",
+      iconColor: "text-blue-500",
     },
     {
       icon: Cloud,
@@ -40,6 +41,7 @@ export default function Solutions() {
         "Privilege escalation paths, misconfigured IAM policies, and lateral movement opportunities across AWS, GCP, and Azure environments.",
       features: ["IAM policy review", "Container escapes", "Secrets exposure"],
       gradient: "from-emerald-500/20 to-cyan-500/10",
+      iconColor: "text-cyan-500",
     },
     {
       icon: Network,
@@ -48,6 +50,7 @@ export default function Solutions() {
         "Full-scope adversary simulation. We compromise your environment the way APT groups would—phishing, initial access, persistence, and data exfiltration.",
       features: ["Initial access", "Persistence", "Objective completion"],
       gradient: "from-orange-500/20 to-red-500/10",
+      iconColor: "text-red-500",
     },
     {
       icon: AlertTriangle,
@@ -60,6 +63,7 @@ export default function Solutions() {
         "Legal-ready reports",
       ],
       gradient: "from-pink-500/20 to-purple-500/10",
+      iconColor: "text-purple-500",
     },
     {
       icon: Bot,
@@ -68,6 +72,7 @@ export default function Solutions() {
         "Adversarial attacks on your models: prompt injection, training data extraction, model inversion, and API abuse testing for LLMs and ML systems.",
       features: ["Prompt injection", "Model extraction", "Data poisoning"],
       gradient: "from-blue-500/20 to-indigo-500/10",
+      iconColor: "text-indigo-500",
     },
     {
       icon: Search,
@@ -80,6 +85,7 @@ export default function Solutions() {
         "Brand impersonation",
       ],
       gradient: "from-slate-500/20 to-gray-500/10",
+      iconColor: "text-green-500",
     },
   ];
 
@@ -134,13 +140,14 @@ export default function Solutions() {
               features={solution.features}
               gradient={solution.gradient}
               index={index}
+              iconColor={solution.iconColor}
             />
           ))}
         </div>
 
         <div className="rounded-2xl border border-border/30 bg-secondary/20 p-8 lg:p-12">
           <div className="text-center mb-10">
-            <h3 className="text-xl md:text-3xl font-bold mb-4">
+            <h3 className="text-2xl md:text-5xl font-bold mb-4">
               Technical Capabilities
             </h3>
             <p className="text-muted-foreground font-body max-w-2xl mx-auto">
@@ -153,7 +160,7 @@ export default function Solutions() {
             {capabilities.map((capability, index) => (
               <div
                 key={capability.text}
-                className="flex items-center gap-3 p-4 rounded-xl border border-border/30 bg-secondary/40 hover:bg-background/90 hover:border-border/50 transition-all duration-300"
+                className="flex items-center gap-3 p-4 rounded-xl bg-card hover:scale-102 transition-transform"
                 style={{ animationDelay: `${index * 0.03}s` }}
               >
                 <capability.icon className="w-4 h-4 text-foreground/70 shrink-0" />
@@ -166,27 +173,6 @@ export default function Solutions() {
             <Button variant="outline" className="group">
               Download Service Catalog
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-        </div>
-
-        <div className="mt-16 relative rounded-2xl overflow-hidden border border-border/30">
-          <div className="absolute inset-0 bg-secondary/30" />
-
-          <div className="relative p-8 lg:p-12 flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-4">
-              <div>
-                <h4 className="text-xl font-semibold">
-                  Don&apos;t know your exposure?
-                </h4>
-                <p className="text-muted-foreground text-sm">
-                  Get a free attack surface reconnaissance report.
-                </p>
-              </div>
-            </div>
-            <Button className="bg-foreground text-background hover:bg-foreground/90">
-              Request Free Recon Report
-              <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
           </div>
         </div>

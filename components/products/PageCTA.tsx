@@ -51,7 +51,7 @@ const PageCTA = ({
           </div>
 
           <div className="relative z-10 p-12 lg:p-20">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-5xl mx-auto text-center">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -59,12 +59,12 @@ const PageCTA = ({
               </div>
 
               {/* Headline */}
-              <h2 className="text-display-md lg:text-display-xl font-bold mb-6">
+              <h2 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
                 {headline}
-                <span className="block gradient-text">{highlightedText}</span>
+                <span className="block text-blue">{highlightedText}</span>
               </h2>
 
-              <p className="text-lg text-muted-foreground mb-10 font-body max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground mb-10 mt-4 font-body max-w-2xl mx-auto">
                 {description}
               </p>
 
@@ -105,24 +105,25 @@ const PageCTA = ({
 
               {/* Trust Indicators */}
               {showTrustIndicators && (
-                <div className="mt-12 pt-8 border-t border-border/30">
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Trusted by security teams at
+                <div className="mt-16 pt-16 border-t border-border/30">
+                  <p className="text-sm text-muted-foreground text-center mb-12 uppercase tracking-widest">
+                    Trusted By Critical Industries
                   </p>
-                  <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4">
+                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16 opacity-50">
                     {[
                       "Banks",
-                      "Defense Contractors",
-                      "Healthcare Systems",
+                      "Governments",
+                      "Healthcare",
+                      "Defense",
                       "Critical Infrastructure",
-                      "Government",
-                    ].map((trust) => (
-                      <span
-                        key={trust}
-                        className="text-sm font-medium text-muted-foreground/60"
+                      "Technology",
+                    ].map((name) => (
+                      <div
+                        key={name}
+                        className="text-base font-semibold tracking-wide uppercase"
                       >
-                        {trust}
-                      </span>
+                        {name}
+                      </div>
                     ))}
                   </div>
                 </div>

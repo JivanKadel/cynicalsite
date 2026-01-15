@@ -6,10 +6,11 @@
 :root {
   --background: oklch(0 0 0);
   --foreground: oklch(1 0 0);
-  --card: oklch(0.14 0 0);
+  --card: #0d0d0e;
   --card-foreground: oklch(1 0 0);
   --popover: oklch(0.18 0 0);
   --popover-foreground: oklch(1 0 0);
+  --blue: #3b82f6;
   --primary: oklch(1 0 0);
   --primary-foreground: oklch(0 0 0);
   --secondary: #141516;
@@ -66,6 +67,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-blue: var(--blue);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -132,6 +134,10 @@ h2 {
 
 p {
   font-family: var(--font-inter);
+}
+button,
+a {
+  cursor: pointer;
 }
 
 @layer base {

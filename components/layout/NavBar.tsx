@@ -11,7 +11,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import {
   Menu,
@@ -27,7 +26,6 @@ import {
   FileText,
   BookOpen,
   ChevronDown,
-  ArrowRight,
   Infinity,
   MessageCircleQuestionMark,
   BriefcaseBusiness,
@@ -35,9 +33,12 @@ import {
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { ScheduleCallDialog } from "../contact/SchedulDialog";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const products = [
     {
@@ -129,139 +130,149 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <Image
-              src={"/logo.svg"}
-              alt="Cynical Tech Logo"
-              width={190}
-              height={90}
-            />
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <NavigationMenu className="opacity-99 border-none outline-none shadow-none">
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                  <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
-                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-1">
-                      {products.map((item) => (
-                        <NavItemCard key={item.label} {...item} />
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-                  <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
-                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
-                      {solutions.map((item) => (
-                        <NavItemCard key={item.label} {...item} />
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                {/* Resources */}
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                  <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
-                    <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
-                      {resources.map((item) => (
-                        <NavItemCard key={item.label} {...item} />
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                {/* Pricing */}
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    href="/pricing"
-                    className="bg-transparent px-4"
-                  >
-                    Pricing
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                {/* Contact */}
-                <NavigationMenuItem>
-                  <NavigationMenuLink
-                    href="/contact"
-                    className="bg-transparent px-4"
-                  >
-                    Contact
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-          </div>
-
-          {/* Desktop CTA Buttons */}
-          <div className="hidden lg:block">
-            <Link
-              href={""}
-              className="bg-primary text-background rounded-[8px] group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2"
-            >
-              <div className="font-medium text-sm font-inter">
-                Schedule a Call
-                <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-inter">
-                  →
-                </span>
-              </div>
-              {/* <ArrowRight className="w-4 h-4 transform transition-transform duration-600 group-hover:translate-x-1" /> */}
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
+        <div className="container mx-auto px-6">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                src={"/logo.svg"}
+                alt="Cynical Tech Logo"
+                width={190}
+                height={90}
+              />
             </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden lg:block">
+              <NavigationMenu className="opacity-99 border-none outline-none shadow-none">
+                <NavigationMenuList>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Products</NavigationMenuTrigger>
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
+                      <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-1">
+                        {products.map((item) => (
+                          <NavItemCard key={item.label} {...item} />
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
+                      <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
+                        {solutions.map((item) => (
+                          <NavItemCard key={item.label} {...item} />
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  {/* Resources */}
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
+                      <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
+                        {resources.map((item) => (
+                          <NavItemCard key={item.label} {...item} />
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  {/* Pricing */}
+                  <NavigationMenuItem>
+                    <NavigationMenuLink
+                      href="/pricing"
+                      className="bg-transparent px-4"
+                    >
+                      Pricing
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                  {/* Contact */}
+                  <NavigationMenuItem>
+                    <NavigationMenuLink
+                      href="/contact"
+                      className="bg-transparent px-4"
+                    >
+                      Contact
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                </NavigationMenuList>
+              </NavigationMenu>
+            </div>
+
+            {/* Desktop CTA Buttons */}
+            <div className="hidden lg:block">
+              <Button
+                // href={"/contact"}
+                onClick={() => setDialogOpen(true)}
+                className="bg-primary text-background rounded-[8px] group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2"
+              >
+                <div className="font-medium text-sm font-inter">
+                  Schedule a Call
+                  <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-inter">
+                    →
+                  </span>
+                </div>
+                {/* <ArrowRight className="w-4 h-4 transform transition-transform duration-600 group-hover:translate-x-1" /> */}
+              </Button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </button>
-        </div>
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="lg:hidden py-6 border-t border-border bg-background">
+              <div className="flex flex-col gap-4">
+                <MobileNavSection title="Products" items={products} />
+                <MobileNavSection title="Solutions" items={solutions} />
+                <MobileNavSection title="Resources" items={resources} />
 
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden py-6 border-t border-border bg-background">
-            <div className="flex flex-col gap-4">
-              <MobileNavSection title="Products" items={products} />
-              <MobileNavSection title="Solutions" items={solutions} />
-              <MobileNavSection title="Resources" items={resources} />
+                <Link
+                  href="/pricing"
+                  className="px-4 py-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Pricing
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-4 py-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
 
-              <Link
-                href="/pricing"
-                className="px-4 py-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Pricing
-              </Link>
-              <Link
-                href="/contact"
-                className="px-4 py-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Contact
-              </Link>
-
-              <div className="flex flex-col gap-3 pt-4 mt-2 border-t border-border">
-                <Button>Schedule a Call</Button>
+                <div className="flex flex-col gap-3 pt-4 mt-2 border-t border-border">
+                  {/* <Link href={"/contact"}> */}
+                  <Button onClick={() => setDialogOpen(true)}>
+                    Schedule a Call
+                  </Button>
+                  {/* </Link> */}
+                </div>
               </div>
             </div>
-          </div>
-        )}
-      </div>
-    </nav>
+          )}
+        </div>
+      </nav>
+      {dialogOpen && (
+        <ScheduleCallDialog open={dialogOpen} onOpenChange={setDialogOpen} />
+      )}
+    </>
   );
 }
 

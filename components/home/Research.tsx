@@ -43,7 +43,7 @@ const Research = () => {
           </div>
           <Link
             href="/research"
-            className="text-sm fonts-medium flex items-center gap-1 hover:gap-2 transition-all link-underline"
+            className="text-sm fonts-medium flex items-center gap-1 hover:gap-2 transition-all duration-500 link-underline"
           >
             View all research
             <ArrowUpRight className="w-4 h-4" />
@@ -55,7 +55,7 @@ const Research = () => {
             <Link
               key={item.title}
               href={item.link}
-              className="group rounded-2xl bg-background/80 border-2 border-border/50 p-8 block"
+              className="group rounded-2xl bg-card p-8 block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center gap-3 mb-4">

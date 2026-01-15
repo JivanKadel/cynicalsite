@@ -8,6 +8,7 @@ export type SolutionCardProps = {
   description: string;
   features: string[];
   gradient?: string;
+  iconColor?: string;
 };
 export default function SolutionCard({
   Icon,
@@ -16,18 +17,19 @@ export default function SolutionCard({
   features,
   index,
   gradient = "from-violet-500/20 to-blue-500/10",
+  iconColor = "text-blue-500",
 }: SolutionCardProps & { index: number }) {
   return (
     <div
       key={title}
-      className="group relative rounded-2xl border-2 border-border/30 bg-card/50 backdrop-blur-sm p-8 hover:bg-card/60 hover:border-border/80 transition-all duration-300 animate-fade-up"
+      className="group relative rounded-2xl bg-card backdrop-blur-sm p-8 hover:border-border/80 transition-all duration-300 animate-fade-up"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div
         className={`absolute rounded-2xl inset-0 bg-linear-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
       />
       <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-foreground/10 transition-colors">
-        <Icon className="w-6 h-6 text-foreground" />
+        <Icon className={`w-6 h-6 ${iconColor}`} />
       </div>
 
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
@@ -46,9 +48,9 @@ export default function SolutionCard({
         ))}
       </div>
 
-      <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
+      {/* <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
         <ArrowRight className="w-5 h-5 text-muted-foreground" />
-      </div>
+      </div> */}
     </div>
   );
 }

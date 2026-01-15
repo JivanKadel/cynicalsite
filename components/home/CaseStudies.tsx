@@ -6,7 +6,7 @@ export default function CaseStudies() {
   return (
     <section id="case-studies" className="py-32 relative">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 gap-6">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12 gap-6">
           <div className="max-w-2xl">
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Case Studies
@@ -19,12 +19,14 @@ export default function CaseStudies() {
               secure—until we tested like real attackers.
             </p>
           </div>
+        </div>
+        <div className="flex justify-end py-8 gap-2 text-sm font-medium hover:gap-3 transition-all group">
           <Link
             href="/resources/case-studies"
-            className="flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all group"
+            className="flex gap-2 text-sm font-medium group"
           >
             View all case studies
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 duration-500 transition-transform" />
           </Link>
         </div>
 
@@ -90,7 +92,7 @@ export default function CaseStudies() {
             );
 
             const className =
-              "group relative overflow-hidden rounded-2xl border border-border/50 bg-card hover:border-border transition-all duration-500 animate-fade-up block";
+              "group relative overflow-hidden rounded-2xl bg-card hover:border-border transition-all duration-500 animate-fade-up block";
             const style = { animationDelay: `${index * 0.1}s` };
 
             return study.link ? (
@@ -111,12 +113,11 @@ export default function CaseStudies() {
           })}
         </div>
 
-        {/* Client Logos */}
         <div className="mt-16 pt-16 border-t border-border/30">
           <p className="text-sm text-muted-foreground text-center mb-12 uppercase tracking-widest">
             Securing organizations that can&apos;t afford to be breached
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16 opacity-50">
+          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-50">
             {[
               "Banks",
               "Governments",
@@ -125,7 +126,10 @@ export default function CaseStudies() {
               "Critical Infrastructure",
               "Technology",
             ].map((name) => (
-              <div key={name} className="text-lg font-semibold tracking-tight">
+              <div
+                key={name}
+                className="text-base font-semibold tracking-wider uppercase"
+              >
                 {name}
               </div>
             ))}
