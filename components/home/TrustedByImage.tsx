@@ -30,7 +30,7 @@ export function TrustedByImage({
         alt={name}
         width={width}
         height={height}
-        className="object-contain hover:scale-102 transition-transform grayscale-10 hover:grayscale-0 opacity-85 hover:opacity-100"
+        className="object-contain hover:scale-105 transition-transform grayscale-10 hover:grayscale-0 opacity-90 hover:opacity-100"
       />
       {/* <p className="text-muted-foreground">{name}</p> */}
     </Link>

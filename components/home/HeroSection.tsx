@@ -1,5 +1,6 @@
 import { trustedBy } from "@/data/trustedby.data";
 import { TrustedByImage } from "./TrustedByImage";
+import Marquee from "react-fast-marquee";
 
 export default function HeroSection() {
   return (
@@ -35,24 +36,48 @@ export default function HeroSection() {
         <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-widest">
           Securing critical infrastructure for
         </p>
-        <div className="flex flex-wrap justify-center items-end gap-x-12 gap-y-6">
-          {trustedBy.map((brand) => (
-            <TrustedByImage
-              key={brand.name}
-              name={brand.name}
-              logo={brand.image}
-              link={brand.link}
-            />
-          ))}
+        <Marquee
+          pauseOnHover={true}
+          gradient={false}
+          autoFill={true}
+          speed={10}
+          style={{
+            marginRight: 10,
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              gap: 48,
+              alignItems: "center",
+              marginLeft: 48,
+            }}
+          >
+            {trustedBy.map((brand) => (
+              <TrustedByImage
+                key={brand.name}
+                name={brand.name}
+                logo={brand.image}
+                link={brand.link}
+              />
+            ))}
 
-          <TrustedByImage
-            width={50}
-            height={50}
-            name="Nagarik App"
-            logo="/brands/nagarik_app.png"
-            link="https://nagarikapp.com"
-          />
-        </div>
+            <TrustedByImage
+              width={44}
+              height={44}
+              name="Nagarik App"
+              logo="/brands/nagarik_app.png"
+              link="https://nagarikapp.com"
+            />
+            <TrustedByImage
+              width={54}
+              height={54}
+              name="Swift Technology"
+              logo="/brands/swift_tech.svg"
+              link="https://swifttech.com.np/"
+            />
+          </div>
+        </Marquee>
       </div>
     </section>
   );
