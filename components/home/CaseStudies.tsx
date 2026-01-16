@@ -102,7 +102,7 @@ export default function CaseStudies() {
             );
 
             const className =
-              "group relative overflow-hidden rounded-2xl bg-card hover:border-border transition-all duration-500 animate-fade-up block";
+              "group relative overflow-hidden rounded-2xl bg-card hover:border-border transition-all duration-500   block";
             const style = { animationDelay: `${index * 0.1}s` };
 
             return study.link ? (

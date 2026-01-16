@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import {
-  ArrowLeft,
   ArrowRight,
   AlertTriangle,
   Shield,
@@ -8,6 +7,9 @@ import {
   Database,
   FileText,
   ExternalLink,
+  Landmark,
+  AppWindow,
+  LayoutTemplate,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -50,7 +52,7 @@ export default function ResearchDetailPage() {
                 { value: "Patched", label: "Status" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <h2 className="text-xl md:text-2xl font-bold mb-1">
+                  <h2 className="text-xl text-blue md:text-2xl font-bold mb-1">
                     {stat.value}
                   </h2>
                   <p className="text-sm md:text-base text-muted-foreground uppercase">
@@ -92,16 +94,19 @@ export default function ResearchDetailPage() {
               <div className="space-y-3">
                 {[
                   {
+                    icon: AppWindow,
                     name: "Enterprise Suite Pro",
                     versions: "v8.0 - v8.4.2",
                     severity: "Critical",
                   },
                   {
+                    icon: LayoutTemplate,
                     name: "GlobalERP Platform",
                     versions: "v12.x - v14.2",
                     severity: "Critical",
                   },
                   {
+                    icon: Landmark,
                     name: "FinanceCore ERP",
                     versions: "v5.0 - v5.3.1",
                     severity: "High",
@@ -109,10 +114,13 @@ export default function ResearchDetailPage() {
                 ].map((system) => (
                   <div
                     key={system.name}
-                    className="flex items-center justify-between p-5 rounded-xl border border-border bg-secondary/30"
+                    className="flex items-center justify-between align-middle p-5 rounded-xl border border-border bg-secondary/30"
                   >
                     <div className="flex items-center gap-4">
-                      <Database className="w-5 h-5 text-muted-foreground" />
+                      <div className=" w-12 h-12 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-foreground/10 transition-colors">
+                        <system.icon className="w-5 h-5 text-muted-foreground" />
+                      </div>
+
                       <div>
                         <p className="font-semibold">{system.name}</p>
                         <p className="text-sm text-muted-foreground">

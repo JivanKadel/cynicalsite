@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Lock, Clock, FileText } from "lucide-react";
+import {
+  ArrowRight,
+  Lock,
+  Clock,
+  FileText,
+  CircleCheckBigIcon,
+} from "lucide-react";
 import Link from "next/link";
 
 interface PageCTAProps {
@@ -31,7 +37,7 @@ const PageCTA = ({
     { icon: Clock, text: "Response within 24 hours" },
     { icon: Lock, text: "NDA-protected briefing" },
     { icon: FileText, text: "Free exposure report included" },
-    { icon: Shield, text: "No sales pitch—just findings" },
+    { icon: CircleCheckBigIcon, text: "No sales pitch—just findings" },
   ];
 
   return (

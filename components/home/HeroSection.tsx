@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="container mx-auto relative z-10 pt-4 md:pt-6 pb-8">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8">
-        <div className="animate-fade-up">
+        <div className=" ">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-secondary/30 text-sm text-muted-foreground">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             47 critical vulnerabilities found this month
@@ -32,7 +32,7 @@ export default function HeroSection() {
 
       <hr className="border-t-2 max-w-4xl mx-auto" />
 
-      <div className="animate-fade-up pt-6">
+      <div className="  pt-6">
         <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-widest">
           Securing critical infrastructure for
         </p>

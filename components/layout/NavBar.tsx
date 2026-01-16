@@ -93,9 +93,9 @@ export default function Navbar() {
   const resources = [
     {
       icon: FileText,
-      label: "Documentation",
-      description: "Guides and API reference",
-      href: "/resources/docs",
+      label: "Research",
+      description: "Latest security research & whitepapers",
+      href: "/research",
     },
     {
       icon: BookOpen,

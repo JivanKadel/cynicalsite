@@ -22,7 +22,7 @@ export default function SolutionCard({
   return (
     <div
       key={title}
-      className="group relative rounded-2xl bg-card backdrop-blur-sm p-8 hover:border-border/80 transition-all duration-300 animate-fade-up"
+      className="group relative rounded-2xl bg-card backdrop-blur-sm p-8 hover:border-border/80 transition-all duration-300  "
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div

@@ -190,7 +190,7 @@ const ThreatIntelligence = () => {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             {/* Breadcrumb */}
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8 animate-fade-up">
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
                 className="hover:text-foreground transition-colors"
@@ -223,14 +223,14 @@ const ThreatIntelligence = () => {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 animate-fade-up stagger-3 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10   stagger-3 leading-relaxed">
               Comprehensive threat intelligence platform providing real-time
               insights into emerging threats, threat actor activities, and
               attack campaigns. Our elite intelligence analysts track 50,000+
               threat actors globally.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up stagger-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4   stagger-4">
               <Button
                 size="lg"
                 className="bg-foreground text-background hover:bg-foreground/90 px-8"

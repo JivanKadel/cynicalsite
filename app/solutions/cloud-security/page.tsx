@@ -189,7 +189,7 @@ const CloudSecurity = () => {
 
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8 animate-fade-up">
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
                 className="hover:text-foreground transition-colors"

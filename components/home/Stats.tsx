@@ -13,7 +13,7 @@ const Stats = () => {
           {stats.map((stat, index) => (
             <div
               key={stat.label}
-              className="bg-background p-8 lg:p-12 text-center animate-fade-up"
+              className="bg-background p-8 lg:p-12 text-center  "
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-4xl sm:text-5xl font-bold mb-4 text-blue">

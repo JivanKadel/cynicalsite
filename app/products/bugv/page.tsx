@@ -244,11 +244,7 @@ const Bugv = () => {
 
             <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
               {process.map((item, index) => (
-                <div
-                  key={item.step}
-                  className="relative animate-fade-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+                <div key={item.step} className="relative">
                   <div className="text-center">
                     <div className="w-16 h-16 rounded-2xl bg-secondary border border-border/50 flex items-center justify-center mx-auto mb-4 relative z-10">
                       <item.icon className="w-7 h-7 text-foreground" />
@@ -287,8 +283,7 @@ const Bugv = () => {
             {features.map((feature, index) => (
               <div
                 key={feature.title}
-                className="group p-6 rounded-2xl border border-border/50 bg-background hover:border-border transition-all duration-300 animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group p-6 rounded-2xl border border-border/50 bg-background hover:border-border transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors">
                   <feature.icon className="w-6 h-6 text-foreground" />
@@ -323,12 +318,11 @@ const Bugv = () => {
             {programTypes.map((program, index) => (
               <div
                 key={program.title}
-                className={`relative rounded-2xl border p-8 animate-fade-up ${
+                className={`relative rounded-2xl border p-8 ${
                   program.recommended
                     ? "border-foreground/30 bg-secondary/50"
                     : "border-border/50 bg-card/50"
                 }`}
-                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {program.recommended && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -396,7 +390,7 @@ const Bugv = () => {
               {vulnerabilityTypes.map((vuln, index) => (
                 <div
                   key={vuln.name}
-                  className="flex items-center justify-between p-4 rounded-xl border border-border/50 bg-background hover:border-border transition-colors animate-fade-up"
+                  className="flex items-center justify-between p-4 rounded-xl border border-border/50 bg-background hover:border-border transition-colors"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <div className="flex items-center gap-4">
