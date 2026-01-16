@@ -1,10 +1,8 @@
 import PageCTA from "@/components/products/PageCTA";
-import { Button } from "@/components/ui/button";
 import {
   Code,
   Shield,
   Lock,
-  ArrowRight,
   Check,
   Zap,
   Globe,
@@ -23,7 +21,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const ApplicationSecurity = () => {
+export default function ApplicationSecurity() {
   const capabilities = [
     {
       icon: Globe,
@@ -170,11 +168,6 @@ const ApplicationSecurity = () => {
   return (
     <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-foreground/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-foreground/3 rounded-full blur-3xl" />
-        </div>
-
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             {/* Breadcrumb */}
@@ -197,7 +190,7 @@ const ApplicationSecurity = () => {
             </div>
 
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8 animate-fade-up stagger-1">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8 ">
               <Code className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">
                 Enterprise Application Security
@@ -211,21 +204,11 @@ const ApplicationSecurity = () => {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 animate-fade-up stagger-3 leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 leading-relaxed">
               Comprehensive penetration testing and vulnerability assessments
               for web, mobile, and API applications. Our elite security
               researchers identify vulnerabilities that automated tools miss.
             </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up stagger-4">
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90 px-8"
-              >
-                Download Sample Report
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -239,9 +222,9 @@ const ApplicationSecurity = () => {
                 <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm md:text-base text-muted-foreground font-body">
+                <p className="text-sm md:text-base text-muted-foreground">
                   {stat.label}
-                </div>
+                </p>
               </div>
             ))}
           </div>
@@ -468,6 +451,4 @@ const ApplicationSecurity = () => {
       />
     </div>
   );
-};
-
-export default ApplicationSecurity;
+}

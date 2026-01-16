@@ -54,8 +54,8 @@ export default function Solutions() {
               title={solution.title}
               description={solution.description}
               features={solution.features}
-              gradient={solution.gradient}
               index={index}
+              gradient={solution.gradient}
               iconColor={iconColors[index % iconColors.length].iconColor}
             />
           ))}

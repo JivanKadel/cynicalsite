@@ -28,8 +28,9 @@ import {
 import PageCTA from "@/components/products/PageCTA";
 // import Link from "next/link";
 import Image from "next/image";
-// import ParallaxImage from "@/components/image/ParallaxImage";
 import DataFlow from "./DataFlow";
+// import ParallaxImage from "@/components/image/ParallaxImage";
+// import StaircaseNodeConnector from "./DataFlow";
 
 const Vigile = () => {
   const stats = [
@@ -220,8 +221,6 @@ const Vigile = () => {
         </div>
       </section>
 
-      <DataFlow />
-
       {/* Outlook Integration - Main Focus Section */}
       <section className="pb-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-b from-background via-secondary/20 to-background" />
@@ -292,13 +291,14 @@ const Vigile = () => {
               </Button>
             </div>
 
-            <div className="relative">
-              {/* Visual representation of the integration */}
+            <div className="relative min-h-64 w-full lg:h-full lg:p-12">
+              <DataFlow />
+            </div>
+            {/* <div className="relative">
               <div className="relative p-8 rounded-3xl border border-border/50 bg-linear-to-br from-secondary/50 to-background">
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-foreground/5 rounded-full blur-2xl" />
                 <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-foreground/5 rounded-full blur-2xl" />
 
-                {/* Office 365 Logo Representation */}
                 <div className="flex items-center justify-center mb-8">
                   <div className="w-20 h-20 rounded-2xl bg-cyan-500/10 border border-border flex items-center justify-center">
                     <Mail className="w-10 h-10 text-cyan-500/70" />
@@ -334,12 +334,11 @@ const Vigile = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
-      {/* Platform Modules Grid */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -457,11 +456,6 @@ const Vigile = () => {
                   <span>Compliance-ready documentation</span>
                 </div>
               </div>
-
-              <Button>
-                <Download className="w-4 h-4 mr-2" />
-                Download Sample Report
-              </Button>
             </div>
           </div>
         </div>

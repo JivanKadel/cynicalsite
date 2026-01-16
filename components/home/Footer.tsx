@@ -64,13 +64,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer>
+    <footer className="lg:pt-16">
       {/* Main Footer */}
       <div className="container mx-auto py-16 lg:py-20 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 content-start">
-          {/* Brand Column - Takes 2 columns on large screens */}
-
-          {/* Link Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h3 className="mb-4 text-xs font-medium tracking-widest uppercase text-neutral-400 sm:text-sm md:mb-6">
