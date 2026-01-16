@@ -1,4 +1,5 @@
 import { caseStudies } from "@/data/casestudies.data";
+import { iconColors } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
@@ -35,12 +36,21 @@ export default function CaseStudies() {
             const content = (
               <>
                 <div
-                  className={`absolute inset-0 bg-linear-to-br ${study.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-linear-to-br ${
+                    iconColors[index].gradient ??
+                    "from-violet-500/20 to-blue-500/10"
+                  } opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
                 />
 
                 <div className="relative p-6 lg:p-8 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-14 h-14 rounded-xl bg-secondary/80 flex items-center justify-center group-hover:bg-foreground/10 transition-colors">
+                    <div
+                      className={`w-14 h-14 rounded-xl ${
+                        iconColors[index % iconColors.length].iconBg
+                      } ${
+                        iconColors[index % iconColors.length].iconColor
+                      } flex items-center justify-center group-hover:bg-foreground/10 transition-colors`}
+                    >
                       {study.logo}
                     </div>
                     <span className="text-xs font-medium px-3 py-1 rounded-full bg-secondary text-muted-foreground">

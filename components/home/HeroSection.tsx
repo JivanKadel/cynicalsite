@@ -14,7 +14,7 @@ export default function HeroSection() {
         </div>
         {/* class="text-[2.7rem] font-light leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] font-aeonik max-w-2xl xl:max-w-4xl text-balance text-center md:text-left" */}
         <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
-          <span className="text-[#BBDEF2]">Offensive</span> Security
+          <span className="text-lightblue">Offensive</span> Security
           <br />
           <span>Built by Attackers.</span>
         </h1>

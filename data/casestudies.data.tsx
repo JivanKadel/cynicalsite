@@ -9,7 +9,7 @@ import {
 
 export const caseStudies = [
   {
-    logo: <Landmark className="w-8 h-8" />,
+    logo: <Landmark className="w-6 h-6" />,
     company: "Global Investment Bank",
     industry: "Financial Services",
     tags: ["Red Team", "API Security", "Compliance"],
@@ -24,7 +24,7 @@ export const caseStudies = [
     link: "/case-studies/#global-investment-bank",
   },
   {
-    logo: <ShoppingCart className="w-8 h-8" />,
+    logo: <ShoppingCart className="w-6 h-6" />,
     company: "Series E E-Commerce Platform",
     industry: "Retail Technology",
     tags: ["Bugv Platform", "Continuous Testing", "PCI DSS"],
@@ -39,7 +39,7 @@ export const caseStudies = [
     link: "/case-studies/#e-commerce-platform",
   },
   {
-    logo: <Plane className="w-8 h-8" />,
+    logo: <Plane className="w-6 h-6" />,
     company: "National Airline Carrier",
     industry: "Aviation",
     tags: ["Vigile.AI", "Threat Intel", "Dark Web Monitoring"],
@@ -54,7 +54,7 @@ export const caseStudies = [
     link: "/case-studies/#national-airline-carrier",
   },
   {
-    logo: <HeartPulse className="w-8 h-8" />,
+    logo: <HeartPulse className="w-6 h-6" />,
     company: "Healthcare Technology Provider",
     industry: "Healthcare",
     tags: ["HIPAA", "Cloud Security", "Application Testing"],
@@ -69,7 +69,7 @@ export const caseStudies = [
     link: "/case-studies/#healthcare-technology-provider",
   },
   {
-    logo: <Cpu className="w-8 h-8" />,
+    logo: <Cpu className="w-6 h-6" />,
     company: "AI Infrastructure Startup",
     industry: "Technology",
     tags: ["Source Code Review", "ML Security", "Red Team"],
@@ -84,7 +84,7 @@ export const caseStudies = [
     link: "/case-studies/#ai-infrastructure-startup",
   },
   {
-    logo: <Building2 className="w-8 h-8" />,
+    logo: <Building2 className="w-6 h-6" />,
     company: "Federal Government Agency",
     industry: "Public Sector",
     tags: ["Red Team", "Social Engineering", "Physical Security"],
