@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export default function Capability({
   capability,
   gradient = "from-violet-500/20 to-blue-500/10",
   index,
-}) {
+}: any) {
   return (
     <div
       key={capability.text}
