@@ -19,10 +19,12 @@ import {
   Server,
   Code,
   Layers,
+  Headset,
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
 import Link from "next/link";
 import Image from "next/image";
+import { iconColors } from "@/lib/utils";
 
 const Bugv = () => {
   const stats = [
@@ -40,7 +42,7 @@ const Bugv = () => {
         "Access a vetted community of elite security researchers from around the world, each with verified credentials and track records.",
     },
     {
-      icon: Shield,
+      icon: Layers,
       title: "Managed Programs",
       description:
         "We handle triage, validation, and communication—so your team can focus on fixing vulnerabilities, not managing reports.",
@@ -144,7 +146,7 @@ const Bugv = () => {
       title: "Remediation Support",
       description:
         "Get detailed fix guidance and verify patches with researcher retesting to ensure complete resolution.",
-      icon: Shield,
+      icon: Headset,
     },
   ];
 
@@ -204,17 +206,17 @@ const Bugv = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 border-y border-border/50 bg-secondary/30">
+      <section className="py-12 lg:py-24 lg:mt-16 border-y border-border/50 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="w-12 h-12 rounded-xl bg-background border border-border/50 flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-6 h-6 text-foreground/70" />
                 </div>
-                <p className="text-3xl md:text-4xl font-bold mb-1">
+                <h2 className="text-3xl md:text-4xl text-blue font-bold mb-1">
                   {stat.value}
-                </p>
+                </h2>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
               </div>
             ))}
@@ -229,7 +231,7 @@ const Bugv = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               How It Works
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               From launch to remediation
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -246,7 +248,7 @@ const Bugv = () => {
               {process.map((item, index) => (
                 <div key={item.step} className="relative">
                   <div className="text-center">
-                    <div className="w-16 h-16 rounded-2xl bg-secondary border border-border/50 flex items-center justify-center mx-auto mb-4 relative z-10">
+                    <div className="w-14 h-14 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
                       <item.icon className="w-7 h-7 text-foreground" />
                     </div>
                     <span className="text-xs text-muted-foreground font-mono mb-2 block">
@@ -271,7 +273,7 @@ const Bugv = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Platform Features
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Enterprise-grade bug bounty
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -286,7 +288,11 @@ const Bugv = () => {
                 className="group p-6 rounded-2xl border border-border/50 bg-background hover:border-border transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors">
-                  <feature.icon className="w-6 h-6 text-foreground" />
+                  <feature.icon
+                    className={`w-6 h-6 ${
+                      iconColors[index % iconColors.length].iconColor
+                    }`}
+                  />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground font-body leading-relaxed">
@@ -318,15 +324,15 @@ const Bugv = () => {
             {programTypes.map((program, index) => (
               <div
                 key={program.title}
-                className={`relative rounded-2xl border p-8 ${
+                className={`relative rounded-2xl border-2 p-8 ${
                   program.recommended
-                    ? "border-foreground/30 bg-secondary/50"
+                    ? "border-blue/70 bg-secondary/50"
                     : "border-border/50 bg-card/50"
                 }`}
               >
                 {program.recommended && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-3 py-1 text-xs font-medium bg-foreground text-background rounded-full">
+                    <span className="px-3 py-1 text-xs font-medium bg-blue text-foreground rounded-full">
                       Most Popular
                     </span>
                   </div>
@@ -341,7 +347,7 @@ const Bugv = () => {
                       key={feature}
                       className="flex items-center gap-3 text-sm"
                     >
-                      <CheckCircle className="w-4 h-4 text-foreground/50 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-500/50 shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -418,7 +424,7 @@ const Bugv = () => {
       </section>
 
       {/* Integration Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
@@ -452,7 +458,7 @@ const Bugv = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <PageCTA
         badge="500+ elite researchers ready to test your assets"

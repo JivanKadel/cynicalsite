@@ -1,8 +1,4 @@
-import { Button } from "@/components/ui/button";
 import {
-  ArrowRight,
-  Eye,
-  Shield,
   Users,
   Clock,
   AlertTriangle,
@@ -13,27 +9,20 @@ import {
   Mail,
   Database,
   Activity,
-  Server,
   FileWarning,
   Link2,
   Type,
   CheckCircle,
-  Bell,
   BarChart3,
-  Download,
   LogIn,
   ShieldAlert,
-  Workflow,
   ShieldPlus,
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
-// import Link from "next/link";
 import Image from "next/image";
 import DataFlow from "./DataFlow";
 import { Badge } from "@/components/ui/badge";
 import { iconColors } from "@/lib/utils";
-// import ParallaxImage from "@/components/image/ParallaxImage";
-// import StaircaseNodeConnector from "./DataFlow";
 
 const Vigile = () => {
   const stats = [
@@ -211,9 +200,9 @@ const Vigile = () => {
                 <div className="w-12 h-12 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-6 h-6 text-foreground/70" />
                 </div>
-                <p className="text-3xl md:text-4xl text-blue font-bold mb-1">
+                <h2 className="text-3xl md:text-4xl text-blue font-bold mb-1">
                   {stat.value}
-                </p>
+                </h2>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
               </div>
             ))}
