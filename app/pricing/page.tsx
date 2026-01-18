@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, CircleCheckBig, Lock } from "lucide-react";
+import Link from "next/link";
 
 const cardData = [
   {
@@ -111,7 +112,7 @@ export default function PricingPage() {
                   </p>
                 ) : (
                   <p className="text-xl md:text-2xl font-bold mb-4">
-                    {card.amount}
+                    Rs. {card.amount}
                     <span className="text-muted-foreground text-sm font-light">
                       /per test
                     </span>
@@ -138,9 +139,13 @@ export default function PricingPage() {
               </div>
               <div className="py-4">
                 {card.custom ? (
-                  <Button className="w-full py-6">Contact Sales</Button>
+                  <Link href="/contact">
+                    <Button className="w-full py-6">Contact Sales</Button>
+                  </Link>
                 ) : (
-                  <Button className="w-full py-6">Get Started</Button>
+                  <Link href={`/pentest?plan=${card.title.toLowerCase()}`}>
+                    <Button className="w-full py-6">Get Started</Button>
+                  </Link>
                 )}
               </div>
 

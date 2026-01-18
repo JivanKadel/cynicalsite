@@ -116,7 +116,6 @@ const Contact = () => {
             </div>
 
             <div className="grid lg:grid-cols-3 gap-12">
-              {/* Form */}
               <div className="lg:col-span-2">
                 <div className="p-8 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl">
                   <div className="mb-6">
@@ -162,20 +161,6 @@ const Contact = () => {
                     </div>
 
                     <div className="flex flex-col gap-6">
-                      {/* <div>
-                        <label className="block text-sm font-medium mb-2">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
-                          placeholder="+977-01-4530730 "
-                          value={formData.phone}
-                          onChange={(e) =>
-                            setFormData({ ...formData, phone: e.target.value })
-                          }
-                        />
-                      </div> */}
                       <div>
                         <label className="block text-sm font-medium mb-2">
                           Company*
@@ -212,7 +197,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Sidebar */}
               <div className="space-y-8">
                 {/* Contact Information */}
                 <div className="p-6 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
