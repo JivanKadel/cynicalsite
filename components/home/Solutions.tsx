@@ -35,9 +35,7 @@ export default function Solutions() {
           </span>
           <h2 className="text-2xl sm:text-5xl md:text-7xl font-bold">
             We break in.
-            <span className="block gradient-text-accent">
-              You fix the gaps.
-            </span>
+            <span className="block  -accent">You fix the gaps.</span>
           </h2>
           <p className="text-lg sm:text-xl font-extralight text-muted-foreground max-w-2xl mx-auto">
             Every engagement is scoped to your threat model. We don&apos;t run
@@ -84,13 +82,6 @@ export default function Solutions() {
                 }
               />
             ))}
-          </div>
-
-          <div className="text-center">
-            <Button variant="outline" className="group">
-              Download Service Catalog
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
           </div>
         </div>
       </div>

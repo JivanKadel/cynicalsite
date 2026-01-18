@@ -32,7 +32,7 @@ export default function HeroSection() {
 
       <hr className="border-t-2 max-w-4xl mx-auto" />
 
-      <div className="  pt-6">
+      <div className="pt-6">
         <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-widest">
           Securing critical infrastructure for
         </p>

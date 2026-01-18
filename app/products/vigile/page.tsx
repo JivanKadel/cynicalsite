@@ -24,7 +24,7 @@ import DataFlow from "./DataFlow";
 import { Badge } from "@/components/ui/badge";
 import { iconColors } from "@/lib/utils";
 
-const Vigile = () => {
+export default function Vigile() {
   const stats = [
     { value: "15B+", label: "Breach Records Indexed", icon: Database },
     { value: "24/7", label: "Real-time Monitoring", icon: Activity },
@@ -525,6 +525,4 @@ const Vigile = () => {
       />
     </div>
   );
-};
-
-export default Vigile;
+}

@@ -341,11 +341,11 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
 
       <section className="py-24 border-t border-border">
         <div className="container mx-auto px-6">
-          <div className="max-w-xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4">
               Concerned about your ERP security?
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground text-lg mb-8">
               Our team can assess your systems for this and other critical
               vulnerabilities.
             </p>

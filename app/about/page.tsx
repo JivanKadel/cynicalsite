@@ -21,8 +21,9 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Marquee from "react-fast-marquee";
 
-const AboutUs = () => {
+export default function AboutUs() {
   const whyChooseItems = [
     {
       icon: Lock,
@@ -68,18 +69,6 @@ const AboutUs = () => {
     },
   ];
 
-  const trustedBrands = [
-    { name: "Esewa", logo: "/brands/esewa.png" },
-    { name: "Global IME Bank", logo: "/brands/global_ime_bank.svg" },
-    {
-      name: "Himalayan Life Insurance",
-      logo: "/brands/himalayan_life_insurance.png",
-    },
-    { name: "Mero Job", logo: "/brands/mero_job.svg" },
-    { name: "Fonepay", logo: "/brands/fonepay.webp" },
-    { name: "WorldLink", logo: "/brands/worldlink.svg" },
-  ];
-
   const awards = [
     {
       title: "Vulnerability Research Grant",
@@ -93,18 +82,6 @@ const AboutUs = () => {
       year: "2019",
       category: "Emerging Technology",
     },
-    {
-      title: "Best Place to Work",
-      organization: "Cybersecurity Ventures",
-      year: "2023",
-      category: "Top Cybersecurity Employer",
-    },
-    {
-      title: "Innovation in Security",
-      organization: "RSA Conference",
-      year: "2023",
-      category: "Most Innovative Solution",
-    },
   ];
 
   const teamMembers = [
@@ -117,15 +94,20 @@ const AboutUs = () => {
         linkedin: "https://www.linkedin.com/in/nareshlamgade/",
       },
       isFeatured: true,
+      message:
+        "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
     },
     {
       name: "Ravi Lamgade",
-      role: "Founded & Office Admin",
+      role: "Co-Founder & Office Admin",
       image: "/people/mr_ravi.jpeg",
       bio: "Co-founder with a passion for cybersecurity and business development. Drives company growth and strategic partnerships.",
       social: {
         linkedin: "https://www.linkedin.com/in/ravi-lamgade-3422ab190/",
       },
+      isFeatured: true,
+      message:
+        "At Cynical, we believe administration is not just paperwork—it’s about enabling people, processes, and progress. My mission is to ensure you have the tools and trust to keep our operations secure, efficient, and future‑ready.",
     },
     {
       name: "Mr. Ram",
@@ -243,17 +225,17 @@ const AboutUs = () => {
 
               <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
                 <div>
-                  <div className="text-2xl font-bold gradient-text">500+</div>
+                  <h2 className="text-2xl md:text-3xl font-bold">500+</h2>
                   <div className="text-sm text-slate-500">
                     Clients Protected
                   </div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold gradient-text">200+</div>
+                  <h2 className="text-2xl md:text-3xl font-bold">200+</h2>
                   <div className="text-sm text-slate-500">Team Members</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold gradient-text">6+</div>
+                  <h2 className="text-2xl md:text-3xl font-bold">6+</h2>
                   <div className="text-sm text-slate-500">
                     Years of Excellence
                   </div>
@@ -261,16 +243,14 @@ const AboutUs = () => {
               </div>
             </div>
 
-            <div className="relative">
-              {/* <div className="aspect-square rounded-2xl overflow-hidden bg-linear-to-br from-secondary to-background"> */}
+            <div className="relative bg-background">
               <Image
                 src={"/about/cynical_hero.jpg"}
                 width={800}
                 height={600}
-                className="flex"
                 alt="Cynical Logo on a dark background"
               />
-              {/* </div> */}
+              <div className="absolute inset-0 bg-linear-to-br from-background/80 via-background/50 to-background/20"></div>
             </div>
           </div>
         </div>
@@ -280,8 +260,8 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              Why Choose Cynical
+            <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+              Why Choose Cynical ?
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               The Cynical difference
@@ -298,7 +278,7 @@ const AboutUs = () => {
                 key={index}
                 className="flex items-start gap-4 p-6 rounded-xl border border-border bg-background hover:border-foreground/20 transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-secondary self-center flex items-center justify-center shrink-0">
                   <item.icon className={`w-5 h-5 ${item.color}`} />
                 </div>
                 <div>
@@ -364,37 +344,60 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Trusted Brands Section */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Brands that trust our cybersecurity competence
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
               From Fortune 500 enterprises to emerging startups, organizations
-              worldwide rely on Cynical to protect their digital assets.
+              rely on Cynical to protect their digital assets.
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center items-end gap-x-12 gap-y-6">
-            {trustedBy.map((brand) => (
-              <TrustedByImage
-                key={brand.name}
-                name={brand.name}
-                logo={brand.image}
-                link={brand.link}
-              />
-            ))}
+          <Marquee
+            pauseOnHover={true}
+            gradient={false}
+            autoFill={true}
+            speed={10}
+            style={{
+              marginRight: 10,
+            }}
+          >
+            <div
+              style={{
+                display: "flex",
+                gap: 48,
+                alignItems: "center",
+                marginLeft: 48,
+              }}
+            >
+              {trustedBy.map((brand) => (
+                <TrustedByImage
+                  key={brand.name}
+                  name={brand.name}
+                  logo={brand.image}
+                  link={brand.link}
+                />
+              ))}
 
-            <TrustedByImage
-              width={50}
-              height={50}
-              name="Nagarik App"
-              logo="/brands/nagarik_app.png"
-              link="https://nagarikapp.com"
-            />
-          </div>
+              <TrustedByImage
+                width={44}
+                height={44}
+                name="Nagarik App"
+                logo="/brands/nagarik_app.png"
+                link="https://nagarikapp.com"
+              />
+              <TrustedByImage
+                width={54}
+                height={54}
+                name="Swift Technology"
+                logo="/brands/swift_tech.svg"
+                link="https://swifttech.com.np/"
+              />
+            </div>
+          </Marquee>
         </div>
       </section>
 
@@ -410,11 +413,11 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {awards.map((award, index) => (
               <div
                 key={index}
-                className="p-6 rounded-xl border border-border bg-card hover:border-foreground/20 transition-colors text-center"
+                className="p-6 rounded-xl w-64 lg:w-72 border border-border bg-card hover:border-foreground/20 transition-colors text-center"
               >
                 <div className="w-12 h-12 rounded-full bg-yellow-400/20 flex items-center justify-center mx-auto mb-4">
                   <Award className="w-6 h-6 text-yellow-400" />
@@ -445,14 +448,13 @@ const AboutUs = () => {
             </p>
           </div>
 
-          {/* CEO Featured Section */}
           <div className="mb-16">
             {teamMembers
               .filter((member) => member.isFeatured)
               .map((member, index) => (
                 <div
                   key={index}
-                  className="bg-card rounded-2xl border border-border p-8 lg:p-12"
+                  className="bg-card rounded-2xl border border-border p-8 lg:p-12 mt-4"
                 >
                   <div className="grid lg:grid-cols-3 gap-8 items-center">
                     <div className="lg:col-span-1">
@@ -497,23 +499,15 @@ const AboutUs = () => {
                         )}
                       </div>
 
-                      {/* CEO Message */}
                       <div className="bg-secondary/50 rounded-lg p-6 border border-border">
                         <div className="flex items-start gap-4">
                           <Quote className="w-6 h-6 text-foreground/60 shrink-0 mt-1" />
                           <div>
                             <p className="text-muted-foreground font-body italic mb-4">
-                              &quot;At Cynical, we believe that cybersecurity
-                              should not be an afterthought for any business
-                              with critical data and infrastructure—it&apos;s
-                              about protecting people, businesses, and
-                              livelihoods. Our mission is to make
-                              enterprise-grade security accessible to every
-                              organization, regardless of size or
-                              industry.&quot;
+                              {member.message}
                             </p>
                             <p className="font-semibold">
-                              — {member.name}, CEO & Founder
+                              — {member.name}, {member.role}
                             </p>
                           </div>
                         </div>
@@ -594,9 +588,7 @@ const AboutUs = () => {
                 key={index}
                 className="text-center p-6 rounded-xl border border-border bg-background"
               >
-                <div className="text-3xl font-bold gradient-text mb-2">
-                  {dept.count}
-                </div>
+                <div className="text-3xl font-bold   mb-2">{dept.count}</div>
                 <h3 className="font-semibold mb-2">{dept.name}</h3>
                 <p className="text-sm text-muted-foreground font-body">
                   {dept.description}
@@ -611,7 +603,7 @@ const AboutUs = () => {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Ready to secure your future?
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
@@ -620,22 +612,24 @@ const AboutUs = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button size="lg" variant="outline">
-                Contact Sales
-              </Button>
+              <Link href={"/contact"}>
+                <Button
+                  size="lg"
+                  className="bg-foreground text-background hover:bg-foreground/90"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <Link href={"/contact"}>
+                <Button size="lg" variant="outline">
+                  Contact Sales
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-};
-
-export default AboutUs;
+}

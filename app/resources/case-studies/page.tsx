@@ -1,20 +1,28 @@
 import { caseStudies } from "@/data/casestudies.data";
+import { iconColors } from "@/lib/utils";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const CaseStudies = () => {
+  const stats = [
+    { value: "500+", label: "Enterprise Clients" },
+    { value: "$4.2M", label: "Assets Protected" },
+    { value: "99.7%", label: "Client Retention Rate" },
+    { value: "15+", label: "Industries Served" },
+  ];
+
   return (
     <div>
-      <section className="pt-6 pb-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto">
+      <section className="pt-6 pb-12 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-4xl mx-auto text-center">
             <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
               Case Studies
             </span>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl max-w-3xl mx-auto md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
               Trusted by Industry Leaders
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 leading-relaxed">
               See how we&apos;ve helped enterprises across industries achieve
               uncompromising security posture.
             </p>
@@ -22,38 +30,19 @@ const CaseStudies = () => {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-12 border-y border-border">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-foreground">
-                500+
+      <section className="py-16 border-y border-border">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl lg:text-5xl text-blue font-bold mb-2">
+                  {stat.value}
+                </div>
+                <p className="text-sm md:text-base text-muted-foreground">
+                  {stat.label}
+                </p>
               </div>
-              <div className="text-muted-foreground mt-1">
-                Enterprise Clients
-              </div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-foreground">
-                $4.2B
-              </div>
-              <div className="text-muted-foreground mt-1">Assets Protected</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-foreground">
-                99.7%
-              </div>
-              <div className="text-muted-foreground mt-1">Client Retention</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold text-foreground">
-                15+
-              </div>
-              <div className="text-muted-foreground mt-1">
-                Industries Served
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -74,7 +63,13 @@ const CaseStudies = () => {
                 />
                 <div className="flex items-start justify-between mb-6">
                   <div>
-                    <span className="text-4xl mb-4 block">{study.logo}</span>
+                    <div
+                      className={`w-12 h-12 rounded-xl ${iconColors[index % iconColors.length].iconBg} flex items-center justify-center mb-6 group-hover:bg-foreground/10 transition-colors`}
+                    >
+                      <study.logo
+                        className={`h-6 w-6 ${iconColors[index % iconColors.length].iconColor}`}
+                      />
+                    </div>
                     <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {study.company}
                     </h3>
@@ -119,7 +114,7 @@ const CaseStudies = () => {
       {/* CTA */}
       <section className="py-20 px-6 border-t border-border">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-foreground mb-4">
             Ready to Join Them?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">

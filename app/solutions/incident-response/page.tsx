@@ -1,5 +1,6 @@
 import PageCTA from "@/components/products/PageCTA";
 import { Button } from "@/components/ui/button";
+import { iconColors } from "@/lib/utils";
 import {
   AlertTriangle,
   Shield,
@@ -231,23 +232,6 @@ const IncidentResponse = () => {
               Our elite response team has handled 1,200+ incidents with 98%
               successful containment.
             </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4   stagger-4">
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90 px-8"
-              >
-                Emergency Response Hotline
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border hover:bg-secondary/50"
-              >
-                View Response Framework
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -258,7 +242,7 @@ const IncidentResponse = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 gradient-text">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue mb-2  ">
                   {stat.value}
                 </div>
                 <div className="text-sm md:text-base text-muted-foreground font-body">
@@ -274,7 +258,7 @@ const IncidentResponse = () => {
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mb-16">
-            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+            <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Capabilities
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
@@ -291,10 +275,14 @@ const IncidentResponse = () => {
             {capabilities.map((capability, index) => (
               <div
                 key={index}
-                className="group p-6 lg:p-8 rounded-2xl border border-border bg-card hover:border-foreground/20 transition-all duration-300 hover-lift"
+                className="group p-6 lg:p-8 rounded-2xl bg-card hover:border-foreground/20 transition-all duration-300 hover-lift"
               >
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-foreground/10 transition-colors">
-                  <capability.icon className="w-6 h-6 text-foreground/80" />
+                <div
+                  className={`w-12 h-12 rounded-xl ${iconColors[index % iconColors.length].iconBg} flex items-center justify-center mb-6 group-hover:bg-foreground/10 transition-colors`}
+                >
+                  <capability.icon
+                    className={`w-6 h-6 ${iconColors[index % iconColors.length].iconColor}`}
+                  />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">
                   {capability.title}
@@ -311,11 +299,11 @@ const IncidentResponse = () => {
       {/* Response Phases Section */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
               Response Phases
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight mb-6">
               Systematic response approach
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -339,11 +327,15 @@ const IncidentResponse = () => {
                 </p>
                 <ul className="space-y-3">
                   {phase.features.map((feature, fIndex) => (
-                    <li
-                      key={fIndex}
-                      className="flex items-center gap-3 text-sm"
-                    >
-                      <Check className="w-4 h-4 text-foreground/70 shrink-0" />
+                    // <li
+                    //   key={fIndex}
+                    //   className="flex items-center gap-3 text-sm"
+                    // >
+                    //   <Check className="w-4 h-4 text-foreground/70 shrink-0" />
+                    //   <span className="text-muted-foreground">{feature}</span>
+                    // </li>
+                    <li key={fIndex} className="flex items-center gap-3">
+                      <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
@@ -359,7 +351,7 @@ const IncidentResponse = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="lg:sticky lg:top-32">
-              <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+              <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Our Process
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
@@ -371,10 +363,6 @@ const IncidentResponse = () => {
                 business email compromise, data breaches, and advanced
                 persistent threats.
               </p>
-              <Button className="bg-foreground text-background hover:bg-foreground/90">
-                Download Response Playbooks
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
             </div>
 
             <div className="space-y-6">
@@ -407,8 +395,8 @@ const IncidentResponse = () => {
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              Why Cynical
+            <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+              Why Cynical ?
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
               Rapid response, proven results
@@ -419,10 +407,14 @@ const IncidentResponse = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-6 rounded-xl border border-border bg-background hover:border-foreground/20 transition-colors"
+                className="flex group items-start gap-4 p-6 rounded-xl border border-border bg-background hover:border-foreground/20 transition-colors"
               >
-                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-                  <feature.icon className="w-5 h-5 text-foreground/80" />
+                <div
+                  className={`w-12 h-12 rounded-xl ${iconColors[index % iconColors.length].iconBg} self-center flex items-center justify-center group-hover:bg-foreground/10 transition-colors`}
+                >
+                  <feature.icon
+                    className={`w-6 h-6 ${iconColors[index % iconColors.length].iconColor}`}
+                  />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">{feature.title}</h3>
@@ -441,7 +433,7 @@ const IncidentResponse = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+              <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Incident Types
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
@@ -460,8 +452,8 @@ const IncidentResponse = () => {
                   key={index}
                   className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card"
                 >
-                  <div className="w-8 h-8 rounded-full bg-foreground text-background flex items-center justify-center text-xs font-bold">
-                    <Check className="w-4 h-4" />
+                  <div className="w-8 h-8 flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
                   </div>
                   <span className="font-medium text-sm">{incident}</span>
                 </div>

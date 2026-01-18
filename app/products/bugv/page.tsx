@@ -3,9 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   Bug,
-  Shield,
   Users,
-  Zap,
   Clock,
   Target,
   Award,
@@ -13,20 +11,15 @@ import {
   Globe,
   Lock,
   FileText,
-  TrendingUp,
   Eye,
-  AlertTriangle,
-  Server,
-  Code,
   Layers,
   Headset,
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
-import Link from "next/link";
 import Image from "next/image";
 import { iconColors } from "@/lib/utils";
 
-const Bugv = () => {
+export default function Bugv() {
   const stats = [
     { value: "500+", label: "Elite Researchers", icon: Users },
     { value: "10,000+", label: "Vulnerabilities Found", icon: Bug },
@@ -472,6 +465,4 @@ const Bugv = () => {
       />
     </div>
   );
-};
-
-export default Bugv;
+}

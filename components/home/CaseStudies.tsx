@@ -51,7 +51,8 @@ export default function CaseStudies() {
                         iconColors[index % iconColors.length].iconColor
                       } flex items-center justify-center group-hover:bg-foreground/10 transition-colors`}
                     >
-                      {study.logo}
+                      {/* {study.logo} */}
+                      <study.logo />
                     </div>
                     <span className="text-xs font-medium px-3 py-1 rounded-full bg-secondary text-muted-foreground">
                       {study.industry}
