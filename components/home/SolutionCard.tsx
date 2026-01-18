@@ -26,7 +26,7 @@ export default function SolutionCard({
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div
-        className={`absolute rounded-2xl inset-0 bg-linear-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+        className={`absolute rounded-2xl inset-0 bg-linear-to-br ${gradient} transition-opacity duration-500`}
       />
       <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-foreground/10 transition-colors">
         <Icon className={`w-6 h-6 ${iconColor}`} />

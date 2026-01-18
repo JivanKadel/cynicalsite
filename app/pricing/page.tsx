@@ -1,51 +1,78 @@
 import { Button } from "@/components/ui/button";
-import { Check, CircleCheckBig, Lock } from "lucide-react";
+import { Check, CircleCheckBig, Lock, X } from "lucide-react";
 import Link from "next/link";
 
 const cardData = [
   {
-    title: "Plus",
-    amount: 75000,
+    title: "Starter",
+    amount: 5000,
     bestFor:
       "Lightweight applications with few interconnected features, a modest set of CRUD resources, simple workflows and low integration complexity.",
     whatYouGet:
       "Comprehensive security assessment of your web applications, identifying vulnerabilities and providing actionable insights to enhance your security posture.",
-    depthOfTest: "Provides the depth of a 2 week manual penetration test.",
     features: [
-      "Up to 5 web applications",
-      "Monthly vulnerability assessments",
-      "Expert-level pentest on the #1 AI engine in the world*",
-      "Deploy on-demand",
-      "Audit-ready report within 5 days",
-      "Instant re-testing with automated verification",
-      "Frictionless authentication testing (2FA, Magic Link, Email)",
-      "Detailed proof-of-concept exploits",
-      "Actionable remediation guidance",
+      "Hybrid Testing Approach (Automated + Manual Exploitation)",
+      "Comprehensive VAPT Report with Proof of Concept",
+      "Dedicated Project Manager & Technical Support",
+      "Secure Issue Tracking Portal (e.g., GitLab Access)",
+      "1 Web or Mobile Application",
+      "1 Issue Tracking",
+    ],
+    unavailableFeatures: [
+      "Advanced Vulnerability Analysis",
+      "Continuous Security Monitoring",
+      "Retesting & Patch Validation",
+      "Official VAPT Certificate of Completion",
     ],
     hardness: "Medium",
     complianceReady: true,
   },
   {
+    title: "Essential",
+    amount: 9000,
+    bestFor:
+      "An application or platform with multiple functional modules, integrations, and multi-step workflows. These applications have deeper access control patterns and data models.",
+    whatYouGet:
+      " Comprehensive compliance ready report that meets SOC 2, ISO27001, HIPAA, GDPR, 40+ compliance frameworks.",
+    features: [
+      "Hybrid Testing Approach (Automated + Manual Exploitation)",
+      "Comprehensive VAPT Report with Proof of Concept",
+      "Dedicated Project Manager & Technical Support",
+      "Secure Issue Tracking Portal (e.g., GitLab Access)",
+      "3 Web or Mobile Applications",
+      "3 Issue Tracking",
+    ],
+    unavailableFeatures: [
+      "Advanced Vulnerability Analysis",
+      "Continuous Security Monitoring",
+      "Realtime Streaming of Findings",
+      "Official VAPT Certificate of Completion",
+    ],
+    hardness: "Hard",
+    complianceReady: true,
+  },
+  {
     title: "Premium",
-    amount: 150000,
+    amount: 15000,
     mostPopular: true,
     bestFor:
       "An application or platform with multiple functional modules, integrations, and multi-step workflows. These applications have deeper access control patterns and data models.",
     whatYouGet:
       " Comprehensive compliance ready report that meets SOC 2, ISO27001, HIPAA, GDPR, 40+ compliance frameworks.",
-    depthOfTest: "Provides the depth of a 4 week manual penetration test.",
+
     features: [
-      "Up to 15 web applications",
-      "Bi-weekly vulnerability assessments",
-      "Expert-level pentest on the #1 AI engine in the world*",
-      "Deploy on-demand",
-      "Audit-ready report within 5 days",
-      "Instant re-testing with automated verification",
-      "Frictionless authentication testing (2FA, Magic Link, Email)",
-      "Detailed proof-of-concept exploits",
-      "Actionable remediation guidance",
-      "Blackbox, Whitebox, or Greybox",
+      "Hybrid Testing Approach (Automated + Manual Exploitation)",
+      "Comprehensive VAPT Report with Proof of Concept",
+      "Dedicated Project Manager & Technical Support",
+      "Secure Issue Tracking Portal (e.g., GitLab Access)",
+      "5 Web or Mobile Applications",
+      "Retesting & Patch Validation",
+      "5 Issue Tracking",
+      "Advanced Vulnerability Analysis",
+      "Retesting & Patch Validation",
+      "Official VAPT Certificate of Completion",
     ],
+
     hardness: "Hard",
     complianceReady: true,
   },
@@ -57,26 +84,24 @@ const cardData = [
     whatYouGet:
       "Comprehensive compliance ready reports, plus continuous security hardening for all feature releases.",
     features: [
-      "Continuous access to the Cynical platform",
-      "Multi-member access",
-      "Shared assessment knowledge",
-      "Realtime streaming of findings",
-      "Reasoning trace on every Cynical agent",
-      "Vulnerability coverage map",
-      "Human directed operatives",
-      "SSO",
-      "Early access to new covered vulnerabilities",
-      "Request and response details",
-      "Realtime streaming of agent activity",
-      "Testing for specific vulnerabilities",
-      "Extensive trace information on every endpoint",
+      "Hybrid Testing Approach (Automated + Manual Exploitation)",
+      "Comprehensive VAPT Report with Proof of Concept",
+      "Dedicated Project Manager & Technical Support",
+      "Secure Issue Tracking Portal (e.g., GitLab Access)",
+      "Unlimited Web or Mobile Applications",
+      "Retesting & Patch Validation",
+      "Unlimited Issue Tracking",
+      "Advanced Vulnerability Analysis",
+      "Continuous Security Monitoring",
+      "Retesting & Patch Validation",
+      "Official VAPT Certificate of Completion",
     ],
   },
 ];
 
 export default function PricingPage() {
   return (
-    <main className="container mx-auto relative z-10 pt-4 md:pt-6 pb-8">
+    <main className="mx-4 relative z-10 pt-4 md:pt-6 pb-8">
       <div className="max-w-5xl mx-auto text-center space-y-8 py-24">
         <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
           Plans and Pricing
@@ -88,7 +113,7 @@ export default function PricingPage() {
           compromise.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-7xl mx-auto">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
         {cardData.map((card) => (
           <div
             key={card.title}
@@ -103,23 +128,23 @@ export default function PricingPage() {
             )}
             <div className="flex-1 flex flex-col w-full">
               <div>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl text-blue font-semibold mb-2 py-2 border-b-2 border-b-muted-foreground/30">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl text-primary font-semibold mb-2 py-2 border-b-2 border-b-muted-foreground/30">
                   {card.title}
                 </h2>
                 {card.custom ? (
-                  <p className="text-xl md:text-2xl font-bold mb-4">
+                  <p className="text-xl text-green-400 md:text-2xl font-bold mb-4">
                     Request a Quote
                   </p>
                 ) : (
-                  <p className="text-xl md:text-2xl font-bold mb-4">
-                    Rs. {card.amount}
+                  <p className="text-xl text-green-400 md:text-2xl font-bold mb-4">
+                    ${card.amount}
                     <span className="text-muted-foreground text-sm font-light">
                       /per test
                     </span>
                   </p>
                 )}
               </div>
-              <div className="min-h-93 flex flex-col">
+              <div className="lg:min-h-88 flex flex-col">
                 <div className="flex-1">
                   <h2 className="mb-1 text-foreground/90">Best For</h2>
                   <p className="mb-4 text-muted-foreground">{card.bestFor}</p>
@@ -128,14 +153,6 @@ export default function PricingPage() {
                     {card.whatYouGet}
                   </p>
                 </div>
-                {card.depthOfTest && (
-                  <div>
-                    <h2 className="mb-1 text-foreground/90">Depth of Test</h2>
-                    <p className="mb-4 text-muted-foreground">
-                      {card.depthOfTest}
-                    </p>
-                  </div>
-                )}
               </div>
               <div className="py-4">
                 {card.custom ? (
@@ -152,25 +169,39 @@ export default function PricingPage() {
               <div className="flex-1 flex flex-col gap-4 justify-between mt-4 py-4 border-t-2 border-muted-foreground/30">
                 <div>
                   {card.custom ? (
-                    <h2 className="text-blue text-xl md:text-2xl">
-                      Advanced Features (All Premium Features included)
+                    <h2 className="text-primary text-xl md:text-2xl">
+                      All Features
                     </h2>
                   ) : (
-                    <h2 className="text-blue text-xl md:text-2xl">
+                    <h2 className="text-primary text-xl md:text-2xl">
                       Key Features
                     </h2>
                   )}
-                  <ul className="mb-4 list-none list-inside flex flex-col gap-3 mt-4">
+                  <div className="mb-4 flex flex-col gap-3 mt-4">
                     {card.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-center gap-1 text-muted-foreground"
-                      >
-                        <Check className="text-green-500 h-5 w-5" />
-                        {feature}
-                      </li>
+                      <div key={feature}>
+                        <div className="flex gap-1 justify-start align-super">
+                          <div className="self-start">
+                            <Check className="text-green-500 h-5! w-5!" />
+                          </div>
+                          <div className="text-muted-foreground">{feature}</div>
+                        </div>
+                      </div>
                     ))}
-                  </ul>
+                    {card.unavailableFeatures &&
+                      card.unavailableFeatures.map((feature) => (
+                        <div key={feature}>
+                          <div className="flex gap-1 justify-start align-super">
+                            <div className="self-start">
+                              <X className="text-red-500 h-5! w-5!" />
+                            </div>
+                            <div className="text-muted-foreground">
+                              {feature}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
                 </div>
 
                 {card.hardness ? (

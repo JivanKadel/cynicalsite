@@ -14,8 +14,9 @@ const Products = () => {
         "4-hour SLA on critical reports",
       ],
       stats: { value: "47", label: "Avg criticals per engagement" },
-      cta: "See Sample Findings",
+      cta: "Learn More",
       gradient: "from-violet-500/20 to-blue-500/10",
+      href: "/products/bugv",
     },
     {
       icon: "/products/vigile_logo.png",
@@ -29,8 +30,9 @@ const Products = () => {
         "Third-party risk scoring",
       ],
       stats: { value: "12K", label: "Avg assets discovered" },
-      cta: "Run Free Exposure Scan",
+      cta: "Learn More",
       gradient: "from-emerald-500/20 to-cyan-500/10",
+      href: "/products/vigile",
     },
     {
       icon: "/products/vigile_logo.png",
@@ -44,8 +46,9 @@ const Products = () => {
         "Security header monitoring",
       ],
       stats: { value: "<4h", label: "Mean time to detect" },
-      cta: "Start Free Trial",
+      cta: "Learn More",
       gradient: "from-orange-500/20 to-red-500/10",
+      href: "https://webmonitoring.doit.gov.np/dashboard",
     },
   ];
 
@@ -54,7 +57,7 @@ const Products = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-secondary/50 via-transparent to-transparent" />
 
       <div className="container mx-auto px-6 relative">
-        <div className="text-center max-w-3xl space-y-8 mx-auto mb-20">
+        <div className="text-center max-w-5xl space-y-8 mx-auto mb-20">
           <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-6 px-4 py-2 rounded-full border border-border/50 bg-secondary/50">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             Products
@@ -82,6 +85,7 @@ const Products = () => {
               features={product.features}
               cta={product.cta}
               gradient={product.gradient}
+              href={product.href}
             />
           ))}
         </div>
@@ -89,12 +93,12 @@ const Products = () => {
         <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/30 bg-secondary/30">
           {[
             { value: "0", label: "Client breaches on our watch" },
-            { value: "2.4M", label: "Vulnerabilities discovered" },
-            { value: "<4h", label: "Critical finding triage" },
+            { value: "2.4K", label: "Vulnerabilities discovered" },
+            { value: "<10h", label: "Critical finding triage" },
             { value: "24/7", label: "Active threat monitoring" },
           ].map((stat) => (
             <div key={stat.label} className="text-center lg:text-left">
-              <p className="text-3xl lg:text-4xl font-bold mb-1 text-blue">
+              <p className="text-3xl lg:text-4xl font-bold mb-1 text-foreground">
                 {stat.value}
               </p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>

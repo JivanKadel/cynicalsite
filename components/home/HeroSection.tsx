@@ -12,21 +12,14 @@ export default function HeroSection() {
             47 critical vulnerabilities found this month
           </span>
         </div>
-        {/* class="text-[2.7rem] font-light leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] font-aeonik max-w-2xl xl:max-w-4xl text-balance text-center md:text-left" */}
         <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
-          <span className="text-lightblue">Offensive</span> Security
-          <br />
-          <span>Built by Attackers.</span>
+          See your organization the way attackers do
         </h1>
 
-        <p className="my-6 font-sans text-base text-foreground/80 sm:px-0 font-normal lg:my-[22px] lg:text-lg md:max-w-[780px] mx-auto text-balance text-center">
-          We found them. Our team of former red teamer, exploit developers, and
-          threat researchers test your systems the way real attackers do. No
-          checklists. No compliance theater.
-        </p>
-
-        <p className="text-sm text-muted-foreground font-inter">
-          2.4M vulnerabilities discovered. Zero breaches on watch.
+        <p className="my-6 font-sans text-base text-foreground/80 sm:px-0 font-normal lg:my-5.5 lg:text-lg m mx-auto text-balance text-center">
+          We provide continuous offensive security by simulating real-world
+          attacks across your attack surface to uncover exploitable weaknesses
+          scanners, audits, and vendors miss
         </p>
       </div>
 

@@ -4,6 +4,7 @@ import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProductCardProps {
   name: string;
@@ -17,6 +18,7 @@ interface ProductCardProps {
   features: string[];
   cta: string;
   gradient?: string;
+  href?: string;
 }
 
 export function ProductCard({
@@ -28,11 +30,12 @@ export function ProductCard({
   features,
   cta,
   gradient = "from-violet-500/20 to-blue-500/10",
+  href,
 }: ProductCardProps) {
   return (
     <div className="group relative bg-[#0d0d0e] rounded-xl rounded-tr-[48px]">
       <div
-        className={`absolute rounded-xl rounded-tr-[48px] inset-0 bg-linear-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+        className={`absolute rounded-xl rounded-tr-[48px] inset-0 bg-linear-to-br ${gradient} transition-opacity duration-500`}
       />
       <div className="relative h-full rounded-xl rounded-tr-[48px] backdrop-blur-md overflow-hidden transition-all duration-30">
         <div className="p-6 flex flex-col h-full text-foreground">
@@ -69,14 +72,16 @@ export function ProductCard({
             ))}
           </div>
 
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-full border-2 border-border/60 py-5 transition-all duration-300"
-          >
-            {cta}
-            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <Link href={href || "#"} className="w-full mt-auto">
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full border-2 border-border/60 py-5 transition-all duration-300"
+            >
+              {cta}
+              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

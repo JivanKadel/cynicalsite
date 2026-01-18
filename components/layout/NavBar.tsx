@@ -63,7 +63,7 @@ export default function Navbar() {
       icon: Infinity,
       label: "Falcon",
       description: "Continuous security and Uptime Monitoring",
-      href: "/products/falcon",
+      href: "https://webmonitoring.doit.gov.np/dashboard",
     },
   ];
 
@@ -139,19 +139,19 @@ export default function Navbar() {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link href="/" className="flex items-center gap-2">
-              {theme === "dark" ? (
-                <Image
-                  src={"/logo.svg"}
-                  alt="Cynical Tech Logo"
-                  width={190}
-                  height={90}
-                />
-              ) : (
+              {theme === "light" ? (
                 <Image
                   src={"/cynical_light.png"}
                   alt="Cynical Tech Logo"
                   width={150}
                   height={40}
+                />
+              ) : (
+                <Image
+                  src={"/logo.svg"}
+                  alt="Cynical Tech Logo"
+                  width={190}
+                  height={90}
                 />
               )}
             </Link>

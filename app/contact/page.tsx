@@ -5,12 +5,10 @@ import {
   ArrowRight,
   Mail,
   Clock,
-  Building2,
   Phone,
   MapPin,
   Globe,
   Calendar,
-  Lock,
 } from "lucide-react";
 
 const Contact = () => {
@@ -27,28 +25,6 @@ const Contact = () => {
     e.preventDefault();
     console.log(formData);
   };
-
-  const trustIndicators = [
-    {
-      icon: Lock,
-      title: "Confidential",
-      description:
-        "All communications are encrypted and handled under strict NDA",
-      color: "text-blue-500",
-    },
-    {
-      icon: Clock,
-      title: "24-Hour Response",
-      description: "Our security team responds within one business day",
-      color: "text-orange-500",
-    },
-    {
-      icon: Building2,
-      title: "Enterprise Ready",
-      description: "Serving Private companies and government agencies",
-      color: "text-green-500",
-    },
-  ];
 
   const contactInfo = [
     {
@@ -93,26 +69,6 @@ const Contact = () => {
                 Share your security requirements. Our offensive security team
                 will evaluate your needs and propose a tailored engagement.
               </p>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="grid md:grid-cols-3 gap-6 mb-16">
-              {trustIndicators.map((item, index) => (
-                <div
-                  key={index}
-                  className="p-6 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm hover:bg-card/70 transition-all duration-300 hover:shadow-lg"
-                >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                    <item.icon className={`w-6 h-6 ${item.color}`} />
-                  </div>
-                  <h3 className="font-semibold mb-2 text-center">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground text-center">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
             </div>
 
             <div className="grid lg:grid-cols-3 gap-12">
