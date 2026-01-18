@@ -45,7 +45,7 @@ const Contact = () => {
     {
       icon: Building2,
       title: "Enterprise Ready",
-      description: "Serving Fortune 500 companies and government agencies",
+      description: "Serving Private companies and government agencies",
       color: "text-green-500",
     },
   ];
@@ -128,15 +128,15 @@ const Contact = () => {
                   </div>
 
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="flex flex-col gap-6">
                       <div>
                         <label className="block text-sm font-medium mb-2">
-                          Full Name *
+                          Full Name*
                         </label>
                         <input
                           type="text"
-                          className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
-                          placeholder="John Smith"
+                          className="w-full placeholder:text-muted-foreground/50 px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
+                          placeholder="John Doe"
                           value={formData.name}
                           onChange={(e) =>
                             setFormData({ ...formData, name: e.target.value })
@@ -146,11 +146,11 @@ const Contact = () => {
                       </div>
                       <div>
                         <label className="block text-sm font-medium mb-2">
-                          Work Email *
+                          Company Email*
                         </label>
                         <input
                           type="email"
-                          className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
+                          className="w-full placeholder:text-muted-foreground/50 px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
                           placeholder="john@company.com"
                           value={formData.email}
                           onChange={(e) =>
@@ -161,8 +161,8 @@ const Contact = () => {
                       </div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
+                    <div className="flex flex-col gap-6">
+                      {/* <div>
                         <label className="block text-sm font-medium mb-2">
                           Phone Number
                         </label>
@@ -175,14 +175,14 @@ const Contact = () => {
                             setFormData({ ...formData, phone: e.target.value })
                           }
                         />
-                      </div>
+                      </div> */}
                       <div>
                         <label className="block text-sm font-medium mb-2">
-                          Company *
+                          Company*
                         </label>
                         <input
                           type="text"
-                          className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
+                          className="w-full placeholder:text-muted-foreground/50 px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
                           placeholder="Company name"
                           value={formData.company}
                           onChange={(e) =>
@@ -194,36 +194,6 @@ const Contact = () => {
                           required
                         />
                       </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Role / Title
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
-                        placeholder="CISO, Security Lead, etc."
-                        value={formData.role}
-                        onChange={(e) =>
-                          setFormData({ ...formData, role: e.target.value })
-                        }
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Security Requirements *
-                      </label>
-                      <textarea
-                        className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors h-36 resize-none focus:ring-2 focus:ring-primary/20"
-                        placeholder="Describe your security needs, compliance requirements, or specific concerns..."
-                        value={formData.message}
-                        onChange={(e) =>
-                          setFormData({ ...formData, message: e.target.value })
-                        }
-                        required
-                      />
                     </div>
 
                     <Button
@@ -285,32 +255,24 @@ const Contact = () => {
                     <p>Emergency Support: 24/7 Available</p>
                   </div>
                 </div>
-
-                {/* What Happens Next */}
-                <div className="p-6 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
-                  <h3 className="font-semibold mb-4">What Happens Next</h3>
-                  <ol className="space-y-3 text-sm text-muted-foreground">
-                    <li className="flex gap-3">
-                      <span className="font-mono text-primary font-bold">
-                        01
-                      </span>
-                      <span>Our team reviews your requirements</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="font-mono text-primary font-bold">
-                        02
-                      </span>
-                      <span>We schedule a confidential scoping call</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="font-mono text-primary font-bold">
-                        03
-                      </span>
-                      <span>You receive a tailored proposal and timeline</span>
-                    </li>
-                  </ol>
-                </div>
               </div>
+            </div>
+            <div className="p-6 mt-16 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
+              <h3 className="font-semibold mb-4">What Happens Next</h3>
+              <ol className="space-y-3 text-sm text-muted-foreground">
+                <li className="flex gap-3">
+                  <span className="font-mono text-primary font-bold">01</span>
+                  <span>Our team reviews your requirements</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="font-mono text-primary font-bold">02</span>
+                  <span>We schedule a confidential scoping call</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="font-mono text-primary font-bold">03</span>
+                  <span>You receive a tailored proposal and timeline</span>
+                </li>
+              </ol>
             </div>
           </div>
         </div>

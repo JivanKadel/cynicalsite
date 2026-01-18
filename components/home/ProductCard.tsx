@@ -35,7 +35,7 @@ export function ProductCard({
         className={`absolute rounded-xl rounded-tr-[48px] inset-0 bg-linear-to-br ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
       />
       <div className="relative h-full rounded-xl rounded-tr-[48px] backdrop-blur-md overflow-hidden transition-all duration-30">
-        <div className="p-6 flex flex-col h-full text-white">
+        <div className="p-6 flex flex-col h-full text-foreground">
           <div className="flex items-start justify-between mb-6">
             <div className="w-12 h-12 p-2 rounded-lg bg-white/10 flex items-center justify-center transition-colors">
               <Image src={icon} alt={name} width={48} height={40} />

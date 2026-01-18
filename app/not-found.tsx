@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { ShieldX, AlertTriangle, Home, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
-    <main className="fixed inset-0 z-50 flex h-screen w-screen items-center justify-center bg-black text-white">
+    <main className="fixed inset-0 z-50 flex h-screen w-screen items-center justify-center bg-background text-foreground">
       <div className="flex flex-col items-center justify-center px-6 text-center space-y-8">
         {/* Animated 404 */}
         <div className="flex items-center space-x-4">
@@ -25,7 +25,7 @@ export default function NotFound() {
           <Button
             variant="outline"
             asChild
-            className="border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+            className="border-red-500 text-red-500 hover:bg-red-500 hover:text-foreground"
           >
             <Link href="/">
               <ArrowLeft className="w-4 h-4 mr-2" />

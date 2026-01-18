@@ -81,7 +81,7 @@ const Footer = () => {
                   >
                     <a
                       href={link.href}
-                      className="font-inter font-normal text-neutral-400 hover:text-white"
+                      className="font-inter font-normal text-neutral-400 hover:text-foreground"
                     >
                       {link.label}
                     </a>

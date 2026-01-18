@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <section className="container mx-auto relative z-10 pt-4 md:pt-6 pb-8">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8">
-        <div className=" ">
+        <div>
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-secondary/30 text-sm text-muted-foreground">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             47 critical vulnerabilities found this month
@@ -19,7 +19,7 @@ export default function HeroSection() {
           <span>Built by Attackers.</span>
         </h1>
 
-        <p className="my-6 font-sans text-base text-white/80 sm:px-0 font-normal lg:my-[22px] lg:text-lg md:max-w-[780px] mx-auto text-balance text-center">
+        <p className="my-6 font-sans text-base text-foreground/80 sm:px-0 font-normal lg:my-[22px] lg:text-lg md:max-w-[780px] mx-auto text-balance text-center">
           We found them. Our team of former red teamer, exploit developers, and
           threat researchers test your systems the way real attackers do. No
           checklists. No compliance theater.
