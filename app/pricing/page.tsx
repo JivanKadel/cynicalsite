@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Check, CircleCheckBig, Lock } from "lucide-react";
-import { title } from "process";
 
 const cardData = [
   {
@@ -43,7 +42,7 @@ const cardData = [
       "Instant re-testing with automated verification",
       "Frictionless authentication testing (2FA, Magic Link, Email)",
       "Detailed proof-of-concept exploits",
-      " Actionable remediation guidance",
+      "Actionable remediation guidance",
       "Blackbox, Whitebox, or Greybox",
     ],
     hardness: "Hard",
@@ -57,11 +56,11 @@ const cardData = [
     whatYouGet:
       "Comprehensive compliance ready reports, plus continuous security hardening for all feature releases.",
     features: [
-      "Continuous access to the XBOW platform",
+      "Continuous access to the Cynical platform",
       "Multi-member access",
       "Shared assessment knowledge",
       "Realtime streaming of findings",
-      "Reasoning trace on every XBOW agent",
+      "Reasoning trace on every Cynical agent",
       "Vulnerability coverage map",
       "Human directed operatives",
       "SSO",
