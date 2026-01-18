@@ -34,9 +34,13 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { ScheduleCallDialog } from "../contact/SchedulDialog";
+import { ThemeSwitcher } from "../theme-switcher";
+import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const { theme } = useTheme();
 
   const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -135,12 +139,21 @@ export default function Navbar() {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src={"/logo.svg"}
-                alt="Cynical Tech Logo"
-                width={190}
-                height={90}
-              />
+              {theme === "dark" ? (
+                <Image
+                  src={"/logo.svg"}
+                  alt="Cynical Tech Logo"
+                  width={190}
+                  height={90}
+                />
+              ) : (
+                <Image
+                  src={"/cynical_light.png"}
+                  alt="Cynical Tech Logo"
+                  width={150}
+                  height={40}
+                />
+              )}
             </Link>
 
             {/* Desktop Navigation */}
@@ -204,7 +217,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop CTA Buttons */}
-            <div className="hidden lg:block">
+            <div className="hidden lg:flex gap-2">
               <Button
                 // href={"/contact"}
                 onClick={() => setDialogOpen(true)}
@@ -218,6 +231,7 @@ export default function Navbar() {
                 </div>
                 {/* <ArrowRight className="w-4 h-4 transform transition-transform duration-600 group-hover:translate-x-1" /> */}
               </Button>
+              <ThemeSwitcher />
             </div>
 
             {/* Mobile Menu Button */}
@@ -257,12 +271,15 @@ export default function Navbar() {
                   Contact
                 </Link>
 
-                <div className="flex flex-col gap-3 pt-4 mt-2 border-t border-border">
+                <div className="flex gap-2 pt-4 mt-2 border-t border-border">
                   {/* <Link href={"/contact"}> */}
-                  <Button onClick={() => setDialogOpen(true)}>
+                  <Button
+                    onClick={() => setDialogOpen(true)}
+                    className="flex-1"
+                  >
                     Schedule a Call
                   </Button>
-                  {/* </Link> */}
+                  <ThemeSwitcher />
                 </div>
               </div>
             </div>
@@ -327,7 +344,7 @@ function MobileNavSection({ title, items }: MobileNavSectionProps) {
         <span
           className={cn(
             "transition-transform duration-200",
-            isOpen ? "rotate-180" : ""
+            isOpen ? "rotate-180" : "",
           )}
         >
           <ChevronDown />

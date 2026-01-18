@@ -6,6 +6,7 @@ import Navbar from "@/components/layout/NavBar";
 import Footer from "@/components/home/Footer";
 import LayoutClient from "./layout-client";
 import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const noto = Noto_Serif({
   variable: "--font-noto",
@@ -55,18 +56,25 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${noto.variable} ${inter.variable} ${aeonik.className} antialiased`}
+      className={`${noto.variable} ${inter.variable} ${aeonik.className} antialiased suppressHydrationWarning`}
     >
       <body>
-        <Toaster richColors position="top-center" />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster richColors position="top-center" />
 
-        <LayoutClient>
-          <div>
-            <Navbar />
-            <div className="mt-16 lg:mt-20">{children}</div>
-            <Footer />
-          </div>
-        </LayoutClient>
+          <LayoutClient>
+            <div>
+              <Navbar />
+              <div className="mt-16 lg:mt-20">{children}</div>
+              <Footer />
+            </div>
+          </LayoutClient>
+        </ThemeProvider>
       </body>
     </html>
   );
