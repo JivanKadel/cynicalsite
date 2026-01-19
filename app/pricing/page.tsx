@@ -143,6 +143,72 @@ export default function PricingPage() {
           </div>
         ))}
       </section> */}
+      {/* <section
+        role="region"
+        aria-labelledby="pricing-heading"
+        className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mx-8"
+      >
+        {pricingData.map((card) => (
+          <div
+            key={card.title}
+            className="relative border-2 border-border/50 hover:border-blue rounded-lg p-6 flex flex-col transition-all"
+          >
+            {card.mostPopular && (
+              <div className="absolute top-0 right-0 bg-blue text-white px-4 py-1 rounded-tr-lg rounded-bl-lg text-sm font-medium">
+                Most Popular
+              </div>
+            )}
+
+            
+            <div>
+              <h2 className="text-3xl font-semibold mb-2 border-b border-muted pb-2">
+                {card.title}
+              </h2>
+
+              {card.custom ? (
+                <p className="text-2xl text-green-400 font-bold mb-4">
+                  Request a Quote
+                </p>
+              ) : (
+                <p className="text-2xl text-green-400 font-bold mb-4">
+                  ${card.amount}
+                  <span className="text-sm text-muted-foreground">
+                    {" "}
+                    / engagement
+                  </span>
+                </p>
+              )}
+            </div>
+
+           
+            <div className="flex-1">
+              <h3 className="text-sm font-medium text-primary-foreground/80">
+                Best For
+              </h3>
+              <p className="text-muted-foreground mb-4">{card.bestFor}</p>
+
+              <h3 className="text-sm font-medium text-primary-foreground/80">
+                What You Get
+              </h3>
+              <p className="text-muted-foreground">{card.whatYouGet}</p>
+            </div>
+
+           
+            <div className="mt-6">
+              {card.custom ? (
+                <Link href="/contact">
+                  <Button className="w-full py-6">Contact Sales</Button>
+                </Link>
+              ) : (
+                <Link href={`/pentest?plan=${card.title.toLowerCase()}`}>
+                  <Button className="w-full py-6">Get Started</Button>
+                </Link>
+              )}
+            </div>
+          </div>
+        ))}
+      </section> */}
+
       <PricingComparison />
 
       <section role="region" aria-labelledby="FAQ section" className="py-16">
