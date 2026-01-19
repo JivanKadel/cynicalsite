@@ -20,13 +20,9 @@ import {
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
 import Image from "next/image";
-import DataFlow from "./DataFlow";
 import { Badge } from "@/components/ui/badge";
 import { iconColors } from "@/lib/utils";
 import HeroImage from "./HeroImage";
-import DataFlowAlt from "./DataFlowAlt";
-import DataFlowAltTailwind from "./DataFlowAltTailwind";
-import DataFlowDarkAlt from "./DataFlowAltAlt";
 
 export default function Vigile() {
   const stats = [
@@ -255,15 +251,8 @@ export default function Vigile() {
               </div>
             </div>
 
-            <div className="w-full">
-              {/* <DataFlow /> */}
-              {/* <DataFlowAlt /> */}
-              {/* <DataFlowDarkAlt /> */}
-            </div>
+            <div className="w-full"></div>
           </div>
-          {/* <div className="p-2 mb-20">
-            <DataFlowAltTailwind />
-          </div> */}
         </div>
       </section>
 
