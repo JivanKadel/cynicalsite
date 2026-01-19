@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Faqs, pricingData } from "@/data/pricing.data";
 import { Check, CircleCheckBig, Lock, X } from "lucide-react";
 import Link from "next/link";
+import PricingComparison from "./PricingComparison";
 
 export default function PricingPage() {
   return (
@@ -24,7 +25,7 @@ export default function PricingPage() {
           compromise.
         </p>
       </div>
-      <section
+      {/* <section
         role="region"
         aria-labelledby="pricing-heading"
         className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8"
@@ -141,7 +142,8 @@ export default function PricingPage() {
             </div>
           </div>
         ))}
-      </section>
+      </section> */}
+      <PricingComparison />
 
       <section role="region" aria-labelledby="FAQ section" className="py-16">
         <Card className="max-w-4xl mx-auto border-none">

@@ -1,6 +1,6 @@
 export const pricingData = [
   {
-    title: "Starter",
+    title: "Foundation Assessment",
     amount: 5000,
     bestFor:
       "Lightweight applications with few interconnected features, a modest set of CRUD resources, simple workflows and low integration complexity.",
@@ -25,7 +25,7 @@ export const pricingData = [
     complianceReady: true,
   },
   {
-    title: "Essential",
+    title: "Growth Security Assurance",
     amount: 9000,
     bestFor:
       "An application or platform with multiple functional modules, integrations, and multi-step workflows. These applications have deeper access control patterns and data models.",
@@ -50,7 +50,7 @@ export const pricingData = [
     complianceReady: true,
   },
   {
-    title: "Premium",
+    title: "Advanced Application Defense",
     amount: 15000,
     mostPopular: true,
     bestFor:
@@ -75,7 +75,7 @@ export const pricingData = [
     complianceReady: true,
   },
   {
-    title: "Enterprise",
+    title: "Enterprise Continuous Security",
     custom: true,
     bestFor:
       " A mature application portfolio with broad functionality, such as a multimodule SaaS product supporting complex workflows, admin tools, and extensive resource relationships.",
