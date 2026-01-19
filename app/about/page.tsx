@@ -28,7 +28,7 @@ export default function AboutUs() {
     {
       icon: Lock,
       title: "Elite Security Expertise",
-      color: "text-blue-500",
+      color: "text-foreground-500",
       description:
         "Top cybersecurity talent with proven and extensive experience in high-stakes environments.",
     },
@@ -186,7 +186,7 @@ export default function AboutUs() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50">
-                  <Building className="w-4 h-4 text-foreground" />
+                  <Building className="w-4 h-4 text-primary-foreground" />
                   <span className="text-sm font-medium">About Cynical</span>
                 </div>
 
@@ -298,7 +298,7 @@ export default function AboutUs() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Target className="w-4 h-4 text-foreground" />
+              <Target className="w-4 h-4 text-primary-foreground" />
               <span className="text-sm font-medium">Our Mission</span>
             </div>
 
@@ -331,7 +331,7 @@ export default function AboutUs() {
 
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mx-auto">
-                  <Zap className="w-6 h-6 text-blue-500" />
+                  <Zap className="w-6 h-6 text-foreground-500" />
                 </div>
                 <h3 className="text-xl font-semibold">Excellence</h3>
                 <p className="text-muted-foreground font-body">
@@ -484,7 +484,7 @@ export default function AboutUs() {
                         {member.social.linkedin && (
                           <Link
                             href={member.social.linkedin}
-                            className="text-muted-foreground hover:text-foreground transition-colors"
+                            className="text-muted-foreground hover:text-primary-foreground transition-colors"
                           >
                             <Linkedin className="w-5 h-5" />
                           </Link>
@@ -492,7 +492,7 @@ export default function AboutUs() {
                         {member.social.twitter && (
                           <Link
                             href={member.social.twitter}
-                            className="text-muted-foreground hover:text-foreground transition-colors"
+                            className="text-muted-foreground hover:text-primary-foreground transition-colors"
                           >
                             <Twitter className="w-5 h-5" />
                           </Link>
@@ -501,7 +501,7 @@ export default function AboutUs() {
 
                       <div className="bg-secondary/50 rounded-lg p-6 border border-border">
                         <div className="flex items-start gap-4">
-                          <Quote className="w-6 h-6 text-foreground/60 shrink-0 mt-1" />
+                          <Quote className="w-6 h-6 text-primary-foreground/60 shrink-0 mt-1" />
                           <div>
                             <p className="text-muted-foreground font-body italic mb-4">
                               {member.message}
@@ -555,7 +555,7 @@ export default function AboutUs() {
                     {member.social.linkedin && (
                       <Link
                         href={member.social.linkedin}
-                        className="text-muted-foreground hover:text-foreground transition-colors"
+                        className="text-muted-foreground hover:text-primary-foreground transition-colors"
                       >
                         <Linkedin className="w-4 h-4" />
                       </Link>
@@ -563,7 +563,7 @@ export default function AboutUs() {
                     {member.social.twitter && (
                       <Link
                         href={member.social.twitter}
-                        className="text-muted-foreground hover:text-foreground transition-colors"
+                        className="text-muted-foreground hover:text-primary-foreground transition-colors"
                       >
                         <Twitter className="w-4 h-4" />
                       </Link>
@@ -571,7 +571,7 @@ export default function AboutUs() {
                     {member.social.github && (
                       <Link
                         href={member.social.github}
-                        className="text-muted-foreground hover:text-foreground transition-colors"
+                        className="text-muted-foreground hover:text-primary-foreground transition-colors"
                       >
                         <Github className="w-4 h-4" />
                       </Link>

@@ -35,7 +35,7 @@ const CaseStudies = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl lg:text-5xl text-blue font-bold mb-2">
+                <div className="text-3xl md:text-4xl lg:text-5xl text-foreground font-bold mb-2">
                   {stat.value}
                 </div>
                 <p className="text-sm md:text-base text-muted-foreground">
@@ -70,7 +70,7 @@ const CaseStudies = () => {
                         className={`h-6 w-6 ${iconColors[index % iconColors.length].iconColor}`}
                       />
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-2xl font-bold text-primary-foreground group-hover:text-primary transition-colors">
                       {study.company}
                     </h3>
                     <p className="text-muted-foreground">{study.industry}</p>
@@ -92,7 +92,7 @@ const CaseStudies = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6 py-4 border-y border-border/50">
                   {study.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="text-center">
-                      <div className="text-xl font-bold text-foreground">
+                      <div className="text-xl font-bold text-primary-foreground">
                         {metric.value}
                       </div>
                       <div className="text-xs text-muted-foreground">
@@ -114,7 +114,7 @@ const CaseStudies = () => {
       {/* CTA */}
       <section className="py-20 px-6 border-t border-border">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-primary-foreground mb-4">
             Ready to Join Them?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">

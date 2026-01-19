@@ -192,23 +192,23 @@ const CloudSecurity = () => {
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Home
               </Link>
               <span>/</span>
               <Link
                 href="/#solutions"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Solutions
               </Link>
               <span>/</span>
-              <span className="text-foreground">Cloud Security</span>
+              <span className="text-primary-foreground">Cloud Security</span>
             </div>
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Cloud className="w-4 h-4 text-foreground" />
+              <Cloud className="w-4 h-4 text-primary-foreground" />
               <span className="text-sm font-medium">
                 Enterprise Cloud Security
               </span>
@@ -237,7 +237,7 @@ const CloudSecurity = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-blue mb-2  ">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2  ">
                   {stat.value}
                 </div>
                 <div className="text-sm md:text-base text-muted-foreground font-body">
@@ -313,7 +313,7 @@ const CloudSecurity = () => {
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
               >
-                <div className="text-6xl font-bold text-foreground/20 mb-4">
+                <div className="text-6xl font-bold text-primary-foreground/20 mb-4">
                   0{index + 1}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{provider.title}</h3>
@@ -326,7 +326,7 @@ const CloudSecurity = () => {
                     //   key={fIndex}
                     //   className="flex items-center gap-3 text-sm"
                     // >
-                    //   <Check className="w-4 h-4 text-foreground/70 shrink-0" />
+                    //   <Check className="w-4 h-4 text-primary-foreground/70 shrink-0" />
                     //   <span className="text-muted-foreground">{feature}</span>
                     // </li>
                     <li key={fIndex} className="flex items-center gap-3">

@@ -175,24 +175,26 @@ export default function ApplicationSecurity() {
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Home
               </Link>
               <span>/</span>
               <Link
                 href="/#solutions"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Solutions
               </Link>
               <span>/</span>
-              <span className="text-foreground">Application Security</span>
+              <span className="text-primary-foreground">
+                Application Security
+              </span>
             </div>
 
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8 ">
-              <Code className="w-4 h-4 text-foreground" />
+              <Code className="w-4 h-4 text-primary-foreground" />
               <span className="text-sm font-medium">
                 Enterprise Application Security
               </span>
@@ -220,7 +222,7 @@ export default function ApplicationSecurity() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl lg:text-5xl text-blue font-bold mb-2">
+                <div className="text-3xl md:text-4xl lg:text-5xl text-foreground font-bold mb-2">
                   {stat.value}
                 </div>
                 <p className="text-sm md:text-base text-muted-foreground">
@@ -296,7 +298,7 @@ export default function ApplicationSecurity() {
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
               >
-                <div className="text-6xl font-bold text-foreground/20 mb-4">
+                <div className="text-6xl font-bold text-primary-foreground/20 mb-4">
                   0{index + 1}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{type.title}</h3>

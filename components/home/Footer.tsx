@@ -51,14 +51,14 @@ const Footer = () => {
       icon: Facebook,
       href: "https://www.facebook.com/cynicaltechnology",
       label: "Facebook",
-      hoverColor: "hover:text-blue-600",
+      hoverColor: "hover:text-foreground-600",
       hoverBg: "hover:bg-blue-600/10",
     },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/company/cynicaltechnology/",
       label: "LinkedIn",
-      hoverColor: "hover:text-blue-700",
+      hoverColor: "hover:text-foreground-700",
       hoverBg: "hover:bg-blue-700/10",
     },
   ];
@@ -81,7 +81,7 @@ const Footer = () => {
                   >
                     <a
                       href={link.href}
-                      className="font-inter font-normal text-neutral-400 hover:text-foreground"
+                      className="font-inter font-normal text-neutral-400 hover:text-primary-foreground"
                     >
                       {link.label}
                     </a>
@@ -150,31 +150,31 @@ const Footer = () => {
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-inter">
               <a
                 href="/privacy"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Privacy Policy
               </a>
               <a
                 href="/terms"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Terms of Service
               </a>
               <a
                 href="/security"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Security
               </a>
               <a
                 href="/cookies"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Cookie Settings
               </a>
               <a
                 href="/responsible-disclosure"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Responsible Disclosure
               </a>

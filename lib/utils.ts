@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const iconColors = [
   {
-    iconColor: "text-blue-500",
+    iconColor: "text-foreground-500",
     iconBg: "bg-blue-500/10",
     gradient: "from-violet-500/20 to-blue-500/10",
   },

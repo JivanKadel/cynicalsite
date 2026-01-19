@@ -17,7 +17,7 @@ export default function SolutionCard({
   features,
   index,
   gradient = "from-violet-500/20 to-blue-500/10",
-  iconColor = "text-blue-500",
+  iconColor = "text-foreground-500",
 }: SolutionCardProps & { index: number }) {
   return (
     <div
@@ -32,7 +32,7 @@ export default function SolutionCard({
         <Icon className={`w-6 h-6 ${iconColor}`} />
       </div>
 
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
+      <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
       <p className="text-muted-foreground text-sm font-body mb-5 leading-relaxed">
         {description}
       </p>
@@ -47,10 +47,6 @@ export default function SolutionCard({
           </span>
         ))}
       </div>
-
-      {/* <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
-        <ArrowRight className="w-5 h-5 text-muted-foreground" />
-      </div> */}
     </div>
   );
 }

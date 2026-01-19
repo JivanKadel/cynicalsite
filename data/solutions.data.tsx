@@ -28,7 +28,7 @@ export const solutions = [
       "Auth/session attacks",
     ],
     gradient: "from-violet-500/20 to-blue-500/10",
-    iconColor: "text-blue-500",
+    iconColor: "text-foreground-500",
   },
   {
     icon: Cloud,

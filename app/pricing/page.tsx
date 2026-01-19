@@ -1,107 +1,18 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Faqs, pricingData } from "@/data/pricing.data";
 import { Check, CircleCheckBig, Lock, X } from "lucide-react";
 import Link from "next/link";
 
-const cardData = [
-  {
-    title: "Starter",
-    amount: 5000,
-    bestFor:
-      "Lightweight applications with few interconnected features, a modest set of CRUD resources, simple workflows and low integration complexity.",
-    whatYouGet:
-      "Comprehensive security assessment of your web applications, identifying vulnerabilities and providing actionable insights to enhance your security posture.",
-    features: [
-      "Hybrid Testing Approach (Automated + Manual Exploitation)",
-      "Comprehensive VAPT Report with Proof of Concept",
-      "Dedicated Project Manager & Technical Support",
-      "Secure Issue Tracking Portal (e.g., GitLab Access)",
-      "1 Web or Mobile Application",
-      "1 Issue Tracking",
-    ],
-    unavailableFeatures: [
-      "Advanced Vulnerability Analysis",
-      "Continuous Security Monitoring",
-      "Retesting & Patch Validation",
-      "Official VAPT Certificate of Completion",
-    ],
-    hardness: "Medium",
-    complianceReady: true,
-  },
-  {
-    title: "Essential",
-    amount: 9000,
-    bestFor:
-      "An application or platform with multiple functional modules, integrations, and multi-step workflows. These applications have deeper access control patterns and data models.",
-    whatYouGet:
-      " Comprehensive compliance ready report that meets SOC 2, ISO27001, HIPAA, GDPR, 40+ compliance frameworks.",
-    features: [
-      "Hybrid Testing Approach (Automated + Manual Exploitation)",
-      "Comprehensive VAPT Report with Proof of Concept",
-      "Dedicated Project Manager & Technical Support",
-      "Secure Issue Tracking Portal (e.g., GitLab Access)",
-      "3 Web or Mobile Applications",
-      "3 Issue Tracking",
-    ],
-    unavailableFeatures: [
-      "Advanced Vulnerability Analysis",
-      "Continuous Security Monitoring",
-      "Realtime Streaming of Findings",
-      "Official VAPT Certificate of Completion",
-    ],
-    hardness: "Hard",
-    complianceReady: true,
-  },
-  {
-    title: "Premium",
-    amount: 15000,
-    mostPopular: true,
-    bestFor:
-      "An application or platform with multiple functional modules, integrations, and multi-step workflows. These applications have deeper access control patterns and data models.",
-    whatYouGet:
-      " Comprehensive compliance ready report that meets SOC 2, ISO27001, HIPAA, GDPR, 40+ compliance frameworks.",
-
-    features: [
-      "Hybrid Testing Approach (Automated + Manual Exploitation)",
-      "Comprehensive VAPT Report with Proof of Concept",
-      "Dedicated Project Manager & Technical Support",
-      "Secure Issue Tracking Portal (e.g., GitLab Access)",
-      "5 Web or Mobile Applications",
-      "Retesting & Patch Validation",
-      "5 Issue Tracking",
-      "Advanced Vulnerability Analysis",
-      "Retesting & Patch Validation",
-      "Official VAPT Certificate of Completion",
-    ],
-
-    hardness: "Hard",
-    complianceReady: true,
-  },
-  {
-    title: "Enterprise",
-    custom: true,
-    bestFor:
-      " A mature application portfolio with broad functionality, such as a multimodule SaaS product supporting complex workflows, admin tools, and extensive resource relationships.",
-    whatYouGet:
-      "Comprehensive compliance ready reports, plus continuous security hardening for all feature releases.",
-    features: [
-      "Hybrid Testing Approach (Automated + Manual Exploitation)",
-      "Comprehensive VAPT Report with Proof of Concept",
-      "Dedicated Project Manager & Technical Support",
-      "Secure Issue Tracking Portal (e.g., GitLab Access)",
-      "Unlimited Web or Mobile Applications",
-      "Retesting & Patch Validation",
-      "Unlimited Issue Tracking",
-      "Advanced Vulnerability Analysis",
-      "Continuous Security Monitoring",
-      "Retesting & Patch Validation",
-      "Official VAPT Certificate of Completion",
-    ],
-  },
-];
-
 export default function PricingPage() {
   return (
-    <main className="mx-4 relative z-10 pt-4 md:pt-6 pb-8">
+    <main className="mx-auto max-w-350 relative z-10 pt-4 md:pt-6 pb-8">
       <div className="max-w-5xl mx-auto text-center space-y-8 py-24">
         <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
           Plans and Pricing
@@ -113,8 +24,12 @@ export default function PricingPage() {
           compromise.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 mx-auto">
-        {cardData.map((card) => (
+      <section
+        role="region"
+        aria-labelledby="pricing-heading"
+        className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 mx-8"
+      >
+        {pricingData.map((card) => (
           <div
             key={card.title}
             className="relative border-2 border-border/50 hover:border-blue rounded-lg p-6 flex flex-col justify-between transition-all duration-600"
@@ -146,9 +61,11 @@ export default function PricingPage() {
               </div>
               <div className="lg:min-h-88 flex flex-col">
                 <div className="flex-1">
-                  <h2 className="mb-1 text-foreground/90">Best For</h2>
+                  <h2 className="mb-1 text-primary-foreground/90">Best For</h2>
                   <p className="mb-4 text-muted-foreground">{card.bestFor}</p>
-                  <h2 className="mb-1 text-foreground/90">What You Get</h2>
+                  <h2 className="mb-1 text-primary-foreground/90">
+                    What You Get
+                  </h2>
                   <p className="mb-4 text-muted-foreground">
                     {card.whatYouGet}
                   </p>
@@ -157,7 +74,9 @@ export default function PricingPage() {
               <div className="py-4">
                 {card.custom ? (
                   <Link href="/contact">
-                    <Button className="w-full py-6">Contact Sales</Button>
+                    <Button className="w-full py-6 text-primary-foreground">
+                      Contact Sales
+                    </Button>
                   </Link>
                 ) : (
                   <Link href={`/pentest?plan=${card.title.toLowerCase()}`}>
@@ -207,7 +126,7 @@ export default function PricingPage() {
                 {card.hardness ? (
                   <div className="mt-auto flex flex-col gap-4">
                     <h2 className="flex gap-2">
-                      <Lock className="text-blue" />
+                      <Lock className="text-foreground" />
                       Security Hardness: <span>{card.hardness}</span>
                     </h2>
                     <h2 className="flex gap-2">
@@ -222,7 +141,36 @@ export default function PricingPage() {
             </div>
           </div>
         ))}
-      </div>
+      </section>
+
+      <section role="region" aria-labelledby="FAQ section" className="py-16">
+        <Card className="max-w-4xl mx-auto border-none">
+          <CardContent>
+            <h2 className="py-4 lg:py-8 text-2xl md:text-4xl">
+              Frequently Asked Questions
+            </h2>
+            <div className="flex flex-col gap-2">
+              {Faqs.map((faq) => (
+                <Accordion
+                  key={faq.question}
+                  type="single"
+                  collapsible
+                  className="border border-border/30 rounded-md px-4 py-2"
+                >
+                  <AccordionItem value="item-1">
+                    <AccordionTrigger className="hover:no-underline md:text-lg text-foreground/90">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-foreground/70 text-base pt-2 border-t border-border/50">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </section>
     </main>
   );
 }

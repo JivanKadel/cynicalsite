@@ -14,7 +14,9 @@ export default function Capability({
         className={`absolute inset-0 bg-linear-to-br rounded-xl ${gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
       />
       <capability.icon className="w-4 h-4 text-foreground/70 shrink-0" />
-      <span className="text-sm font-medium">{capability.text}</span>
+      <span className="text-sm font-medium text-foreground">
+        {capability.text}
+      </span>
     </div>
   );
 }

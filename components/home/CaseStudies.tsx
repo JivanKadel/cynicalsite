@@ -12,7 +12,7 @@ export default function CaseStudies() {
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Case Studies
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-foreground">
               Real engagements. Real findings.
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -39,7 +39,7 @@ export default function CaseStudies() {
                   className={`absolute inset-0 bg-linear-to-br ${
                     iconColors[index].gradient ??
                     "from-violet-500/20 to-blue-500/10"
-                  } opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  } transition-opacity duration-500`}
                 />
 
                 <div className="relative p-6 lg:p-8 flex flex-col h-full">
@@ -59,7 +59,7 @@ export default function CaseStudies() {
                   </div>
 
                   {/* Company */}
-                  <h3 className="text-lg font-semibold mb-3">
+                  <h3 className="text-lg font-semibold mb-3 text-foreground">
                     {study.company}
                   </h3>
 
@@ -79,7 +79,9 @@ export default function CaseStudies() {
                   <div className="grid grid-cols-3 gap-4 mb-6 pt-4 border-t border-border/30">
                     {study.metrics.map((metric) => (
                       <div key={metric.label}>
-                        <p className="text-xl font-bold mb-1">{metric.value}</p>
+                        <p className="text-xl font-bold mb-1 text-foreground">
+                          {metric.value}
+                        </p>
                         <p className="text-xs text-muted-foreground leading-tight">
                           {metric.label}
                         </p>
@@ -93,9 +95,9 @@ export default function CaseStudies() {
                   </p>
 
                   {/* Hover CTA */}
-                  <div className="mt-6 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="text-foreground mt-6 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Read full case study
-                    <ArrowUpRight className="w-4 h-4" />
+                    <ArrowUpRight className="w-4 h-4 text-foreground" />
                   </div>
                 </div>
               </>

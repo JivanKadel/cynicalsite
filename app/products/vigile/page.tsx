@@ -166,7 +166,7 @@ export default function Vigile() {
                   />
                 </span>
                 <h1 className="text-4xl md:text-5xl font-bold">Vigile.AI</h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-foreground/90 mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground/90 mb-4">
                   Discover Employee Data Breaches Before They Happen
                 </h2>
 
@@ -198,9 +198,9 @@ export default function Vigile() {
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-6 h-6 text-foreground/70" />
+                  <stat.icon className="w-6 h-6 text-primary-foreground/70" />
                 </div>
-                <h2 className="text-3xl md:text-4xl text-blue font-bold mb-1">
+                <h2 className="text-3xl md:text-4xl text-foreground font-bold mb-1">
                   {stat.value}
                 </h2>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
@@ -221,7 +221,7 @@ export default function Vigile() {
                 variant={"outline"}
                 className="inline-flex items-center gap-2 px-4 py-2 mb-6"
               >
-                <Mail className="w-4 h-4 text-foreground" />
+                <Mail className="w-4 h-4 text-primary-foreground" />
                 <span className="text-sm font-medium">Core Integration</span>
               </Badge>
 
@@ -315,7 +315,8 @@ export default function Vigile() {
               Platform Modules
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
-              Enterprise breach <span className="text-blue">Intelligence</span>
+              Enterprise breach{" "}
+              <span className="text-foreground">Intelligence</span>
             </h2>
             <p className="text-lg text-muted-foreground">
               Comprehensive monitoring and response capabilities powered by AI
@@ -351,7 +352,7 @@ export default function Vigile() {
                 {/* Mock PDF Report Preview */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 pb-4 border-b border-border/50">
-                    <FileText className="w-8 h-8 text-foreground/70" />
+                    <FileText className="w-8 h-8 text-primary-foreground/70" />
                     <div>
                       <p className="font-semibold">Breach Analysis Report</p>
                       <p className="text-xs text-muted-foreground">
@@ -366,13 +367,13 @@ export default function Vigile() {
                         key={metric.label}
                         className="p-4 rounded-xl bg-background border border-border/50  "
                       >
-                        <h2 className="text-2xl font-bold text-blue">
+                        <h2 className="text-2xl font-bold text-foreground">
                           {metric.value}
                         </h2>
                         <p className="text-xs text-muted-foreground">
                           {metric.label}
                         </p>
-                        <div className="flex items-center gap-1 mt-2 text-xs text-foreground/70">
+                        <div className="flex items-center gap-1 mt-2 text-xs text-primary-foreground/70">
                           <TrendingUp className="w-3 h-3 text-green-500" />
                           {metric.trend}
                         </div>
@@ -385,7 +386,7 @@ export default function Vigile() {
                       <span className="text-muted-foreground">
                         Ready for export
                       </span>
-                      <span className="text-foreground font-medium">
+                      <span className="text-primary-foreground font-medium">
                         PDF • CSV • JSON
                       </span>
                     </div>
@@ -409,19 +410,19 @@ export default function Vigile() {
               </p>
 
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3 text-foreground/80">
+                <div className="flex items-center gap-3 text-primary-foreground/80">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Executive summary with risk scoring</span>
                 </div>
-                <div className="flex items-center gap-3 text-foreground/80">
+                <div className="flex items-center gap-3 text-primary-foreground/80">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Detailed breach timeline and analysis</span>
                 </div>
-                <div className="flex items-center gap-3 text-foreground/80">
+                <div className="flex items-center gap-3 text-primary-foreground/80">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Remediation recommendations</span>
                 </div>
-                <div className="flex items-center gap-3 text-foreground/80">
+                <div className="flex items-center gap-3 text-primary-foreground/80">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Compliance-ready documentation</span>
                 </div>
@@ -439,7 +440,7 @@ export default function Vigile() {
               Use Cases
             </span>
             <h2 className="text-3xl md:text-6xl font-bold mb-4">
-              <span className="text-blue">Protect</span> what matters most
+              <span className="text-foreground">Protect</span> what matters most
             </h2>
             <p className="text-lg text-muted-foreground font-body">
               How security teams leverage Vigile.AI to stay ahead of threats

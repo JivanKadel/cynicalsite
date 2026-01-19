@@ -38,7 +38,7 @@ const Research = () => {
                 className={`absolute inset-0 bg-linear-to-br rounded-xl ${
                   iconColors[index % iconColors.length].gradient ??
                   "from-violet-500/20 to-blue-500/10"
-                } opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                } transition-opacity duration-500`}
               />
               <div className="flex items-center gap-3 mb-4">
                 <Badge variant={"outline"}>{item.type}</Badge>
@@ -47,7 +47,7 @@ const Research = () => {
                 </span>
               </div>
 
-              <h3 className="text-lg font-semibold mb-3 group-hover:text-foreground/80 transition-colors">
+              <h3 className="text-lg font-semibold mb-3 group-hover:text-primary-foreground/80 transition-colors">
                 {item.title}
               </h3>
 

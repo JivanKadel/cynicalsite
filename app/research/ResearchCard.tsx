@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ResearchCard({
   researchItem,
   gradient = "from-violet-500/20 to-blue-500/10",
-  iconColor = "text-blue-500",
+  iconColor = "text-foreground-500",
   index,
   iconBg = "bg-blue-500/10",
 }: {
@@ -48,16 +48,16 @@ export default function ResearchCard({
                 researchItem.severity === "Critical"
                   ? "bg-red-500/20 text-red-400"
                   : researchItem.severity === "High"
-                  ? "bg-orange-500/20 text-orange-400"
-                  : researchItem.severity === "Medium"
-                  ? "bg-yellow-500/20 text-yellow-400"
-                  : "bg-primary/20 text-primary"
+                    ? "bg-orange-500/20 text-orange-400"
+                    : researchItem.severity === "Medium"
+                      ? "bg-yellow-500/20 text-yellow-400"
+                      : "bg-primary/20 text-primary"
               }`}
             >
               {researchItem.severity}
             </span>
           </div>
-          <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+          <h3 className="text-xl md:text-2xl font-semibold text-primary-foreground mb-2 group-hover:text-primary transition-colors">
             {researchItem.title}
           </h3>
           <p className="text-muted-foreground">{researchItem.description}</p>

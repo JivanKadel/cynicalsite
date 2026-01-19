@@ -63,7 +63,7 @@ const Testimonials = () => {
   const prevTestimonial = () => {
     setIsAutoPlaying(false);
     setActiveIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   };
 
@@ -110,7 +110,7 @@ const Testimonials = () => {
               <span className="absolute -top-12 -left-6 text-8xl font-serif text-primary opacity-20 select-none">
                 “
               </span>
-              <blockquote className="text-2xl md:text-3xl text-foreground/70 relative z-10 font-aeonik">
+              <blockquote className="text-2xl md:text-3xl text-primary-foreground/70 relative z-10 font-aeonik">
                 {testimonials[activeIndex].quote}
               </blockquote>
               {/* Author */}

@@ -12,7 +12,7 @@ export default function HeroSection() {
             47 critical vulnerabilities found this month
           </span>
         </div>
-        <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+        <h1 className="text-[2.7rem] font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
           See your organization the way attackers do
         </h1>
 

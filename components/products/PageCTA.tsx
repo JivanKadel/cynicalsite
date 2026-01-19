@@ -67,7 +67,7 @@ const PageCTA = ({
               {/* Headline */}
               <h2 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
                 {headline}
-                <span className="block text-blue">{highlightedText}</span>
+                <span className="block text-foreground">{highlightedText}</span>
               </h2>
 
               <p className="text-lg text-muted-foreground mb-10 mt-4 font-body max-w-2xl mx-auto">

@@ -52,14 +52,14 @@ export function ScheduleCallDialog({
 
         <form className="space-y-4" onSubmit={onSubmit}>
           <div className="space-y-2">
-            <Label htmlFor="name" className="text-foreground/70">
+            <Label htmlFor="name" className="text-primary-foreground/70">
               Full name
             </Label>
             <Input id="name" placeholder="John Doe" required />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-foreground/70">
+            <Label htmlFor="email" className="text-primary-foreground/70">
               Work email
             </Label>
             <Input
@@ -71,7 +71,7 @@ export function ScheduleCallDialog({
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="company" className="text-foreground/70">
+            <Label htmlFor="company" className="text-primary-foreground/70">
               Company
             </Label>
             <Input id="company" placeholder="Company name" required />
@@ -79,19 +79,21 @@ export function ScheduleCallDialog({
 
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="date" className="text-foreground/70">
+              <Label htmlFor="date" className="text-primary-foreground/70">
                 Preferred date
               </Label>
               <Input
                 id="date"
                 type="date"
                 required
-                className="text-foreground/70"
+                className="text-primary-foreground/70"
               />
             </div>
 
             <div className="space-y-2">
-              <Label className="text-foreground/70">Preferred time</Label>
+              <Label className="text-primary-foreground/70">
+                Preferred time
+              </Label>
               <Select required>
                 <SelectTrigger>
                   <SelectValue placeholder="Select time" />
@@ -108,7 +110,7 @@ export function ScheduleCallDialog({
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="message" className="text-foreground/70">
+            <Label htmlFor="message" className="text-primary-foreground/70">
               What do you want to discuss? (optional)
             </Label>
             <Textarea

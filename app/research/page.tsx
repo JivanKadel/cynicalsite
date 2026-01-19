@@ -14,29 +14,29 @@ export default function ResearchPage() {
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Homes
               </Link>
               <span>/</span>
               <Link
                 href="/#research"
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary-foreground transition-colors"
               >
                 Research
               </Link>
               <span>/</span>
-              <span className="text-foreground">All Research</span>
+              <span className="text-primary-foreground">All Research</span>
             </div>
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <NotebookPen className="w-4 h-4 text-foreground" />
+              <NotebookPen className="w-4 h-4 text-primary-foreground" />
               <span className="text-sm font-medium">Security Research</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
               Frontier Security
-              <span className="block text-blue">Research</span>
+              <span className="block text-foreground">Research</span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10   stagger-3 leading-relaxed">
@@ -51,13 +51,13 @@ export default function ResearchPage() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-blue">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-foreground">
                 47
               </div>
               <div className="text-muted-foreground mt-1">CVEs Published</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-blue">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-foreground">
                 $2.3M
               </div>
               <div className="text-muted-foreground mt-1">
@@ -65,13 +65,13 @@ export default function ResearchPage() {
               </div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-blue">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-foreground">
                 12
               </div>
               <div className="text-muted-foreground mt-1">Research Papers</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-blue">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-foreground">
                 200+
               </div>
               <div className="text-muted-foreground mt-1">

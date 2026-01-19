@@ -205,9 +205,9 @@ export default function Bugv() {
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-6 h-6 text-foreground/70" />
+                  <stat.icon className="w-6 h-6 text-primary-foreground/70" />
                 </div>
-                <h2 className="text-3xl md:text-4xl text-blue font-bold mb-1">
+                <h2 className="text-3xl md:text-4xl text-foreground font-bold mb-1">
                   {stat.value}
                 </h2>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
@@ -242,7 +242,7 @@ export default function Bugv() {
                 <div key={item.step} className="relative">
                   <div className="text-center">
                     <div className="w-14 h-14 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
-                      <item.icon className="w-7 h-7 text-foreground" />
+                      <item.icon className="w-7 h-7 text-primary-foreground" />
                     </div>
                     <span className="text-xs text-muted-foreground font-mono mb-2 block">
                       {item.step}
@@ -325,7 +325,7 @@ export default function Bugv() {
               >
                 {program.recommended && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-3 py-1 text-xs font-medium bg-blue text-foreground rounded-full">
+                    <span className="px-3 py-1 text-xs font-medium bg-blue text-white rounded-full">
                       Most Popular
                     </span>
                   </div>
@@ -398,8 +398,8 @@ export default function Bugv() {
                         vuln.severity === "Critical"
                           ? "bg-red-500/10 text-red-400"
                           : vuln.severity === "High"
-                          ? "bg-orange-500/10 text-orange-400"
-                          : "bg-yellow-500/10 text-yellow-400"
+                            ? "bg-orange-500/10 text-orange-400"
+                            : "bg-yellow-500/10 text-yellow-400"
                       }`}
                     >
                       {vuln.severity}
