@@ -47,7 +47,7 @@ const Research = () => {
                 </span>
               </div>
 
-              <h3 className="text-lg font-semibold mb-3 group-hover:text-primary-foreground/80 transition-colors">
+              <h3 className="text-lg font-semibold mb-3 group-hover:text-foreground/80 transition-colors">
                 {item.title}
               </h3>
 

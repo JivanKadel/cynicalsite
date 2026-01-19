@@ -1,11 +1,8 @@
 import PageCTA from "@/components/products/PageCTA";
-import { Button } from "@/components/ui/button";
 import { iconColors } from "@/lib/utils";
 import {
   Radar,
   Shield,
-  ArrowRight,
-  Check,
   Zap,
   Globe,
   Network,
@@ -207,9 +204,7 @@ const ThreatIntelligence = () => {
                 Solutions
               </Link>
               <span>/</span>
-              <span className="text-primary-foreground">
-                Threat Intelligence
-              </span>
+              <span className="text-foreground">Threat Intelligence</span>
             </div>
 
             {/* Badge */}

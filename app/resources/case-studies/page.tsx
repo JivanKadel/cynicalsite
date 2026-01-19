@@ -16,7 +16,7 @@ const CaseStudies = () => {
       <section className="pt-6 pb-12 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-6">
+            <span className="inline-block px-4 py-2 bg-primary/10 text-foreground rounded-full text-sm font-medium mb-6">
               Case Studies
             </span>
             <h1 className="text-4xl max-w-3xl mx-auto md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
@@ -59,7 +59,7 @@ const CaseStudies = () => {
                 className="relative group block p-8 border-2 border-border/30 rounded-2xl transition-all duration-300"
               >
                 <div
-                  className={`absolute rounded-2xl inset-0 bg-linear-to-br ${study.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                  className={`absolute rounded-2xl inset-0 bg-linear-to-br ${study.gradient} opacity-90 transition-opacity duration-500`}
                 />
                 <div className="flex items-start justify-between mb-6">
                   <div>
@@ -70,7 +70,7 @@ const CaseStudies = () => {
                         className={`h-6 w-6 ${iconColors[index % iconColors.length].iconColor}`}
                       />
                     </div>
-                    <h3 className="text-2xl font-bold text-primary-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-2xl font-bold text-foreground">
                       {study.company}
                     </h3>
                     <p className="text-muted-foreground">{study.industry}</p>
@@ -92,7 +92,7 @@ const CaseStudies = () => {
                 <div className="grid grid-cols-3 gap-4 mb-6 py-4 border-y border-border/50">
                   {study.metrics.map((metric, metricIndex) => (
                     <div key={metricIndex} className="text-center">
-                      <div className="text-xl font-bold text-primary-foreground">
+                      <div className="text-xl font-bold text-foreground">
                         {metric.value}
                       </div>
                       <div className="text-xs text-muted-foreground">
@@ -114,7 +114,7 @@ const CaseStudies = () => {
       {/* CTA */}
       <section className="py-20 px-6 border-t border-border">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-primary-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold text-foreground mb-4">
             Ready to Join Them?
           </h2>
           <p className="text-lg text-muted-foreground mb-8">

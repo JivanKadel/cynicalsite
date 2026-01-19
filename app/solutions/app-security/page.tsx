@@ -187,9 +187,7 @@ export default function ApplicationSecurity() {
                 Solutions
               </Link>
               <span>/</span>
-              <span className="text-primary-foreground">
-                Application Security
-              </span>
+              <span className="text-foreground">Application Security</span>
             </div>
 
             {/* Badge */}

@@ -1,8 +1,5 @@
 "use client";
 
-import * as React from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,6 +8,7 @@ interface ProductCardProps {
   tagline: string;
   description: string;
   icon: string;
+  dashboardImage: string;
   stats: {
     value: string;
     label: string;
@@ -29,65 +27,37 @@ export function ProductCard({
   stats,
   features,
   cta,
+  dashboardImage,
   gradient = "from-violet-500/20 to-blue-500/10",
   href,
 }: ProductCardProps) {
   return (
-    <div className="group relative rounded-2xl bg-card backdrop-blur-sm p-2 hover:border-border/80 transition-all duration-300  ">
-      <div
-        className={`absolute rounded-2xl inset-0 bg-linear-to-br ${gradient} transition-opacity duration-500`}
-      />
-      <div className="relative h-full rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-30">
-        <div className="p-6 flex flex-col h-full text-primary-foreground">
-          <div className="flex items-start justify-between mb-6">
-            <div className="w-12 h-12 p-2 rounded-lg bg-foreground/40 dark:bg-foreground/10 flex items-center justify-center transition-colors">
-              <Image src={icon} alt={name} width={48} height={40} />
-            </div>
-            <div className="text-right">
-              <p className="text-xl font-bold text-foreground">{stats.value}</p>
-              <p className="text-[10px]uppercase tracking-wide">
-                {stats.label}
-              </p>
-            </div>
-          </div>
-
-          {/* Title */}
+    <Link
+      href={href || "#"}
+      className="group h-[280px] lg:h-[420px] rounded-2xl bg-[#bfbfbb] opacity-90 hover:border-border/80 transition-all duration-300"
+    >
+      <div className="relative h-full rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
+        <div className="p-6 flex flex-col h-full text-black relative z-10">
           <div className="mb-3">
-            <h3 className="text-xl font-bold mb-1 text-foreground">{name}</h3>
-            <p className="text-xs font-medium text-primary-foreground">
-              {tagline}
-            </p>
+            <h2 className="md:text-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik z-10 relative text-pretty max-w-96">
+              {name}
+            </h2>
+            <p className="z-10 mb-8 leading-6 md:mb-18">{tagline}</p>
           </div>
+        </div>
 
-          {/* Description */}
-          <p className="text-sm text-foreground/70 mb-6 leading-relaxed line-clamp-3">
-            {description}
-          </p>
-
-          {/* Features */}
-          <div className="space-y-3 mb-6 grow">
-            {features.map((feature) => (
-              <div key={feature} className="flex items-center gap-3">
-                <Check className="w-4 h-4 text-green-600 dark:text-green-500 shrink-0" />
-                <span className="text-sm text-primary-foreground/70">
-                  {feature}
-                </span>
-              </div>
-            ))}
+        <div className="absolute bottom-0 right-0 w-[90%] h-100!">
+          <div className="relative w-full h-full">
+            <Image
+              src={dashboardImage}
+              alt={name}
+              fill
+              className="object-contain object-bottom-right"
+              sizes="90vw"
+            />
           </div>
-
-          <Link href={href || "#"} className="w-full mt-auto">
-            <Button
-              variant="outline"
-              size="sm"
-              className="w-full border-2 border-border/60 py-5 transition-all duration-300 text-primary-foreground"
-            >
-              {cta}
-              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1 text-primary-foreground" />
-            </Button>
-          </Link>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

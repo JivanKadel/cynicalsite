@@ -1,4 +1,4 @@
-import { ArrowRight, NotebookPen } from "lucide-react";
+import { NotebookPen } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
 import Link from "next/link";
 import { researchItems } from "@/data/research.data";

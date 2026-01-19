@@ -164,14 +164,6 @@ export default function Bugv() {
           <div className="max-w-4xl">
             <div className="flex items-center gap-4 mb-6">
               <div>
-                <span className="text-sm text-muted-foreground uppercase tracking-widest">
-                  <Image
-                    width={50}
-                    height={30}
-                    src={"/products/bugv_logo.png"}
-                    alt="Bugv Logo"
-                  />
-                </span>
                 <h1 className="text-4xl md:text-5xl font-bold mt-4">Bugv</h1>
               </div>
             </div>
@@ -204,8 +196,8 @@ export default function Bugv() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="w-12 h-12 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-6 h-6 text-primary-foreground/70" />
+                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-6 h-6 text-foreground/70" />
                 </div>
                 <h2 className="text-3xl md:text-4xl text-foreground font-bold mb-1">
                   {stat.value}
@@ -241,8 +233,8 @@ export default function Bugv() {
               {process.map((item, index) => (
                 <div key={item.step} className="relative">
                   <div className="text-center">
-                    <div className="w-14 h-14 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
-                      <item.icon className="w-7 h-7 text-primary-foreground" />
+                    <div className="w-14 h-14 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
+                      <item.icon className="w-7 h-7 text-foreground" />
                     </div>
                     <span className="text-xs text-muted-foreground font-mono mb-2 block">
                       {item.step}

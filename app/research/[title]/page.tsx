@@ -73,7 +73,7 @@ export default function ResearchDetailPage() {
               <h2 className="text-xl md:text-3xl font-semibold uppercase tracking-widest mb-6">
                 Executive Summary
               </h2>
-              <p className="text-base md:text-lg leading-relaxed text-primary-foreground/70">
+              <p className="text-base md:text-lg leading-relaxed text-foreground/70">
                 During a routine security assessment, our research team
                 discovered a series of critical SQL injection vulnerabilities in
                 three major enterprise ERP platforms. These vulnerabilities
@@ -149,7 +149,7 @@ export default function ResearchDetailPage() {
                   Technical Analysis
                 </h2>
 
-                <p className="text-base md:text-lg leading-relaxed text-primary-foreground/70">
+                <p className="text-base md:text-lg leading-relaxed text-foreground/70">
                   The vulnerability exists in the user authentication module
                   where user-supplied input is directly concatenated into SQL
                   queries without proper sanitization.
@@ -165,7 +165,7 @@ export default function ResearchDetailPage() {
                   </span>
                 </div>
                 <pre className="p-6 overflow-x-auto text-sm">
-                  <code className="text-primary-foreground/80">{`// Vulnerable implementation
+                  <code className="text-foreground/80">{`// Vulnerable implementation
 String query = "SELECT * FROM users WHERE username = '" 
              + request.getParameter("user") 
              + "' AND password = '" 
@@ -180,7 +180,7 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
                 </pre>
               </div>
               <div className="text-center mb-20">
-                <p className="text-base md:text-lg leading-relaxed text-primary-foreground/70">
+                <p className="text-base md:text-lg leading-relaxed text-foreground/70">
                   The vulnerable endpoint is exposed on the public-facing login
                   page, requiring no prior authentication. Successful
                   exploitation grants full access to the underlying database.
@@ -256,10 +256,10 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
                     key={index}
                     className="flex items-center gap-4 p-4 rounded-xl bg-card"
                   >
-                    <span className="w-8 h-8 rounded-full bg-primary/20 text-green-500 flex items-center justify-center text-sm font-bold shrink-0">
+                    <span className="w-8 h-8 rounded-full bg-primary/5 dark:bg-primary/20 text-green-500 flex items-center justify-center text-sm font-bold shrink-0">
                       {index + 1}
                     </span>
-                    <p className="text-primary-foreground/90">{step}</p>
+                    <p className="text-foreground/90">{step}</p>
                   </div>
                 ))}
               </div>
@@ -306,9 +306,7 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
                         {item.date}
                       </span>
                       <div className="w-2 h-2 rounded-full bg-foreground mt-2 shrink-0 relative z-10" />
-                      <p className="text-primary-foreground/90 flex-1">
-                        {item.event}
-                      </p>
+                      <p className="text-foreground/90 flex-1">{item.event}</p>
                     </div>
                   ))}
                 </div>

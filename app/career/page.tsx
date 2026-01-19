@@ -282,7 +282,7 @@ const Careers = () => {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Users className="w-4 h-4 text-primary-foreground" />
+              <Users className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">Join Our Team</span>
             </div>
 
@@ -338,7 +338,7 @@ const Careers = () => {
               >
                 <CardHeader>
                   <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center mb-4">
-                    <perk.icon className="w-5 h-5 text-primary-foreground/80" />
+                    <perk.icon className="w-5 h-5 text-foreground/80" />
                   </div>
                   <CardTitle className="text-xl">{perk.title}</CardTitle>
                   <CardDescription>{perk.description}</CardDescription>
@@ -350,7 +350,7 @@ const Careers = () => {
                         key={idx}
                         className="flex items-center gap-2 text-sm text-muted-foreground"
                       >
-                        <Check className="w-3 h-3 text-primary-foreground/60 shrink-0" />
+                        <Check className="w-3 h-3 text-foreground/60 shrink-0" />
                         {detail}
                       </li>
                     ))}
@@ -390,7 +390,7 @@ const Careers = () => {
                     <p className="text-muted-foreground font-body text-sm mb-3">
                       {step.description}
                     </p>
-                    <Badge variant="secondary" className="text-xs">
+                    <Badge variant="outline" className="text-xs">
                       {step.duration}
                     </Badge>
                   </div>
@@ -463,7 +463,7 @@ const Careers = () => {
                               key={idx}
                               className="flex items-start gap-2 text-sm text-muted-foreground"
                             >
-                              <Check className="w-3 h-3 text-primary-foreground/60 shrink-0 mt-0.5" />
+                              <Check className="w-3 h-3 text-foreground/60 shrink-0 mt-0.5" />
                               {req}
                             </li>
                           ))}
@@ -478,7 +478,7 @@ const Careers = () => {
                               key={idx}
                               className="flex items-start gap-2 text-sm text-muted-foreground"
                             >
-                              <Check className="w-3 h-3 text-primary-foreground/60 shrink-0 mt-0.5" />
+                              <Check className="w-3 h-3 text-foreground/60 shrink-0 mt-0.5" />
                               {benefit}
                             </li>
                           ))}
@@ -533,7 +533,7 @@ const Careers = () => {
               <Card className="border-border bg-background">
                 <CardContent className="p-12">
                   <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto mb-6">
-                    <Briefcase className="w-8 h-8 text-primary-foreground/60" />
+                    <Briefcase className="w-8 h-8 text-foreground/60" />
                   </div>
                   <h3 className="text-xl font-semibold mb-4">
                     No Current Openings
@@ -699,7 +699,7 @@ const Careers = () => {
             <Card className="border-border bg-background">
               <CardContent className="p-6">
                 <div className="aspect-video rounded-lg bg-linear-to-br from-secondary to-background border border-border mb-4 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-primary-foreground/60" />
+                  <Users className="w-12 h-12 text-foreground/60" />
                 </div>
                 <h3 className="font-semibold mb-2">Team Retreats</h3>
                 <p className="text-sm text-muted-foreground">
@@ -711,7 +711,7 @@ const Careers = () => {
             <Card className="border-border bg-background">
               <CardContent className="p-6">
                 <div className="aspect-video rounded-lg bg-linear-to-br from-secondary to-background border border-border mb-4 flex items-center justify-center">
-                  <Brain className="w-12 h-12 text-primary-foreground/60" />
+                  <Brain className="w-12 h-12 text-foreground/60" />
                 </div>
                 <h3 className="font-semibold mb-2">Learning Culture</h3>
                 <p className="text-sm text-muted-foreground">
@@ -723,7 +723,7 @@ const Careers = () => {
             <Card className="border-border bg-background">
               <CardContent className="p-6">
                 <div className="aspect-video rounded-lg bg-linear-to-br from-secondary to-background border border-border mb-4 flex items-center justify-center">
-                  <Award className="w-12 h-12 text-primary-foreground/60" />
+                  <Award className="w-12 h-12 text-foreground/60" />
                 </div>
                 <h3 className="font-semibold mb-2">Recognition</h3>
                 <p className="text-sm text-muted-foreground">

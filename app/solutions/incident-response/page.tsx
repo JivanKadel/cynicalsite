@@ -1,11 +1,8 @@
 import PageCTA from "@/components/products/PageCTA";
-import { Button } from "@/components/ui/button";
 import { iconColors } from "@/lib/utils";
 import {
   AlertTriangle,
   Shield,
-  ArrowRight,
-  Check,
   Zap,
   Globe,
   Target,
@@ -208,7 +205,7 @@ const IncidentResponse = () => {
                 Solutions
               </Link>
               <span>/</span>
-              <span className="text-primary-foreground">Incident Response</span>
+              <span className="text-foreground">Incident Response</span>
             </div>
 
             {/* Badge */}

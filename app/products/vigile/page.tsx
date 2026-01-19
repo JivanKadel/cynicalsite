@@ -23,6 +23,10 @@ import Image from "next/image";
 import DataFlow from "./DataFlow";
 import { Badge } from "@/components/ui/badge";
 import { iconColors } from "@/lib/utils";
+import HeroImage from "./HeroImage";
+import DataFlowAlt from "./DataFlowAlt";
+import DataFlowAltTailwind from "./DataFlowAltTailwind";
+import DataFlowDarkAlt from "./DataFlowAltAlt";
 
 export default function Vigile() {
   const stats = [
@@ -147,26 +151,12 @@ export default function Vigile() {
   return (
     <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-secondary/80 via-background to-background" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMDIwMjAiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
-
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/3 rounded-full blur-3xl animate-pulse" />
-
         <div className="container mx-auto px-6 relative">
           <div>
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-20">
               <div className="col-span-2 flex flex-col gap-4">
-                <span className="text-sm text-muted-foreground uppercase tracking-widest">
-                  <Image
-                    width={80}
-                    height={30}
-                    src={"/products/vigile_logo.png"}
-                    alt="Vigile Logo"
-                  />
-                </span>
                 <h1 className="text-4xl md:text-5xl font-bold">Vigile.AI</h1>
-                <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground/90 mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground/80 mb-4">
                   Discover Employee Data Breaches Before They Happen
                 </h2>
 
@@ -176,17 +166,7 @@ export default function Vigile() {
                   blocks unauthorized access across your organization.
                 </p>
               </div>
-
-              <div className="relative col-span-3 transform-[translateY(25%)_translateX(30%)_scale(1.7)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)] xl:ml-8">
-                <Image
-                  src="/vigile.webp"
-                  width={1920}
-                  height={924}
-                  alt="Vigile.AI Logo"
-                  className="block"
-                />
-                <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black/80" />
-              </div>
+              <HeroImage />
             </div>
           </div>
         </div>
@@ -197,8 +177,8 @@ export default function Vigile() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="w-12 h-12 rounded-xl bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-6 h-6 text-primary-foreground/70" />
+                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-6 h-6 text-foreground/70" />
                 </div>
                 <h2 className="text-3xl md:text-4xl text-foreground font-bold mb-1">
                   {stat.value}
@@ -212,10 +192,10 @@ export default function Vigile() {
 
       {/* Outlook Integration - Main Focus Section */}
       <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-b from-background via-secondary/20 to-background" />
+        {/* <div className="absolute inset-0 bg-linear-to-b from-background via-secondary/20 to-background" /> */}
 
         <div className="container mx-auto px-6 relative">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-1 gap-8 items-center">
             <div>
               <Badge
                 variant={"outline"}
@@ -275,10 +255,15 @@ export default function Vigile() {
               </div>
             </div>
 
-            <div className="relative min-h-64 w-full lg:h-full lg:p-12">
-              <DataFlow />
+            <div className="w-full">
+              {/* <DataFlow /> */}
+              {/* <DataFlowAlt /> */}
+              {/* <DataFlowDarkAlt /> */}
             </div>
           </div>
+          {/* <div className="p-2 mb-20">
+            <DataFlowAltTailwind />
+          </div> */}
         </div>
       </section>
 
@@ -410,19 +395,19 @@ export default function Vigile() {
               </p>
 
               <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3 text-primary-foreground/80">
+                <div className="flex items-center gap-3 text-foreground/80">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Executive summary with risk scoring</span>
                 </div>
-                <div className="flex items-center gap-3 text-primary-foreground/80">
+                <div className="flex items-center gap-3 text-foreground/80">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Detailed breach timeline and analysis</span>
                 </div>
-                <div className="flex items-center gap-3 text-primary-foreground/80">
+                <div className="flex items-center gap-3 text-foreground/80">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Remediation recommendations</span>
                 </div>
-                <div className="flex items-center gap-3 text-primary-foreground/80">
+                <div className="flex items-center gap-3 text-foreground/80">
                   <CheckCircle className="w-5 h-5 text-green-500" />
                   <span>Compliance-ready documentation</span>
                 </div>
@@ -487,24 +472,24 @@ export default function Vigile() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-3 max-w-md mx-auto gap-3">
+            <div className="grid sm:grid-cols-1 max-w-sm mx-auto gap-3">
               {[
                 { name: "Office 365", icon: "/products/outlook.svg" },
-                { name: "Google Workspace", icon: "/products/google.svg" },
-                { name: "Entra ID", icon: "/products/entra_id.svg" },
+                // { name: "Google Workspace", icon: "/products/google.svg" },
+                // { name: "Entra ID", icon: "/products/entra_id.svg" },
               ].map((integration) => (
                 <div
                   key={integration.name}
-                  className="flex flex-col items-center justify-center p-6 rounded-xl bg-card"
+                  className="flex flex-col items-center justify-center p-2 rounded-xl bg-card"
                 >
                   <Image
                     src={integration.icon as string}
-                    width={48}
-                    height={48}
+                    width={120}
+                    height={120}
                     alt={integration.name}
                     className="mb-3"
                   />
-                  <span className="text-xs font-medium text-center">
+                  <span className="text-lg font-medium text-center">
                     {integration.name}
                   </span>
                 </div>

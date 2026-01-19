@@ -64,13 +64,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="lg:pt-16">
+    <footer className="lg:pt-16 border-t-2 border-border/30">
       {/* Main Footer */}
       <div className="container mx-auto py-16 lg:py-20 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 content-start">
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="mb-4 text-xs font-medium tracking-widest uppercase text-neutral-400 sm:text-sm md:mb-6">
+              <h3 className="mb-4 text-xs font-medium tracking-widest uppercase text-foreground sm:text-sm md:mb-6">
                 {category}
               </h3>
               <ul className="space-y-3">
@@ -81,7 +81,7 @@ const Footer = () => {
                   >
                     <a
                       href={link.href}
-                      className="font-inter font-normal text-neutral-400 hover:text-primary-foreground"
+                      className="font-inter font-normal text-foreground/60 hover:text-foreground"
                     >
                       {link.label}
                     </a>

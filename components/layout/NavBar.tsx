@@ -324,7 +324,7 @@ z"
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-1">
                         {products.map((item) => (
                           <NavItemCard key={item.label} {...item} />
@@ -335,7 +335,7 @@ z"
 
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                         {solutions.map((item) => (
                           <NavItemCard key={item.label} {...item} />
@@ -347,7 +347,7 @@ z"
                   {/* Resources */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#0a0909]! opacity-97">
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                         {resources.map((item) => (
                           <NavItemCard key={item.label} {...item} />
@@ -418,14 +418,14 @@ z"
 
                 <Link
                   href="/pricing"
-                  className="px-4 py-2 text-primary-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
+                  className="px-4 py-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Pricing
                 </Link>
                 <Link
                   href="/contact"
-                  className="px-4 py-2 text-primary-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
+                  className="px-4 py-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
@@ -474,10 +474,10 @@ function NavItemCard({
       className={cn("flex items-start gap-3 p-3 group", className)}
     >
       <div className="w-10 h-10 flex items-center justify-center self-center shrink-0">
-        <Icon className="w-6 h-6 text-primary-foreground/70" />
+        <Icon className="w-6 h-6 text-foreground/70 dark:text-foreground/70" />
       </div>
       <div>
-        <p className="font-medium text-primary-foreground/70 group-hover:text-primary-foreground/90">
+        <p className="font-medium text-foreground/70 dark:text-foreground/70 group-hover:text-foreground/90 dark:group-hover:text-foreground/90">
           {label}
         </p>
         <p className="text-muted-foreground text-sm">{description}</p>
@@ -497,7 +497,7 @@ function MobileNavSection({ title, items }: MobileNavSectionProps) {
   return (
     <div>
       <button
-        className="flex items-center justify-between w-full px-4 py-2 text-primary-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
+        className="flex items-center justify-between w-full px-4 py-2 text-foreground hover:bg-secondary/50 rounded-lg transition-colors font-medium"
         onClick={() => setIsOpen(!isOpen)}
       >
         {title}

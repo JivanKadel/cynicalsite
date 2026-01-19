@@ -204,7 +204,7 @@ const CloudSecurity = () => {
                 Solutions
               </Link>
               <span>/</span>
-              <span className="text-primary-foreground">Cloud Security</span>
+              <span className="text-foreground">Cloud Security</span>
             </div>
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
@@ -322,13 +322,6 @@ const CloudSecurity = () => {
                 </p>
                 <ul className="space-y-3">
                   {provider.features.map((feature, fIndex) => (
-                    // <li
-                    //   key={fIndex}
-                    //   className="flex items-center gap-3 text-sm"
-                    // >
-                    //   <Check className="w-4 h-4 text-primary-foreground/70 shrink-0" />
-                    //   <span className="text-muted-foreground">{feature}</span>
-                    // </li>
                     <li key={fIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>

@@ -4,8 +4,9 @@ const Products = () => {
   const products = [
     {
       icon: "/products/bugv_logo.png",
+      dashboardImage: "/bugv.png",
       name: "Bugv",
-      tagline: "Offensive Security Network",
+      tagline: "Offensive Security Network of Security Researchers",
       description:
         "500+ vetted hackers testing your systems around the clock. Not automated scanners—actual adversaries hunting for the flaws your tools miss.",
       features: [
@@ -13,15 +14,16 @@ const Products = () => {
         "Exploit-verified findings only",
         "4-hour SLA on critical reports",
       ],
-      stats: { value: "47", label: "Avg criticals per engagement" },
+      stats: { value: "47", label: "Avg critical per engagement" },
       cta: "Learn More",
       gradient: "from-violet-500/20 to-blue-500/10",
       href: "/products/bugv",
     },
     {
       icon: "/products/vigile_logo.png",
+      dashboardImage: "/vigile.webp",
       name: "Vigile.AI",
-      tagline: "Attack Surface Reconnaissance",
+      tagline: "Continuous Breaches and Malware Monitoring",
       description:
         "See your infrastructure the way attackers see it. Continuous discovery of shadow IT, leaked credentials, and exposed services across your entire digital footprint.",
       features: [
@@ -34,22 +36,22 @@ const Products = () => {
       gradient: "from-emerald-500/20 to-cyan-500/10",
       href: "/products/vigile",
     },
-    {
-      icon: "/products/vigile_logo.png",
-      name: "Falcon",
-      tagline: "Continuous Security Monitoring",
-      description:
-        "Know when your defenses fail. Agentless monitoring catches configuration drift, certificate expirations, and security header regressions before attackers exploit them.",
-      features: [
-        "Zero-install deployment",
-        "SSL/TLS chain validation",
-        "Security header monitoring",
-      ],
-      stats: { value: "<4h", label: "Mean time to detect" },
-      cta: "Learn More",
-      gradient: "from-orange-500/20 to-red-500/10",
-      href: "https://webmonitoring.doit.gov.np/dashboard",
-    },
+    // {
+    //   icon: "/products/vigile_logo.png",
+    //   name: "Falcon",
+    //   tagline: "Continuous Security Monitoring",
+    //   description:
+    //     "Know when your defenses fail. Agentless monitoring catches configuration drift, certificate expirations, and security header regressions before attackers exploit them.",
+    //   features: [
+    //     "Zero-install deployment",
+    //     "SSL/TLS chain validation",
+    //     "Security header monitoring",
+    //   ],
+    //   stats: { value: "<4h", label: "Mean time to detect" },
+    //   cta: "Learn More",
+    //   gradient: "from-orange-500/20 to-red-500/10",
+    //   href: "https://webmonitoring.doit.gov.np/dashboard",
+    // },
   ];
 
   return (
@@ -73,7 +75,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl">
           {products.map((product) => (
             <ProductCard
               key={product.name}
@@ -81,6 +83,7 @@ const Products = () => {
               tagline={product.tagline}
               description={product.description}
               icon={product.icon}
+              dashboardImage={product.dashboardImage}
               stats={product.stats}
               features={product.features}
               cta={product.cta}

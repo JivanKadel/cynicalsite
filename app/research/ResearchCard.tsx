@@ -57,7 +57,7 @@ export default function ResearchCard({
               {researchItem.severity}
             </span>
           </div>
-          <h3 className="text-xl md:text-2xl font-semibold text-primary-foreground mb-2 group-hover:text-primary transition-colors">
+          <h3 className="text-xl md:text-2xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
             {researchItem.title}
           </h3>
           <p className="text-muted-foreground">{researchItem.description}</p>
