@@ -44,7 +44,7 @@ const aeonik = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Cynical Technology - Revolutionizing and Empowering Cybersecurity",
+  title: "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
   description: "Securing your digital space",
 };
 
