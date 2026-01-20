@@ -314,7 +314,7 @@ const ThreatIntelligence = () => {
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
               >
-                <div className="text-6xl font-bold text-primary-foreground/20 mb-4">
+                <div className="text-6xl font-bold text-foreground/20 mb-4">
                   0{index + 1}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{type.title}</h3>
@@ -323,13 +323,6 @@ const ThreatIntelligence = () => {
                 </p>
                 <ul className="space-y-3">
                   {type.features.map((feature, fIndex) => (
-                    // <li
-                    //   key={fIndex}
-                    //   className="flex items-center gap-3 text-sm"
-                    // >
-                    //   <Check className="w-4 h-4 text-primary-foreground/70 shrink-0" />
-                    //   <span className="text-muted-foreground">{feature}</span>
-                    // </li>
                     <li key={fIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>

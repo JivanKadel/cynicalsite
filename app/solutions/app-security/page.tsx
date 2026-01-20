@@ -296,7 +296,7 @@ export default function ApplicationSecurity() {
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
               >
-                <div className="text-6xl font-bold text-primary-foreground/20 mb-4">
+                <div className="text-6xl font-bold text-foreground/20 mb-4">
                   0{index + 1}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{type.title}</h3>
