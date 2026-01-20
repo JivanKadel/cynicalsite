@@ -55,7 +55,10 @@ const Products = () => {
   ];
 
   return (
-    <section id="products" className="pt-20 pb-10 relative overflow-hidden">
+    <section
+      id="products"
+      className="pt-20 pb-10 relative overflow-hidden mx-auto"
+    >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-secondary/50 via-transparent to-transparent" />
 
       <div className="container mx-auto px-6 relative">
@@ -75,7 +78,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {products.map((product) => (
             <ProductCard
               key={product.name}

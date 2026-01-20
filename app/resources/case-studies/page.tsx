@@ -1,6 +1,6 @@
 import { caseStudies } from "@/data/casestudies.data";
 import { iconColors } from "@/lib/utils";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const CaseStudies = () => {

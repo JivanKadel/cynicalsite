@@ -34,7 +34,7 @@ export function ProductCard({
   return (
     <Link
       href={href || "#"}
-      className="group h-[280px] lg:h-[420px] rounded-2xl bg-[#bfbfbb] opacity-90 hover:border-border/80 transition-all duration-300"
+      className="group h-[280px] lg:h-[420px] rounded-2xl bg-[#12121188] dark:bg-[#bfbfbbaa] opacity-90 hover:border-border/80 transition-all duration-300"
     >
       <div className="relative h-full rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
         <div className="p-6 flex flex-col h-full text-black relative z-10">
