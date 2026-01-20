@@ -98,7 +98,7 @@ export default function AboutUs() {
         "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
     },
     {
-      name: "Ravi Lamgade",
+      name: "Mr. R",
       role: "Co-Founder & Office Admin",
       image: "/people/mr_ravi.jpeg",
       bio: "Co-founder with a passion for cybersecurity and business development. Drives company growth and strategic partnerships.",
@@ -110,7 +110,7 @@ export default function AboutUs() {
         "At Cynical, we believe administration is not just paperwork—it’s about enabling people, processes, and progress. My mission is to ensure you have the tools and trust to keep our operations secure, efficient, and future‑ready.",
     },
     {
-      name: "Mr. Ram",
+      name: "Mr. J",
       role: "Sales and Marketing Head",
       image: "/people/placeholder_person.jpg",
       bio: "HR executive with 15+ years building high-performance security teams. Champions our culture of excellence and continuous learning.",
@@ -119,7 +119,7 @@ export default function AboutUs() {
       },
     },
     {
-      name: "Shyam",
+      name: "Mr. K",
       role: "VP of Sales & Marketing",
       image: "/people/placeholder_person.jpg",
       bio: "Cybersecurity sales veteran who has scaled multiple security companies. Drives our global expansion and client relationships.",
@@ -129,22 +129,12 @@ export default function AboutUs() {
       },
     },
     {
-      name: "Hari",
+      name: "Mr. H",
       role: "Chief Security Officer",
       image: "/people/placeholder_person.jpg",
       bio: "Former FBI cybercrime investigator and forensic expert. Leads our security research and incident response teams.",
       social: {
         linkedin: "https://linkedin.com/in/emily-watson",
-      },
-    },
-    {
-      name: "Sushil",
-      role: "Head of Development",
-      image: "/people/placeholder_person.jpg",
-      bio: "Full-stack development expert with focus on security tooling. Manages our engineering teams building cutting-edge security platforms.",
-      social: {
-        linkedin: "https://linkedin.com/in/michael-park",
-        github: "https://github.com/michael-park",
       },
     },
   ];
@@ -448,137 +438,48 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="mb-16">
-            {teamMembers
-              .filter((member) => member.isFeatured)
-              .map((member, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mb-16 mx-auto">
+            {teamMembers.map((member, index) => (
+              <div key={index}>
                 <div
-                  key={index}
-                  className="bg-card rounded-2xl border border-border p-8 lg:p-12 mt-4"
+                  style={{
+                    width: 375,
+                    height: 400,
+                    objectFit: "cover",
+                    overflow: "hidden",
+                    borderRadius: "0.75rem",
+                  }}
                 >
-                  <div className="grid lg:grid-cols-3 gap-8 items-center">
-                    <div className="lg:col-span-1">
-                      <Image
-                        src={member.image}
-                        width={400}
-                        height={600}
-                        alt={member.name}
-                        className="rounded-xl"
-                      />
-                    </div>
-
-                    <div className="lg:col-span-2 space-y-6">
-                      <div>
-                        <h3 className="text-2xl font-bold mb-1">
-                          {member.name}
-                        </h3>
-                        <p className="text-lg text-muted-foreground mb-4">
-                          {member.role}
-                        </p>
-                        <p className="text-muted-foreground font-body leading-relaxed">
-                          {member.bio}
-                        </p>
-                      </div>
-
-                      <div className="flex gap-4">
-                        {member.social.linkedin && (
-                          <Link
-                            href={member.social.linkedin}
-                            className="text-muted-foreground hover:text-primary-foreground transition-colors"
-                          >
-                            <Linkedin className="w-5 h-5" />
-                          </Link>
-                        )}
-                        {member.social.twitter && (
-                          <Link
-                            href={member.social.twitter}
-                            className="text-muted-foreground hover:text-primary-foreground transition-colors"
-                          >
-                            <Twitter className="w-5 h-5" />
-                          </Link>
-                        )}
-                      </div>
-
-                      <div className="bg-secondary/50 rounded-lg p-6 border border-border">
-                        <div className="flex items-start gap-4">
-                          <Quote className="w-6 h-6 text-primary-foreground/60 shrink-0 mt-1" />
-                          <div>
-                            <p className="text-muted-foreground font-body italic mb-4">
-                              {member.message}
-                            </p>
-                            <p className="font-semibold">
-                              — {member.name}, {member.role}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <Image
+                    src={member.image}
+                    width={400}
+                    height={400}
+                    alt={member.name}
+                    className="rounded-xl transition-transform duration-400 hover:scale-110"
+                    style={{
+                      width: 375,
+                      height: 400,
+                      objectFit: "cover",
+                    }}
+                  />
                 </div>
-              ))}
-          </div>
-
-          {/* Rest of Team */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {teamMembers
-              .filter((member) => !member.isFeatured)
-              .map((member, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-xl border border-border p-6 hover:border-foreground/20 transition-colors"
-                >
-                  <div>
-                    <Image
-                      src={member.image}
-                      width={400}
-                      height={400}
-                      alt={member.name}
-                      className="rounded-xl"
-                      style={{
-                        width: 350,
-                        height: 350,
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-                  <div className="flex flex-col gap-2 mt-2">
-                    <h3 className="text-lg font-semibold mb-1">
-                      {member.name}
-                    </h3>
-                    <p className="text-muted-foreground mb-3">{member.role}</p>
-                    <p className="text-sm text-muted-foreground font-body mb-4">
-                      {member.bio}
-                    </p>
-                  </div>
-
-                  <div className="flex gap-3">
-                    {member.social.linkedin && (
-                      <Link
-                        href={member.social.linkedin}
-                        className="text-muted-foreground hover:text-primary-foreground transition-colors"
-                      >
-                        <Linkedin className="w-4 h-4" />
-                      </Link>
-                    )}
-                    {member.social.twitter && (
-                      <Link
-                        href={member.social.twitter}
-                        className="text-muted-foreground hover:text-primary-foreground transition-colors"
-                      >
-                        <Twitter className="w-4 h-4" />
-                      </Link>
-                    )}
-                    {member.social.github && (
-                      <Link
-                        href={member.social.github}
-                        className="text-muted-foreground hover:text-primary-foreground transition-colors"
-                      >
-                        <Github className="w-4 h-4" />
-                      </Link>
-                    )}
-                  </div>
+                <div className="flex flex-col gap-2 mt-2">
+                  <h3 className="text-lg font-semibold mb-1">{member.name}</h3>
+                  <p className="text-muted-foreground mb-3">{member.role}</p>
                 </div>
-              ))}
+
+                <div className="flex gap-3">
+                  {member.social.linkedin && (
+                    <Link
+                      href={member.social.linkedin}
+                      className="text-foreground"
+                    >
+                      LinkedIn
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Departments */}
