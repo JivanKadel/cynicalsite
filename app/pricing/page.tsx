@@ -34,15 +34,16 @@ export default function PricingPage() {
               Why Choose Cynical?
             </h2>
             <p className="flex gap-2 items-center">
-              <Check className="text-green-500" /> Find and fix more critical
-              vulnerabilities faster
+              <Check className="text-green-500" /> Detect threats before they
+              impact your business
             </p>
             <p className="flex gap-2 items-center">
-              <Check className="text-green-500" /> Continuously secure your
-              development pipeline
+              <Check className="text-green-500" /> Automate protection across
+              every environment
             </p>
             <p className="flex gap-2 items-center">
-              <Check className="text-green-500" /> Go beyond compliance
+              <Check className="text-green-500" /> Build resilience with
+              enterprise-grade security
             </p>
           </div>
 
