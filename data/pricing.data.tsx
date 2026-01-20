@@ -99,11 +99,6 @@ export const pricingData = [
 
 export const Faqs = [
   {
-    question: "What is included in a VAPT assessment?",
-    answer:
-      "VAPT (Vulnerability Assessment and Penetration Testing) includes automated scanning to identify vulnerabilities, manual exploitation to validate findings, and a comprehensive report with proof of concepts and remediation recommendations.",
-  },
-  {
     question: "Can I upgrade or downgrade my plan?",
     answer:
       "Yes, you can upgrade to a higher tier plan at any time. Downgrades are available and will be prorated based on your current billing cycle.",
@@ -137,11 +132,6 @@ export const Faqs = [
     question: "Is there a contract period?",
     answer:
       "Starter and Essential plans are available on a pay-as-you-go basis with no long-term contract. Premium and Enterprise plans typically involve a project-based engagement with defined timelines.",
-  },
-  {
-    question: "Do you offer a money-back guarantee?",
-    answer:
-      "We offer a 30-day satisfaction guarantee. If you're not satisfied with the assessment quality, contact our support team for a full refund.",
   },
   {
     question: "Are there any hidden fees?",

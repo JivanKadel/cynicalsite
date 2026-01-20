@@ -81,7 +81,7 @@ const Footer = () => {
                   >
                     <a
                       href={link.href}
-                      className="font-inter font-normal text-foreground/60 hover:text-foreground"
+                      className="font-inter font-normal text-foreground/90 hover:text-foreground"
                     >
                       {link.label}
                     </a>
@@ -100,10 +100,12 @@ const Footer = () => {
                 height={90}
               />
             </Link>
-            <div className="space-y-3 text-sm text-muted-foreground">
+            <div className="space-y-3 text-sm text-foreground">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span className="font-inter">info@cynicaltechnology.com</span>
+                <span className="font-inter break-all">
+                  info@cynicaltechnology.com
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
@@ -140,7 +142,6 @@ const Footer = () => {
         <div className="container mx-auto py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              {/* <span className="w-2 h-2 rounded-full bg-green-500" /> */}
               <span className="font-inter">
                 Copyright © {new Date().getFullYear()} Cynical Technology. All
                 Rights Reserved.
@@ -148,36 +149,11 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-inter">
-              <a
-                href="/privacy"
-                className="hover:text-primary-foreground transition-colors"
-              >
-                Privacy Policy
-              </a>
-              <a
-                href="/terms"
-                className="hover:text-primary-foreground transition-colors"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="/security"
-                className="hover:text-primary-foreground transition-colors"
-              >
-                Security
-              </a>
-              <a
-                href="/cookies"
-                className="hover:text-primary-foreground transition-colors"
-              >
-                Cookie Settings
-              </a>
-              <a
-                href="/responsible-disclosure"
-                className="hover:text-primary-foreground transition-colors"
-              >
-                Responsible Disclosure
-              </a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Service</a>
+              <a href="/security">Security</a>
+              <a href="/cookies">Cookie Settings</a>
+              <a href="/responsible-disclosure">Responsible Disclosure</a>
             </div>
           </div>
         </div>
