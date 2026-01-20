@@ -203,17 +203,15 @@ export default function Vigile() {
 
               <h2 className="text-3xl md:text-5xl font-bold mb-6">
                 Office 365 Integration
-                <span className="block text-muted-foreground text-2xl md:text-3xl mt-2">
-                  Powered by Microsoft Graph API
-                </span>
               </h2>
 
               <p className="text-lg text-muted-foreground font-body mb-8 leading-relaxed">
-                We connect directly with your organization&apos;s Office365
-                environment and fetch all employee records, sign-in logs, risk
-                users, and activities. Our powerful AI engine correlates this
-                data with our 15B+ breach records database to surface exposures
-                in real-time.
+                Our platform integrates seamlessly with your organization’s
+                Microsoft 365 environment to securely access employee directory
+                information, authentication activity, and risk indicators.
+                Leveraging our advanced AI engine, we correlate this data
+                against a proprietary database of over 15 billion breach records
+                to provide real-time visibility into potential exposures.
               </p>
 
               <div className="space-y-4 mb-8">

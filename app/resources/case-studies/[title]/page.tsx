@@ -155,9 +155,7 @@ const GlobalInvestmentBank = () => {
               {/* Section Label */}
               <div className="lg:col-span-4">
                 <div className="lg:sticky lg:top-32">
-                  <span className="inline-block px-3 py-1 rounded-full bg-secondary text-xs font-semibold uppercase tracking-wider mb-4">
-                    01 — The Challenge
-                  </span>
+                  <Badge>01 — The Challenge</Badge>
                   <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
                     Legacy security in a modern threat landscape
                   </h2>
@@ -212,9 +210,7 @@ const GlobalInvestmentBank = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 mb-16">
               <div className="lg:col-span-4 self-center">
-                <span className="inline-block px-3 py-1 rounded-full bg-foreground text-background text-xs font-semibold uppercase tracking-wider mb-4">
-                  02 — Our Approach
-                </span>
+                <Badge>02 — Our Approach</Badge>
                 <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
                   Comprehensive adversary simulation
                 </h2>
@@ -334,13 +330,11 @@ const GlobalInvestmentBank = () => {
       </section>
 
       {/* Results Section */}
-      <section className="py-24 bg-foreground text-background">
+      <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <span className="inline-block px-3 py-1 rounded-full bg-background/10 text-xs font-semibold uppercase tracking-wider mb-4">
-                03 — Results
-              </span>
+            <div className="text-left mb-8">
+              <Badge>03 — Results</Badge>
               <h2 className="text-3xl lg:text-4xl font-bold">
                 Measurable security transformation
               </h2>
@@ -379,18 +373,18 @@ const GlobalInvestmentBank = () => {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="group p-8 rounded-2xl bg-background/5 hover:bg-background/10 transition-colors"
+                  className="group p-8 rounded-2xl bg-card/50 hover:bg-card/80 transition-colors"
                 >
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-background/10 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center">
                       <item.icon className="w-5 h-5" />
                     </div>
-                    <span className="text-xs font-semibold text-background/50">
+                    <span className="text-xs font-semibold text-foreground/50">
                       {item.highlight}
                     </span>
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                  <p className="text-background/70 leading-relaxed">
+                  <p className="text-foreground/70 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
