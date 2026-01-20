@@ -88,7 +88,7 @@ export default function AboutUs() {
     {
       name: "Naresh Lamgade",
       role: "CEO & Founder",
-      image: "/people/mr_naresh.png",
+      image: "/people/naresh_sir.jpeg",
       bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and BugV to bring enterprise-grade security to organizations worldwide.",
       social: {
         linkedin: "https://www.linkedin.com/in/nareshlamgade/",
@@ -455,7 +455,7 @@ export default function AboutUs() {
                     width={400}
                     height={400}
                     alt={member.name}
-                    className="rounded-xl transition-transform duration-400 hover:scale-110"
+                    className="rounded-xl transition-transform duration-500 hover:scale-105"
                     style={{
                       width: 375,
                       height: 400,

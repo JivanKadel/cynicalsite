@@ -75,22 +75,17 @@ export default function HeroSection() {
                 name={brand.name}
                 logo={brand.image}
                 link={brand.link}
+                className="object-contain hover:scale-105 transition-transform grayscale hover:grayscale-0 dark:grayscale-0 dark:brightness-0 dark:invert opacity-90"
               />
             ))}
 
-            <TrustedByImage
-              width={44}
-              height={44}
-              name="Nagarik App"
-              logo="/brands/nagarik_app.png"
-              link="https://nagarikapp.com"
-            />
             <TrustedByImage
               width={54}
               height={54}
               name="Swift Technology"
               logo="/brands/swift_tech.svg"
               link="https://swifttech.com.np/"
+              className="object-contain hover:scale-105 transition-transform grayscale hover:grayscale-0 dark:grayscale-0 dark:brightness-0 dark:invert opacity-90"
             />
           </div>
         </Marquee>

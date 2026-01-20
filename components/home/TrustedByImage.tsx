@@ -9,6 +9,8 @@ interface TrustedByProps {
   link: string;
   width?: number;
   height?: number;
+  style?: React.CSSProperties;
+  className?: string;
 }
 
 export function TrustedByImage({
@@ -17,6 +19,8 @@ export function TrustedByImage({
   link,
   width = 100,
   height = 80,
+  style = {},
+  className = "",
 }: TrustedByProps) {
   return (
     <Link
@@ -30,9 +34,9 @@ export function TrustedByImage({
         alt={name}
         width={width}
         height={height}
-        className="object-contain hover:scale-105 transition-transform grayscale-10 hover:grayscale-0 opacity-90 hover:opacity-100"
+        style={style}
+        className={`object-contain hover:scale-105 transition-transform grayscale-10 hover:grayscale-0 opacity-90 hover:opacity-100 ${className}`}
       />
-      {/* <p className="text-muted-foreground">{name}</p> */}
     </Link>
   );
 }
