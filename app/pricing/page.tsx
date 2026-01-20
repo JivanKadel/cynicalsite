@@ -64,7 +64,7 @@ export default function PricingPage() {
                     alt={brand.name}
                     width={120}
                     height={80}
-                    className="object-contain hover:scale-105 transition-transform grayscale hover:grayscale-0 dark:grayscale-0 dark:brightness-0 dark:invert opacity-90"
+                    className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
                   />
                 </Link>
               ))}

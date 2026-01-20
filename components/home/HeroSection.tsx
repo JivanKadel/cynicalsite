@@ -75,7 +75,7 @@ export default function HeroSection() {
                 name={brand.name}
                 logo={brand.image}
                 link={brand.link}
-                className="object-contain hover:scale-105 transition-transform grayscale hover:grayscale-0 dark:grayscale-0 dark:brightness-0 dark:invert opacity-90"
+                className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
               />
             ))}
 
@@ -85,7 +85,7 @@ export default function HeroSection() {
               name="Swift Technology"
               logo="/brands/swift_tech.svg"
               link="https://swifttech.com.np/"
-              className="object-contain hover:scale-105 transition-transform grayscale hover:grayscale-0 dark:grayscale-0 dark:brightness-0 dark:invert opacity-90"
+              className="object-contain hover:scale-105 transition-transform  dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
             />
           </div>
         </Marquee>
