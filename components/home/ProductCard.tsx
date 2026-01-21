@@ -1,10 +1,12 @@
 "use client";
 
+import { ArrowUp, ArrowUpRight, MoveUpRight, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 interface ProductCardProps {
   name: string;
+  title: string;
   tagline: string;
   description: string;
   icon: string;
@@ -22,6 +24,7 @@ interface ProductCardProps {
 export function ProductCard({
   name,
   tagline,
+  title,
   description,
   icon = "logo.svg",
   stats,
@@ -34,11 +37,19 @@ export function ProductCard({
   return (
     <Link
       href={href || "#"}
-      className="group h-[280px] lg:h-[420px] rounded-2xl bg-[#12121188] dark:bg-[#bfbfbbaa] opacity-90 hover:border-border/80 transition-all duration-300"
+      className="group h-70 lg:h-105 rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
     >
-      <div className="relative h-full rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
-        <div className="p-6 flex flex-col h-full text-black relative z-10">
-          <div className="mb-3">
+      <div className="relative h-full p-2 lg:p-4 rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
+        <div className="flex justify-between items-center">
+          <h2 className="flex gap-1 text-green-500 text-xs tracking-widest">
+            <Shield className="h-4 w-4" /> {title}
+          </h2>
+          <div className="border border-foreground/20 p-2 rounded-full">
+            <MoveUpRight className="h-4 w-4" />
+          </div>
+        </div>
+        <div className="mt-2 flex flex-col h-full text-foreground relative z-10">
+          <div className="mb-1">
             <h2 className="md:text-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik z-10 relative text-pretty max-w-96">
               {name}
             </h2>
@@ -46,14 +57,14 @@ export function ProductCard({
           </div>
         </div>
 
-        <div className="absolute bottom-0 right-0 w-[90%] h-100!">
-          <div className="relative w-full h-full">
+        <div className="absolute bottom-4 right-4 left-4 h-[60%]">
+          <div className="relative w-full h-full rounded-lg p-0 m-0">
             <Image
               src={dashboardImage}
               alt={name}
-              fill
-              className="object-contain object-bottom-right"
-              sizes="90vw"
+              width={1080}
+              height={490}
+              className="object-contain rounded-lg"
             />
           </div>
         </div>

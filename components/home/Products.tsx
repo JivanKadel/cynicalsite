@@ -4,7 +4,8 @@ const Products = () => {
   const products = [
     {
       icon: "/products/bugv_logo.png",
-      dashboardImage: "/bugv.png",
+      title: "CROWDSOURCED SECURITY",
+      dashboardImage: "/bugv_product.png",
       name: "Bugv",
       tagline: "Offensive Security Network of Security Researchers",
       description:
@@ -21,7 +22,8 @@ const Products = () => {
     },
     {
       icon: "/products/vigile_logo.png",
-      dashboardImage: "/vigile.webp",
+      title: "THREAT INTELLIGENCE",
+      dashboardImage: "/products/vigile_1.png",
       name: "Vigile.AI",
       tagline: "Continuous Breaches and Malware Monitoring",
       description:
@@ -36,22 +38,6 @@ const Products = () => {
       gradient: "from-emerald-500/20 to-cyan-500/10",
       href: "/products/vigile",
     },
-    // {
-    //   icon: "/products/vigile_logo.png",
-    //   name: "Falcon",
-    //   tagline: "Continuous Security Monitoring",
-    //   description:
-    //     "Know when your defenses fail. Agentless monitoring catches configuration drift, certificate expirations, and security header regressions before attackers exploit them.",
-    //   features: [
-    //     "Zero-install deployment",
-    //     "SSL/TLS chain validation",
-    //     "Security header monitoring",
-    //   ],
-    //   stats: { value: "<4h", label: "Mean time to detect" },
-    //   cta: "Learn More",
-    //   gradient: "from-orange-500/20 to-red-500/10",
-    //   href: "https://webmonitoring.doit.gov.np/dashboard",
-    // },
   ];
 
   return (
@@ -82,6 +68,7 @@ const Products = () => {
           {products.map((product) => (
             <ProductCard
               key={product.name}
+              title={product.title}
               name={product.name}
               tagline={product.tagline}
               description={product.description}
