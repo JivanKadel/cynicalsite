@@ -29,9 +29,11 @@ import {
   Infinity,
   MessageCircleQuestionMark,
   BriefcaseBusiness,
+  Building2,
+  Eye,
 } from "lucide-react";
 import { useState } from "react";
-import { cn } from "@/lib/utils";
+import { cn, iconColors } from "@/lib/utils";
 import Image from "next/image";
 import { ScheduleCallDialog } from "../contact/SchedulDialog";
 import { ThemeSwitcher } from "../theme-switcher";
@@ -119,11 +121,38 @@ export default function Navbar() {
       description: "Customer success stories",
       href: "/resources/case-studies",
     },
+    // {
+    //   icon: MessageCircleQuestionMark,
+    //   label: "About Us",
+    //   description: "Learn more about Cynical Tech",
+    //   href: "/about",
+    // },
+    // {
+    //   icon: BriefcaseBusiness,
+    //   label: "Careers",
+    //   description: "Join our team",
+    //   href: "/career",
+    // },
+  ];
+
+  const company = [
     {
-      icon: MessageCircleQuestionMark,
-      label: "About Us",
-      description: "Learn more about Cynical Tech",
-      href: "/about",
+      icon: Building2,
+      label: "Company",
+      description: "Inside Cynical Tech",
+      href: "/company",
+    },
+    {
+      icon: Eye,
+      label: "Our Vision",
+      description: "Our mission and vision",
+      href: "/vision",
+    },
+    {
+      icon: Users,
+      label: "Team",
+      description: "Our leadership team",
+      href: "/company#our-team",
     },
     {
       icon: BriefcaseBusiness,
@@ -350,6 +379,17 @@ z"
                     <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                         {resources.map((item) => (
+                          <NavItemCard key={item.label} {...item} />
+                        ))}
+                      </div>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger>Company</NavigationMenuTrigger>
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
+                      <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
+                        {company.map((item) => (
                           <NavItemCard key={item.label} {...item} />
                         ))}
                       </div>

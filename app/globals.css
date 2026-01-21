@@ -186,6 +186,10 @@
     0 32px 64px -16px transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1,
 h2,
 h3 {
