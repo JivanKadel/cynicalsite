@@ -1,4 +1,5 @@
-import { ArrowRight, LucideProps } from "lucide-react";
+import { LucideProps } from "lucide-react";
+import Link from "next/link";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 export type SolutionCardProps = {
   Icon: ForwardRefExoticComponent<
@@ -9,6 +10,7 @@ export type SolutionCardProps = {
   features: string[];
   gradient?: string;
   iconColor?: string;
+  href?: string;
 };
 export default function SolutionCard({
   Icon,
@@ -18,9 +20,11 @@ export default function SolutionCard({
   index,
   gradient = "from-violet-500/20 to-blue-500/10",
   iconColor = "text-foreground-500",
+  href = "/solutions/app-security",
 }: SolutionCardProps & { index: number }) {
   return (
-    <div
+    <Link
+      href={href}
       key={title}
       className="group relative rounded-2xl bg-card backdrop-blur-sm p-8 hover:border-border/80 transition-all duration-300  "
       style={{ animationDelay: `${index * 0.1}s` }}
@@ -47,6 +51,6 @@ export default function SolutionCard({
           </span>
         ))}
       </div>
-    </div>
+    </Link>
   );
 }

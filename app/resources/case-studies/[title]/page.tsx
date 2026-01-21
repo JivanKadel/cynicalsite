@@ -1,3 +1,4 @@
+import PageCTA from "@/components/products/PageCTA";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -226,9 +227,6 @@ const GlobalInvestmentBank = () => {
 
             {/* Timeline */}
             <div className="relative">
-              {/* Connecting line */}
-              <div className="hidden lg:block absolute top-12 left-0 right-0 h-px" />
-
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
                   {
@@ -271,7 +269,7 @@ const GlobalInvestmentBank = () => {
                       </span>
                     </div>
 
-                    <div className="bg-background rounded-2xl p-6 h-full border border-border/50 lg:mt-6">
+                    <div className="bg-background rounded-2xl px-4 py-3 h-full border border-border/50 lg:mt-4">
                       <span className="text-xs text-muted-foreground font-medium">
                         {item.phase}
                       </span>
@@ -394,31 +392,17 @@ const GlobalInvestmentBank = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to secure your organization?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-              Let&apos;s discuss how we can help protect your critical assets
-              and achieve your security goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group" asChild>
-                <Link href="/contact">
-                  Schedule a Consultation
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/#case-studies">View More Case Studies</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        badge="500+ cloud environments secured this year"
+        headline="Ready to secure"
+        highlightedText="your Organization?"
+        description="Let's discuss how we can help protect your critical assets
+              and achieve your security goals."
+        primaryButtonText="Schedule a Consultation"
+        primaryButtonLink="/contact"
+        secondaryButtonText="Contact Sales"
+        secondaryButtonLink="/contact"
+      />
     </div>
   );
 };

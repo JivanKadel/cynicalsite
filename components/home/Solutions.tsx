@@ -48,6 +48,7 @@ export default function Solutions() {
           {solutions.map((solution, index) => (
             <SolutionCard
               key={solution.title}
+              href={solution.href}
               Icon={solution.icon}
               title={solution.title}
               description={solution.description}

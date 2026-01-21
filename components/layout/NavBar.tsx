@@ -77,7 +77,7 @@ export default function Navbar() {
     {
       icon: Cloud,
       label: "Cloud Security",
-      description: "AWS, GCP, Azure assessments",
+      description: "Assess AWS, GCP, Azure",
       href: "/solutions/cloud-security",
     },
     {
@@ -104,7 +104,7 @@ export default function Navbar() {
     {
       icon: BookOpen,
       label: "Blog",
-      description: "Security insights & research",
+      description: "Security insights & Research Reports",
       href: "/resources/blog",
     },
     {
@@ -396,7 +396,7 @@ z"
             </div>
 
             <button
-              className="lg:hidden p-2 text-muted-foreground hover:text-primary-foreground"
+              className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -517,7 +517,7 @@ function MobileNavSection({ title, items }: MobileNavSectionProps) {
             <Link
               key={item.label}
               href={item.href}
-              className="flex items-center gap-3 px-4 py-2 text-muted-foreground hover:text-primary-foreground hover:bg-secondary/30 rounded-lg transition-colors text-sm"
+              className="flex items-center gap-3 px-4 py-2 text-muted-foreground hover:text-foreground hover:bg-secondary/30 rounded-lg transition-colors text-sm"
             >
               <item.icon className="w-4 h-4" />
               <span>{item.label}</span>

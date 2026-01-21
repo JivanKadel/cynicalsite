@@ -1,4 +1,5 @@
 import { TrustedByImage } from "@/components/home/TrustedByImage";
+import PageCTA from "@/components/products/PageCTA";
 import { Button } from "@/components/ui/button";
 import { trustedBy } from "@/data/trustedby.data";
 import {
@@ -239,8 +240,9 @@ export default function AboutUs() {
                 width={800}
                 height={600}
                 alt="Cynical Logo on a dark background"
+                className="hidden dark:block"
               />
-              <div className="absolute inset-0 bg-linear-to-br from-background/80 via-background/50 to-background/20"></div>
+              <div className="absolute inset-0 dark:bg-linear-to-br from-background/80 via-background/50 to-background/20"></div>
             </div>
           </div>
         </div>
@@ -283,7 +285,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -369,22 +370,17 @@ export default function AboutUs() {
                   name={brand.name}
                   logo={brand.image}
                   link={brand.link}
+                  className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
                 />
               ))}
 
-              <TrustedByImage
-                width={44}
-                height={44}
-                name="Nagarik App"
-                logo="/brands/nagarik_app.png"
-                link="https://nagarikapp.com"
-              />
               <TrustedByImage
                 width={54}
                 height={54}
                 name="Swift Technology"
                 logo="/brands/swift_tech.svg"
                 link="https://swifttech.com.np/"
+                className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
               />
             </div>
           </Marquee>
@@ -426,7 +422,7 @@ export default function AboutUs() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 lg:py-32 bg-secondary/20" id="our-team">
+      <section className="py-20 lg:py-32 mx-auto bg-secondary/20" id="our-team">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
@@ -438,7 +434,7 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-6 mb-16 mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 place-content-between gap-4 gap-y-6 mb-16 mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index}>
                 <div
@@ -449,6 +445,7 @@ export default function AboutUs() {
                     overflow: "hidden",
                     borderRadius: "0.75rem",
                   }}
+                  className="self-center"
                 >
                   <Image
                     src={member.image}
@@ -500,37 +497,15 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Ready to secure your future?
-            </h2>
-            <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
-              Join hundreds of organizations who trust Cynical to protect their
-              digital assets and secure their future.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href={"/contact"}>
-                <Button
-                  size="lg"
-                  className="bg-foreground text-background hover:bg-foreground/90"
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
-              <Link href={"/contact"}>
-                <Button size="lg" variant="outline">
-                  Contact Sales
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageCTA
+        badge="Secure Your Future with Cynical"
+        headline="Ready to"
+        highlightedText="Secure Your Future?"
+        description="Join hundreds of organizations who trust Cynical to protect their
+              digital assets and secure their future."
+        primaryButtonText="Get Started"
+        secondaryButtonText="Contact Sales"
+      />
     </div>
   );
 }

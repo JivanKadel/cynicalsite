@@ -26,7 +26,7 @@ import HeroImage from "./HeroImage";
 
 export default function Vigile() {
   const stats = [
-    { value: "15B+", label: "Breach Records Indexed", icon: Database },
+    { value: "250B+", label: "Breach Records Indexed", icon: Database },
     { value: "24/7", label: "Real-time Monitoring", icon: Activity },
     { value: "<5min", label: "Alert Response Time", icon: Clock },
     { value: "99.9%", label: "Detection Accuracy", icon: ShieldPlus },
@@ -151,7 +151,13 @@ export default function Vigile() {
           <div>
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-20">
               <div className="col-span-2 flex flex-col gap-4">
-                <h1 className="text-4xl md:text-5xl font-bold">Vigile.AI</h1>
+                <div className="flex items-center gap-4 mb-6">
+                  <div>
+                    <h1 className="text-4xl md:text-5xl font-bold mt-4">
+                      Vigile.AI
+                    </h1>
+                  </div>
+                </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground/80 mb-4">
                   Discover Employee Data Breaches Before They Happen
                 </h2>
@@ -186,10 +192,7 @@ export default function Vigile() {
         </div>
       </section>
 
-      {/* Outlook Integration - Main Focus Section */}
       <section className="py-16 relative overflow-hidden">
-        {/* <div className="absolute inset-0 bg-linear-to-b from-background via-secondary/20 to-background" /> */}
-
         <div className="container mx-auto px-6 relative">
           <div className="grid lg:grid-cols-1 gap-8 items-center">
             <div>
@@ -197,7 +200,7 @@ export default function Vigile() {
                 variant={"outline"}
                 className="inline-flex items-center gap-2 px-4 py-2 mb-6"
               >
-                <Mail className="w-4 h-4 text-primary-foreground" />
+                <Mail className="w-4 h-4 text-foreground" />
                 <span className="text-sm font-medium">Core Integration</span>
               </Badge>
 
@@ -249,33 +252,33 @@ export default function Vigile() {
               </div>
             </div>
 
-            <div className="w-full"></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-12 overflow-hidden">
-        <div className="p-8 rounded-3xl border border-border/50 bg-linear-to-br from-secondary/50 to-background">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {outlookFeatures.map((feature, index) => (
-              <div
-                key={feature.title}
-                className="p-4 rounded-xl bg-background/50 border border-border/50"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center mb-3">
-                  <feature.icon
-                    className={`w-5 h-5 ${
-                      iconColors[index % iconColors.length].iconColor
-                    }`}
-                  />
+            <section className="pb-12 overflow-hidden">
+              <div className="p-8 rounded-3xl">
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                  {outlookFeatures.map((feature, index) => (
+                    <div
+                      key={feature.title}
+                      className="p-4 rounded-xl bg-background/50 border border-border/50"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center mb-3">
+                        <feature.icon
+                          className={`w-5 h-5 ${
+                            iconColors[index % iconColors.length].iconColor
+                          }`}
+                        />
+                      </div>
+                      <h4 className="font-semibold text-sm lg:text-lg mb-1 lg:mb-3">
+                        {feature.title}
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        {feature.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                <h4 className="font-semibold text-sm mb-1">{feature.title}</h4>
-                <p className="text-xs text-muted-foreground">
-                  {feature.description}
-                </p>
               </div>
-            ))}
+            </section>
           </div>
         </div>
       </section>
@@ -321,12 +324,13 @@ export default function Vigile() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
               <div className="relative p-8 rounded-3xl border border-border/50 bg-linear-to-br from-secondary/30 to-background">
-                {/* Mock PDF Report Preview */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 pb-4 border-b border-border/50">
-                    <FileText className="w-8 h-8 text-primary-foreground/70" />
+                    <FileText className="w-8 h-8 text-foreground/70" />
                     <div>
-                      <p className="font-semibold">Breach Analysis Report</p>
+                      <p className="font-semibold">
+                        Breach Analysis Report Sample Data
+                      </p>
                       <p className="text-xs text-muted-foreground">
                         Generated: January 6, 2026
                       </p>
@@ -351,17 +355,6 @@ export default function Vigile() {
                         </div>
                       </div>
                     ))}
-                  </div>
-
-                  <div className="pt-4 border-t border-border/50">
-                    <div className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">
-                        Ready for export
-                      </span>
-                      <span className="text-primary-foreground font-medium">
-                        PDF • CSV • JSON
-                      </span>
-                    </div>
                   </div>
                 </div>
               </div>

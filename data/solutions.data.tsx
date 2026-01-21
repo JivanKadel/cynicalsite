@@ -29,6 +29,7 @@ export const solutions = [
     ],
     gradient: "from-violet-500/20 to-blue-500/10",
     iconColor: "text-foreground-500",
+    href: "/solutions/app-security",
   },
   {
     icon: Cloud,
@@ -38,6 +39,7 @@ export const solutions = [
     features: ["IAM policy review", "Container escapes", "Secrets exposure"],
     gradient: "from-emerald-500/20 to-cyan-500/10",
     iconColor: "text-cyan-500",
+    href: "/solutions/cloud-security",
   },
   {
     icon: Network,
@@ -47,6 +49,7 @@ export const solutions = [
     features: ["Initial access", "Persistence", "Objective completion"],
     gradient: "from-orange-500/20 to-red-500/10",
     iconColor: "text-red-500",
+    href: "/solutions/cloud-security",
   },
   {
     icon: AlertTriangle,
@@ -56,6 +59,7 @@ export const solutions = [
     features: ["4-hour deployment", "Malware analysis", "Legal-ready reports"],
     gradient: "from-pink-500/20 to-purple-500/10",
     iconColor: "text-purple-500",
+    href: "/solutions/incident-response",
   },
   {
     icon: Bot,
@@ -65,6 +69,7 @@ export const solutions = [
     features: ["Prompt injection", "Model extraction", "Data poisoning"],
     gradient: "from-blue-500/20 to-indigo-500/10",
     iconColor: "text-indigo-500",
+    href: "/solutions/app-security",
   },
   {
     icon: Search,
@@ -78,6 +83,7 @@ export const solutions = [
     ],
     gradient: "from-slate-500/20 to-gray-500/10",
     iconColor: "text-green-500",
+    href: "/solutions/threat-intel",
   },
 ];
 

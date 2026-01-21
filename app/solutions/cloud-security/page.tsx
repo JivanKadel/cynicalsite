@@ -18,6 +18,7 @@ import {
   Key,
   Settings,
   CheckCircle,
+  CheckCircleIcon,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -192,14 +193,14 @@ const CloudSecurity = () => {
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
-                className="hover:text-primary-foreground transition-colors"
+                className="hover:text-foreground transition-colors"
               >
                 Home
               </Link>
               <span>/</span>
               <Link
                 href="/#solutions"
-                className="hover:text-primary-foreground transition-colors"
+                className="hover:text-foreground transition-colors"
               >
                 Solutions
               </Link>
@@ -437,10 +438,10 @@ const CloudSecurity = () => {
               {securityFrameworks.map((framework, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-4 p-4 rounded-lg border border-border bg-card"
+                  className="flex items-center gap-2 p-4 rounded-lg border border-border bg-card"
                 >
-                  <div className="p-1.5 rounded-full bg-border flex items-center justify-center text-xs font-bold">
-                    <Check className="text-green-500" />
+                  <div className="p-1.5 rounded-full flex items-center justify-center text-xs font-bold">
+                    <CheckCircleIcon className="text-green-500" />
                   </div>
                   <span className="font-medium text-sm">{framework}</span>
                 </div>

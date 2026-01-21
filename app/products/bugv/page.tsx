@@ -16,10 +16,10 @@ import {
   Headset,
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
-import Image from "next/image";
 import { iconColors } from "@/lib/utils";
+import Link from "next/link";
 
-export default function Bugv() {
+export default function BugV() {
   const stats = [
     { value: "500+", label: "Elite Researchers", icon: Users },
     { value: "10,000+", label: "Vulnerabilities Found", icon: Bug },
@@ -157,14 +157,11 @@ export default function Bugv() {
   return (
     <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary/80 via-background to-background" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMDIwMjAiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
-
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl">
             <div className="flex items-center gap-4 mb-6">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold mt-4">Bugv</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mt-4">BugV</h1>
               </div>
             </div>
 
@@ -175,16 +172,15 @@ export default function Bugv() {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90"
-              >
-                Start Your Program
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button size="lg" variant="outline">
-                View Sample Report
-              </Button>
+              <a href={"https://bugv.io/request-a-demo/"} target="_blank">
+                <Button
+                  size="lg"
+                  className="bg-foreground text-background hover:bg-foreground/90"
+                >
+                  Start Your Program
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -449,7 +445,7 @@ export default function Bugv() {
         badge="500+ elite researchers ready to test your assets"
         headline="Ready to find vulnerabilities"
         highlightedText="before attackers do?"
-        description="Join the companies that trust Bugv to secure their most critical assets with continuous crowdsourced security testing."
+        description="Join the companies that trust BugV to secure their most critical assets with continuous crowdsourced security testing."
         primaryButtonText="Launch Your Program"
         primaryButtonLink="/contact"
         secondaryButtonText="Talk to Security Expert"

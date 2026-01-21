@@ -14,23 +14,23 @@ export default function ResearchPage() {
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
-                className="hover:text-primary-foreground transition-colors"
+                className="hover:text-foreground/90 transition-colors"
               >
                 Homes
               </Link>
               <span>/</span>
               <Link
                 href="/#research"
-                className="hover:text-primary-foreground transition-colors"
+                className="hover:text-foreground/90 transition-colors"
               >
                 Research
               </Link>
               <span>/</span>
-              <span className="text-primary-foreground">All Research</span>
+              <span className="text-foreground">All Research</span>
             </div>
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <NotebookPen className="w-4 h-4 text-primary-foreground" />
+              <NotebookPen className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">Security Research</span>
             </div>
 

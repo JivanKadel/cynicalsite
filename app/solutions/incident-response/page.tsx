@@ -193,14 +193,14 @@ const IncidentResponse = () => {
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
-                className="hover:text-primary-foreground transition-colors"
+                className="hover:text-foreground transition-colors"
               >
                 Home
               </Link>
               <span>/</span>
               <Link
                 href="/#solutions"
-                className="hover:text-primary-foreground transition-colors"
+                className="hover:text-foreground transition-colors"
               >
                 Solutions
               </Link>

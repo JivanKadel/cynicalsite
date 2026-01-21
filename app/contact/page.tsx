@@ -169,7 +169,7 @@ const Contact = () => {
                           {item.href ? (
                             <a
                               href={item.href}
-                              className="text-sm text-muted-foreground hover:text-primary-foreground transition-colors"
+                              className="text-sm text-muted-foreground"
                             >
                               {item.content}
                             </a>
