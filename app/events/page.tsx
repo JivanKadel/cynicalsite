@@ -10,6 +10,7 @@ import {
   MapPin,
 } from "lucide-react";
 import AvatarGroup from "./AvatarGroup";
+import Link from "next/link";
 
 export default function EventsPage() {
   return (
@@ -39,97 +40,8 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
-      {/* <section className="container mx-auto px-6 mb-20">
-        <Tabs defaultValue="upcoming">
-          <TabsList className="rounded-2xl">
-            <TabsTrigger value="upcoming" className="rounded-xl">
-              Upcoming Events
-            </TabsTrigger>
-            <TabsTrigger value="past" className="rounded-xl">
-              Past Events
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent
-            value="upcoming"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          >
-            {upcomingEvents.map((event) => (
-              <Card key={event.id}>
-                <CardContent>
-                  <div className="flex gap-1">
-                    {event.tags.map((tag) => (
-                      <Badge variant={"outline"} key={tag}>
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <h2>{event.name}</h2>
-                  <div>
-                    <div>
-                      <div className="flex gap-1">
-                        <Clock /> {event.time}
-                      </div>
-                      <div className="flex gap-1">
-                        <Calendar /> {event.date}
-                      </div>
-                    </div>
-                    <div className="flex gap-1">
-                      <MapPin /> {event.location}
-                    </div>
-                  </div>
-                  <div>
-                    <p>{event.description}</p>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <AvatarGroup />
-                    <Badge variant={"outline"}>{event.hashtag}</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </TabsContent>
-          <TabsContent
-            value="past"
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-          >
-            {pastEvents.map((event) => (
-              <Card key={event.id}>
-                <CardContent>
-                  <div className="flex gap-1">
-                    {event.tags.map((tag) => (
-                      <Badge variant={"outline"} key={tag}>
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <h2>{event.name}</h2>
-                  <div>
-                    <div>
-                      <div className="flex gap-1">
-                        <Clock /> {event.time}
-                      </div>
-                      <div className="flex gap-1">
-                        <Calendar /> {event.date}
-                      </div>
-                    </div>
-                    <div className="flex gap-1">
-                      <MapPin /> {event.location}
-                    </div>
-                  </div>
-                  <div>
-                    <p>{event.description}</p>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <AvatarGroup />
-                    <Badge variant={"outline"}>{event.hashtag}</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </TabsContent>
-        </Tabs>
-      </section> */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16">
+
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-24">
         <div className="max-w-7xl mx-auto">
           <Tabs defaultValue="upcoming" className="w-full">
             <TabsList className="grid w-full max-w-xs mx-auto grid-cols-2 rounded-2xl">
@@ -222,15 +134,15 @@ export default function EventsPage() {
                     </div>
 
                     {event.link && (
-                      <a
-                        href={event.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link
+                        href={`/events/"${event.name.split(" ").join("-")}`}
+                        // target="_blank"
+                        // rel="noopener noreferrer"
                         className="mt-6 w-full inline-flex items-center justify-center px-4 py-2.5 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-medium rounded-lg transition-all duration-200 group-hover:shadow-lg"
                       >
                         Register Now
                         <ArrowUpRight className="ml-2 w-4 h-4" />
-                      </a>
+                      </Link>
                     )}
                   </CardContent>
                 </Card>

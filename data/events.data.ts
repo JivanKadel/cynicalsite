@@ -1,5 +1,4 @@
 import { time } from "console";
-
 export const upcomingEvents = [
   {
     id: "101",
@@ -11,7 +10,23 @@ export const upcomingEvents = [
     hashtag: "#BugV2026",
     attendees: 150,
     description:
-      "A comprehensive workshop on penetration testing techniques and tools.",
+      "A comprehensive workshop on penetration testing techniques and tools. Learn industry best practices from experienced security professionals. This hands-on session covers reconnaissance, vulnerability scanning, exploitation techniques, and reporting. Perfect for professionals looking to advance their cybersecurity career.",
+    skillYouWillGain: [
+      "Penetration Testing",
+      "Vulnerability Assessment",
+      "Network Security",
+      "Exploitation Techniques",
+    ],
+    opportunities: [
+      "Networking with security professionals",
+      "Job placement assistance",
+      "Certification prep",
+    ],
+    facilitators: ["Expert Ethical Hackers", "Security Consultants"],
+    requirements: [
+      "Basic networking knowledge",
+      "Linux/Windows CLI experience",
+    ],
     link: "https://bugv.io/penetration-testing",
   },
   {
@@ -24,7 +39,23 @@ export const upcomingEvents = [
     hashtag: "#BugV2026",
     attendees: 200,
     description:
-      "An exciting live hacking competition to test your skills against other hackers.",
+      "An exciting live hacking competition to test your skills against other hackers. Compete in real-world scenarios, solve capture-the-flag challenges, and demonstrate your expertise. Network with top security talent and showcase your abilities to recruiters and industry leaders.",
+    skillYouWillGain: [
+      "Problem-solving",
+      "CTF Techniques",
+      "Security Tools",
+      "Team Collaboration",
+    ],
+    opportunities: [
+      "Cash prizes",
+      "Sponsorship from tech companies",
+      "Recruitment opportunities",
+    ],
+    facilitators: ["Experienced CTF Organizers", "Cybersecurity Experts"],
+    requirements: [
+      "Intermediate hacking knowledge",
+      "Prior competition experience recommended",
+    ],
     link: "https://bugv.io/live-hacking",
   },
   {
@@ -37,7 +68,23 @@ export const upcomingEvents = [
     hashtag: "#BugVMobile2026",
     attendees: 250,
     description:
-      "A conference dedicated to the latest trends and challenges in mobile security.",
+      "A conference dedicated to the latest trends and challenges in mobile security. Featuring keynote speakers from leading tech companies discussing Android and iOS vulnerabilities, secure development practices, and emerging threats. Interactive sessions and panel discussions on mobile app security, privacy concerns, and defense strategies.",
+    skillYouWillGain: [
+      "Mobile App Security",
+      "iOS/Android Vulnerabilities",
+      "Secure Coding Practices",
+      "Privacy Protection",
+    ],
+    opportunities: [
+      "Industry networking",
+      "Vendor exhibitions",
+      "Workshop participation",
+    ],
+    facilitators: ["Mobile Security Researchers", "Platform Security Teams"],
+    requirements: [
+      "Basic mobile development knowledge",
+      "Interest in security topics",
+    ],
     link: "https://bugv.io/mobile-security",
   },
 ];
