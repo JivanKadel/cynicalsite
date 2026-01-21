@@ -209,7 +209,7 @@ const ThreatIntelligence = () => {
 
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Radar className="w-4 h-4 text-primary-foreground" />
+              <Radar className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">
                 Advanced Threat Intelligence
               </span>

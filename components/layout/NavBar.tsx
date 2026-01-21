@@ -27,14 +27,13 @@ import {
   BookOpen,
   ChevronDown,
   Infinity,
-  MessageCircleQuestionMark,
+  Calendar1,
   BriefcaseBusiness,
   Building2,
   Eye,
 } from "lucide-react";
 import { useState } from "react";
-import { cn, iconColors } from "@/lib/utils";
-import Image from "next/image";
+import { cn } from "@/lib/utils";
 import { ScheduleCallDialog } from "../contact/SchedulDialog";
 import { ThemeSwitcher } from "../theme-switcher";
 import { useTheme } from "next-themes";
@@ -110,10 +109,10 @@ export default function Navbar() {
       href: "/resources/blog",
     },
     {
-      icon: Shield,
-      label: "Security Advisories",
-      description: "Latest vulnerability disclosures",
-      href: "/resources/advisories",
+      icon: Calendar1,
+      label: "Events",
+      description: "Events in BugV X Cynical",
+      href: "/events",
     },
     {
       icon: Users,

@@ -210,7 +210,7 @@ const IncidentResponse = () => {
 
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Siren className="w-4 h-4 text-primary-foreground" />
+              <Siren className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">
                 Emergency Incident Response
               </span>
