@@ -58,10 +58,15 @@ export const trustedBy = [
 ];
 
 export const trustedByClipped = [
+  // {
+  //   name: "Himalayan Life Insurance",
+  //   image: "/brands/himalayan_life_insurance.png",
+  //   link: "https://himalayanlife.com.np",
+  // },
   {
-    name: "Himalayan Life Insurance",
-    image: "/brands/himalayan_life_insurance.png",
-    link: "https://himalayanlife.com.np",
+    name: "WorldBank",
+    image: "/brands/worldbank.svg",
+    link: "https://worldbank.org",
   },
   {
     name: "Ncell",
@@ -74,10 +79,15 @@ export const trustedByClipped = [
     link: "https://merojob.com",
   },
   {
-    name: "Edusanjal",
-    image: "/brands/edusanjal.png",
-    link: "https://edusanjal.com",
+    name: "WorldLink",
+    image: "/brands/worldlink.svg",
+    link: "https://worldlink.com.np",
   },
+  // {
+  //   name: "Edusanjal",
+  //   image: "/brands/edusanjal.png",
+  //   link: "https://edusanjal.com",
+  // },
   {
     name: "Programiz",
     image: "/brands/programiz.svg",
