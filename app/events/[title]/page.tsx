@@ -9,7 +9,6 @@ import {
   Briefcase,
   CheckCircle,
   ExternalLink,
-  ArrowLeft,
   Share2,
   BookOpen,
   Target,
@@ -190,7 +189,7 @@ export default function EventDetailsPage() {
                       key={index}
                       className="flex items-center gap-3 p-4 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-700 transition-colors"
                     >
-                      <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-500 dark:text-green-400 shrink-0" />
                       <span className="text-gray-800 dark:text-gray-200 font-medium">
                         {skill}
                       </span>
@@ -292,7 +291,7 @@ export default function EventDetailsPage() {
                   </div>
 
                   <Button
-                    className="w-full py-6 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full py-6 text-lg font-semibold bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 dark:from-blue-500 dark:to-purple-500 dark:hover:from-blue-600 dark:hover:to-purple-600 text-white shadow-lg hover:shadow-xl transition-all duration-300"
                     size="lg"
                     onClick={() => window.open(event.link, "_blank")}
                   >

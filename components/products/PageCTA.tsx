@@ -65,7 +65,7 @@ const PageCTA = ({
               </div>
 
               {/* Headline */}
-              <h2 className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+              <h2 className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
                 {headline}
                 <span className="block text-foreground">{highlightedText}</span>
               </h2>
@@ -112,10 +112,10 @@ const PageCTA = ({
               {/* Trust Indicators */}
               {showTrustIndicators && (
                 <div className="mt-16 pt-16 border-t border-border/30">
-                  <p className="text-sm text-muted-foreground text-center mb-12 uppercase tracking-widest">
+                  <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
                     Trusted By Critical Industries
                   </p>
-                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16 opacity-50">
+                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
                     {[
                       "Banks",
                       "Governments",

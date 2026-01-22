@@ -1,4 +1,3 @@
-// app/layout-client.tsx
 "use client";
 
 import Providers from "@/context/ProgressProvider";

@@ -17,7 +17,6 @@ import {
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
 import { iconColors } from "@/lib/utils";
-import Link from "next/link";
 
 export default function BugV() {
   const stats = [
@@ -230,10 +229,10 @@ export default function BugV() {
 
           <div className="relative">
             {/* Connection Line */}
-            <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+            <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
             <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
-              {process.map((item, index) => (
+              {process.map((item) => (
                 <div key={item.step} className="relative">
                   <div className="text-center">
                     <div className="w-14 h-14 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
@@ -309,7 +308,7 @@ export default function BugV() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {programTypes.map((program, index) => (
+            {programTypes.map((program) => (
               <div
                 key={program.title}
                 className={`relative rounded-2xl border-2 p-8 ${
@@ -424,43 +423,6 @@ export default function BugV() {
           </div>
         </div>
       </section>
-
-      {/* Integration Section */}
-      {/* <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
-              Integrations
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Fits into your workflow
-            </h2>
-            <p className="text-lg text-muted-foreground font-body">
-              Connect Bugv with your existing tools for seamless vulnerability
-              management
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[
-              { name: "Jira", icon: Layers },
-              { name: "GitHub", icon: Code },
-              { name: "Slack", icon: Globe },
-              { name: "PagerDuty", icon: AlertTriangle },
-              { name: "Splunk", icon: TrendingUp },
-              { name: "ServiceNow", icon: Server },
-            ].map((integration) => (
-              <div
-                key={integration.name}
-                className="flex flex-col items-center justify-center p-6 rounded-xl border border-border/50 bg-card/50 hover:border-border transition-colors"
-              >
-                <integration.icon className="w-8 h-8 text-muted-foreground mb-3" />
-                <span className="text-sm font-medium">{integration.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       <PageCTA
         badge="500+ elite researchers ready to test your assets"

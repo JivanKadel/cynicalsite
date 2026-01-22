@@ -89,7 +89,7 @@ export default function EventsPage() {
                       <div className="flex items-start gap-3">
                         <div className="flex-1 space-y-2">
                           <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                            <Calendar className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+                            <Calendar className="w-4 h-4 text-gray-500 dark:text-gray-400 shrink-0" />
                             <span className="text-sm font-medium">
                               {new Date(event.date).toLocaleDateString(
                                 "en-US",
@@ -103,13 +103,13 @@ export default function EventsPage() {
                             </span>
                           </div>
                           <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                            <Clock className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+                            <Clock className="w-4 h-4 text-gray-500 dark:text-gray-400 shrink-0" />
                             <span className="text-sm font-medium">
                               {event.time}
                             </span>
                           </div>
                           <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
-                            <MapPin className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+                            <MapPin className="w-4 h-4 text-gray-500 dark:text-gray-400 shrink-0" />
                             <span className="text-sm">{event.location}</span>
                           </div>
                         </div>
@@ -135,7 +135,6 @@ export default function EventsPage() {
 
                     {event.link && (
                       <Link
-                        // href={`/events/"${event.name.split(" ").join("-")}`}
                         href={"#"}
                         className="mt-6 w-full inline-flex items-center justify-center px-4 py-2.5 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-medium rounded-lg transition-all duration-200 group-hover:shadow-lg"
                       >
@@ -209,10 +208,7 @@ export default function EventsPage() {
                       </Badge>
                       {event.link && (
                         <Link
-                          // href={event.link}
                           href={"#"}
-                          // target="_blank"
-                          // rel="noopener noreferrer"
                           className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-1"
                         >
                           View Recap

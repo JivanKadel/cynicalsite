@@ -17,7 +17,6 @@ import {
   X,
   Bug,
   Radar,
-  Shield,
   Code,
   Cloud,
   Search,
@@ -34,16 +33,11 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
-import { ScheduleCallDialog } from "../contact/SchedulDialog";
+
 import { ThemeSwitcher } from "../theme-switcher";
-import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const { theme } = useTheme();
-
-  const [dialogOpen, setDialogOpen] = useState(false);
 
   const products = [
     {
@@ -120,18 +114,6 @@ export default function Navbar() {
       description: "Customer success stories",
       href: "/resources/case-studies",
     },
-    // {
-    //   icon: MessageCircleQuestionMark,
-    //   label: "About Us",
-    //   description: "Learn more about Cynical Tech",
-    //   href: "/about",
-    // },
-    // {
-    //   icon: BriefcaseBusiness,
-    //   label: "Careers",
-    //   description: "Join our team",
-    //   href: "/career",
-    // },
   ];
 
   const company = [
@@ -167,6 +149,8 @@ export default function Navbar() {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link
+              role="link"
+              title="Cynical Home Page"
               href="/"
               className="flex items-center gap-2 h-12 text-black dark:text-white"
             >
@@ -420,11 +404,7 @@ z"
             {/* Desktop CTA Buttons */}
             <div className="hidden lg:flex gap-2">
               <Link href="/contact">
-                <Button
-                  // href={"/contact"}
-                  // onClick={() => setDialogOpen(true)}
-                  className="bg-primary text-background rounded-[8px] group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2"
-                >
+                <Button className="bg-primary text-background rounded-xl group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2">
                   <div className="font-medium text-sm font-inter">
                     Schedule a Call
                     <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-inter">

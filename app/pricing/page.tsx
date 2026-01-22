@@ -19,7 +19,7 @@ export default function PricingPage() {
       >
         {/* Left Section */}
         <section>
-          <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+          <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
             Plans and Pricing
           </h1>
           <p className="font-sans text-base text-foreground/70 font-normal lg:text-lg mt-4">

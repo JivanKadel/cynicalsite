@@ -132,7 +132,7 @@ const Testimonials = () => {
                   src={testimonials[activeIndex].image}
                   width={48}
                   height={48}
-                  alt={testimonials[activeIndex].author}
+                  alt={`${testimonials[activeIndex].author}. ${testimonials[activeIndex].role} at ${testimonials[activeIndex].company}`}
                   className="w-14 h-14 rounded-full border-2 border-blue-500"
                 />
                 <div>
@@ -146,31 +146,8 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-
-          {/* Metric */}
-          {/* <div className="lg:col-span-5 relative">
-            <div className="glow-border relative z-20 rounded-2xl p-8 lg:p-12 overflow-hidden aspect-square flex flex-col items-center justify-center shadow-2xl bg-white/5 dark:bg-slate-900/50 backdrop-blur-sm border border-white/10">
-              <div className="relative z-10 text-center space-y-2">
-                <div className="text-7xl lg:text-9xl font-display font-extrabold tracking-tighter text-blue">
-                  {testimonials[activeIndex].metric}
-                </div>
-                <p className="text-sm font-bold tracking-[0.3em] uppercase text-blue">
-                  {testimonials[activeIndex].metricLabel}
-                </p>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
-                <div
-                  className="w-64 h-64 border border-primary rounded-full animate-ping"
-                  style={{ animationDuration: "4s" }}
-                ></div>
-                <div className="absolute w-48 h-48 border border-primary/40 rounded-full animate-pulse"></div>
-              </div>
-            </div>
-            <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full z-10 pointer-events-none"></div>
-          </div> */}
         </div>
 
-        {/* Progress Indicators */}
         <div className="mt-16 flex items-center gap-3">
           {testimonials.map((_, index) => (
             <button

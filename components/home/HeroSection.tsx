@@ -10,7 +10,7 @@ export default function HeroSection() {
   return (
     <section className="container mx-auto relative z-10 pt-4 md:pt-6 pb-8">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8 py-8">
-        <h1 className="text-[2.7rem] font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+        <h1 className="text-[2.7rem] font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
           See your organization the way attackers do
         </h1>
 
@@ -23,9 +23,9 @@ export default function HeroSection() {
       <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 md:pb-16 max-w-sm">
         <Link href={"/contact"}>
           <Button
-            className="relative overflow-hidden w-[180px] border-0 border-transparent py-6 text-sm 
+            className="relative overflow-hidden w-45 border-0 border-transparent py-6 text-sm 
              text-white rounded-4xl 
-             bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 
+             bg-linear-to-r from-blue-500 via-blue-600 to-blue-700 
              hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 
              transition-all duration-300 ease-in-out"
           >
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </Button>
         </Link>
         <Link href={"/resources/case-studies"} className="flex-1">
-          <Button className="w-[180px] py-6 px-8 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
+          <Button className="w-45 py-6 px-8 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
             Read Case Studies <ArrowRight className="w-5! h-5!" />
           </Button>
         </Link>

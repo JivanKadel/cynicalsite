@@ -1,12 +1,4 @@
-import {
-  Github,
-  Linkedin,
-  Twitter,
-  Mail,
-  MapPin,
-  Phone,
-  Facebook,
-} from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Facebook } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 

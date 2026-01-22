@@ -1,22 +1,3 @@
-import {
-  ArrowRight,
-  Shield,
-  Cloud,
-  Search,
-  AlertTriangle,
-  Code,
-  Smartphone,
-  Lock,
-  Network,
-  FileCheck,
-  Bot,
-  Database,
-  Fingerprint,
-  Webhook,
-  Monitor,
-  Key,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
 import SolutionCard from "./SolutionCard";
 import { iconColors } from "@/lib/utils";
 import { capabilities, solutions } from "@/data/solutions.data";

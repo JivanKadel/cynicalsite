@@ -177,8 +177,8 @@ export default function VisionPage() {
       {/* Vision Statement */}
       <section className="py-16">
         <div className="relative">
-          <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-50"></div>
-          <div className="relative bg-gradient-to-br from-background to-card border border-primary/20 rounded-3xl p-10 md:p-16 shadow-2xl overflow-hidden">
+          <div className="absolute -inset-1 bg-linear-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-50"></div>
+          <div className="relative bg-linear-to-br from-background to-card border border-primary/20 rounded-3xl p-10 md:p-16 shadow-2xl overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-16 translate-x-16"></div>
             <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary/5 rounded-full translate-y-20 -translate-x-20"></div>
 
