@@ -81,7 +81,7 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     const templateParams = {
-      name: formData.fullName,
+      fullName: formData.fullName,
       companyName: formData.companyName,
       companyEmail: formData.companyEmail,
       title: formData.title,
@@ -95,9 +95,6 @@ export default function ContactForm() {
       const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
       await sendEmail({ serviceID, templateID, templateParams, publicKey });
-      console.log({
-        templateParams,
-      });
 
       toast.success("Request Submitted! We will reach out soon.");
 
