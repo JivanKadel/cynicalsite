@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { sortedCountries } from "@/data/countries";
 import { sendEmail } from "@/lib/sendQuery";
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
@@ -13,10 +12,7 @@ interface FormErrors {
   fullName?: string;
   email?: string;
   company?: string;
-  title?: string;
-  phone?: string;
   product?: string;
-  country?: string;
 }
 
 export default function PricingForm() {
@@ -24,10 +20,7 @@ export default function PricingForm() {
     fullName: "",
     email: "",
     company: "",
-    title: "",
-    phone: "",
     product: "Penetration Testing",
-    country: "Nepal",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
@@ -57,13 +50,6 @@ export default function PricingForm() {
       newErrors.company = "Please enter a valid Company Name";
     }
 
-    // Title
-    if (!formData.title.trim()) {
-      newErrors.title = "Title is required";
-    } else if (formData.title.trim().length < 2) {
-      newErrors.title = "Please enter a valid Title";
-    }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -81,11 +67,9 @@ export default function PricingForm() {
     const templateParams = {
       fullName: formData.fullName,
       email: formData.email,
+      title: "Pricing Form, Cynical",
       company: formData.company,
-      title: formData.title,
-      phone: formData.phone,
       product: formData.product,
-      country: formData.country,
       time: new Date().toString(),
     };
 
@@ -111,10 +95,7 @@ export default function PricingForm() {
         fullName: "",
         email: "",
         company: "",
-        title: "",
-        phone: "",
         product: "Penetration Testing",
-        country: "Nepal",
       });
     } catch (error) {
       console.error("EmailJS error", error);
@@ -217,33 +198,6 @@ export default function PricingForm() {
 
         <div>
           <Label
-            htmlFor="title"
-            className="block text-sm font-medium text-foreground"
-          >
-            Title
-          </Label>
-          <Input
-            type="text"
-            id="title"
-            name="title"
-            className={` ${
-              errors.title ? "border-red-500 focus-visible:ring-red-500" : ""
-            }`}
-            onChange={(e) => {
-              setFormData({
-                ...formData,
-                title: e.target.value,
-              });
-              if (errors.title) setErrors({ ...errors, title: undefined });
-            }}
-          />
-          {errors.title && (
-            <p className="text-sm text-red-500">{errors.title}</p>
-          )}
-        </div>
-
-        <div>
-          <Label
             htmlFor="phone"
             className="block text-sm font-medium text-foreground"
           >
@@ -284,32 +238,6 @@ export default function PricingForm() {
             <option value="API Protection">API Protection</option>
             <option value="Compliance Suite">Compliance Suite</option>
             <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <div>
-          <Label className="block text-sm font-medium mb-2" htmlFor="country">
-            Country
-          </Label>
-          <select
-            id="country"
-            name="country"
-            defaultValue={"Nepal"}
-            className={`w-full bg-background p-3 border ${
-              errors.country ? "border-red-500 focus-visible:ring-red-500" : ""
-            }`}
-            onChange={(e) => {
-              setFormData({
-                ...formData,
-                country: e.target.value,
-              });
-            }}
-          >
-            {sortedCountries.map((country) => (
-              <option key={country.iso_code} value={country.country}>
-                {country.country}
-              </option>
-            ))}
           </select>
         </div>
 

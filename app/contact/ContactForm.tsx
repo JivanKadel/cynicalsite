@@ -12,7 +12,6 @@ interface FormErrors {
   fullName?: string;
   companyEmail?: string;
   companyName?: string;
-  title?: string;
   message?: string;
 }
 
@@ -21,7 +20,6 @@ export default function ContactForm() {
     fullName: "",
     companyEmail: "",
     companyName: "",
-    title: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,13 +50,6 @@ export default function ContactForm() {
       newErrors.companyName = "Please enter a valid Company Name";
     }
 
-    // Title
-    if (!formData.title.trim()) {
-      newErrors.title = "Title is required";
-    } else if (formData.title.trim().length < 2) {
-      newErrors.title = "Please enter a valid Title";
-    }
-
     // Message
     if (!formData.message.trim()) {
       newErrors.message = "Message is required";
@@ -84,8 +75,8 @@ export default function ContactForm() {
       fullName: formData.fullName,
       companyName: formData.companyName,
       companyEmail: formData.companyEmail,
-      title: formData.title,
       message: formData.message,
+      title: "Contact Form, Cynical",
       time: new Date().toString(),
     };
     try {
@@ -103,7 +94,6 @@ export default function ContactForm() {
         fullName: "",
         companyName: "",
         companyEmail: "",
-        title: "",
         message: "",
       });
     } catch (error) {
@@ -194,30 +184,7 @@ export default function ContactForm() {
           )}
         </div>
       </div>
-      <div className="flex flex-col gap-6">
-        <div>
-          <Label className="block text-sm font-medium mb-2">Title*</Label>
-          <Input
-            type="text"
-            className={` ${
-              errors.title ? "border-red-500 focus-visible:ring-red-500" : ""
-            }`}
-            placeholder="Pentest Inquiry"
-            value={formData.title}
-            name="title"
-            onChange={(e) => {
-              setFormData({
-                ...formData,
-                title: e.target.value,
-              });
-              if (errors.title) setErrors({ ...errors, title: undefined });
-            }}
-          />
-          {errors.title && (
-            <p className="text-sm text-red-500">{errors.title}</p>
-          )}
-        </div>
-      </div>
+
       <div className="flex flex-col gap-6">
         <div>
           <Label className="block text-sm font-medium mb-2">Message*</Label>
