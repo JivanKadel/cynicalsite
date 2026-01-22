@@ -1,31 +1,7 @@
-"use client";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Mail,
-  Clock,
-  Phone,
-  MapPin,
-  Globe,
-  Calendar,
-} from "lucide-react";
+import { Mail, Clock, Phone, MapPin, Globe, Calendar } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    role: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
   const contactInfo = [
     {
       icon: Phone,
@@ -80,75 +56,7 @@ const Contact = () => {
                     within 24 hours.
                   </p>
                 </div>
-
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="flex flex-col gap-6">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Full Name*
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full placeholder:text-muted-foreground/50 px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
-                        placeholder="John Doe"
-                        value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Company Email*
-                      </label>
-                      <input
-                        type="email"
-                        className="w-full placeholder:text-muted-foreground/50 px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
-                        placeholder="john@company.com"
-                        value={formData.email}
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-6">
-                    <div>
-                      <label className="block text-sm font-medium mb-2">
-                        Company*
-                      </label>
-                      <input
-                        type="text"
-                        className="w-full placeholder:text-muted-foreground/50 px-4 py-3 rounded-lg border border-border bg-background focus:border-primary focus:outline-none transition-colors focus:ring-2 focus:ring-primary/20"
-                        placeholder="Company name"
-                        value={formData.company}
-                        onChange={(e) =>
-                          setFormData({
-                            ...formData,
-                            company: e.target.value,
-                          })
-                        }
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <Button
-                    size="lg"
-                    className="w-full text-foreground group bg-linear-to-r from-background via-background/90 to-background hover:from-background/95 hover:via-background/85 hover:to-background/95 border border-border duration-500 transition-colors"
-                  >
-                    Submit Inquiry
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-
-                  <p className="text-xs text-muted-foreground text-center">
-                    By submitting, you agree to our privacy policy. We do not
-                    share your information with third parties.
-                  </p>
-                </form>
+                <ContactForm />
               </div>
             </div>
 
