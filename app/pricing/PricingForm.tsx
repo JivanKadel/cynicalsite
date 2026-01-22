@@ -198,22 +198,6 @@ export default function PricingForm() {
 
         <div>
           <Label
-            htmlFor="phone"
-            className="block text-sm font-medium text-foreground"
-          >
-            Phone
-          </Label>
-          <Input
-            type="tel"
-            id="phone"
-            name="phone"
-            pattern="[0-9]{10,15}"
-            className="mt-1 block w-full rounded-md border border-border shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2"
-          />
-        </div>
-        {/* Product */}
-        <div>
-          <Label
             htmlFor="product"
             className="block text-sm font-medium text-foreground"
           >

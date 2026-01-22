@@ -46,42 +46,42 @@ export default function PricingPage() {
               enterprise-grade security
             </p>
           </div>
-
-          <div className="mt-16">
-            <h2 className="text-lg text-center sm:text-start font-semibold tracking-wider text-muted-foreground">
-              JOIN MANY COMPANIES THAT TRUST CYNICAL
-            </h2>
-            <div className="flex justify-center sm:justify-start flex-wrap gap-4 mt-8">
-              {trustedByClipped.map((brand) => {
-                return (
-                  <Link
-                    key={brand.name}
-                    href={brand.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-col items-center justify-center p-2"
-                  >
-                    <Image
-                      src={brand.image}
-                      alt={brand.name}
-                      width={120}
-                      height={80}
-                      className={`object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
-                        brand.name.toLowerCase() === "worldlink" ||
-                        brand.name.toLowerCase() == "worldbank"
-                          ? ""
-                          : "dark:hover:invert-0 dark:hover:brightness-100"
-                      }`}
-                    />
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
         </section>
 
         <PricingForm />
       </section>
+
+      <div className="mt-16 mx-auto flex flex-col justify-center">
+        <h2 className="text-lg text-center font-semibold tracking-wider text-muted-foreground">
+          JOIN MANY COMPANIES THAT TRUST CYNICAL
+        </h2>
+        <div className="flex justify-center flex-wrap gap-4 mt-8">
+          {trustedByClipped.map((brand) => {
+            return (
+              <Link
+                key={brand.name}
+                href={brand.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center p-2"
+              >
+                <Image
+                  src={brand.image}
+                  alt={brand.name}
+                  width={120}
+                  height={80}
+                  className={`object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
+                    brand.name.toLowerCase() === "worldlink" ||
+                    brand.name.toLowerCase() == "worldbank"
+                      ? ""
+                      : "dark:hover:invert-0 dark:hover:brightness-100"
+                  }`}
+                />
+              </Link>
+            );
+          })}
+        </div>
+      </div>
 
       <section
         role="region"
