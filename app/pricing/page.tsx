@@ -52,23 +52,30 @@ export default function PricingPage() {
               JOIN MANY COMPANIES THAT TRUST CYNICAL
             </h2>
             <div className="flex justify-center sm:justify-start flex-wrap gap-4 mt-8">
-              {trustedByClipped.map((brand) => (
-                <Link
-                  key={brand.name}
-                  href={brand.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex flex-col items-center justify-center p-2"
-                >
-                  <Image
-                    src={brand.image}
-                    alt={brand.name}
-                    width={120}
-                    height={80}
-                    className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
-                  />
-                </Link>
-              ))}
+              {trustedByClipped.map((brand) => {
+                return (
+                  <Link
+                    key={brand.name}
+                    href={brand.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center justify-center p-2"
+                  >
+                    <Image
+                      src={brand.image}
+                      alt={brand.name}
+                      width={120}
+                      height={80}
+                      className={`object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
+                        brand.name.toLowerCase() === "worldlink" ||
+                        brand.name.toLowerCase() == "worldbank"
+                          ? ""
+                          : "dark:hover:invert-0 dark:hover:brightness-100"
+                      }`}
+                    />
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

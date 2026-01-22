@@ -106,7 +106,7 @@ export default function Navbar() {
       icon: BookOpen,
       label: "Blog",
       description: "Security insights & Research Reports",
-      href: "/resources/blog",
+      href: "/blogs",
     },
     {
       icon: Calendar1,

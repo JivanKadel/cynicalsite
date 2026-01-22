@@ -94,27 +94,27 @@ export default function AboutUs() {
       message:
         "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
     },
-    {
-      name: "Mr. Ravi Lamgade",
-      role: "Co-Founder & Office Admin",
-      image: "/people/mr_ravi.jpeg",
-      bio: "Co-founder with a passion for cybersecurity and business development. Drives company growth and strategic partnerships.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/ravi-lamgade-3422ab190/",
-      },
-      isFeatured: true,
-      message:
-        "At Cynical, we believe administration is not just paperwork—it’s about enabling people, processes, and progress. My mission is to ensure you have the tools and trust to keep our operations secure, efficient, and future‑ready.",
-    },
-    {
-      name: "Mrs. Sabina Lawaju",
-      role: "Sales and Marketing Head",
-      image: "/people/mrs_sabina.jpeg",
-      bio: "HR executive with 5+ years building high-performance security teams. Champions our culture of excellence and continuous learning.",
-      social: {
-        linkedin: "https://www.linkedin.com/in/sabina-lawaju-mba-30777a1b1/",
-      },
-    },
+    // {
+    //   name: "Mr. Ravi Lamgade",
+    //   role: "Co-Founder & Office Admin",
+    //   image: "/people/mr_ravi.jpeg",
+    //   bio: "Co-founder with a passion for cybersecurity and business development. Drives company growth and strategic partnerships.",
+    //   social: {
+    //     linkedin: "https://www.linkedin.com/in/ravi-lamgade-3422ab190/",
+    //   },
+    //   isFeatured: true,
+    //   message:
+    //     "At Cynical, we believe administration is not just paperwork—it’s about enabling people, processes, and progress. My mission is to ensure you have the tools and trust to keep our operations secure, efficient, and future‑ready.",
+    // },
+    // {
+    //   name: "Mrs. Sabina Lawaju",
+    //   role: "Sales and Marketing Head",
+    //   image: "/people/mrs_sabina.jpeg",
+    //   bio: "HR executive with 5+ years building high-performance security teams. Champions our culture of excellence and continuous learning.",
+    //   social: {
+    //     linkedin: "https://www.linkedin.com/in/sabina-lawaju-mba-30777a1b1/",
+    //   },
+    // },
   ];
 
   const departments = [
@@ -347,7 +347,12 @@ export default function AboutUs() {
                   name={brand.name}
                   logo={brand.image}
                   link={brand.link}
-                  className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
+                  className={`object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
+                    brand.name.toLowerCase() === "worldlink" ||
+                    brand.name.toLowerCase() == "worldbank"
+                      ? ""
+                      : "dark:hover:invert-0 dark:hover:brightness-100"
+                  }`}
                 />
               ))}
 
@@ -411,7 +416,8 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 place-content-between gap-4 gap-y-6 mb-16 mx-auto">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 place-content-between gap-4 gap-y-6 mb-16 mx-auto"> */}
+          <div className="flex justify-center gap-4 gap-y-6 mb-16 mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index}>
                 <div
@@ -457,7 +463,7 @@ export default function AboutUs() {
           </div>
 
           {/* Departments */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:pt-24 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {departments.map((dept, index) => (
               <div
                 key={index}

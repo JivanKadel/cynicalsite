@@ -15,34 +15,32 @@ const Footer = () => {
     Products: [
       { label: "Bugv Platform", href: "/products/bugv" },
       { label: "Vigile.AI", href: "/products/vigile" },
-      { label: "Red Team Services", href: "/products/red-team" },
-      { label: "Integrations", href: "/integrations" },
+      {
+        label: "Falcon",
+        href: "https://webmonitoring.doit.gov.np/dashboard",
+      },
       { label: "Pricing", href: "/pricing" },
-      { label: "Changelog", href: "/changelog" },
     ],
     Solutions: [
-      { label: "Application Security", href: "/solutions/appsec" },
-      { label: "Cloud Security", href: "/solutions/cloud" },
-      { label: "AI/ML Security", href: "/solutions/ai-security" },
+      { label: "Application Security", href: "/solutions/app-security" },
+      { label: "Cloud Security", href: "/solutions/cloud-security" },
+      { label: "AI/ML Security", href: "/solutions/app-security" },
       { label: "Threat Intelligence", href: "/solutions/threat-intel" },
       { label: "Incident Response", href: "/solutions/incident-response" },
-      { label: "Compliance", href: "/solutions/compliance" },
     ],
     Resources: [
-      { label: "Documentation", href: "/docs" },
-      { label: "API Reference", href: "/api" },
-      { label: "Blog", href: "/blog" },
-      { label: "Security Advisories", href: "/advisories" },
-      { label: "Case Studies", href: "/case-studies" },
-      { label: "Webinars", href: "/webinars" },
+      { label: "Research", href: "/research" },
+      { label: "Blog", href: "/blogs" },
+      { label: "Events", href: "/events" },
+      { label: "Case Studies", href: "/resources/case-studies" },
     ],
     Company: [
-      { label: "About Us", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Press", href: "/press" },
+      { label: "Company", href: "/company" },
+      { label: "Vision", href: "/vision" },
+      { label: "Team", href: "/company#our-team" },
+      { label: "Careers", href: "/career" },
       { label: "Contact", href: "/contact" },
-      { label: "Partners", href: "/partners" },
-      { label: "Trust Center", href: "/trust" },
+      { label: "Pricing", href: "/pricing" },
     ],
   };
 
@@ -149,11 +147,11 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-inter">
-              <a href="/privacy">Privacy Policy</a>
-              <a href="/terms">Terms of Service</a>
-              <a href="/security">Security</a>
-              <a href="/cookies">Cookie Settings</a>
-              <a href="/responsible-disclosure">Responsible Disclosure</a>
+              <Link href="#">Privacy Policy</Link>
+              <Link href="#">Terms of Service</Link>
+              <Link href="#">Security</Link>
+              <Link href="#">Cookie Settings</Link>
+              <Link href="#">Responsible Disclosure</Link>
             </div>
           </div>
         </div>

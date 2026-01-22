@@ -153,9 +153,14 @@ export default function Vigile() {
               <div className="col-span-2 flex flex-col gap-4">
                 <div className="flex items-center gap-4 mb-6">
                   <div>
-                    <h1 className="text-4xl md:text-5xl font-bold mt-4">
+                    <a
+                      href="https://vigile.ai/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-aeonik text-4xl md:text-5xl font-bold mt-4"
+                    >
                       Vigile.AI
-                    </h1>
+                    </a>
                   </div>
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-foreground/80 mb-4">

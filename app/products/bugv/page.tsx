@@ -161,7 +161,14 @@ export default function BugV() {
           <div className="max-w-4xl">
             <div className="flex items-center gap-4 mb-6">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold mt-4">BugV</h1>
+                <a
+                  href="https://bugv.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-4xl md:text-5xl font-bold mt-4"
+                >
+                  BugV
+                </a>
               </div>
             </div>
 
@@ -333,12 +340,18 @@ export default function BugV() {
                     </li>
                   ))}
                 </ul>
-                <Button
-                  variant={program.recommended ? "default" : "outline"}
-                  className="w-full"
+                <a
+                  href="https://bugv.io/request-a-demo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Get Started
-                </Button>
+                  <Button
+                    variant={program.recommended ? "default" : "outline"}
+                    className="w-full"
+                  >
+                    Get Started
+                  </Button>
+                </a>
               </div>
             ))}
           </div>
@@ -365,11 +378,19 @@ export default function BugV() {
                 millions of users worldwide.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button>
-                  View Hall of Fame
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-                <Button variant="outline">Research Blog</Button>
+                <a href="https://bugv.io/contacts/">
+                  <Button>
+                    Contact
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </a>
+                <a
+                  href="https://blog.bugv.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline">Read Blogs</Button>
+                </a>
               </div>
             </div>
 
