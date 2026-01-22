@@ -117,7 +117,7 @@ export default function PricingForm() {
         className="space-y-4 bg-card/80 shadow-md rounded-lg p-6"
         onSubmit={handleSubmit}
       >
-        <div>
+        <div className="flex flex-col gap-2">
           <Label
             htmlFor="fullName"
             className="block text-sm font-medium text-foreground"
@@ -142,7 +142,7 @@ export default function PricingForm() {
           )}
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
           <Label
             htmlFor="email"
             className="block text-sm font-medium text-foreground"
@@ -169,7 +169,7 @@ export default function PricingForm() {
           )}
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
           <Label
             htmlFor="company"
             className="block text-sm font-medium text-foreground"
@@ -196,7 +196,7 @@ export default function PricingForm() {
           )}
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
           <Label
             htmlFor="product"
             className="block text-sm font-medium text-foreground"
@@ -207,7 +207,7 @@ export default function PricingForm() {
             id="product"
             name="product"
             defaultValue={"Penetration Testing"}
-            className={`w-full bg-background p-3 border ${
+            className={`w-full bg-background rounded-md p-3 border ${
               errors.product ? "border-red-500 focus-visible:ring-red-500" : ""
             }`}
             onChange={(e) => {
