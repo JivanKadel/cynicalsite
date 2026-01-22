@@ -3,9 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   Bug,
-  Shield,
   Users,
-  Zap,
   Clock,
   Target,
   Award,
@@ -13,17 +11,15 @@ import {
   Globe,
   Lock,
   FileText,
-  TrendingUp,
   Eye,
-  AlertTriangle,
-  Server,
-  Code,
   Layers,
+  Headset,
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
+import { iconColors } from "@/lib/utils";
 import Link from "next/link";
 
-const Bugv = () => {
+export default function BugV() {
   const stats = [
     { value: "500+", label: "Elite Researchers", icon: Users },
     { value: "10,000+", label: "Vulnerabilities Found", icon: Bug },
@@ -39,7 +35,7 @@ const Bugv = () => {
         "Access a vetted community of elite security researchers from around the world, each with verified credentials and track records.",
     },
     {
-      icon: Shield,
+      icon: Layers,
       title: "Managed Programs",
       description:
         "We handle triage, validation, and communication—so your team can focus on fixing vulnerabilities, not managing reports.",
@@ -143,7 +139,7 @@ const Bugv = () => {
       title: "Remediation Support",
       description:
         "Get detailed fix guidance and verify patches with researcher retesting to ensure complete resolution.",
-      icon: Shield,
+      icon: Headset,
     },
   ];
 
@@ -159,29 +155,13 @@ const Bugv = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary/80 via-background to-background" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMyMDIwMjAiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIxIiBjeT0iMSIgcj0iMSIvPjwvZz48L2c+PC9zdmc+')] opacity-40" />
-
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl">
-            <Link
-              href="/#products"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-            >
-              ← Back to Products
-            </Link>
-
             <div className="flex items-center gap-4 mb-6">
-              {/* <div className="w-16 h-16 rounded-2xl bg-secondary border border-border/50 flex items-center justify-center">
-                <Bug className="w-8 h-8 text-foreground" />
-              </div> */}
               <div>
-                <span className="text-sm text-muted-foreground uppercase tracking-widest">
-                  Product
-                </span>
-                <h1 className="text-4xl md:text-5xl font-bold">Bugv</h1>
+                <h1 className="text-4xl md:text-5xl font-bold mt-4">BugV</h1>
               </div>
             </div>
 
@@ -192,33 +172,32 @@ const Bugv = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90"
-              >
-                Start Your Program
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-              <Button size="lg" variant="outline">
-                View Sample Report
-              </Button>
+              <a href={"https://bugv.io/request-a-demo/"} target="_blank">
+                <Button
+                  size="lg"
+                  className="bg-foreground text-background hover:bg-foreground/90"
+                >
+                  Start Your Program
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 border-y border-border/50 bg-secondary/30">
+      <section className="py-12 lg:py-24 lg:mt-16 border-y border-border/50 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="w-12 h-12 rounded-xl bg-background border border-border/50 flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-6 h-6 text-foreground/70" />
                 </div>
-                <p className="text-3xl md:text-4xl font-bold mb-1">
+                <h2 className="text-3xl md:text-4xl text-foreground font-bold mb-1">
                   {stat.value}
-                </p>
+                </h2>
                 <p className="text-sm text-muted-foreground">{stat.label}</p>
               </div>
             ))}
@@ -233,7 +212,7 @@ const Bugv = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               How It Works
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               From launch to remediation
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -248,13 +227,9 @@ const Bugv = () => {
 
             <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
               {process.map((item, index) => (
-                <div
-                  key={item.step}
-                  className="relative animate-fade-up"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+                <div key={item.step} className="relative">
                   <div className="text-center">
-                    <div className="w-16 h-16 rounded-2xl bg-secondary border border-border/50 flex items-center justify-center mx-auto mb-4 relative z-10">
+                    <div className="w-14 h-14 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
                       <item.icon className="w-7 h-7 text-foreground" />
                     </div>
                     <span className="text-xs text-muted-foreground font-mono mb-2 block">
@@ -279,7 +254,7 @@ const Bugv = () => {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Platform Features
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
               Enterprise-grade bug bounty
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -291,11 +266,14 @@ const Bugv = () => {
             {features.map((feature, index) => (
               <div
                 key={feature.title}
-                className="group p-6 rounded-2xl border border-border/50 bg-background hover:border-border transition-all duration-300 animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group p-6 rounded-2xl border border-border/50 bg-background hover:border-border transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors">
-                  <feature.icon className="w-6 h-6 text-foreground" />
+                  <feature.icon
+                    className={`w-6 h-6 ${
+                      iconColors[index % iconColors.length].iconColor
+                    }`}
+                  />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
                 <p className="text-sm text-muted-foreground font-body leading-relaxed">
@@ -327,16 +305,15 @@ const Bugv = () => {
             {programTypes.map((program, index) => (
               <div
                 key={program.title}
-                className={`relative rounded-2xl border p-8 animate-fade-up ${
+                className={`relative rounded-2xl border-2 p-8 ${
                   program.recommended
-                    ? "border-foreground/30 bg-secondary/50"
+                    ? "border-blue/70 bg-secondary/50"
                     : "border-border/50 bg-card/50"
                 }`}
-                style={{ animationDelay: `${index * 0.15}s` }}
               >
                 {program.recommended && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-3 py-1 text-xs font-medium bg-foreground text-background rounded-full">
+                    <span className="px-3 py-1 text-xs font-medium bg-blue text-white rounded-full">
                       Most Popular
                     </span>
                   </div>
@@ -351,7 +328,7 @@ const Bugv = () => {
                       key={feature}
                       className="flex items-center gap-3 text-sm"
                     >
-                      <CheckCircle className="w-4 h-4 text-foreground/50 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-500/50 shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -400,7 +377,7 @@ const Bugv = () => {
               {vulnerabilityTypes.map((vuln, index) => (
                 <div
                   key={vuln.name}
-                  className="flex items-center justify-between p-4 rounded-xl border border-border/50 bg-background hover:border-border transition-colors animate-fade-up"
+                  className="flex items-center justify-between p-4 rounded-xl border border-border/50 bg-background hover:border-border transition-colors"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <div className="flex items-center gap-4">
@@ -409,8 +386,8 @@ const Bugv = () => {
                         vuln.severity === "Critical"
                           ? "bg-red-500/10 text-red-400"
                           : vuln.severity === "High"
-                          ? "bg-orange-500/10 text-orange-400"
-                          : "bg-yellow-500/10 text-yellow-400"
+                            ? "bg-orange-500/10 text-orange-400"
+                            : "bg-yellow-500/10 text-yellow-400"
                       }`}
                     >
                       {vuln.severity}
@@ -428,7 +405,7 @@ const Bugv = () => {
       </section>
 
       {/* Integration Section */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
@@ -462,13 +439,13 @@ const Bugv = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <PageCTA
         badge="500+ elite researchers ready to test your assets"
         headline="Ready to find vulnerabilities"
         highlightedText="before attackers do?"
-        description="Join the companies that trust Bugv to secure their most critical assets with continuous crowdsourced security testing."
+        description="Join the companies that trust BugV to secure their most critical assets with continuous crowdsourced security testing."
         primaryButtonText="Launch Your Program"
         primaryButtonLink="/contact"
         secondaryButtonText="Talk to Security Expert"
@@ -476,6 +453,4 @@ const Bugv = () => {
       />
     </div>
   );
-};
-
-export default Bugv;
+}

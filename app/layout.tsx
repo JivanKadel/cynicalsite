@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Cabin, Inter } from "next/font/google";
+import localFont from "next/font/local";
+import { Inter, Noto_Serif } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/NavBar";
 import Footer from "@/components/home/Footer";
+import LayoutClient from "./layout-client";
+import { Toaster } from "@/components/ui/sonner";
+import { ThemeProvider } from "@/components/theme-provider";
 
-const cabin = Cabin({
-  variable: "--font-cabin",
+const noto = Noto_Serif({
+  variable: "--font-noto",
   subsets: ["latin"],
   display: "swap",
 });
@@ -16,8 +20,31 @@ const inter = Inter({
   display: "swap",
 });
 
+const aeonik = localFont({
+  src: [
+    {
+      path: "./font/Aeonik-Light.ttf",
+      weight: "300",
+      style: "light",
+    },
+    {
+      path: "./font/Aeonik-Medium.ttf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "./font/Aeonik-Bold.ttf",
+      weight: "700",
+      style: "bold",
+    },
+  ],
+  variable: "--font-aeonik",
+  display: "swap",
+  fallback: ["system-ui", "arial"],
+});
+
 export const metadata: Metadata = {
-  title: "Cynical Tech",
+  title: "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
   description: "Securing your digital space",
 };
 
@@ -27,11 +54,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${cabin.variable} ${inter.variable} antialiased`}>
-        <Navbar />
-        <div className="mt-16 lg:mt-20">{children}</div>
-        <Footer />
+    <html
+      lang="en"
+      className={`${noto.variable} ${inter.variable} ${aeonik.className} antialiased suppressHydrationWarning`}
+    >
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Toaster richColors position="top-center" />
+
+          <LayoutClient>
+            <div>
+              <Navbar />
+              <div className="mt-16 lg:mt-20">{children}</div>
+              <Footer />
+            </div>
+          </LayoutClient>
+        </ThemeProvider>
       </body>
     </html>
   );

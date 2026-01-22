@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight, ArrowLeft } from "lucide-react";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const Testimonials = () => {
@@ -9,40 +10,50 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      quote:
-        "They compromised our domain controller in 4 hours. Our MSSP had been giving us green reports for two years. That's the difference between compliance testing and real offensive security.",
-      author: "CISO",
-      role: "",
-      company: "Fortune 500 Financial Institution",
+      quote: [
+        "Cynical Technology team brings both levels of professionalism and skill that have satisfied us beyond expectations.",
+        "Their team is communicative and responsive, making them a reliable and trustworthy partner.",
+      ],
+      author: "Raghu Nath Bhandari",
+      role: "VP Tech",
+      company: "IME Group",
       metric: "4h",
       metricLabel: "Time to domain admin",
+      image: "/testimonials/mr_raghu_ime_group.jpg",
     },
     {
-      quote:
-        "Cynical's researchers found an auth bypass in our API that would have exposed 2M customer records. Our previous pen test vendor ran the same test six months prior and missed it.",
-      author: "VP of Engineering",
-      role: "",
-      company: "Series D Fintech",
+      quote: [
+        "Naresh and the team have submitted reports to our team over the last few months. ",
+        "Their reports are extremely thorough and always include steps to replicate the issues and also include possible solutions to implement. We appreciate them for all the hard work and diligence they have provided.",
+      ],
+      author: "Jon Tsai",
+      role: "Product Manager",
+      company: "GoFundMe",
       metric: "2M",
       metricLabel: "Records at risk",
+      image: "/testimonials/mr_jon_gofundme.jpg",
     },
     {
-      quote:
-        "We thought we had good visibility into our attack surface. Vigile discovered 340 leaked credentials and 12,000 assets we didn't know existed. We had shadow IT everywhere.",
-      author: "Head of Security",
-      role: "",
-      company: "National Airline",
+      quote: [
+        "Cynical Technology has evolved to be our most trustworthy cyber security partner for business in the last few years. Their professionalism and dedications are unmatched. Thanks for the Support.",
+      ],
+      author: "Diwas Sapkota",
+      role: "CEO",
+      company: "FonePay",
       metric: "340",
       metricLabel: "Credential leaks found",
+      image: "/testimonials/mr_diwas_fonepay.jpg",
     },
     {
-      quote:
-        "When we got hit with ransomware, their IR team was on-site in 3 hours. They contained the spread, identified the initial access vector, and had us operational in 48 hours.",
-      author: "CTO",
-      role: "",
-      company: "Healthcare Technology",
+      quote: [
+        "A  Team of young cyber security professionals who are dedicated to strengthen Nepalese cyberspace. It has been a pleasant experience working with them in F1soft.",
+      ],
+      author: "Aslam Ali",
+      role: "Head of SOC",
+      company: "F1Soft",
       metric: "48h",
       metricLabel: "Full recovery",
+      image: "/testimonials/mr_aslam_f1soft.png",
     },
   ];
 
@@ -62,7 +73,7 @@ const Testimonials = () => {
   const prevTestimonial = () => {
     setIsAutoPlaying(false);
     setActiveIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   };
 
@@ -70,15 +81,15 @@ const Testimonials = () => {
     <section className="py-12 bg-background overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header */}
-        <div className="flex items-end justify-between mb-20">
+        <div className="flex items-end justify-between mb-12">
           <div>
-            <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
+            <span className="text-md text-muted-foreground uppercase tracking-widest mb-4 block">
               Client Results
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold">
+            <h2 className="text-4xl md:text-6xl">
               What we found.
               <br />
-              What we fixed.
+              <span className="text-slate-500">What we fixed.</span>
             </h2>
           </div>
 
@@ -106,23 +117,24 @@ const Testimonials = () => {
           {/* Quote */}
           <div className="lg:col-span-7">
             <div className="relative">
-              {/* Large quote mark */}
-              <span className="absolute -top-8 -left-4 text-[120px] font-serif text-foreground/5 leading-none select-none">
-                &quot;
+              <span className="absolute -top-12 -left-6 text-8xl font-serif text-primary opacity-30 select-none">
+                “
               </span>
-
-              <blockquote className="text-2xl md:text-3xl lg:text-4xl font-normal leading-snug tracking-tight relative z-10">
-                {testimonials[activeIndex].quote}
+              <blockquote className="text-2xl md:text-3xl text-foreground/70 relative z-10 font-aeonik mt-8">
+                {testimonials[activeIndex].quote.map((q, i) => (
+                  <p key={i}>{q}</p>
+                ))}
+                {/* {testimonials[activeIndex].quote} */}
               </blockquote>
-
               {/* Author */}
               <div className="mt-10 flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-secondary border border-border flex items-center justify-center text-lg font-bold">
-                  {testimonials[activeIndex].author
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </div>
+                <Image
+                  src={testimonials[activeIndex].image}
+                  width={48}
+                  height={48}
+                  alt={testimonials[activeIndex].author}
+                  className="w-14 h-14 rounded-full border-2 border-blue-500"
+                />
                 <div>
                   <p className="font-semibold text-lg">
                     {testimonials[activeIndex].author}
@@ -136,18 +148,26 @@ const Testimonials = () => {
           </div>
 
           {/* Metric */}
-          <div className="lg:col-span-5">
-            <div className="relative p-10 lg:p-14 rounded-3xl bg-secondary/50 border border-border">
-              <div className="text-center">
-                <span className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-tighter gradient-text-accent">
+          {/* <div className="lg:col-span-5 relative">
+            <div className="glow-border relative z-20 rounded-2xl p-8 lg:p-12 overflow-hidden aspect-square flex flex-col items-center justify-center shadow-2xl bg-white/5 dark:bg-slate-900/50 backdrop-blur-sm border border-white/10">
+              <div className="relative z-10 text-center space-y-2">
+                <div className="text-7xl lg:text-9xl font-display font-extrabold tracking-tighter text-blue">
                   {testimonials[activeIndex].metric}
-                </span>
-                <p className="text-lg text-muted-foreground mt-2">
+                </div>
+                <p className="text-sm font-bold tracking-[0.3em] uppercase text-blue">
                   {testimonials[activeIndex].metricLabel}
                 </p>
               </div>
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+                <div
+                  className="w-64 h-64 border border-primary rounded-full animate-ping"
+                  style={{ animationDuration: "4s" }}
+                ></div>
+                <div className="absolute w-48 h-48 border border-primary/40 rounded-full animate-pulse"></div>
+              </div>
             </div>
-          </div>
+            <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full z-10 pointer-events-none"></div>
+          </div> */}
         </div>
 
         {/* Progress Indicators */}

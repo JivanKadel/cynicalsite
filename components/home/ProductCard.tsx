@@ -1,80 +1,75 @@
 "use client";
 
-import * as React from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowUp, ArrowUpRight, MoveUpRight, Shield } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProductCardProps {
   name: string;
+  title: string;
   tagline: string;
   description: string;
   icon: string;
+  dashboardImage: string;
   stats: {
     value: string;
     label: string;
   };
   features: string[];
   cta: string;
+  gradient?: string;
+  href?: string;
 }
 
 export function ProductCard({
   name,
   tagline,
+  title,
   description,
   icon = "logo.svg",
   stats,
   features,
   cta,
+  dashboardImage,
+  gradient = "from-violet-500/20 to-blue-500/10",
+  href,
 }: ProductCardProps) {
   return (
-    <div className="group relative animate-fade-up">
-      <div className="relative h-full rounded-xl border border-secondary backdrop-blur-md overflow-hidden transition-all duration-30">
-        <div className="p-6 flex flex-col h-full text-white">
-          <div className="flex items-start justify-between mb-6">
-            <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center transition-colors">
-              <Image src={icon} alt={name} width={24} height={24} />
-            </div>
-            <div className="text-right">
-              <p className="text-xl font-bold">{stats.value}</p>
-              <p className="text-[10px]uppercase tracking-wide">
-                {stats.label}
-              </p>
-            </div>
+    <Link
+      href={href || "#"}
+      className="group h-70 lg:h-105 rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
+    >
+      <div className="relative h-full p-2 lg:p-4 rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
+        <div className="flex justify-between items-center">
+          <h2 className="flex gap-1 text-green-500 text-xs tracking-widest">
+            {/* <Shield className="h-4 w-4" /> */}
+            {title}
+          </h2>
+          <div className="border border-foreground/20 p-2 rounded-full">
+            <MoveUpRight className="h-4 w-4" />
           </div>
-
-          {/* Title */}
-          <div className="mb-3">
-            <h3 className="text-xl font-bold mb-1">{name}</h3>
-            <p className="text-xs font-medium">{tagline}</p>
+        </div>
+        <div className="mt-2 flex flex-col h-full text-foreground relative z-10">
+          <div className="mb-1">
+            <h2 className="md:text-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik z-10 relative text-pretty max-w-96">
+              {name}
+            </h2>
+            <p className="z-10 mb-8 leading-6 md:mb-18">{tagline}</p>
           </div>
+        </div>
 
-          {/* Description */}
-          <p className="text-sm mb-6 leading-relaxed line-clamp-3">
-            {description}
-          </p>
-
-          {/* Features */}
-          <div className="space-y-2 mb-6 grow">
-            {features.map((feature) => (
-              <div key={feature} className="flex items-center gap-2">
-                <Check className="w-3.5 h-3.5 text-green-600 dark:text-green-50 shrink-0" />
-                <span className="text-xs">{feature}</span>
-              </div>
-            ))}
+        <div className="absolute bottom-4 right-4 left-4 h-[60%]">
+          <div className="relative w-full h-full rounded-lg p-0 m-0">
+            <Image
+              src={dashboardImage}
+              alt={name}
+              width={1080}
+              height={490}
+              className="object-contain rounded-lg"
+            />
           </div>
-
-          {/* CTA */}
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-full border-2 border-background/30 transition-all duration-300"
-          >
-            {cta}
-            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-          </Button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

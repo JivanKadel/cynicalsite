@@ -1,0 +1,334 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { sortedCountries } from "@/data/countries";
+import { sendEmail } from "@/lib/sendQuery";
+import { ArrowRight } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
+
+interface FormErrors {
+  fullName?: string;
+  email?: string;
+  company?: string;
+  title?: string;
+  phone?: string;
+  product?: string;
+  country?: string;
+}
+
+export default function PricingForm() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    company: "",
+    title: "",
+    phone: "",
+    product: "Penetration Testing",
+    country: "Nepal",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    // Full name
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+    } else if (formData.fullName.trim().length < 2) {
+      newErrors.fullName = "A valid name is required";
+    }
+
+    // Company Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is Required";
+    } else if (!emailRegex.test(formData.email.trim())) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    // Company Name
+    if (!formData.company.trim()) {
+      newErrors.company = "Company name is required";
+    } else if (formData.company.trim().length < 2) {
+      newErrors.company = "Please enter a valid Company Name";
+    }
+
+    // Title
+    if (!formData.title.trim()) {
+      newErrors.title = "Title is required";
+    } else if (formData.title.trim().length < 2) {
+      newErrors.title = "Please enter a valid Title";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      toast.error("Please fill the form with correct values!");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const templateParams = {
+      fullName: formData.fullName,
+      email: formData.email,
+      company: formData.company,
+      title: formData.title,
+      phone: formData.phone,
+      product: formData.product,
+      country: formData.country,
+      time: new Date().toString(),
+    };
+
+    try {
+      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+      const templateID = process.env
+        .NEXT_PUBLIC_EMAILJS_PRICING_TEMPLATE_ID as string;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+
+      await sendEmail({
+        serviceID,
+        templateID,
+        templateParams,
+        publicKey,
+      });
+      console.log({
+        templateParams,
+      });
+      toast.success("Request Submitted! We will reach out soon.");
+
+      setErrors({});
+      setFormData({
+        fullName: "",
+        email: "",
+        company: "",
+        title: "",
+        phone: "",
+        product: "Penetration Testing",
+        country: "Nepal",
+      });
+    } catch (error) {
+      console.error("EmailJS error", error);
+      toast.error("Submission Failed! Please try again");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section role="form" aria-labelledby="Pricing Inquiry Form Section">
+      <h2
+        id="Pricing Inquiry Form Section"
+        className="font-aeonik text-xl md:text-2xl lg:text-3xl font-semibold mb-6 text-center"
+      >
+        Request Pricing Details
+      </h2>
+      <form
+        className="space-y-4 bg-card/80 shadow-md rounded-lg p-6"
+        onSubmit={handleSubmit}
+      >
+        <div>
+          <Label
+            htmlFor="fullName"
+            className="block text-sm font-medium text-foreground"
+          >
+            Full Name
+          </Label>
+          <Input
+            type="text"
+            id="fullName"
+            name="fullName"
+            onChange={(e) => {
+              setFormData({ ...formData, fullName: e.target.value });
+              if (errors.fullName)
+                setErrors({ ...errors, fullName: undefined });
+            }}
+            className={`border ${
+              errors.fullName ? "border-red-500 focus-visible:ring-red-500" : ""
+            }`}
+          />
+          {errors.fullName && (
+            <p className="text-sm text-red-500">{errors.fullName}</p>
+          )}
+        </div>
+
+        <div>
+          <Label
+            htmlFor="email"
+            className="block text-sm font-medium text-foreground"
+          >
+            Email
+          </Label>
+          <Input
+            type="email"
+            id="email"
+            name="email"
+            className={` ${
+              errors.email ? "border-red-500 focus-visible:ring-red-500" : ""
+            }`}
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                email: e.target.value,
+              });
+              if (errors.email) setErrors({ ...errors, email: undefined });
+            }}
+          />
+          {errors.email && (
+            <p className="text-sm text-red-500">{errors.email}</p>
+          )}
+        </div>
+
+        <div>
+          <Label
+            htmlFor="company"
+            className="block text-sm font-medium text-foreground"
+          >
+            Company
+          </Label>
+          <Input
+            type="text"
+            id="company"
+            name="company"
+            className={` ${
+              errors.company ? "border-red-500 focus-visible:ring-red-500" : ""
+            }`}
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                company: e.target.value,
+              });
+              if (errors.company) setErrors({ ...errors, company: undefined });
+            }}
+          />
+          {errors.company && (
+            <p className="text-sm text-red-500">{errors.company}</p>
+          )}
+        </div>
+
+        <div>
+          <Label
+            htmlFor="title"
+            className="block text-sm font-medium text-foreground"
+          >
+            Title
+          </Label>
+          <Input
+            type="text"
+            id="title"
+            name="title"
+            className={` ${
+              errors.title ? "border-red-500 focus-visible:ring-red-500" : ""
+            }`}
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                title: e.target.value,
+              });
+              if (errors.title) setErrors({ ...errors, title: undefined });
+            }}
+          />
+          {errors.title && (
+            <p className="text-sm text-red-500">{errors.title}</p>
+          )}
+        </div>
+
+        <div>
+          <Label
+            htmlFor="phone"
+            className="block text-sm font-medium text-foreground"
+          >
+            Phone
+          </Label>
+          <Input
+            type="tel"
+            id="phone"
+            name="phone"
+            pattern="[0-9]{10,15}"
+            className="mt-1 block w-full rounded-md border border-border shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2"
+          />
+        </div>
+        {/* Product */}
+        <div>
+          <Label
+            htmlFor="product"
+            className="block text-sm font-medium text-foreground"
+          >
+            Product
+          </Label>
+          <select
+            id="product"
+            name="product"
+            defaultValue={"Penetration Testing"}
+            className={`w-full bg-background p-3 border ${
+              errors.product ? "border-red-500 focus-visible:ring-red-500" : ""
+            }`}
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                product: e.target.value,
+              });
+            }}
+          >
+            <option value="Web Security">Web Security</option>
+            <option value="Penetration Testing">Penetration Testing</option>
+            <option value="API Protection">API Protection</option>
+            <option value="Compliance Suite">Compliance Suite</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <Label className="block text-sm font-medium mb-2" htmlFor="country">
+            Country
+          </Label>
+          <select
+            id="country"
+            name="country"
+            defaultValue={"Nepal"}
+            className={`w-full bg-background p-3 border ${
+              errors.country ? "border-red-500 focus-visible:ring-red-500" : ""
+            }`}
+            onChange={(e) => {
+              setFormData({
+                ...formData,
+                country: e.target.value,
+              });
+            }}
+          >
+            {sortedCountries.map((country) => (
+              <option key={country.iso_code} value={country.country}>
+                {country.country}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        <Button
+          type="submit"
+          disabled={isSubmitting}
+          size="lg"
+          className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition"
+        >
+          {isSubmitting ? (
+            "Submitting..."
+          ) : (
+            <>
+              Submit Inquiry
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </>
+          )}
+        </Button>
+      </form>
+    </section>
+  );
+}

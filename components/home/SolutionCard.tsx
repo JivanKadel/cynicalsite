@@ -1,4 +1,5 @@
-import { ArrowRight, LucideProps } from "lucide-react";
+import { LucideProps } from "lucide-react";
+import Link from "next/link";
 import { ForwardRefExoticComponent, RefAttributes } from "react";
 export type SolutionCardProps = {
   Icon: ForwardRefExoticComponent<
@@ -7,6 +8,9 @@ export type SolutionCardProps = {
   title: string;
   description: string;
   features: string[];
+  gradient?: string;
+  iconColor?: string;
+  href?: string;
 };
 export default function SolutionCard({
   Icon,
@@ -14,18 +18,25 @@ export default function SolutionCard({
   description,
   features,
   index,
+  gradient = "from-violet-500/20 to-blue-500/10",
+  iconColor = "text-foreground-500",
+  href = "/solutions/app-security",
 }: SolutionCardProps & { index: number }) {
   return (
-    <div
+    <Link
+      href={href}
       key={title}
-      className="group relative rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-8 hover:bg-card/80 hover:border-border transition-all duration-300 animate-fade-up"
+      className="group relative rounded-2xl bg-card backdrop-blur-sm p-8 hover:border-border/80 transition-all duration-300  "
       style={{ animationDelay: `${index * 0.1}s` }}
     >
+      <div
+        className={`absolute rounded-2xl inset-0 bg-linear-to-br ${gradient} transition-opacity duration-500`}
+      />
       <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-foreground/10 transition-colors">
-        <Icon className="w-6 h-6 text-foreground" />
+        <Icon className={`w-6 h-6 ${iconColor}`} />
       </div>
 
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
+      <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
       <p className="text-muted-foreground text-sm font-body mb-5 leading-relaxed">
         {description}
       </p>
@@ -40,10 +51,6 @@ export default function SolutionCard({
           </span>
         ))}
       </div>
-
-      <div className="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
-        <ArrowRight className="w-5 h-5 text-muted-foreground" />
-      </div>
-    </div>
+    </Link>
   );
 }

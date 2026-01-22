@@ -1,34 +1,10 @@
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import { research } from "@/data/research.data";
+import { iconColors } from "@/lib/utils";
 
 const Research = () => {
-  const research = [
-    {
-      type: "CVE",
-      title: "SQL Injection in Fortune 500 ERP Systems",
-      description:
-        "Pre-auth SQL injection affecting 3 major ERP vendors. Full database access without credentials.",
-      date: "2026",
-      link: "/research/sql-injection-erp",
-    },
-    {
-      type: "Advisory",
-      title: "CVE-2024-XXXXX: Auth Bypass in Enterprise SSO",
-      description:
-        "SAML signature validation flaw allowing complete authentication bypass in widely-deployed SSO solution.",
-      date: "2024",
-      link: "#",
-    },
-    {
-      type: "Report",
-      title: "API Security: 500 Enterprise Assessments Analyzed",
-      description:
-        "73% of tested APIs had broken object-level authorization. Data from real penetration tests, not surveys.",
-      date: "2024",
-      link: "#",
-    },
-  ];
-
   return (
     <section id="research" className="py-12 relative">
       <div className="container mx-auto px-6">
@@ -37,13 +13,13 @@ const Research = () => {
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Research
             </span>
-            <h2 className="text-display-md font-bold">
+            <h2 className="text-2xl md:text-4xl font-bold">
               We publish what we find.
             </h2>
           </div>
           <Link
             href="/research"
-            className="text-sm fonts-medium flex items-center gap-1 hover:gap-2 transition-all link-underline"
+            className="text-sm fonts-medium flex items-center gap-1 hover:gap-2 transition-all duration-500 link-underline"
           >
             View all research
             <ArrowUpRight className="w-4 h-4" />
@@ -55,13 +31,17 @@ const Research = () => {
             <Link
               key={item.title}
               href={item.link}
-              className="group card-elevated p-8 hover-lift block animate-fade-up"
+              className="group relative rounded-2xl bg-card p-8 block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              <div
+                className={`absolute inset-0 bg-linear-to-br rounded-xl ${
+                  iconColors[index % iconColors.length].gradient ??
+                  "from-violet-500/20 to-blue-500/10"
+                } transition-opacity duration-500`}
+              />
               <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 text-xs rounded-full bg-secondardy text-muted-foreground">
-                  {item.type}
-                </span>
+                <Badge variant={"outline"}>{item.type}</Badge>
                 <span className="text-xs text-muted-foreground">
                   {item.date}
                 </span>
