@@ -37,7 +37,7 @@ export function ProductCard({
   return (
     <Link
       href={href || "#"}
-      className="group h-70 lg:h-105 rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
+      className="group h-80 sm:h-70 md:h-105 rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
     >
       <div className="relative h-full p-2 lg:p-4 rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
         <div className="flex justify-between items-center">
@@ -58,7 +58,7 @@ export function ProductCard({
           </div>
         </div>
 
-        <div className="absolute bottom-4 right-4 left-4 h-[60%]">
+        <div className="absolute -bottom-4 sm:bottom-4 right-4 left-4 h-[60%]">
           <div className="relative w-full h-full rounded-lg p-0 m-0">
             <Image
               src={dashboardImage}

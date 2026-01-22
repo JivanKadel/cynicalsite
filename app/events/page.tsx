@@ -135,9 +135,8 @@ export default function EventsPage() {
 
                     {event.link && (
                       <Link
-                        href={`/events/"${event.name.split(" ").join("-")}`}
-                        // target="_blank"
-                        // rel="noopener noreferrer"
+                        // href={`/events/"${event.name.split(" ").join("-")}`}
+                        href={"#"}
                         className="mt-6 w-full inline-flex items-center justify-center px-4 py-2.5 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-medium rounded-lg transition-all duration-200 group-hover:shadow-lg"
                       >
                         Register Now
@@ -209,15 +208,16 @@ export default function EventsPage() {
                         {event.hashtag}
                       </Badge>
                       {event.link && (
-                        <a
-                          href={event.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                        <Link
+                          // href={event.link}
+                          href={"#"}
+                          // target="_blank"
+                          // rel="noopener noreferrer"
                           className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium flex items-center gap-1"
                         >
                           View Recap
                           <ExternalLink className="w-4 h-4" />
-                        </a>
+                        </Link>
                       )}
                     </div>
                   </CardContent>

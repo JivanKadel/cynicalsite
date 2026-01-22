@@ -65,7 +65,7 @@ const PageCTA = ({
               </div>
 
               {/* Headline */}
-              <h2 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+              <h2 className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-[80px] lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
                 {headline}
                 <span className="block text-foreground">{highlightedText}</span>
               </h2>
@@ -76,11 +76,11 @@ const PageCTA = ({
 
               {/* Benefits Grid */}
               {showBenefits && (
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
                   {benefits.map((benefit) => (
                     <div
                       key={benefit.text}
-                      className="flex items-center justify-center gap-2 text-sm text-muted-foreground"
+                      className="flex items-center justify-start sm:justify-center gap-2 text-sm text-muted-foreground"
                     >
                       <benefit.icon className="w-4 h-4" />
                       <span>{benefit.text}</span>

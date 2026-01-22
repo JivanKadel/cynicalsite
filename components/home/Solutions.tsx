@@ -71,7 +71,7 @@ export default function Solutions() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-10">
             {capabilities.map((capability, index) => (
               <Capability
                 key={capability.text}

@@ -64,9 +64,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="lg:pt-16 border-t-2 border-border/30">
+    <footer className="p-4 lg:pt-16 border-t-2 border-border/30">
       {/* Main Footer */}
-      <div className="container mx-auto py-16 lg:py-20 md:px-12">
+      <div className="container mx-auto py-8 lg:py-20 md:px-12">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 content-start">
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
@@ -142,7 +142,7 @@ const Footer = () => {
         <div className="container mx-auto py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span className="font-inter">
+              <span className="font-inter text-center">
                 Copyright © {new Date().getFullYear()} Cynical Technology. All
                 Rights Reserved.
               </span>

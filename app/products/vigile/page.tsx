@@ -254,7 +254,7 @@ export default function Vigile() {
 
             <section className="pb-12 overflow-hidden">
               <div className="p-8 rounded-3xl">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   {outlookFeatures.map((feature, index) => (
                     <div
                       key={feature.title}
@@ -349,7 +349,7 @@ export default function Vigile() {
                         <p className="text-xs text-muted-foreground">
                           {metric.label}
                         </p>
-                        <div className="flex items-center gap-1 mt-2 text-xs text-primary-foreground/70">
+                        <div className="flex items-center gap-1 mt-2 text-xs text-foreground/70">
                           <TrendingUp className="w-3 h-3 text-green-500" />
                           {metric.trend}
                         </div>
@@ -453,27 +453,25 @@ export default function Vigile() {
             </div>
 
             <div className="grid sm:grid-cols-1 max-w-sm mx-auto gap-3">
-              {[
-                { name: "Office 365", icon: "/products/outlook.svg" },
-                // { name: "Google Workspace", icon: "/products/google.svg" },
-                // { name: "Entra ID", icon: "/products/entra_id.svg" },
-              ].map((integration) => (
-                <div
-                  key={integration.name}
-                  className="flex flex-col items-center justify-center p-2 rounded-xl bg-card"
-                >
-                  <Image
-                    src={integration.icon as string}
-                    width={120}
-                    height={120}
-                    alt={integration.name}
-                    className="mb-3"
-                  />
-                  <span className="text-lg font-medium text-center">
-                    {integration.name}
-                  </span>
-                </div>
-              ))}
+              {[{ name: "Office 365", icon: "/products/outlook.svg" }].map(
+                (integration) => (
+                  <div
+                    key={integration.name}
+                    className="flex flex-col items-center justify-center p-2 rounded-xl bg-card"
+                  >
+                    <Image
+                      src={integration.icon as string}
+                      width={120}
+                      height={120}
+                      alt={integration.name}
+                      className="mb-3"
+                    />
+                    <span className="text-lg font-medium text-center">
+                      {integration.name}
+                    </span>
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </div>

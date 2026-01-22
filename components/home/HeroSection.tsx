@@ -20,7 +20,7 @@ export default function HeroSection() {
           scanners, audits, and vendors miss
         </p>
       </div>
-      <section className="flex flex-col sm:flex-row gap-4 justify-center mx-auto pb-8 md:pb-16 max-w-sm">
+      <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 md:pb-16 max-w-sm">
         <Link href={"/contact"}>
           <Button
             className="relative overflow-hidden w-[180px] border-0 border-transparent py-6 text-sm 
@@ -49,7 +49,7 @@ export default function HeroSection() {
       <hr className="border-t-2 max-w-4xl mx-auto" />
 
       <div className="pt-6">
-        <p className="text-center text-sm text-muted-foreground mb-8 uppercase tracking-widest">
+        <p className="text-center text-xs md:text-sm text-muted-foreground mb-8 uppercase tracking-widest">
           Securing critical infrastructure for
         </p>
         <Marquee

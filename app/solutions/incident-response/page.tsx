@@ -324,13 +324,6 @@ const IncidentResponse = () => {
                 </p>
                 <ul className="space-y-3">
                   {phase.features.map((feature, fIndex) => (
-                    // <li
-                    //   key={fIndex}
-                    //   className="flex items-center gap-3 text-sm"
-                    // >
-                    //   <Check className="w-4 h-4 text-primary-foreground/70 shrink-0" />
-                    //   <span className="text-muted-foreground">{feature}</span>
-                    // </li>
                     <li key={fIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>

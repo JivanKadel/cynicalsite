@@ -1,16 +1,13 @@
 import { TrustedByImage } from "@/components/home/TrustedByImage";
 import PageCTA from "@/components/products/PageCTA";
 import { Button } from "@/components/ui/button";
-import { trustedBy } from "@/data/trustedby.data";
+import { trustedByClipped } from "@/data/trustedby.data";
 import {
   Users,
   Award,
   TrendingUp,
   Globe,
   Clock,
-  Quote,
-  Linkedin,
-  Twitter,
   Building,
   Target,
   Lightbulb,
@@ -18,7 +15,6 @@ import {
   Zap,
   ArrowRight,
   Lock,
-  Github,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -99,7 +95,7 @@ export default function AboutUs() {
         "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
     },
     {
-      name: "Mr. R",
+      name: "Mr. Ravi Lamgade",
       role: "Co-Founder & Office Admin",
       image: "/people/mr_ravi.jpeg",
       bio: "Co-founder with a passion for cybersecurity and business development. Drives company growth and strategic partnerships.",
@@ -111,31 +107,12 @@ export default function AboutUs() {
         "At Cynical, we believe administration is not just paperwork—it’s about enabling people, processes, and progress. My mission is to ensure you have the tools and trust to keep our operations secure, efficient, and future‑ready.",
     },
     {
-      name: "Mr. J",
+      name: "Mrs. Sabina Lawaju",
       role: "Sales and Marketing Head",
-      image: "/people/placeholder_person.jpg",
-      bio: "HR executive with 15+ years building high-performance security teams. Champions our culture of excellence and continuous learning.",
+      image: "/people/mrs_sabina.jpeg",
+      bio: "HR executive with 5+ years building high-performance security teams. Champions our culture of excellence and continuous learning.",
       social: {
-        linkedin: "https://linkedin.com/in/maria-rodriguez",
-      },
-    },
-    {
-      name: "Mr. K",
-      role: "VP of Sales & Marketing",
-      image: "/people/placeholder_person.jpg",
-      bio: "Cybersecurity sales veteran who has scaled multiple security companies. Drives our global expansion and client relationships.",
-      social: {
-        linkedin: "https://linkedin.com/in/james-thompson",
-        twitter: "https://twitter.com/james_thompson",
-      },
-    },
-    {
-      name: "Mr. H",
-      role: "Chief Security Officer",
-      image: "/people/placeholder_person.jpg",
-      bio: "Former FBI cybercrime investigator and forensic expert. Leads our security research and incident response teams.",
-      social: {
-        linkedin: "https://linkedin.com/in/emily-watson",
+        linkedin: "https://www.linkedin.com/in/sabina-lawaju-mba-30777a1b1/",
       },
     },
   ];
@@ -177,7 +154,7 @@ export default function AboutUs() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50">
-                  <Building className="w-4 h-4 text-primary-foreground" />
+                  <Building className="w-4 h-4 text-foreground" />
                   <span className="text-sm font-medium">About Cynical</span>
                 </div>
 
@@ -289,7 +266,7 @@ export default function AboutUs() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Target className="w-4 h-4 text-primary-foreground" />
+              <Target className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">Our Mission</span>
             </div>
 
@@ -364,7 +341,7 @@ export default function AboutUs() {
                 marginLeft: 48,
               }}
             >
-              {trustedBy.map((brand) => (
+              {trustedByClipped.map((brand) => (
                 <TrustedByImage
                   key={brand.name}
                   name={brand.name}

@@ -48,10 +48,10 @@ export default function PricingPage() {
           </div>
 
           <div className="mt-16">
-            <h2 className="text-lg font-semibold tracking-wider text-muted-foreground">
+            <h2 className="text-lg text-center sm:text-start font-semibold tracking-wider text-muted-foreground">
               JOIN MANY COMPANIES THAT TRUST CYNICAL
             </h2>
-            <div className="flex flex-wrap gap-4 mt-8">
+            <div className="flex justify-center sm:justify-start flex-wrap gap-4 mt-8">
               {trustedByClipped.map((brand) => (
                 <Link
                   key={brand.name}
@@ -76,7 +76,11 @@ export default function PricingPage() {
         <PricingForm />
       </section>
 
-      <section role="region" aria-labelledby="FAQ section" className="py-16">
+      <section
+        role="region"
+        aria-labelledby="FAQ section"
+        className="px-4 py-16"
+      >
         <Card className="max-w-4xl mx-auto border-none">
           <CardContent>
             <h2 className="py-4 lg:py-8 text-2xl md:text-4xl">
