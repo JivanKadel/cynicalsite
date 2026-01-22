@@ -10,40 +10,50 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      quote:
-        "They compromised our domain controller in 4 hours. Our MSSP had been giving us green reports for two years. That's the difference between compliance testing and real offensive security.",
-      author: "CISO",
-      role: "",
-      company: "Fortune 500 Financial Institution",
+      quote: [
+        "Cynical Technology team brings both levels of professionalism and skill that have satisfied us beyond expectations.",
+        "Their team is communicative and responsive, making them a reliable and trustworthy partner.",
+      ],
+      author: "Raghu Nath Bhandari",
+      role: "VP Tech",
+      company: "IME Group",
       metric: "4h",
       metricLabel: "Time to domain admin",
+      image: "/testimonials/mr_raghu_ime_group.jpg",
     },
     {
-      quote:
-        "Cynical's researchers found an auth bypass in our API that would have exposed 2M customer records. Our previous pen test vendor ran the same test six months prior and missed it.",
-      author: "VP of Engineering",
-      role: "",
-      company: "Series D Fintech",
+      quote: [
+        "Naresh and the team have submitted reports to our team over the last few months. ",
+        "Their reports are extremely thorough and always include steps to replicate the issues and also include possible solutions to implement. We appreciate them for all the hard work and diligence they have provided.",
+      ],
+      author: "Jon Tsai",
+      role: "Product Manager",
+      company: "GoFundMe",
       metric: "2M",
       metricLabel: "Records at risk",
+      image: "/testimonials/mr_jon_gofundme.jpg",
     },
     {
-      quote:
-        "We thought we had good visibility into our attack surface. Vigile discovered 340 leaked credentials and 12,000 assets we didn't know existed. We had shadow IT everywhere.",
-      author: "Head of Security",
-      role: "",
-      company: "National Airline",
+      quote: [
+        "Cynical Technology has evolved to be our most trustworthy cyber security partner for business in the last few years. Their professionalism and dedications are unmatched. Thanks for the Support.",
+      ],
+      author: "Diwas Sapkota",
+      role: "CEO",
+      company: "FonePay",
       metric: "340",
       metricLabel: "Credential leaks found",
+      image: "/testimonials/mr_diwas_fonepay.jpg",
     },
     {
-      quote:
-        "When we got hit with ransomware, their IR team was on-site in 3 hours. They contained the spread, identified the initial access vector, and had us operational in 48 hours.",
-      author: "CTO",
-      role: "",
-      company: "Healthcare Technology",
+      quote: [
+        "A  Team of young cyber security professionals who are dedicated to strengthen Nepalese cyberspace. It has been a pleasant experience working with them in F1soft.",
+      ],
+      author: "Aslam Ali",
+      role: "Head of SOC",
+      company: "F1Soft",
       metric: "48h",
       metricLabel: "Full recovery",
+      image: "/testimonials/mr_aslam_f1soft.png",
     },
   ];
 
@@ -110,13 +120,16 @@ const Testimonials = () => {
               <span className="absolute -top-12 -left-6 text-8xl font-serif text-primary opacity-30 select-none">
                 “
               </span>
-              <blockquote className="text-2xl md:text-3xl text-foreground/70 relative z-10 font-aeonik">
-                {testimonials[activeIndex].quote}
+              <blockquote className="text-2xl md:text-3xl text-foreground/70 relative z-10 font-aeonik mt-8">
+                {testimonials[activeIndex].quote.map((q, i) => (
+                  <p key={i}>{q}</p>
+                ))}
+                {/* {testimonials[activeIndex].quote} */}
               </blockquote>
               {/* Author */}
               <div className="mt-10 flex items-center gap-4">
                 <Image
-                  src={"/people/guy.png"}
+                  src={testimonials[activeIndex].image}
                   width={48}
                   height={48}
                   alt={testimonials[activeIndex].author}
@@ -135,7 +148,7 @@ const Testimonials = () => {
           </div>
 
           {/* Metric */}
-          <div className="lg:col-span-5 relative">
+          {/* <div className="lg:col-span-5 relative">
             <div className="glow-border relative z-20 rounded-2xl p-8 lg:p-12 overflow-hidden aspect-square flex flex-col items-center justify-center shadow-2xl bg-white/5 dark:bg-slate-900/50 backdrop-blur-sm border border-white/10">
               <div className="relative z-10 text-center space-y-2">
                 <div className="text-7xl lg:text-9xl font-display font-extrabold tracking-tighter text-blue">
@@ -154,7 +167,7 @@ const Testimonials = () => {
               </div>
             </div>
             <div className="absolute -inset-4 bg-primary/10 blur-3xl rounded-full z-10 pointer-events-none"></div>
-          </div>
+          </div> */}
         </div>
 
         {/* Progress Indicators */}

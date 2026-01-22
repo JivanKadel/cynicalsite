@@ -1,5 +1,6 @@
 "use client";
 
+import { sortedCountries } from "@/data/countries";
 import { toast } from "sonner";
 
 export default function PricingForm() {
@@ -96,7 +97,6 @@ export default function PricingForm() {
             id="phone"
             name="phone"
             pattern="[0-9]{10,15}"
-            placeholder="e.g. 9876543210"
             className="mt-1 block w-full rounded-md border border-border shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2"
           />
         </div>
@@ -129,13 +129,18 @@ export default function PricingForm() {
           >
             Country
           </label>
-          <input
-            type="text"
+          <select
             id="country"
             name="country"
             required
-            className="mt-1 block w-full rounded-md border border-border shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2"
-          />
+            className="mt-1 block w-full rounded-md border border-border bg-card shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2"
+          >
+            {sortedCountries.map((country) => (
+              <option key={country.iso_code} value={country.iso_code}>
+                {country.country}
+              </option>
+            ))}
+          </select>
         </div>
         {/* Submit */}
         <button

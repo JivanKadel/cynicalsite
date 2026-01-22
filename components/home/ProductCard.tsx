@@ -42,7 +42,8 @@ export function ProductCard({
       <div className="relative h-full p-2 lg:p-4 rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
         <div className="flex justify-between items-center">
           <h2 className="flex gap-1 text-green-500 text-xs tracking-widest">
-            <Shield className="h-4 w-4" /> {title}
+            {/* <Shield className="h-4 w-4" /> */}
+            {title}
           </h2>
           <div className="border border-foreground/20 p-2 rounded-full">
             <MoveUpRight className="h-4 w-4" />

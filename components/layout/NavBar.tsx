@@ -179,7 +179,7 @@ export default function Navbar() {
                 y="0px"
                 width="100%"
                 viewBox="0 0 720 288"
-                enable-background="new 0 0 720 288"
+                enableBackground="new 0 0 720 288"
                 xmlSpace="preserve"
                 className="h-24"
               >
