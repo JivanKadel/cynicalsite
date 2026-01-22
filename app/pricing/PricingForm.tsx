@@ -114,7 +114,6 @@ export default function PricingForm() {
             required
             className="mt-1 block w-full rounded-md border border-border bg-card shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2"
           >
-            <option value="">Select a product</option>
             <option value="websec">Web Security</option>
             <option value="pentest">Penetration Testing</option>
             <option value="apisec">API Protection</option>
@@ -136,7 +135,7 @@ export default function PricingForm() {
             className="mt-1 block w-full rounded-md border border-border bg-card shadow-sm focus:border-indigo-500 focus:ring-indigo-500 p-2"
           >
             {sortedCountries.map((country) => (
-              <option key={country.iso_code} value={country.iso_code}>
+              <option key={country.iso_code} value={country.country}>
                 {country.country}
               </option>
             ))}
