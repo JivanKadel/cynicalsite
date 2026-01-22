@@ -64,7 +64,7 @@ export function ProductCard({
               alt={name}
               width={1080}
               height={490}
-              className="object-contain rounded-lg"
+              className="object-contain rounded-lg border-2 border-border"
             />
           </div>
         </div>

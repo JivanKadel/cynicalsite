@@ -229,7 +229,7 @@ export default function PricingForm() {
           type="submit"
           disabled={isSubmitting}
           size="lg"
-          className="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 transition"
+          className="w-full  font-semibold py-2 px-4 rounded-md"
         >
           {isSubmitting ? (
             "Submitting..."
