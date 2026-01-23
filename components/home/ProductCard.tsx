@@ -41,7 +41,7 @@ export function ProductCard({
     >
       <div className="relative h-full p-2 lg:p-4 rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
         <div className="flex justify-between items-center">
-          <h2 className="flex gap-1 text-green-700 dark:text-green-500 text-xs tracking-widest">
+          <h2 className="flex gap-1 text-green-900 dark:text-green-500 text-sm tracking-widest">
             {title}
           </h2>
           <div className="border border-foreground/20 p-2 rounded-full">
@@ -50,7 +50,7 @@ export function ProductCard({
         </div>
         <div className="mt-2 flex flex-col h-full text-foreground relative z-10">
           <div className="mb-1">
-            <h2 className="md:vtext-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik z-10 relative text-pretty max-w-96">
+            <h2 className="md:text-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik z-10 relative text-pretty max-w-96">
               {name}
             </h2>
             <p className="z-10 mb-8 leading-6 md:mb-18">{tagline}</p>

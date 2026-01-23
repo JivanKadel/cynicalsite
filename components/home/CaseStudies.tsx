@@ -129,7 +129,7 @@ export default function CaseStudies() {
           <p className="text-sm text-muted-foreground text-center mb-12 uppercase tracking-widest">
             Securing organizations that can&apos;t afford to be breached
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 opacity-50">
+          <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
             {[
               "Banks",
               "Governments",
@@ -138,12 +138,12 @@ export default function CaseStudies() {
               "Critical Infrastructure",
               "Technology",
             ].map((name) => (
-              <div
+              <h2
                 key={name}
-                className="text-base font-semibold tracking-wider uppercase"
+                className="text-base text-foreground font-semibold tracking-wider uppercase"
               >
                 {name}
-              </div>
+              </h2>
             ))}
           </div>
         </div>
