@@ -46,6 +46,22 @@ const aeonik = localFont({
 export const metadata: Metadata = {
   title: "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
   description: "Securing your digital space",
+  openGraph: {
+    title:
+      "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
+    description: "Securing your digital space",
+    url: "https://cynicalsite.vercel.app/",
+    siteName: "Cynical Technology",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
+    description: "Securing your digital space",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
