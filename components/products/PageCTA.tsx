@@ -94,7 +94,7 @@ const PageCTA = ({
                 <Link href={primaryButtonLink}>
                   <Button
                     size="lg"
-                    className="bg-foreground text-background hover:bg-foreground/90"
+                    className="h-12 bg-foreground text-background hover:bg-foreground/90"
                   >
                     {primaryButtonText}
                     <ArrowRight className="w-4 h-4" />
@@ -102,7 +102,7 @@ const PageCTA = ({
                 </Link>
                 {secondaryButtonText && (
                   <Link href={secondaryButtonLink || "/contact"}>
-                    <Button variant="outline" size="lg">
+                    <Button variant="outline" size="lg" className="h-12">
                       {secondaryButtonText}
                     </Button>
                   </Link>
