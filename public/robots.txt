@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://cynicalsite.vercel.app
+
+# Sitemaps
+Sitemap: https://cynicalsite.vercel.app/sitemap.xml
