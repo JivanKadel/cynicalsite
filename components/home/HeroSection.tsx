@@ -23,7 +23,7 @@ export default function HeroSection() {
       <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 md:pb-16 max-w-sm">
         <Link href={"/contact"}>
           <Button
-            className="relative overflow-hidden w-45 border-0 border-transparent py-6 text-sm 
+            className="relative overflow-hidden w-48 h-12 border-0 border-transparent text-sm 
              text-white rounded-4xl 
              bg-linear-to-r from-blue-500 via-blue-600 to-blue-700 
              hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </Button>
         </Link>
         <Link href={"/resources/case-studies"} className="flex-1">
-          <Button className="w-45 py-6 px-8 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
+          <Button className="w-48 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
             Read Case Studies <ArrowRight className="w-5! h-5!" />
           </Button>
         </Link>

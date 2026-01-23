@@ -50,7 +50,7 @@ export function ProductCard({
         </div>
         <div className="mt-2 flex flex-col h-full text-foreground relative z-10">
           <div className="mb-1">
-            <h2 className="md:text-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik z-10 relative text-pretty max-w-96">
+            <h2 className="md:vtext-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik z-10 relative text-pretty max-w-96">
               {name}
             </h2>
             <p className="z-10 mb-8 leading-6 md:mb-18">{tagline}</p>

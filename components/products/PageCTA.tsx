@@ -124,12 +124,12 @@ const PageCTA = ({
                       "Critical Infrastructure",
                       "Technology",
                     ].map((name) => (
-                      <div
+                      <h2
                         key={name}
-                        className="text-base font-semibold tracking-wide uppercase"
+                        className="text-base text-foreground font-semibold tracking-wide uppercase"
                       >
                         {name}
-                      </div>
+                      </h2>
                     ))}
                   </div>
                 </div>

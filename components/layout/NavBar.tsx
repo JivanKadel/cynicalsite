@@ -404,7 +404,7 @@ z"
             {/* Desktop CTA Buttons */}
             <div className="hidden lg:flex gap-2">
               <Link href="/contact">
-                <Button className="bg-primary text-background rounded-xl group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2">
+                <Button className="bg-primary text-background rounded-md group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2">
                   <div className="font-medium text-sm font-inter">
                     Schedule a Call
                     <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-inter">
