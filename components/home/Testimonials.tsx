@@ -1,13 +1,16 @@
 "use client";
 
-import { ArrowRight, ArrowLeft } from "lucide-react";
+import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 
 const Testimonials = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
   const testimonials = [
     {
       quote: [
@@ -17,9 +20,8 @@ const Testimonials = () => {
       author: "Raghu Nath Bhandari",
       role: "VP Tech",
       company: "IME Group",
-      metric: "4h",
-      metricLabel: "Time to domain admin",
       image: "/testimonials/mr_raghu_ime_group.jpg",
+      bgColor: "bg-card-blue",
     },
     {
       quote: [
@@ -29,9 +31,8 @@ const Testimonials = () => {
       author: "Jon Tsai",
       role: "Product Manager",
       company: "GoFundMe",
-      metric: "2M",
-      metricLabel: "Records at risk",
       image: "/testimonials/mr_jon_gofundme.jpg",
+      bgColor: "bg-card-yellow",
     },
     {
       quote: [
@@ -40,9 +41,8 @@ const Testimonials = () => {
       author: "Diwas Sapkota",
       role: "CEO",
       company: "FonePay",
-      metric: "340",
-      metricLabel: "Credential leaks found",
       image: "/testimonials/mr_diwas_fonepay.jpg",
+      bgColor: "bg-card-green",
     },
     {
       quote: [
@@ -51,39 +51,40 @@ const Testimonials = () => {
       author: "Aslam Ali",
       role: "Head of SOC",
       company: "F1Soft",
-      metric: "48h",
-      metricLabel: "Full recovery",
       image: "/testimonials/mr_aslam_f1soft.png",
+
+      bgColor: "bg-card-orange",
+    },
+    {
+      quote: [
+        "Cynical Technology is really good at what they do!  Professional penetration test with very good preliminary discussion and an impressive presentation of the vulnerabilities and results. We are more secure because of the work they do for us.",
+      ],
+      author: "Ravi Shakya",
+      role: "CTO",
+      company: "eSewa Fonepay Pvt. Ltd.",
+      image: "/testimonials/mr_ravi_esewa.jpg",
+      bgColor: "bg-card-purple",
+    },
+    {
+      quote: [
+        "Cynical Technology Provided the best services for us. They delivered what they had promised. They had kept us updated on progress and delivered the reports on time. ",
+      ],
+      author: "Er. Prabin Chauhan",
+      role: "CTO",
+      company: "IME Pay",
+      image: "/testimonials/mr_prabin_nitc.jpg",
+      bgColor: "bg-card-pink",
     },
   ];
 
-  useEffect(() => {
-    if (!isAutoPlaying) return;
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isAutoPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
-    setIsAutoPlaying(false);
-    setActiveIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setIsAutoPlaying(false);
-    setActiveIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
-    );
-  };
+  const autoplay = Autoplay({ delay: 3000, stopOnInteraction: false });
 
   return (
     <section className="py-12 bg-background overflow-hidden">
       <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className="flex items-end justify-between mb-12">
+        <div className="flex items-end justify-center mb-12">
           <div>
-            <span className="text-md text-muted-foreground uppercase tracking-widest mb-4 block">
+            <span className="text-center text-md text-muted-foreground uppercase tracking-widest mb-4 block">
               Client Results
             </span>
             <h2 className="text-4xl md:text-6xl">
@@ -92,101 +93,71 @@ const Testimonials = () => {
               <span className="text-slate-500">What we fixed.</span>
             </h2>
           </div>
-
-          {/* Navigation */}
-          <div className="hidden md:flex items-center gap-3">
-            <button
-              onClick={prevTestimonial}
-              className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-all"
-              aria-label="Previous testimonial"
-            >
-              <ArrowLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={nextTestimonial}
-              className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-all"
-              aria-label="Next testimonial"
-            >
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
         </div>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          {/* Quote */}
-          <div className="lg:col-span-7">
-            <div className="relative">
-              <span className="absolute -top-12 -left-6 text-8xl font-serif text-primary opacity-30 select-none">
-                “
-              </span>
-              <blockquote className="text-2xl md:text-3xl text-foreground/70 relative z-10 font-aeonik mt-8">
-                {testimonials[activeIndex].quote.map((q, i) => (
-                  <p key={i}>{q}</p>
-                ))}
-                {/* {testimonials[activeIndex].quote} */}
-              </blockquote>
-              {/* Author */}
-              <div className="mt-10 flex items-center gap-4">
-                <Image
-                  src={testimonials[activeIndex].image}
-                  width={48}
-                  height={48}
-                  alt={`${testimonials[activeIndex].author}. ${testimonials[activeIndex].role} at ${testimonials[activeIndex].company}`}
-                  className="w-14 h-14 rounded-full border-2 border-blue-500"
-                />
-                <div>
-                  <p className="font-semibold text-lg">
-                    {testimonials[activeIndex].author}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[autoplay]}
+          onMouseEnter={() => autoplay.stop()}
+          onMouseLeave={() => autoplay.play()}
+        >
+          <CarouselContent className="-ml-4 items-stretch">
+            {testimonials.map((testimonial) => (
+              <CarouselItem
+                key={testimonial.author}
+                className={`md:basis-1/2 lg:basis-1/3 pl-4 flex flex-col items-stretch`}
+              >
+                <article
+                  className={`p-4 flex-1 rounded-2xl flex flex-col ${testimonial.bgColor}`}
+                >
+                  <div className="mb-0 sm:mb-2">
+                    <span className="text-6xl text-gray-400 font-serif leading-none opacity-60">
+                      “
+                    </span>
+                  </div>
+                  <p className="flex-1 self-center text-gray-800 text-lg leading-relaxed mb-6">
+                    “
+                    {testimonial.quote.map((part, index) => (
+                      <span key={index}>
+                        {part}
+                        {index < testimonial.quote.length - 1 && <br />}
+                      </span>
+                    ))}
+                    ”
                   </p>
-                  <p className="text-muted-foreground text-sm">
-                    {testimonials[activeIndex].company}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div className="mt-16 flex items-center gap-3">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setIsAutoPlaying(false);
-                setActiveIndex(index);
-              }}
-              className="group relative h-1 flex-1 max-w-24 bg-border rounded-full overflow-hidden"
-              aria-label={`Go to testimonial ${index + 1}`}
-            >
-              <div
-                className={`absolute inset-y-0 left-0 bg-foreground rounded-full transition-all duration-300 ${
-                  index === activeIndex
-                    ? "w-full"
-                    : "w-0 group-hover:w-full group-hover:bg-foreground/50"
-                }`}
-              />
-            </button>
-          ))}
-        </div>
-
-        {/* Mobile Navigation */}
-        <div className="flex md:hidden items-center justify-center gap-3 mt-10">
-          <button
-            onClick={prevTestimonial}
-            className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-all"
-            aria-label="Previous testimonial"
-          >
-            <ArrowLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={nextTestimonial}
-            className="w-12 h-12 rounded-full border border-border flex items-center justify-center hover:bg-secondary transition-all"
-            aria-label="Next testimonial"
-          >
-            <ArrowRight className="w-5 h-5" />
-          </button>
-        </div>
+                  <div className="flex justify-end">
+                    <span className="text-6xl text-gray-400 font-serif leading-none opacity-60">
+                      ”
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-4 mt-auto">
+                    <div className="relative inline-block">
+                      <Image
+                        alt={testimonial.author}
+                        width={50}
+                        height={50}
+                        className="w-14 h-14 rounded-full object-cover"
+                        src={testimonial.image}
+                      />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-gray-900 text-lg">
+                        {testimonial.author}
+                      </h3>
+                      <p className="text-sm text-gray-500">
+                        {testimonial.role}, {testimonial.company}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );
