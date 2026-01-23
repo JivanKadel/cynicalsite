@@ -31,7 +31,7 @@ const Contact = () => {
 
   return (
     <main className="pt-12 pb-16">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2 sm:px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-4">
@@ -48,7 +48,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <div className="p-8 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl">
+              <div className="p-4 py-5 sm:p-8 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl">
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold mb-2">Get In Touch</h2>
                   <p className="text-muted-foreground">

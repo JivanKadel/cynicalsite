@@ -11,14 +11,14 @@ import PricingForm from "./PricingForm";
 
 export default function PricingPage() {
   return (
-    <main className="mx-auto py-12 md:px-16 lg:px-32 relative z-10 pt-4 md:pt-6 pb-8">
+    <main className="mx-auto py-12 md:px-16 lg:px-32 relative z-10 pt-4 sm:pt-6 pb-8">
       <section
         role="region"
         aria-labelledby="Pricing Details Section"
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 p-6 md:p-12"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 p-2 md:p-12"
       >
         {/* Left Section */}
-        <section>
+        <section className="p-2">
           <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
             Plans and Pricing
           </h1>

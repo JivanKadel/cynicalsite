@@ -152,19 +152,19 @@ const GlobalInvestmentBank = () => {
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+            <div className="grid lg:grid-cols-12 gap-8 lg:gap-20">
               {/* Section Label */}
               <div className="lg:col-span-4">
                 <div className="lg:sticky lg:top-32">
                   <Badge>01 — The Challenge</Badge>
-                  <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
+                  <h2 className="text-3xl lg:text-4xl font-bold leading-tight mt-2">
                     Legacy security in a modern threat landscape
                   </h2>
                 </div>
               </div>
 
               {/* Content */}
-              <div className="lg:col-span-8 space-y-8">
+              <div className="lg:col-span-8 space-y-4 sm:space-y-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   As one of the world&apos;s largest investment banks, our
                   client managed over $200 million in assets and processed
@@ -212,7 +212,7 @@ const GlobalInvestmentBank = () => {
             <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 mb-16">
               <div className="lg:col-span-4 self-center">
                 <Badge>02 — Our Approach</Badge>
-                <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
+                <h2 className="text-3xl lg:text-4xl font-bold leading-tight mt-2">
                   Comprehensive adversary simulation
                 </h2>
               </div>
@@ -333,7 +333,7 @@ const GlobalInvestmentBank = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-left mb-8">
               <Badge>03 — Results</Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold">
+              <h2 className="text-3xl lg:text-4xl font-bold mt-2">
                 Measurable security transformation
               </h2>
             </div>

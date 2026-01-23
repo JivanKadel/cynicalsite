@@ -42,7 +42,7 @@ const PageCTA = ({
 
   return (
     <section className="py-32 relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-2 sm:px-6">
         <div className="relative overflow-hidden rounded-3xl border border-border/30">
           {/* Background Layers */}
           <div className="absolute inset-0 bg-linear-to-br from-secondary via-background to-secondary" />

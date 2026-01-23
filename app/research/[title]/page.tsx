@@ -44,7 +44,7 @@ export default function ResearchDetailPage() {
       <section className="py-12 border-y border-border">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-4 gap-8 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-8 text-center">
               {[
                 { value: "CVE-2026-XXXX", label: "Assigned CVE" },
                 { value: "9.8", label: "CVSS Score" },
@@ -349,8 +349,11 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
               Our team can assess your systems for this and other critical
               vulnerabilities.
             </p>
-            <Button size="lg" className="group" asChild>
-              <Link href="/contact">
+            <Button size="lg" className="group h-12">
+              <Link
+                href="/contact"
+                className="flex items-center justify-center"
+              >
                 Request an Assessment
                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
