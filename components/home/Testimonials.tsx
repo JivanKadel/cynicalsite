@@ -148,7 +148,7 @@ const Testimonials = () => {
                       <h3 className="font-bold text-gray-900 text-lg">
                         {testimonial.author}
                       </h3>
-                      <p className="text-sm text-gray-500">
+                      <p className="text-sm text-gray-800">
                         {testimonial.role}, {testimonial.company}
                       </p>
                     </div>
