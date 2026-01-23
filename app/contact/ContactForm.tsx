@@ -10,7 +10,7 @@ import { toast } from "sonner";
 
 interface FormErrors {
   fullName?: string;
-  companyEmail?: string;
+  email?: string;
   companyName?: string;
   message?: string;
 }
@@ -18,7 +18,7 @@ interface FormErrors {
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     fullName: "",
-    companyEmail: "",
+    email: "",
     companyName: "",
     message: "",
   });
@@ -37,10 +37,10 @@ export default function ContactForm() {
 
     // Company Email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.companyEmail.trim()) {
-      newErrors.companyEmail = "Email is Required";
-    } else if (!emailRegex.test(formData.companyEmail.trim())) {
-      newErrors.companyEmail = "Please enter a valid email address";
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is Required";
+    } else if (!emailRegex.test(formData.email.trim())) {
+      newErrors.email = "Please enter a valid email address";
     }
 
     // Company Name
@@ -72,9 +72,9 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     const templateParams = {
-      fullName: formData.fullName,
-      companyName: formData.companyName,
-      companyEmail: formData.companyEmail,
+      fullname: formData.fullName,
+      company_name: formData.companyName,
+      email: formData.email,
       message: formData.message,
       title: "Contact Form, Cynical",
       time: new Date().toString(),
@@ -93,7 +93,7 @@ export default function ContactForm() {
       setFormData({
         fullName: "",
         companyName: "",
-        companyEmail: "",
+        email: "",
         message: "",
       });
     } catch (error) {
@@ -127,30 +127,25 @@ export default function ContactForm() {
           )}
         </div>
         <div>
-          <Label className="block text-sm font-medium mb-2">
-            Company Email*
-          </Label>
+          <Label className="block text-sm font-medium mb-2">Email*</Label>
           <Input
             type="email"
             className={` ${
-              errors.companyEmail
-                ? "border-red-500 focus-visible:ring-red-500"
-                : ""
+              errors.email ? "border-red-500 focus-visible:ring-red-500" : ""
             }`}
             placeholder="contact@company.com"
-            value={formData.companyEmail}
-            name="companyEmail"
+            value={formData.email}
+            name="email"
             onChange={(e) => {
               setFormData({
                 ...formData,
-                companyEmail: e.target.value,
+                email: e.target.value,
               });
-              if (errors.companyEmail)
-                setErrors({ ...errors, companyEmail: undefined });
+              if (errors.email) setErrors({ ...errors, email: undefined });
             }}
           />
-          {errors.companyEmail && (
-            <p className="text-sm text-red-500">{errors.companyEmail}</p>
+          {errors.email && (
+            <p className="text-sm text-red-500">{errors.email}</p>
           )}
         </div>
       </div>

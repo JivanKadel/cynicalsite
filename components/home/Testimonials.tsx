@@ -157,6 +157,8 @@ const Testimonials = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <CarouselPrevious className="-left-6 sm:-left-12" />
+          <CarouselNext className="-right-6 sm:-right-12" />
         </Carousel>
       </div>
     </section>
