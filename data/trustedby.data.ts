@@ -29,6 +29,11 @@ export const trustedBy = [
     image: "/brands/sasto_ticket.png",
     link: "https://sastotickets.com/",
   },
+  {
+    name: "Web Point",
+    image: "/brands/webpoint.svg",
+    link: "https://webpoint.io/",
+  },
 ];
 
 export const trustedByClipped = [
@@ -61,5 +66,10 @@ export const trustedByClipped = [
     name: "Sasto Ticket",
     image: "/brands/sasto_ticket.png",
     link: "https://sastotickets.com/",
+  },
+  {
+    name: "Web Point",
+    image: "/brands/webpoint.svg",
+    link: "https://webpoint.io/",
   },
 ];
