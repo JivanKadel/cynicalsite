@@ -1,9 +1,13 @@
-"use client";
-
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileCheck } from "lucide-react";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Thank You | Cynical Technology",
+  description:
+    "Thank you for your interest in Cynical Technology. Your request has been received, and we're excited to share our expertise with you.",
+};
 
 export default function ThankYouPage() {
   return (

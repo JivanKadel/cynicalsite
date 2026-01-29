@@ -17,7 +17,13 @@ import {
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
 import { iconColors } from "@/lib/utils";
-import Head from "next/head";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bugv | Crowdsourced Cyber Security Platform",
+  description:
+    "Bugv is a crowdsourcing cybersecurity platform powered by human intelligence where we connect businesses with cyber security experts from all around the world.",
+};
 
 export default function BugV() {
   const stats = [
@@ -155,301 +161,286 @@ export default function BugV() {
   ];
 
   return (
-    <>
-      <Head>
-        <title>
-          Bugv - #1 Crowdsourced Cyber Security and Pentesting Platform
-        </title>
-        <meta
-          name="description"
-          content="Bugv is a crowdsourcing cybersecurity platform powered by human intelligence where we connect businesses with cyber security experts from all around the world."
-        />
-      </Head>
-      <div>
-        <section className="pt-6 pb-12 relative overflow-hidden">
-          <div className="container mx-auto px-6 relative">
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-4 mb-6">
-                <div>
-                  <a
-                    href="https://bugv.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-4xl md:text-5xl font-bold mt-4"
-                  >
-                    Bugv
-                  </a>
-                </div>
-              </div>
-
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-body leading-relaxed max-w-3xl">
-                The crowdsourced security platform that connects you with elite
-                ethical hackers. Continuous testing from adversaries who think
-                like attackers—because they are.
-              </p>
-
-              <div className="flex flex-wrap gap-4">
-                <a href={"https://bugv.io/request-a-demo/"} target="_blank">
-                  <Button
-                    size="lg"
-                    className="bg-foreground text-background hover:bg-foreground/90"
-                  >
-                    Start Your Program
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
+    <div>
+      <section className="pt-6 pb-12 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-4xl">
+            <div className="flex items-center gap-4 mb-6">
+              <div>
+                <a
+                  href="https://bugv.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-4xl md:text-5xl font-bold mt-4"
+                >
+                  Bugv
                 </a>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Stats Section */}
-        <section className="py-12 lg:py-24 lg:mt-16 border-y border-border/50 bg-secondary/30">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="w-6 h-6 text-foreground/70" />
-                  </div>
-                  <h2 className="text-3xl md:text-4xl text-foreground font-bold mb-1">
-                    {stat.value}
-                  </h2>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-body leading-relaxed max-w-3xl">
+              The crowdsourced security platform that connects you with elite
+              ethical hackers. Continuous testing from adversaries who think
+              like attackers—because they are.
+            </p>
 
-        {/* How It Works */}
-        <section className="py-24">
-          <div className="container mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
-                How It Works
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                From launch to remediation
-              </h2>
-              <p className="text-lg text-muted-foreground font-body">
-                A streamlined process that turns security chaos into actionable
-                insights
-              </p>
-            </div>
-
-            <div className="relative">
-              {/* Connection Line */}
-              <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-px bg-linear-to-r from-transparent via-border to-transparent" />
-
-              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
-                {process.map((item) => (
-                  <div key={item.step} className="relative">
-                    <div className="text-center">
-                      <div className="w-14 h-14 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
-                        <item.icon className="w-7 h-7 text-foreground" />
-                      </div>
-                      <span className="text-xs text-muted-foreground font-mono mb-2 block">
-                        {item.step}
-                      </span>
-                      <h3 className="text-lg font-semibold mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground font-body">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Grid */}
-        <section className="py-24 bg-secondary/30">
-          <div className="container mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
-                Platform Features
-              </span>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                Enterprise-grade bug bounty
-              </h2>
-              <p className="text-lg text-muted-foreground font-body">
-                Everything you need to run a successful security program
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, index) => (
-                <div
-                  key={feature.title}
-                  className="group p-6 rounded-2xl border border-border/50 bg-background hover:border-border transition-all duration-300"
+            <div className="flex flex-wrap gap-4">
+              <a href={"https://bugv.io/request-a-demo/"} target="_blank">
+                <Button
+                  size="lg"
+                  className="bg-foreground text-background hover:bg-foreground/90"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors">
-                    <feature.icon
-                      className={`w-6 h-6 ${
-                        iconColors[index % iconColors.length].iconColor
-                      }`}
-                    />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground font-body leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
+                  Start Your Program
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Program Types */}
-        <section className="py-24">
-          <div className="container mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
-                Program Options
-              </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Choose your approach
-              </h2>
-              <p className="text-lg text-muted-foreground font-body">
-                Flexible program structures to match your security maturity and
-                business needs
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {programTypes.map((program) => (
-                <div
-                  key={program.title}
-                  className={`relative rounded-2xl border-2 p-8 ${
-                    program.recommended
-                      ? "border-blue/70 bg-secondary/50"
-                      : "border-border/50 bg-card/50"
-                  }`}
-                >
-                  {program.recommended && (
-                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="px-3 py-1 text-xs font-medium bg-blue text-white rounded-full">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  <h3 className="text-xl font-bold mb-2">{program.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-6 font-body">
-                    {program.description}
-                  </p>
-                  <ul className="space-y-3 mb-8">
-                    {program.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-center gap-3 text-sm"
-                      >
-                        <CheckCircle className="w-4 h-4 text-green-500/50 shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <a
-                    href="https://bugv.io/request-a-demo/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button
-                      variant={program.recommended ? "default" : "outline"}
-                      className="w-full"
-                    >
-                      Get Started
-                    </Button>
-                  </a>
+      {/* Stats Section */}
+      <section className="py-12 lg:py-24 lg:mt-16 border-y border-border/50 bg-secondary/30">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="w-12 h-12 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-6 h-6 text-foreground/70" />
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Vulnerability Types */}
-        <section className="py-24 bg-secondary/30">
-          <div className="container mx-auto px-6">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
-                  Proven Results
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Real vulnerabilities.
-                  <span className="block text-muted-foreground">
-                    Real impact.
-                  </span>
+                <h2 className="text-3xl md:text-4xl text-foreground font-bold mb-1">
+                  {stat.value}
                 </h2>
-                <p className="text-lg text-muted-foreground font-body mb-8">
-                  Our researchers have uncovered thousands of critical
-                  vulnerabilities across Fortune 500 companies, protecting
-                  millions of users worldwide.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <a href="https://bugv.io/contacts/">
-                    <Button>
-                      Contact
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </a>
-                  <a
-                    href="https://blog.bugv.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="outline">Read Blogs</Button>
-                  </a>
-                </div>
+                <p className="text-sm text-muted-foreground">{stat.label}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <div className="space-y-3">
-                {vulnerabilityTypes.map((vuln, index) => (
-                  <div
-                    key={vuln.name}
-                    className="flex items-center justify-between p-4 rounded-xl border border-border/50 bg-background hover:border-border transition-colors"
-                    style={{ animationDelay: `${index * 0.05}s` }}
-                  >
-                    <div className="flex items-center gap-4">
-                      <span
-                        className={`px-2 py-1 text-xs font-medium rounded ${
-                          vuln.severity === "Critical"
-                            ? "bg-red-500/10 text-red-400"
-                            : vuln.severity === "High"
-                              ? "bg-orange-500/10 text-orange-400"
-                              : "bg-yellow-500/10 text-yellow-400"
-                        }`}
-                      >
-                        {vuln.severity}
-                      </span>
-                      <span className="font-medium">{vuln.name}</span>
+      {/* How It Works */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
+              How It Works
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              From launch to remediation
+            </h2>
+            <p className="text-lg text-muted-foreground font-body">
+              A streamlined process that turns security chaos into actionable
+              insights
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Connection Line */}
+            <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-px bg-linear-to-r from-transparent via-border to-transparent" />
+
+            <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
+              {process.map((item) => (
+                <div key={item.step} className="relative">
+                  <div className="text-center">
+                    <div className="w-14 h-14 rounded-xl bg-gray-100 dark:bg-blue/10 border border-border/50 flex items-center justify-center mx-auto mb-4">
+                      <item.icon className="w-7 h-7 text-foreground" />
                     </div>
-                    <span className="text-sm text-muted-foreground font-mono">
-                      {vuln.count}
+                    <span className="text-xs text-muted-foreground font-mono mb-2 block">
+                      {item.step}
+                    </span>
+                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground font-body">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-24 bg-secondary/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
+              Platform Features
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+              Enterprise-grade bug bounty
+            </h2>
+            <p className="text-lg text-muted-foreground font-body">
+              Everything you need to run a successful security program
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={feature.title}
+                className="group p-6 rounded-2xl border border-border/50 bg-background hover:border-border transition-all duration-300"
+              >
+                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors">
+                  <feature.icon
+                    className={`w-6 h-6 ${
+                      iconColors[index % iconColors.length].iconColor
+                    }`}
+                  />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground font-body leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Program Types */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
+              Program Options
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Choose your approach
+            </h2>
+            <p className="text-lg text-muted-foreground font-body">
+              Flexible program structures to match your security maturity and
+              business needs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {programTypes.map((program) => (
+              <div
+                key={program.title}
+                className={`relative rounded-2xl border-2 p-8 ${
+                  program.recommended
+                    ? "border-blue/70 bg-secondary/50"
+                    : "border-border/50 bg-card/50"
+                }`}
+              >
+                {program.recommended && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                    <span className="px-3 py-1 text-xs font-medium bg-blue text-white rounded-full">
+                      Most Popular
                     </span>
                   </div>
-                ))}
+                )}
+                <h3 className="text-xl font-bold mb-2">{program.title}</h3>
+                <p className="text-sm text-muted-foreground mb-6 font-body">
+                  {program.description}
+                </p>
+                <ul className="space-y-3 mb-8">
+                  {program.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="flex items-center gap-3 text-sm"
+                    >
+                      <CheckCircle className="w-4 h-4 text-green-500/50 shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="https://bugv.io/request-a-demo/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button
+                    variant={program.recommended ? "default" : "outline"}
+                    className="w-full"
+                  >
+                    Get Started
+                  </Button>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Vulnerability Types */}
+      <section className="py-24 bg-secondary/30">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
+                Proven Results
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Real vulnerabilities.
+                <span className="block text-muted-foreground">
+                  Real impact.
+                </span>
+              </h2>
+              <p className="text-lg text-muted-foreground font-body mb-8">
+                Our researchers have uncovered thousands of critical
+                vulnerabilities across Fortune 500 companies, protecting
+                millions of users worldwide.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="https://bugv.io/contacts/">
+                  <Button>
+                    Contact
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </a>
+                <a
+                  href="https://blog.bugv.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button variant="outline">Read Blogs</Button>
+                </a>
               </div>
             </div>
-          </div>
-        </section>
 
-        <PageCTA
-          badge="500+ elite researchers ready to test your assets"
-          headline="Ready to find vulnerabilities"
-          highlightedText="before attackers do?"
-          description="Join the companies that trust Bugv to secure their most critical assets with continuous crowdsourced security testing."
-          primaryButtonText="Launch Your Program"
-          primaryButtonLink="/contact"
-          secondaryButtonText="Talk to Security Expert"
-          secondaryButtonLink="/contact"
-        />
-      </div>
-    </>
+            <div className="space-y-3">
+              {vulnerabilityTypes.map((vuln, index) => (
+                <div
+                  key={vuln.name}
+                  className="flex items-center justify-between p-4 rounded-xl border border-border/50 bg-background hover:border-border transition-colors"
+                  style={{ animationDelay: `${index * 0.05}s` }}
+                >
+                  <div className="flex items-center gap-4">
+                    <span
+                      className={`px-2 py-1 text-xs font-medium rounded ${
+                        vuln.severity === "Critical"
+                          ? "bg-red-500/10 text-red-400"
+                          : vuln.severity === "High"
+                            ? "bg-orange-500/10 text-orange-400"
+                            : "bg-yellow-500/10 text-yellow-400"
+                      }`}
+                    >
+                      {vuln.severity}
+                    </span>
+                    <span className="font-medium">{vuln.name}</span>
+                  </div>
+                  <span className="text-sm text-muted-foreground font-mono">
+                    {vuln.count}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PageCTA
+        badge="500+ elite researchers ready to test your assets"
+        headline="Ready to find vulnerabilities"
+        highlightedText="before attackers do?"
+        description="Join the companies that trust Bugv to secure their most critical assets with continuous crowdsourced security testing."
+        primaryButtonText="Launch Your Program"
+        primaryButtonLink="/contact"
+        secondaryButtonText="Talk to Security Expert"
+        secondaryButtonLink="/contact"
+      />
+    </div>
   );
 }

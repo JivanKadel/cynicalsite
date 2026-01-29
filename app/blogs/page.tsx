@@ -1,20 +1,15 @@
+import type { Metadata } from "next";
 import UnderConstruction from "@/components/UnderConstruction";
-import Head from "next/head";
+
+export const metadata: Metadata = {
+  title: "Blog | Cynical Blogs",
+  description: "Read the latest articles and updates on Cynical Blogs.",
+};
 
 export default function BlogPage() {
   return (
-    <>
-      <Head>
-        <title>Blog | Cynical Blogs</title>
-        <meta
-          name="description"
-          content="Read the latest articles and updates on Cynical Blogs."
-        />
-      </Head>
-
-      <div>
-        <UnderConstruction />
-      </div>
-    </>
+    <div>
+      <UnderConstruction />
+    </div>
   );
 }
