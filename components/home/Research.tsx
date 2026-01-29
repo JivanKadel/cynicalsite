@@ -36,8 +36,9 @@ const Research = () => {
             >
               <div
                 className={`absolute inset-0 bg-linear-to-br rounded-xl ${
-                  iconColors[index % iconColors.length].gradient ??
-                  "from-violet-500/20 to-blue-500/10"
+                  // iconColors[index % iconColors.length].gradient ??
+                  // "from-violet-500/20 to-blue-500/10"
+                  "from-emerald-500/20 to-cyan-500/10 dark:bg-none"
                 } transition-opacity duration-500`}
               />
               <div className="flex items-center gap-3 mb-4">
@@ -55,7 +56,7 @@ const Research = () => {
                 {item.description}
               </p>
 
-              <div className="mt-6 flex items-center gap-1 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="mt-6 flex items-center gap-1 text-sm font-medium">
                 Read more
                 <ArrowUpRight className="w-4 h-4" />
               </div>

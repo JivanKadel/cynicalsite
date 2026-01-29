@@ -38,18 +38,21 @@ export default function CaseStudies() {
               <>
                 <div
                   className={`absolute inset-0 bg-linear-to-br ${
-                    iconColors[index].gradient ??
+                    // iconColors[index].gradient ??
+                    iconColors[1].gradient ??
                     "from-violet-500/20 to-blue-500/10"
-                  } transition-opacity duration-500`}
+                  } transition-opacity duration-500 dark:opacity-0`}
                 />
 
                 <div className="relative p-6 lg:p-8 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-3">
                     <div
                       className={`w-14 h-14 rounded-xl ${
-                        iconColors[index % iconColors.length].iconBg
+                        // iconColors[index % iconColors.length].iconBg
+                        iconColors[1].iconBg
                       } ${
-                        iconColors[index % iconColors.length].iconColor
+                        // iconColors[index % iconColors.length].iconColor
+                        iconColors[1].iconColor
                       } flex items-center justify-center group-hover:bg-foreground/10 transition-colors`}
                     >
                       <study.logo className="w-8 h-8" />
