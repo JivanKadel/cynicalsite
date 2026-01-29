@@ -45,11 +45,13 @@ const aeonik = localFont({
 
 export const metadata: Metadata = {
   title: "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
-  description: "Securing your digital space",
+  description:
+    "Leading cybersecurity firm specializing in penetration testing, incident response, and threat intelligence. Leverage years of combined expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive employee data security.",
   openGraph: {
     title:
       "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
-    description: "Securing your digital space",
+    description:
+      "Leading cybersecurity firm specializing in penetration testing, incident response, and threat intelligence. Leverage years of combined expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive employee data security.",
     url: "https://cynicalsite.vercel.app/",
     siteName: "Cynical Technology",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
@@ -59,7 +61,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title:
       "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
-    description: "Securing your digital space",
+    description:
+      "Leading cybersecurity firm specializing in penetration testing, incident response, and threat intelligence. Leverage years of combined expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive employee data security.",
     images: ["/og.png"],
   },
 };
