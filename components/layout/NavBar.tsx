@@ -105,7 +105,7 @@ export default function Navbar() {
     {
       icon: Calendar1,
       label: "Events",
-      description: "Events in BugV X Cynical",
+      description: "Events in Bugv X Cynical",
       href: "/events",
     },
     {

@@ -37,12 +37,7 @@ export default function CaseStudies() {
             const content = (
               <>
                 {/* <div
-                  className={`absolute inset-0 bg-linear-to-br ${
-                    // iconColors[index].gradient ??
-                    // iconColors[1].gradient ??
-                    // "from-violet-500/20 to-blue-500/10"
-                    "shadow-xl"
-                  } transition-opacity duration-500 dark:opacity-0`}
+                  className={`absolute inset-0 bg-linear-to-br ${"shadow-xl"} transition-opacity duration-500 dark:opacity-0`}
                 /> */}
 
                 <div className="relative bg-card shadow-xl p-6 lg:p-8 flex flex-col h-full">

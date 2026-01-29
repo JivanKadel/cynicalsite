@@ -23,7 +23,7 @@ export default function ResearchCard({
       className="group relative block p-6 md:p-8 rounded-2xl border border-border bg-card  transition-all duration-400"
     >
       <div
-        className={`absolute rounded-2xl inset-0 bg-linear-to-br ${gradient} opacity-0 group-hover:opacity-60 transition-opacity duration-500`}
+        className={`absolute rounded-2xl inset-0 bg-linear-to-br ${gradient} opacity-0 group-hover:opacity-60 dark:bg-none transition-opacity duration-500`}
       />
       <div className="flex flex-col md:flex-row md:items-center gap-6">
         <div className="shrink-0">
