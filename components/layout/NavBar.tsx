@@ -336,7 +336,7 @@ z"
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Products</NavigationMenuTrigger>
-                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#ffffff]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-1">
                         {products.map((item) => (
                           <NavItemCard key={item.label} {...item} />
@@ -347,7 +347,7 @@ z"
 
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Solutions</NavigationMenuTrigger>
-                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#ffffff]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                         {solutions.map((item) => (
                           <NavItemCard key={item.label} {...item} />
@@ -359,7 +359,7 @@ z"
                   {/* Resources */}
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
-                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#ffffff]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                         {resources.map((item) => (
                           <NavItemCard key={item.label} {...item} />
@@ -370,7 +370,7 @@ z"
 
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Company</NavigationMenuTrigger>
-                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#f6f3f3]! dark:bg-[#0a0909]! opacity-99">
+                    <NavigationMenuContent className="backdrop-blur-3xl! bg-[#ffffff]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
                         {company.map((item) => (
                           <NavItemCard key={item.label} {...item} />

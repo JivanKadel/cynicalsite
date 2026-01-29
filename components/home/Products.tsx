@@ -53,9 +53,9 @@ const Products = () => {
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             Products
           </span>
-          <h2 className="text-2xl sm:text-5xl md:text-7xl font-bold text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground">
             Offense-first platforms.
-            <span className="block  -accent">Defense-grade results.</span>
+            <span className="block">Defense-grade results.</span>
           </h2>
           <p className="text-lg sm:text-xl font-extralight text-muted-foreground max-w-2xl mx-auto">
             Built by the same people who would be breaking in. Our platforms

@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 
 import { sendEmail } from "@/lib/sendQuery";
 import { ArrowRight, FileCheck, FileCheckCorner } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -22,6 +23,8 @@ export default function SampleReportForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
+
+  const router = useRouter();
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -79,6 +82,12 @@ export default function SampleReportForm() {
       // await sendEmail({ serviceID, templateID, templateParams, publicKey });
 
       toast.success("Your Download is Ready!");
+
+      setTimeout(() => {
+        router.push("/downloads/thank-you");
+      }, 500);
+
+      // router.push("/downloads/thank-you");
 
       setErrors({});
       setFormData({

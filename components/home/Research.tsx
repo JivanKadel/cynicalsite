@@ -8,7 +8,7 @@ const Research = () => {
   return (
     <section id="research" className="py-12 relative">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-8">
           <div className="max-w-2xl">
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Research

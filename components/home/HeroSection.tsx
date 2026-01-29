@@ -8,14 +8,14 @@ import { BorderBeam } from "../ui/border-beam";
 
 export default function HeroSection() {
   return (
-    <section className="container h-screen flex flex-col justify-center items-center mx-auto relative z-10 pt-4 md:pt-0 md:-mt-16">
+    <section className="container min-h-screen flex flex-col justify-center items-center mx-auto relative z-10 pt-4 md:pt-0 md:-mt-16">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8 py-8">
         <h1 className="text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
           {/* See your organization the way attackers do */}
-          Penetration testing that finds real risk, not checkbox issues.
+          Penetration testing that finds real risk.
         </h1>
 
-        <p className="my-6 font-sans text-base  text-foreground/80 sm:px-0 font-normal lg:my-5.5 md:text-lg lg:text-xl mx-auto text-balance text-center">
+        <p className="my-6 text-base  text-foreground/80 sm:px-0 font-normal lg:my-5.5 md:text-lg lg:text-xl mx-auto text-balance text-center">
           {/* We provide continuous offensive security by simulating real-world
           attacks across your attack surface to uncover exploitable weaknesses
           scanners, audits, and vendors miss */}

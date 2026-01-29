@@ -7,7 +7,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-12 relative">
+    <section className="relative">
       <div className="container mx-auto px-6">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden">
           {stats.map((stat, index) => (

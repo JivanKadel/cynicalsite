@@ -80,7 +80,7 @@ const SampleReportPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="max-w-sm p-4 py-5 sm:p-8 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl">
+              <div className="min-w-85 max-w-sm p-4 py-5 sm:p-8 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl">
                 <SampleReportForm />
               </div>
             </div>

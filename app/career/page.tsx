@@ -330,7 +330,7 @@ const Careers = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Perks & Benefits
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-6">
                 Why work at Cynical?
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -379,7 +379,7 @@ const Careers = () => {
               <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Hiring Process
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl  font-bold tracking-tight mb-6">
                 Your journey to Cynical
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -421,7 +421,7 @@ const Careers = () => {
         <section className="py-20 lg:py-32 bg-secondary/20">
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-6">
                 Current openings
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -574,7 +574,7 @@ const Careers = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-5xl  font-bold tracking-tight mb-6">
                   Submit your application
                 </h2>
                 <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -700,7 +700,7 @@ const Careers = () => {
         <section className="py-20 lg:py-32 bg-secondary/20">
           <div className="container mx-auto px-6">
             <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl  font-bold tracking-tight mb-6">
                 Life at Cynical
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">
@@ -754,7 +754,7 @@ const Careers = () => {
         <section className="py-20 lg:py-32">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl  font-bold tracking-tight mb-6">
                 Questions about careers at Cynical?
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">

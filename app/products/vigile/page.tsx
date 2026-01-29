@@ -317,9 +317,9 @@ export default function Vigile() {
               {platformModules.map((module, index) => (
                 <div
                   key={module.title}
-                  className="group p-6 rounded-2xl bg-card"
+                  className="group p-6 rounded-2xl bg-card shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors">
                     <module.icon
                       className={`w-6 h-6 ${
                         iconColors[index % iconColors.length].iconColor
@@ -435,7 +435,7 @@ export default function Vigile() {
               {useCases.map((useCase, index) => (
                 <div
                   key={useCase.title}
-                  className="group p-6 rounded-2xl bg-card"
+                  className="group p-6 rounded-2xl bg-card shadow-lg hover:shadow-xl transition-shadow"
                 >
                   <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-foreground/10 transition-colors">
                     <useCase.icon
@@ -478,7 +478,7 @@ export default function Vigile() {
                   (integration) => (
                     <div
                       key={integration.name}
-                      className="flex flex-col items-center justify-center p-2 rounded-xl bg-card"
+                      className="flex flex-col items-center justify-center p-2 rounded-xl bg-card shadow-lg"
                     >
                       <Image
                         src={integration.icon as string}

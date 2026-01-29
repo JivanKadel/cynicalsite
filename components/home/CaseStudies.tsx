@@ -8,12 +8,12 @@ export default function CaseStudies() {
   return (
     <section id="case-studies" className="py-32 relative">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12 gap-6">
+        {/* <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-12 gap-6">
           <div className="max-w-2xl">
             <span className="text-sm text-muted-foreground uppercase tracking-widest mb-4 block">
               Case Studies
             </span>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-foreground">
               Real engagements. Real findings.
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -21,8 +21,22 @@ export default function CaseStudies() {
               secure—until we tested like real attackers.
             </p>
           </div>
+        </div> */}
+        <div className="text-center max-w-3xl space-y-8 mx-auto mb-20">
+          <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-6 px-4 py-2 rounded-full border border-border/50 bg-secondary/50">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+            Case Studies
+          </span>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground">
+            Real engagements.
+            <span className="block">Real findings.</span>
+          </h2>
+          <p className="text-lg sm:text-xl font-extralight text-muted-foreground max-w-2xl mx-auto">
+            Every case study represents a client who thought they were secure
+            until we tested like real attackers.
+          </p>
         </div>
-        <div className="flex justify-end py-8 gap-2 text-sm font-medium group">
+        <div className="flex justify-end mb-8 gap-2 text-sm font-medium group">
           <Link
             href="/resources/case-studies"
             className="flex gap-2 text-sm font-medium group"
