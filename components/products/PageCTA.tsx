@@ -43,10 +43,9 @@ const PageCTA = ({
   return (
     <section className="py-32 relative">
       <div className="container mx-auto px-2 sm:px-6">
-        <div className="relative overflow-hidden rounded-3xl border border-border/30">
-          {/* Background Layers */}
-          <div className="absolute inset-0 bg-linear-to-br from-secondary via-background to-secondary" />
-          <div className="absolute inset-0 opacity-30">
+        <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
+          {/* <div className="absolute inset-0 bg-linear-to-br from-background via-card to-background" /> */}
+          {/* <div className="absolute inset-0 opacity-30">
             <div
               className="absolute inset-0"
               style={{
@@ -54,7 +53,7 @@ const PageCTA = ({
                 backgroundSize: "32px 32px",
               }}
             />
-          </div>
+          </div> */}
 
           <div className="relative z-10 p-12 lg:p-20">
             <div className="max-w-5xl mx-auto text-center">

@@ -87,10 +87,10 @@ const Testimonials = () => {
             <span className="text-center text-md text-muted-foreground uppercase tracking-widest mb-4 block">
               Client Results
             </span>
-            <h2 className="text-4xl md:text-6xl">
+            <h2 className="text-4xl md:text-6xl text-center">
               What we found.
               <br />
-              <span className="text-slate-500">What we fixed.</span>
+              <span className="text-slate-500 text-center">What we fixed.</span>
             </h2>
           </div>
         </div>

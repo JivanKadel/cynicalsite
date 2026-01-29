@@ -2,6 +2,7 @@ import { caseStudies } from "@/data/casestudies.data";
 import { iconColors } from "@/lib/utils";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { Badge } from "../ui/badge";
 
 export default function CaseStudies() {
   return (
@@ -21,13 +22,13 @@ export default function CaseStudies() {
             </p>
           </div>
         </div>
-        <div className="flex justify-end py-8 gap-2 text-sm font-medium hover:gap-3 transition-all group">
+        <div className="flex justify-end py-8 gap-2 text-sm font-medium group">
           <Link
             href="/resources/case-studies"
             className="flex gap-2 text-sm font-medium group"
           >
             View all case studies
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 duration-500 transition-transform" />
+            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 duration-300 transition-transform" />
           </Link>
         </div>
 
@@ -43,7 +44,7 @@ export default function CaseStudies() {
                 />
 
                 <div className="relative p-6 lg:p-8 flex flex-col h-full">
-                  <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-start justify-between mb-3">
                     <div
                       className={`w-14 h-14 rounded-xl ${
                         iconColors[index % iconColors.length].iconBg
@@ -51,7 +52,7 @@ export default function CaseStudies() {
                         iconColors[index % iconColors.length].iconColor
                       } flex items-center justify-center group-hover:bg-foreground/10 transition-colors`}
                     >
-                      <study.logo />
+                      <study.logo className="w-8 h-8" />
                     </div>
                     <span className="text-xs font-medium px-3 py-1 rounded-full bg-secondary text-muted-foreground">
                       {study.industry}
@@ -66,17 +67,17 @@ export default function CaseStudies() {
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {study.tags.map((tag) => (
-                      <span
+                      <Badge
                         key={tag}
-                        className="text-xs px-2.5 py-1 rounded-md border border-border/50 text-muted-foreground"
+                        // className="text-xs px-2.5 py-1 rounded-md border border-border/50 text-muted-foreground"
                       >
                         {tag}
-                      </span>
+                      </Badge>
                     ))}
                   </div>
 
                   {/* Metrics */}
-                  <div className="grid grid-cols-3 gap-4 mb-6 pt-4 border-t border-border/30">
+                  <div className="grid grid-cols-3 gap-4 mb-6 pt-4 border-t-2 border-border/80">
                     {study.metrics.map((metric) => (
                       <div key={metric.label}>
                         <p className="text-xl font-bold mb-1 text-foreground">
@@ -89,13 +90,12 @@ export default function CaseStudies() {
                     ))}
                   </div>
 
-                  {/* Quote */}
                   <p className="text-sm text-muted-foreground font-body italic grow">
                     &quot;{study.quote}&quot;
                   </p>
 
                   {/* Hover CTA */}
-                  <div className="text-foreground mt-6 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="text-foreground mt-6 flex items-center gap-2 text-sm font-medium">
                     Read full case study
                     <ArrowUpRight className="w-4 h-4 text-foreground" />
                   </div>

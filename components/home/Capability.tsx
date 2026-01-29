@@ -7,7 +7,7 @@ export default function Capability({
   return (
     <div
       key={capability.text}
-      className={`relative group flex items-center gap-3 p-4 rounded-xl bg-card ${gradient}`}
+      className={`relative group flex items-center gap-3 p-4 rounded-xl bg-gray-100 dark:bg-card ${gradient}`}
       style={{ animationDelay: `${index * 0.03}s` }}
     >
       <div

@@ -301,7 +301,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="pb-24 md:mx-20 border-t border-border">
+      <div className="pb-2 md:mx-20 border-t border-border">
         <div className="container mx-auto py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">

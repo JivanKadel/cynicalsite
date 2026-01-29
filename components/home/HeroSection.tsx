@@ -8,7 +8,7 @@ import { BorderBeam } from "../ui/border-beam";
 
 export default function HeroSection() {
   return (
-    <section className="container mx-auto relative z-10 pt-4 md:pt-6 pb-8">
+    <section className="container h-screen flex flex-col justify-center items-center mx-auto relative z-10 pt-4 md:pt-0 md:-mt-16">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8 py-8">
         <h1 className="text-[2.7rem] font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
           See your organization the way attackers do
@@ -48,7 +48,7 @@ export default function HeroSection() {
 
       <hr className="border-t-2 max-w-4xl mx-auto" />
 
-      <div className="pt-6">
+      <div className="pt-6 max-w-7xl w-full mx-auto">
         <p className="text-center text-xs md:text-sm text-muted-foreground mb-8 uppercase tracking-widest">
           Securing critical infrastructure for
         </p>
