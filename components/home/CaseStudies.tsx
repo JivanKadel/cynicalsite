@@ -36,22 +36,21 @@ export default function CaseStudies() {
           {caseStudies.map((study, index) => {
             const content = (
               <>
-                <div
+                {/* <div
                   className={`absolute inset-0 bg-linear-to-br ${
                     // iconColors[index].gradient ??
-                    iconColors[1].gradient ??
-                    "from-violet-500/20 to-blue-500/10"
+                    // iconColors[1].gradient ??
+                    // "from-violet-500/20 to-blue-500/10"
+                    "shadow-xl"
                   } transition-opacity duration-500 dark:opacity-0`}
-                />
+                /> */}
 
-                <div className="relative p-6 lg:p-8 flex flex-col h-full">
+                <div className="relative bg-card shadow-xl p-6 lg:p-8 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-3">
                     <div
                       className={`w-14 h-14 rounded-xl ${
-                        // iconColors[index % iconColors.length].iconBg
                         iconColors[1].iconBg
                       } ${
-                        // iconColors[index % iconColors.length].iconColor
                         iconColors[1].iconColor
                       } flex items-center justify-center group-hover:bg-foreground/10 transition-colors`}
                     >
@@ -107,7 +106,7 @@ export default function CaseStudies() {
             );
 
             const className =
-              "group relative overflow-hidden rounded-2xl bg-card hover:border-border transition-all duration-500   block";
+              "group relative overflow-hidden rounded-2xl bg-card shadow-xl hover:border-border transition-all duration-500 block";
             const style = { animationDelay: `${index * 0.1}s` };
 
             return study.link ? (

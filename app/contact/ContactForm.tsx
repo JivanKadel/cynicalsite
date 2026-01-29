@@ -76,7 +76,7 @@ export default function ContactForm() {
       company_name: formData.companyName,
       email: formData.email,
       message: formData.message,
-      title: "Contact Form, Cynical",
+      title: "Source: Contact Form, Cynical Site",
       time: new Date().toString(),
     };
     try {

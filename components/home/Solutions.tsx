@@ -37,7 +37,8 @@ export default function Solutions() {
               index={index}
               // gradient={solution.gradient}
               // iconColor={iconColors[index % iconColors.length].iconColor}
-              gradient={"from-emerald-500/20 to-cyan-500/10"}
+              // gradient={"from-emerald-500/20 to-cyan-500/10"}
+              gradient={""}
               iconColor="text-cyan-500"
             />
           ))}

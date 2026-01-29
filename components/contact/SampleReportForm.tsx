@@ -1,0 +1,221 @@
+"use client";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+
+import { sendEmail } from "@/lib/sendQuery";
+import { ArrowRight, FileCheck, FileCheckCorner } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
+import {
+  Dialog,
+  DialogContent,
+  DialogOverlay,
+  DialogTrigger,
+} from "../ui/dialog";
+
+interface FormErrors {
+  fullName?: string;
+  email?: string;
+  companyName?: string;
+}
+
+export default function SampleReportForm() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    companyName: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const [showDialog, setShowDialog] = useState(false);
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    // Full name
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+    } else if (formData.fullName.trim().length < 2) {
+      newErrors.fullName = "A valid name is required";
+    }
+
+    // Company Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is Required";
+    } else if (!emailRegex.test(formData.email.trim())) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    // Company Name
+    if (!formData.companyName.trim()) {
+      newErrors.companyName = "Company name is required";
+    } else if (formData.companyName.trim().length < 2) {
+      newErrors.companyName = "Please enter a valid Company Name";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // if (!validateForm()) {
+    //   toast.error("Please fill the form with Correct Values");
+    //   return;
+    // }
+
+    setIsSubmitting(true);
+
+    const templateParams = {
+      fullname: formData.fullName,
+      company_name: formData.companyName,
+      email: formData.email,
+      message: "Sample Report Downloaded",
+      title: "Source: Sample Report Download Form",
+      time: new Date().toString(),
+    };
+    try {
+      // const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+      // const templateID = process.env
+      //   .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+      // const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+
+      // await sendEmail({ serviceID, templateID, templateParams, publicKey });
+
+      toast.success("Your Download is Ready!");
+      setShowDialog(true);
+      setErrors({});
+      setFormData({
+        fullName: "",
+        companyName: "",
+        email: "",
+      });
+    } catch (error) {
+      console.error("EmailJS error", error);
+      toast.error("Submission Failed! Please try again");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+  return (
+    <>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="flex flex-col gap-6">
+          <div>
+            <Label className="block text-sm font-medium mb-2">Full Name*</Label>
+            <Input
+              type="text"
+              placeholder="Naresh Lamgade"
+              value={formData.fullName}
+              name="fullName"
+              onChange={(e) => {
+                setFormData({ ...formData, fullName: e.target.value });
+                if (errors.fullName)
+                  setErrors({ ...errors, fullName: undefined });
+              }}
+              className={`border ${
+                errors.fullName
+                  ? "border-red-500 focus-visible:ring-red-500"
+                  : ""
+              }`}
+            />
+            {errors.fullName && (
+              <p className="text-sm text-red-500">{errors.fullName}</p>
+            )}
+          </div>
+          <div>
+            <Label className="block text-sm font-medium mb-2">Email*</Label>
+            <Input
+              type="email"
+              className={` ${
+                errors.email ? "border-red-500 focus-visible:ring-red-500" : ""
+              }`}
+              placeholder="contact@company.com"
+              value={formData.email}
+              name="email"
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  email: e.target.value,
+                });
+                if (errors.email) setErrors({ ...errors, email: undefined });
+              }}
+            />
+            {errors.email && (
+              <p className="text-sm text-red-500">{errors.email}</p>
+            )}
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          <div>
+            <Label className="block text-sm font-medium mb-2">
+              Company Name*
+            </Label>
+            <Input
+              type="text"
+              className={` ${
+                errors.companyName
+                  ? "border-red-500 focus-visible:ring-red-500"
+                  : ""
+              }`}
+              placeholder="Company name"
+              value={formData.companyName}
+              name="companyName"
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  companyName: e.target.value,
+                });
+                if (errors.companyName)
+                  setErrors({ ...errors, companyName: undefined });
+              }}
+            />
+            {errors.companyName && (
+              <p className="text-sm text-red-500">{errors.companyName}</p>
+            )}
+          </div>
+        </div>
+
+        <Button
+          type="submit"
+          // disabled={isSubmitting}
+          size="lg"
+          className="w-full group border border-border duration-500 transition-colors"
+        >
+          {isSubmitting ? (
+            "Processing..."
+          ) : (
+            <>
+              Download
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </>
+          )}
+        </Button>
+
+        <p className="text-xs text-muted-foreground text-center">
+          By submitting, you agree to our privacy policy. We do not share your
+          information with third parties.
+        </p>
+      </form>
+      <Dialog open={showDialog} onOpenChange={setShowDialog}>
+        <DialogContent className="max-w-[320px]">
+          <div className="flex flex-col gap-4 text-center">
+            <div className="flex flex-col gap-4 justify-center items-center">
+              <FileCheckCorner className="text-green-500 h-20 w-20" />
+              <h2 className="text-xl md:text-2xl lg:text-4xl font-semibold">
+                Thank You
+              </h2>
+            </div>
+            <p>Your report is ready for download!</p>
+            <Button>Download</Button>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+}

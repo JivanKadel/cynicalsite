@@ -38,7 +38,8 @@ const Research = () => {
                 className={`absolute inset-0 bg-linear-to-br rounded-xl ${
                   // iconColors[index % iconColors.length].gradient ??
                   // "from-violet-500/20 to-blue-500/10"
-                  "from-emerald-500/20 to-cyan-500/10 dark:bg-none"
+                  // "from-emerald-500/20 to-cyan-500/10 dark:bg-none"
+                  "shadow-xl"
                 } transition-opacity duration-500`}
               />
               <div className="flex items-center gap-3 mb-4">

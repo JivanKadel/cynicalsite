@@ -42,7 +42,7 @@ export default function HeroSection() {
             />
           </Button>
         </Link>
-        <Link href={"/resources/case-studies"} className="flex-1">
+        <Link href={"/downloads/sample-report"} className="flex-1">
           <Button className="w-54 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
             Download sample report <ArrowRight className="w-5! h-5!" />
           </Button>
