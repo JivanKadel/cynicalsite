@@ -35,8 +35,11 @@ export default function Solutions() {
               description={solution.description}
               features={solution.features}
               index={index}
-              gradient={solution.gradient}
-              iconColor={iconColors[index % iconColors.length].iconColor}
+              // gradient={solution.gradient}
+              // iconColor={iconColors[index % iconColors.length].iconColor}
+              // gradient={"from-emerald-500/20 to-cyan-500/10"}
+              gradient={""}
+              iconColor="text-cyan-500"
             />
           ))}
         </div>

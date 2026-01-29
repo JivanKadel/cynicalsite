@@ -67,7 +67,7 @@ export default function PricingForm() {
     const templateParams = {
       fullname: formData.fullName,
       email: formData.email,
-      title: "Pricing Form, Cynical",
+      title: "Source: Pricing Form, Cynical Site",
       company_name: formData.company,
       message: "I'm interested in " + formData.product,
       time: new Date().toString(),

@@ -10,26 +10,29 @@ export default function HeroSection() {
   return (
     <section className="container h-screen flex flex-col justify-center items-center mx-auto relative z-10 pt-4 md:pt-0 md:-mt-16">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8 py-8">
-        <h1 className="text-[2.7rem] font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
-          See your organization the way attackers do
+        <h1 className="text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+          {/* See your organization the way attackers do */}
+          Penetration testing that finds real risk, not checkbox issues.
         </h1>
 
-        <p className="my-6 font-sans text-base text-foreground/80 sm:px-0 font-normal lg:my-5.5 lg:text-lg m mx-auto text-balance text-center">
-          We provide continuous offensive security by simulating real-world
+        <p className="my-6 font-sans text-base  text-foreground/80 sm:px-0 font-normal lg:my-5.5 md:text-lg lg:text-xl mx-auto text-balance text-center">
+          {/* We provide continuous offensive security by simulating real-world
           attacks across your attack surface to uncover exploitable weaknesses
-          scanners, audits, and vendors miss
+          scanners, audits, and vendors miss */}
+          Web, API, Mobile, Cloud, and Red Team engagements with executive-ready
+          reporting, clear remediation, and retesting included.
         </p>
       </div>
-      <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 md:pb-16 max-w-sm">
+      <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 max-w-sm">
         <Link href={"/contact"}>
           <Button
-            className="relative overflow-hidden w-48 h-12 border-0 border-transparent text-sm 
+            className="relative overflow-hidden w-50 h-12 border-0 border-transparent text-sm 
              text-white rounded-4xl 
              bg-linear-to-r from-blue-500 via-blue-600 to-blue-700 
              hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 
              transition-all duration-300 ease-in-out"
           >
-            Get Started Now <ArrowRight className="w-5! h-5!" />
+            Book a 15-min call <ArrowRight className="w-5! h-5!" />
             <BorderBeam
               size={50}
               borderWidth={2}
@@ -39,9 +42,9 @@ export default function HeroSection() {
             />
           </Button>
         </Link>
-        <Link href={"/resources/case-studies"} className="flex-1">
-          <Button className="w-48 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
-            Read Case Studies <ArrowRight className="w-5! h-5!" />
+        <Link href={"/downloads/sample-report"} className="flex-1">
+          <Button className="w-54 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
+            Download sample report <ArrowRight className="w-5! h-5!" />
           </Button>
         </Link>
       </section>
@@ -49,8 +52,9 @@ export default function HeroSection() {
       <hr className="border-t-2 max-w-4xl mx-auto" />
 
       <div className="pt-6 max-w-7xl w-full mx-auto">
-        <p className="text-center text-xs md:text-sm text-muted-foreground mb-8 uppercase tracking-widest">
-          Securing critical infrastructure for
+        <p className="text-center text-xs md:text-sm text-foreground mb-4 uppercase tracking-widest">
+          {/* Securing critical infrastructure for */}
+          Trusted by teams in SaaS, fintech, and enterprise
         </p>
         <Marquee
           pauseOnHover={true}

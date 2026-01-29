@@ -108,17 +108,18 @@ const Testimonials = () => {
             {testimonials.map((testimonial) => (
               <CarouselItem
                 key={testimonial.author}
-                className={`md:basis-1/2 lg:basis-1/3 pl-4 flex flex-col items-stretch`}
+                className={`md:basis-1/2 lg:basis-1/3 pl-4 py-4 flex flex-col items-stretch`}
               >
                 <article
-                  className={`p-4 flex-1 rounded-2xl flex flex-col ${testimonial.bgColor}`}
+                  // className={`p-4 flex-1 rounded-2xl flex flex-col ${testimonial.bgColor}`}
+                  className="p-4 flex-1 rounded-2xl flex flex-col bg-card border-2 border-border/10"
                 >
                   <div className="mb-0 sm:mb-2">
                     <span className="text-6xl text-gray-400 font-serif leading-none opacity-60">
                       “
                     </span>
                   </div>
-                  <p className="flex-1 self-center text-gray-800 text-lg leading-relaxed mb-6">
+                  <p className="flex-1 self-center text-gray-800 dark:text-slate-300 text-lg leading-relaxed mb-6">
                     “
                     {testimonial.quote.map((part, index) => (
                       <span key={index}>
@@ -145,10 +146,10 @@ const Testimonials = () => {
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 text-lg">
+                      <h3 className="font-bold text-gray-900 dark:text-slate-100 text-lg">
                         {testimonial.author}
                       </h3>
-                      <p className="text-sm text-gray-800">
+                      <p className="text-sm text-gray-800 dark:text-slate-300">
                         {testimonial.role}, {testimonial.company}
                       </p>
                     </div>
