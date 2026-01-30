@@ -1,3 +1,4 @@
+import { decode } from "he";
 import { parseStringPromise } from "xml2js";
 
 export interface BlogPost {
@@ -11,27 +12,21 @@ export interface BlogPost {
   author?: string;
 }
 
-// lib/sanitize.ts
 export function sanitizeHtmlContent(html: string): string {
   if (!html) return "";
 
-  return (
-    html
-      // Remove empty heading tags with &nbsp;
-      .replace(/<h[1-6]>\s*&nbsp;\s*<\/h[1-6]>/gi, "")
-      // Remove empty heading tags with whitespace
-      .replace(/<h[1-6]>\s*<\/h[1-6]>/gi, "")
-      // Remove empty paragraph tags with &nbsp;
-      .replace(/<p>\s*&nbsp;\s*<\/p>/gi, "")
-      // Remove empty paragraph tags
-      .replace(/<p>\s*<\/p>/gi, "")
-      // Remove multiple consecutive <br> tags
-      .replace(/(<br\s*\/?>\s*){3,}/gi, "<br><br>")
-      // Remove empty divs
-      .replace(/<div>\s*<\/div>/gi, "")
-      // Clean up excessive whitespace
-      .replace(/\n\s*\n\s*\n/g, "\n\n")
-  );
+  let cleaned = decode(html);
+
+  cleaned = cleaned
+    .replace(/<h[1-6]>\s*&nbsp;\s*<\/h[1-6]>/gi, "")
+    .replace(/<h[1-6]>\s*<\/h[1-6]>/gi, "")
+    .replace(/<p>\s*&nbsp;\s*<\/p>/gi, "")
+    .replace(/<p>\s*<\/p>/gi, "")
+    .replace(/(<br\s*\/?>\s*){3,}/gi, "<br><br>")
+    .replace(/<div>\s*<\/div>/gi, "")
+    .replace(/\n\s*\n\s*\n/g, "\n\n");
+
+  return cleaned;
 }
 
 const RSS_FEED_URL = "https://cynicaltechnology.com/feed/"; // Your RSS URL
@@ -49,6 +44,7 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
 
     const items = parsed.rss.channel[0].item || [];
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return items.map((item: any, index: number) => ({
       id: item.link?.[0]?.split("/").filter(Boolean).pop() || `post-${index}`,
       title: item.title?.[0] || "Untitled",

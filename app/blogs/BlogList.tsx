@@ -4,6 +4,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { BlogPost } from "@/lib/blog";
+import { decode } from "he";
 
 interface BlogListProps {
   initialPosts: BlogPost[];
@@ -60,11 +61,11 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
           className="w-full h-12 px-4 py-1 border rounded-lg"
         />
 
-        <div className="flex gap-4 flex-wrap md:flex-nowrap">
+        <div className="flex justify-end gap-4 flex-wrap md:flex-nowrap">
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 h-12 py-2 bg-background border rounded-lg"
+            className="w-50 px-4 h-12 py-2 bg-background border rounded-lg"
           >
             <option value="all">All Categories</option>
             {categories.map((cat) => (
@@ -77,7 +78,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as "date" | "title")}
-            className="px-4 h-12 bg-background py-2 border rounded-lg"
+            className="px-4 w-50 h-12 bg-background py-2 border rounded-lg"
           >
             <option value="date">Sort by Date</option>
             <option value="title">Sort by Title</option>
@@ -90,8 +91,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
         Showing {filteredPosts.length} of {initialPosts.length} posts
       </p>
 
-      {/* Blog list */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-col gap-6">
         {filteredPosts.map((post) => (
           <article
             key={post.id}
@@ -112,7 +112,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
             </time>
 
             <p className="mt-3 text-gray-700 dark:text-gray-400 line-clamp-3">
-              {post.description.replace(/<[^>]*>/g, "")}
+              {decode(post.description).replace(/<[^>]*>/g, "")}
             </p>
 
             {post.categories && post.categories.length > 0 && (
