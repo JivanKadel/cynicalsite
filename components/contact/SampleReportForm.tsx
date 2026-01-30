@@ -189,7 +189,7 @@ export default function SampleReportForm() {
           "Processing..."
         ) : (
           <>
-            Download
+            Get Download Link
             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
           </>
         )}
