@@ -8,14 +8,6 @@ export const metadata: Metadata = {
   description: "Read the latest articles and updates on Cynical Blogs.",
 };
 
-// export default function BlogPage() {
-//   return (
-//     <div>
-//       <UnderConstruction />
-//     </div>
-//   );
-// }
-
 export const revalidate = 3600; // Revalidate every hour
 
 export default async function BlogsPage() {

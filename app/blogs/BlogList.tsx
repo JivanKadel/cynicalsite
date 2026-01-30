@@ -51,20 +51,20 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
   return (
     <div>
       {/* Filters */}
-      <div className="mb-8 space-y-4">
+      <div className="mb-8 space-y-4 md:flex md:items-center md:justify-between md:space-y-0 md:gap-4">
         <input
           type="text"
           placeholder="Search blogs..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full px-4 py-2 border rounded-lg"
+          className="w-full h-12 px-4 py-1 border rounded-lg"
         />
 
-        <div className="flex gap-4 flex-wrap">
+        <div className="flex gap-4 flex-wrap md:flex-nowrap">
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-2 border rounded-lg"
+            className="px-4 h-12 py-2 bg-background border rounded-lg"
           >
             <option value="all">All Categories</option>
             {categories.map((cat) => (
@@ -77,7 +77,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as "date" | "title")}
-            className="px-4 py-2 border rounded-lg"
+            className="px-4 h-12 bg-background py-2 border rounded-lg"
           >
             <option value="date">Sort by Date</option>
             <option value="title">Sort by Title</option>
@@ -86,7 +86,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
       </div>
 
       {/* Results count */}
-      <p className="mb-4 text-gray-600">
+      <p className="mb-4 text-gray-600 dark:text-gray-300">
         Showing {filteredPosts.length} of {initialPosts.length} posts
       </p>
 
@@ -98,7 +98,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
             className="border rounded-lg p-6 hover:shadow-lg transition"
           >
             <Link href={`/blogs/${post.id}`}>
-              <h2 className="text-xl font-semibold mb-2 hover:text-blue-600">
+              <h2 className="text-xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400">
                 {post.title}
               </h2>
             </Link>
@@ -111,7 +111,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
               })}
             </time>
 
-            <p className="mt-3 text-gray-700 line-clamp-3">
+            <p className="mt-3 text-gray-700 dark:text-gray-400 line-clamp-3">
               {post.description.replace(/<[^>]*>/g, "")}
             </p>
 
@@ -120,7 +120,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
                 {post.categories.slice(0, 3).map((cat) => (
                   <span
                     key={cat}
-                    className="text-xs bg-gray-100 px-2 py-1 rounded"
+                    className="text-xs bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded"
                   >
                     {cat}
                   </span>

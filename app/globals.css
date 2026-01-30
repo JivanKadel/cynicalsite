@@ -288,6 +288,27 @@ a {
 
 /* Styles below are for sanitizing blog content */
 
+.prose h1:empty,
+.prose h2:empty,
+.prose h3:empty,
+.prose h4:empty,
+.prose h5:empty,
+.prose h6:empty,
+.prose p:empty {
+  display: none;
+}
+
+/* Also hide elements that only contain &nbsp; */
+.prose h1:has(> :only-child:empty),
+.prose h2:has(> :only-child:empty),
+.prose h3:has(> :only-child:empty),
+.prose h4:has(> :only-child:empty),
+.prose h5:has(> :only-child:empty),
+.prose h6:has(> :only-child:empty),
+.prose p:has(> :only-child:empty) {
+  display: none;
+}
+
 .wp-smiley,
 .wp-smiley + strong {
   display: inline;

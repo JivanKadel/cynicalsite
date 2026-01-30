@@ -43,7 +43,7 @@ export default async function BlogPostPage({
     <article className="container mx-auto px-4 py-8 max-w-4xl">
       <Link
         href="/blogs"
-        className="text-blue-600 hover:underline mb-4 inline-block"
+        className="text-blue-600 dark:text-blue-400 hover:underline mb-4 inline-block"
       >
         ← Back to all posts
       </Link>
@@ -51,7 +51,7 @@ export default async function BlogPostPage({
       <header className="mb-8">
         <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
 
-        <div className="flex items-center gap-4 text-gray-600">
+        <div className="flex items-center gap-4 text-gray-600 dark:text-gray-300">
           <time>
             {new Date(post.pubDate).toLocaleDateString("en-US", {
               year: "numeric",
@@ -67,7 +67,7 @@ export default async function BlogPostPage({
             {post.categories.map((cat) => (
               <span
                 key={cat}
-                className="bg-gray-100 px-3 py-1 rounded-full text-sm"
+                className="bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm"
               >
                 {cat}
               </span>
@@ -77,7 +77,7 @@ export default async function BlogPostPage({
       </header>
 
       <div
-        className="prose prose-lg max-w-none"
+        className="prose prose-lg max-w-none dark:prose-invert"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
     </article>
