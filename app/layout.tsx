@@ -44,9 +44,9 @@ const aeonik = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
+  title: "Redefining Security: Human Wisdom Meets AI | Cynical Technology",
   description:
-    "Leading cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive data security.",
+    "Cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive data security.",
   alternates: {
     canonical: "https://cynicalsite.vercel.app/",
   },
@@ -74,10 +74,9 @@ export const metadata: Metadata = {
     }),
   },
   openGraph: {
-    title:
-      "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
+    title: "Redefining Security: Human Wisdom Meets AI | Cynical Technology",
     description:
-      "Leading cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive data security.",
+      "Cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive security.",
     url: "https://cynicalsite.vercel.app/",
     siteName: "Cynical Technology",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
@@ -85,10 +84,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
+    title: "Redefining Security: Human Wisdom Meets AI | Cynical Technology",
     description:
-      "Leading cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive data security.",
+      "Cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive security.",
     images: ["/og.png"],
   },
 };
