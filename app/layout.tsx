@@ -44,9 +44,9 @@ const aeonik = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Redefining Security: Human Wisdom Meets AI | Cynical Technology",
+  title: "Redefining Security: Human Wisdom + AI | Cynical Technology",
   description:
-    "Cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive data security.",
+    "Cynical Technology delivers pentesting, incident response, and threat intel with crowdsourced security and AI-powered breach analysis.",
   alternates: {
     canonical: "https://cynicalsite.vercel.app/",
   },
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     }),
   },
   openGraph: {
-    title: "Redefining Security: Human Wisdom Meets AI | Cynical Technology",
+    title: "Redefining Security: Human Wisdom + AI | Cynical Technology",
     description:
       "Cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive security.",
     url: "https://cynicalsite.vercel.app/",
@@ -84,9 +84,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Redefining Security: Human Wisdom Meets AI | Cynical Technology",
+    title: "Redefining Security: Human Wisdom + AI | Cynical Technology",
     description:
-      "Cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive security.",
+      "Cynical Technology delivers pentesting, incident response, and threat intel with crowdsourced security and AI-powered breach analysis.",
     images: ["/og.png"],
   },
 };
