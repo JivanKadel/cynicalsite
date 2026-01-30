@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function ThankYouPage() {
   return (
-    <div className="flex lg:min-h-screen items-center justify-center px-4 lg:-mt-16">
+    <div className="flex lg:min-h-screen items-center justify-center py-6 px-4 lg:-mt-16">
       <div className="w-full max-w-lg">
         <div className="flex flex-col items-center space-y-2 pb-4">
           <FileCheck className="h-12 w-12 text-green-500" />
@@ -37,7 +37,7 @@ export default function ThankYouPage() {
           <div className="flex justify-center">
             <Button asChild className="px-6 py-2 h-12 text-base">
               <a
-                href="/downloads/sample-vapt-report.pdf"
+                href="https://cynicaltechnology.com/files/McFoster-Sample-Pentest-Report.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
