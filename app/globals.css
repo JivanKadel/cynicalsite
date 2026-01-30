@@ -285,3 +285,30 @@ a {
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
 }
+
+/* Styles below are for sanitizing blog content */
+
+.wp-smiley,
+.wp-smiley + strong {
+  display: inline;
+}
+
+.wp-smiley {
+  margin-right: 0.4rem;
+}
+
+p:has(iframe) {
+  display: flex;
+  justify-content: center;
+}
+
+p iframe {
+  max-width: 1120px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.wp-block-image {
+  display: none;
+}

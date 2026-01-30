@@ -11,6 +11,29 @@ export interface BlogPost {
   author?: string;
 }
 
+// lib/sanitize.ts
+export function sanitizeHtmlContent(html: string): string {
+  if (!html) return "";
+
+  return (
+    html
+      // Remove empty heading tags with &nbsp;
+      .replace(/<h[1-6]>\s*&nbsp;\s*<\/h[1-6]>/gi, "")
+      // Remove empty heading tags with whitespace
+      .replace(/<h[1-6]>\s*<\/h[1-6]>/gi, "")
+      // Remove empty paragraph tags with &nbsp;
+      .replace(/<p>\s*&nbsp;\s*<\/p>/gi, "")
+      // Remove empty paragraph tags
+      .replace(/<p>\s*<\/p>/gi, "")
+      // Remove multiple consecutive <br> tags
+      .replace(/(<br\s*\/?>\s*){3,}/gi, "<br><br>")
+      // Remove empty divs
+      .replace(/<div>\s*<\/div>/gi, "")
+      // Clean up excessive whitespace
+      .replace(/\n\s*\n\s*\n/g, "\n\n")
+  );
+}
+
 const RSS_FEED_URL = "https://cynicaltechnology.com/feed/"; // Your RSS URL
 
 export async function fetchBlogPosts(): Promise<BlogPost[]> {
@@ -32,7 +55,9 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
       link: item.link?.[0] || "",
       pubDate: item.pubDate?.[0] || "",
       description: item.description?.[0] || "",
-      content: item["content:encoded"]?.[0] || item.description?.[0] || "",
+      content: sanitizeHtmlContent(
+        item["content:encoded"]?.[0] || item.description?.[0] || "",
+      ),
       categories: item.category || [],
       author: item["dc:creator"]?.[0] || item.author?.[0] || "Unknown",
     }));
