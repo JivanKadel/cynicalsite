@@ -101,27 +101,6 @@ export default function AboutUs() {
       message:
         "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
     },
-    // {
-    //   name: "Mr. Ravi Lamgade",
-    //   role: "Co-Founder & Office Admin",
-    //   image: "/people/mr_ravi.jpeg",
-    //   bio: "Co-founder with a passion for cybersecurity and business development. Drives company growth and strategic partnerships.",
-    //   social: {
-    //     linkedin: "https://www.linkedin.com/in/ravi-lamgade-3422ab190/",
-    //   },
-    //   isFeatured: true,
-    //   message:
-    //     "At Cynical, we believe administration is not just paperwork—it’s about enabling people, processes, and progress. My mission is to ensure you have the tools and trust to keep our operations secure, efficient, and future‑ready.",
-    // },
-    // {
-    //   name: "Mrs. Sabina Lawaju",
-    //   role: "Sales and Marketing Head",
-    //   image: "/people/mrs_sabina.jpeg",
-    //   bio: "HR executive with 5+ years building high-performance security teams. Champions our culture of excellence and continuous learning.",
-    //   social: {
-    //     linkedin: "https://www.linkedin.com/in/sabina-lawaju-mba-30777a1b1/",
-    //   },
-    // },
   ];
 
   const departments = [

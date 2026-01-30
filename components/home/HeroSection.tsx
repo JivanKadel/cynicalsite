@@ -11,16 +11,13 @@ export default function HeroSection() {
     <section className="container min-h-screen flex flex-col justify-center items-center mx-auto relative z-10 pt-4 md:pt-0 md:-mt-16">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8 py-8">
         <h1 className="text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
-          {/* See your organization the way attackers do */}
-          Penetration testing that finds real risk.
+          Attackers don&apos;t wait. Neither should you.
         </h1>
 
         <p className="my-6 text-base  text-foreground/80 sm:px-0 font-normal lg:my-5.5 md:text-lg lg:text-xl mx-auto text-balance text-center">
-          {/* We provide continuous offensive security by simulating real-world
-          attacks across your attack surface to uncover exploitable weaknesses
-          scanners, audits, and vendors miss */}
-          Web, API, Mobile, Cloud, and Red Team engagements with executive-ready
-          reporting, clear remediation, and retesting included.
+          Real-world penetration testing across your entire stack—Web, API,
+          Mobile, Cloud, and Red Team—backed by clear remediation and verified
+          retesting.
         </p>
       </div>
       <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 max-w-sm">
@@ -53,7 +50,6 @@ export default function HeroSection() {
 
       <div className="pt-6 max-w-7xl w-full mx-auto">
         <p className="text-center text-xs md:text-sm text-foreground mb-4 uppercase tracking-widest">
-          {/* Securing critical infrastructure for */}
           Trusted by teams in SaaS, fintech, and enterprise
         </p>
         <Marquee

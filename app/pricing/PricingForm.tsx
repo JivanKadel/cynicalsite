@@ -85,9 +85,7 @@ export default function PricingForm() {
         templateParams,
         publicKey,
       });
-      // console.log({
-      //   templateParams,
-      // });
+
       toast.success("Request Submitted! We will reach out soon.");
 
       setErrors({});

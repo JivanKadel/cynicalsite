@@ -21,7 +21,6 @@ import {
   BarChart3,
   CheckCircle,
 } from "lucide-react";
-import Head from "next/head";
 import Link from "next/link";
 
 export const metadata: Metadata = {

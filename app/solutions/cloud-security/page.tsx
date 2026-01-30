@@ -4,7 +4,6 @@ import { iconColors } from "@/lib/utils";
 import {
   Cloud,
   Shield,
-  Check,
   Zap,
   Database,
   Network,
@@ -21,7 +20,6 @@ import {
   CheckCircle,
   CheckCircleIcon,
 } from "lucide-react";
-import Head from "next/head";
 import Link from "next/link";
 
 export const metadata: Metadata = {
