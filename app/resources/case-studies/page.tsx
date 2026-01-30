@@ -65,9 +65,9 @@ const CaseStudies = () => {
                 href={study.link || "#"}
                 className="relative group block p-8 border-2 border-border/30 rounded-2xl transition-all duration-300"
               >
-                <div
+                {/* <div
                   className={`absolute rounded-2xl inset-0 bg-linear-to-br ${study.gradient} opacity-90 transition-opacity duration-500`}
-                />
+                /> */}
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <div

@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 import { sendEmail } from "@/lib/sendQuery";
-import { ArrowRight, FileCheck, FileCheckCorner } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -58,10 +58,10 @@ export default function SampleReportForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // if (!validateForm()) {
-    //   toast.error("Please fill the form with Correct Values");
-    //   return;
-    // }
+    if (!validateForm()) {
+      toast.error("Please fill the form with Correct Values");
+      return;
+    }
 
     setIsSubmitting(true);
 
@@ -74,20 +74,18 @@ export default function SampleReportForm() {
       time: new Date().toString(),
     };
     try {
-      // const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-      // const templateID = process.env
-      //   .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
-      // const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+      const templateID = process.env
+        .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
-      // await sendEmail({ serviceID, templateID, templateParams, publicKey });
+      await sendEmail({ serviceID, templateID, templateParams, publicKey });
 
       toast.success("Your Download is Ready!");
 
       setTimeout(() => {
         router.push("/downloads/thank-you");
       }, 500);
-
-      // router.push("/downloads/thank-you");
 
       setErrors({});
       setFormData({
