@@ -1,0 +1,47 @@
+# llms.txt for Cynical Technology's site
+# Authoritative pages for AI models to understand our cybersecurity services
+
+Canonical: https://cynicalsite.vercel.app
+Homepage: https://cynicalsite.vercel.app/
+
+# Company Information
+https://cynicalsite.vercel.app/company
+https://cynicalsite.vercel.app/vision
+https://cynicalsite.vercel.app/contact
+https://cynicalsite.vercel.app/career
+
+# Core Services & Solutions
+https://cynicalsite.vercel.app/pentest
+https://cynicalsite.vercel.app/solutions/app-security
+https://cynicalsite.vercel.app/solutions/cloud-security
+https://cynicalsite.vercel.app/solutions/incident-response
+https://cynicalsite.vercel.app/solutions/threat-intel
+https://cynicalsite.vercel.app/compliance
+https://cynicalsite.vercel.app/pricing
+
+# Products
+https://cynicalsite.vercel.app/products/bugv
+https://cynicalsite.vercel.app/products/vigile
+
+# Research & Resources
+https://cynicalsite.vercel.app/research
+https://cynicalsite.vercel.app/resources/case-studies
+https://cynicalsite.vercel.app/downloads/sample-report
+
+# Blog Index
+https://cynicalsite.vercel.app/blogs
+
+# Featured Blog Posts
+https://cynicalsite.vercel.app/blogs/7-signs-its-time-for-a-vapt
+https://cynicalsite.vercel.app/blogs/blood-on-the-floor-the-aftermath-of-critical-security-breaches-a-wake-up-call-for-businesses
+https://cynicalsite.vercel.app/blogs/empowering-digital-safety-a-successful-cybersecurity-awareness-month-2024
+https://cynicalsite.vercel.app/blogs/hr-security-how-fake-job-applications-are-putting-your-organization-at-risk
+https://cynicalsite.vercel.app/blogs/the-human-factor-how-untrained-employees-can-be-your-biggest-cybersecurity-risk
+https://cynicalsite.vercel.app/blogs/top-5-malware-threats-to-prepare-against-in-2025
+https://cynicalsite.vercel.app/blogs/top-cybersecurity-threats-related-to-human-risk-how-to-protect-your-organization
+https://cynicalsite.vercel.app/blogs/types-of-voip-hacking-and-how-to-prevent-them
+https://cynicalsite.vercel.app/blogs/uncovering-a-critical-authentication-vulnerability-in-qwen-ai
+https://cynicalsite.vercel.app/blogs/understanding-osi-layers-and-cybersecurity-attacks
+
+# Events
+https://cynicalsite.vercel.app/events

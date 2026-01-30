@@ -6,6 +6,9 @@ import BlogList from "./BlogList";
 export const metadata: Metadata = {
   title: "Blog | Cynical Blogs",
   description: "Read the latest articles and updates on Cynical Blogs.",
+  alternates: {
+    canonical: "https://cynicalsite.vercel.app/blogs",
+  },
 };
 
 export const revalidate = 3600; // Revalidate every hour

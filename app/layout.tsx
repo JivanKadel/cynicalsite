@@ -46,12 +46,38 @@ const aeonik = localFont({
 export const metadata: Metadata = {
   title: "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
   description:
-    "Leading cybersecurity firm specializing in penetration testing, incident response, and threat intelligence. Leverage years of combined expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive employee data security.",
+    "Leading cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive data security.",
+  alternates: {
+    canonical: "https://cynicalsite.vercel.app/",
+  },
+  other: {
+    "script:ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Cynical Technology",
+      url: "https://cynicalsite.vercel.app",
+      logo: "https://cynicalsite.vercel.app/logo.svg",
+      sameAs: [
+        "https://www.linkedin.com/company/cynicaltechnology",
+        "https://twitter.com/cynicaltech",
+      ],
+      contactPoint: [
+        {
+          "@type": "ContactPoint",
+          telephone: "+977-01-4530730",
+          email: "info@cynicaltechnology.com",
+          contactType: "customer service",
+          areaServed: "NP",
+          availableLanguage: ["en", "ne"],
+        },
+      ],
+    }),
+  },
   openGraph: {
     title:
       "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
     description:
-      "Leading cybersecurity firm specializing in penetration testing, incident response, and threat intelligence. Leverage years of combined expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive employee data security.",
+      "Leading cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive data security.",
     url: "https://cynicalsite.vercel.app/",
     siteName: "Cynical Technology",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
@@ -62,7 +88,7 @@ export const metadata: Metadata = {
     title:
       "Redefining Cybersecurity: Human Wisdom Meets AI | Cynical Technology",
     description:
-      "Leading cybersecurity firm specializing in penetration testing, incident response, and threat intelligence. Leverage years of combined expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive employee data security.",
+      "Leading cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with our crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive data security.",
     images: ["/og.png"],
   },
 };
