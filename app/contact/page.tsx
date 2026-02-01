@@ -75,7 +75,7 @@ const Contact = () => {
                   <Calendar className="w-5 h-5 text-primary" />
                   Contact Information
                 </h3>
-                <div className="space-y-4">
+                <address className="space-y-4">
                   {contactInfo.map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <item.icon className="w-5 h-5 text-primary mt-0.5" />
@@ -96,7 +96,7 @@ const Contact = () => {
                       </div>
                     </div>
                   ))}
-                </div>
+                </address>
               </div>
 
               {/* Office Hours */}

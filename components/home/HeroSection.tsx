@@ -14,11 +14,11 @@ export default function HeroSection() {
           Attackers don&apos;t wait. Neither should you.
         </h1>
 
-        <p className="my-6 text-base  text-foreground/80 sm:px-0 font-normal lg:my-5.5 md:text-lg lg:text-xl mx-auto text-balance text-center">
-          Real-world penetration testing across your entire stack—Web, API,
-          Mobile, Cloud, and Red Team—backed by clear remediation and verified
-          retesting.
-        </p>
+        <h2 className="my-6 text-base  text-foreground/80 sm:px-0 font-normal lg:my-5.5 md:text-lg lg:text-xl mx-auto text-balance text-center">
+          Real-world penetration <span className="sr-only">pentesting</span>{" "}
+          testing across your entire stack—Web, API, Mobile, Cloud, and Red
+          Team—backed by clear remediation and verified retesting.
+        </h2>
       </div>
       <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 max-w-sm">
         <Link href={"/contact"}>

@@ -57,7 +57,7 @@ const Products = () => {
             Offense-first platforms.
             <span className="block">Defense-grade results.</span>
           </h2>
-          <p className="text-lg sm:text-xl font-extralight text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Built by the same people who would be breaking in. Our platforms
             operationalize attacker tradecraft into continuous, scalable
             security testing.

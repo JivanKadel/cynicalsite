@@ -17,7 +17,7 @@ export default function CaseStudies() {
             Real engagements.
             <span className="block">Real findings.</span>
           </h2>
-          <p className="text-lg sm:text-xl font-extralight text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Every case study represents a client who thought they were secure
             until we tested like real attackers.
           </p>

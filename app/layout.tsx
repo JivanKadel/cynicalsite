@@ -43,10 +43,33 @@ const aeonik = localFont({
   fallback: ["system-ui", "arial"],
 });
 
+const orgSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Cynical Technology",
+  url: "https://cynicalsite.vercel.app",
+  logo: "https://cynicalsite.vercel.app/logo.svg",
+  sameAs: [
+    "https://www.linkedin.com/company/cynicaltechnology",
+    "https://twitter.com/cynicaltech",
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+977-01-4530730",
+      email: "info@cynicaltechnology.com",
+      contactType: "customer service",
+      areaServed: "NP",
+      availableLanguage: ["en", "ne"],
+    },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "Redefining Security: Human Wisdom + AI | Cynical Technology",
+  title: "Cybersecurity, Pentesting & AI Breach Analysis | Cynical Technology",
   description:
-    "Cynical Technology delivers pentesting, incident response, and threat intel with crowdsourced security and AI-powered breach analysis.",
+    "Cynical Technology offers cybersecurity, pentesting, incident response, and AI-powered breach analysis with Bugv and Vigile.ai.",
+  metadataBase: new URL("https://cynicalsite.vercel.app"),
   alternates: {
     canonical: "https://cynicalsite.vercel.app/",
   },
@@ -74,9 +97,10 @@ export const metadata: Metadata = {
     }),
   },
   openGraph: {
-    title: "Redefining Security: Human Wisdom + AI | Cynical Technology",
+    title:
+      "Cybersecurity, Pentesting & AI Breach Analysis | Cynical Technology",
     description:
-      "Cybersecurity firm specializing in pentesting, incident response, and threat intel. Combine human expertise with crowdsourced offensive security platform and AI-powered data breach analysis solutions for comprehensive security.",
+      "Cynical Technology offers cybersecurity, pentesting, incident response, and AI-powered breach analysis with Bugv and Vigile.ai.",
     url: "https://cynicalsite.vercel.app/",
     siteName: "Cynical Technology",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
@@ -84,9 +108,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Redefining Security: Human Wisdom + AI | Cynical Technology",
+    title:
+      "Cybersecurity, Pentesting & AI Breach Analysis | Cynical Technology",
     description:
-      "Cynical Technology delivers pentesting, incident response, and threat intel with crowdsourced security and AI-powered breach analysis.",
+      "Cynical Technology offers cybersecurity, pentesting, incident response, and AI-powered breach analysis with Bugv and Vigile.ai.",
     images: ["/og.png"],
   },
 };
@@ -101,6 +126,12 @@ export default function RootLayout({
       lang="en"
       className={`${noto.variable} ${inter.variable} ${aeonik.className} antialiased suppressHydrationWarning`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+      </head>
       <body>
         <ThemeProvider
           attribute="class"

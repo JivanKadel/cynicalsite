@@ -293,8 +293,7 @@ a {
 .prose h3:empty,
 .prose h4:empty,
 .prose h5:empty,
-.prose h6:empty,
-.prose p:empty {
+.prose h6:empty {
   display: none;
 }
 
@@ -304,8 +303,7 @@ a {
 .prose h3:has(> :only-child:empty),
 .prose h4:has(> :only-child:empty),
 .prose h5:has(> :only-child:empty),
-.prose h6:has(> :only-child:empty),
-.prose p:has(> :only-child:empty) {
+.prose h6:has(> :only-child:empty) {
   display: none;
 }
 

@@ -18,7 +18,7 @@ export default function Solutions() {
             We break in.
             <span className="block">You fix the gaps.</span>
           </h2>
-          <p className="text-lg sm:text-xl font-extralight text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Every engagement is scoped to your threat model. We don&apos;t run
             generic scans—we simulate the specific adversaries targeting your
             industry.
