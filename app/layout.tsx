@@ -72,6 +72,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://cynicalsite.vercel.app"),
   alternates: {
     canonical: "https://cynicalsite.vercel.app/",
+    languages: {
+      en: "https://cynicalsite.vercel.app",
+    },
   },
   other: {
     "script:ld+json": JSON.stringify({
