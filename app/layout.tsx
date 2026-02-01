@@ -66,9 +66,9 @@ const orgSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Cybersecurity, Pentesting & AI Breach Analysis | Cynical Technology",
+  title: "Cybersecurity, PenTest & AI Breach Analysis | Cynical Tech",
   description:
-    "Cynical Technology offers cybersecurity, pentesting, incident response, and AI-powered breach analysis with Bugv and Vigile.ai.",
+    "Cynical Technology offers cybersecurity, penetration testing, incident response, and AI-powered breach analysis with security experts, and platforms: Bugv and Vigile.ai.",
   metadataBase: new URL("https://cynicalsite.vercel.app"),
   alternates: {
     canonical: "https://cynicalsite.vercel.app/",
@@ -97,10 +97,9 @@ export const metadata: Metadata = {
     }),
   },
   openGraph: {
-    title:
-      "Cybersecurity, Pentesting & AI Breach Analysis | Cynical Technology",
+    title: "Cybersecurity, PenTest & AI Breach Analysis | Cynical Tech",
     description:
-      "Cynical Technology offers cybersecurity, pentesting, incident response, and AI-powered breach analysis with Bugv and Vigile.ai.",
+      "Cynical Technology offers cybersecurity, penetration testing, incident response, and AI-powered breach analysis with security experts, and platforms: Bugv and Vigile.ai.",
     url: "https://cynicalsite.vercel.app/",
     siteName: "Cynical Technology",
     images: [{ url: "/og.png", width: 1200, height: 630 }],
@@ -108,10 +107,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Cybersecurity, Pentesting & AI Breach Analysis | Cynical Technology",
+    title: "Cybersecurity, PenTest & AI Breach Analysis | Cynical Tech",
     description:
-      "Cynical Technology offers cybersecurity, pentesting, incident response, and AI-powered breach analysis with Bugv and Vigile.ai.",
+      "Cynical Technology offers cybersecurity, penetration testing, incident response, and AI-powered breach analysis with security experts, and platforms: Bugv and Vigile.ai.",
     images: ["/og.png"],
   },
 };
