@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { sendEmail } from "@/lib/sendQuery";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -24,6 +25,8 @@ export default function PricingForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
+
+  const router = useRouter();
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -54,7 +57,7 @@ export default function PricingForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent) => {
     e.preventDefault();
 
     if (!validateForm()) {
@@ -87,6 +90,10 @@ export default function PricingForm() {
       });
 
       toast.success("Request Submitted! We will reach out soon.");
+
+      setTimeout(() => {
+        router.push("/pricing/thank-you");
+      }, 500);
 
       setErrors({});
       setFormData({

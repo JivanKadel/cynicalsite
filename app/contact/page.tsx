@@ -75,12 +75,12 @@ const Contact = () => {
                   <Calendar className="w-5 h-5 text-primary" />
                   Contact Information
                 </h3>
-                <address className="space-y-4">
+                <address className="space-y-4 font-normal not-italic">
                   {contactInfo.map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
                       <item.icon className="w-5 h-5 text-primary mt-0.5" />
                       <div className="flex-1">
-                        <p className="font-medium text-sm">{item.title}</p>
+                        <p className="font-bold text-sm">{item.title}</p>
                         {item.href ? (
                           <a
                             href={item.href}

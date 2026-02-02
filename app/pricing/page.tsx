@@ -36,7 +36,7 @@ export default function PricingPage() {
             compromise.
           </p>
 
-          <div className="mt-8 space-y-3 text-foreground/80">
+          <div className="mt-8 space-y-4 md:space-y-6 text-foreground/80">
             <h2 className="text-xl font-semibold text-foreground/90">
               Why Choose Cynical?
             </h2>

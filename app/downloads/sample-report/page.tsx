@@ -19,10 +19,6 @@ const SampleReportPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="space-y-3 flex flex-col items-center text-center mb-12">
             <h1 className="text-2xl lg:text-5xl">VAPT Sample Report</h1>
-            {/* <p className="text-lg text-slate-500 leading-relaxed">
-              See how we identify, prioritize, and remediate real security
-              risks. Get a transparent look at our methodology.
-            </p> */}
             <p className="text-xs text-slate-400 font-medium uppercase tracking-widest pt-2">
               Prepared by Cynical Technology
             </p>
