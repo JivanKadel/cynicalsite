@@ -91,11 +91,11 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
         Showing {filteredPosts.length} of {initialPosts.length} posts
       </p>
 
-      <div className="flex flex-col gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredPosts.map((post) => (
           <article
             key={post.id}
-            className="border rounded-lg p-6 hover:shadow-lg transition"
+            className="flex flex-col border rounded-lg p-6 hover:shadow-lg transition"
           >
             <Link href={`/blogs/${post.id}`}>
               <h2 className="text-xl font-semibold mb-2 hover:text-blue-600 dark:hover:text-blue-400">
@@ -111,7 +111,7 @@ export default function BlogList({ initialPosts, categories }: BlogListProps) {
               })}
             </time>
 
-            <p className="mt-3 text-gray-700 dark:text-gray-400 line-clamp-3">
+            <p className="flex-1 mt-3 text-gray-700 dark:text-gray-400 line-clamp-3">
               {decode(post.description).replace(/<[^>]*>/g, "")}
             </p>
 
