@@ -1,17 +1,15 @@
-import { Linkedin, Mail, MapPin, Phone, Facebook } from "lucide-react";
+import { Linkedin, Mail, MapPin, Phone, Facebook, Twitter } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 
 const Footer = () => {
   const footerLinks = {
     Products: [
       { label: "Bugv Platform", href: "/products/bugv" },
       { label: "Vigile.AI", href: "/products/vigile" },
-      {
-        label: "Falcon",
-        href: "https://webmonitoring.doit.gov.np/dashboard",
-      },
-      { label: "Pricing", href: "/pricing" },
+      // {
+      //   label: "Falcon",
+      //   href: "https://webmonitoring.doit.gov.np/dashboard",
+      // },
     ],
     Solutions: [
       { label: "Application Security", href: "/solutions/app-security" },
@@ -25,6 +23,7 @@ const Footer = () => {
       { label: "Blog", href: "/blogs" },
       { label: "Events", href: "/events" },
       { label: "Case Studies", href: "/resources/case-studies" },
+      { label: "Pricing", href: "/pricing" },
     ],
     Company: [
       { label: "Company", href: "/company" },
@@ -41,15 +40,22 @@ const Footer = () => {
       icon: Facebook,
       href: "https://www.facebook.com/cynicaltechnology",
       label: "Facebook",
-      hoverColor: "hover:text-foreground-600",
-      hoverBg: "hover:bg-blue-600/10",
+      hoverColor: "hover:text-blue-400",
+      hoverBg: "hover:bg-blue-400/30",
     },
     {
       icon: Linkedin,
       href: "https://www.linkedin.com/company/cynicaltechnology/",
       label: "LinkedIn",
-      hoverColor: "hover:text-foreground-700",
-      hoverBg: "hover:bg-blue-700/10",
+      hoverColor: "hover:text-blue-500",
+      hoverBg: "hover:bg-blue-700/30",
+    },
+    {
+      icon: Twitter,
+      href: "https://x.com/cynical_sec",
+      label: "X",
+      hoverColor: "hover:text-cyan-400",
+      hoverBg: "hover:bg-cyan-400/30",
     },
   ];
 
@@ -287,6 +293,7 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
                   className={`w-10 h-10 rounded-lg bg-secondary flex items-center justify-center ${social.hoverBg} transition-colors`}
                   aria-label={social.label}
                 >

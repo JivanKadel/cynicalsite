@@ -7,7 +7,7 @@ export const trustedBy = [
   {
     name: "Ncell",
     image: "/brands/ncell.svg",
-    link: "https://ncell.com",
+    link: "https://www.ncell.com.np/en",
   },
   {
     name: "Mero Job",
@@ -45,7 +45,7 @@ export const trustedByClipped = [
   {
     name: "Ncell",
     image: "/brands/ncell.svg",
-    link: "https://ncell.com",
+    link: "https://www.ncell.com.np/en",
   },
   {
     name: "Mero Job",

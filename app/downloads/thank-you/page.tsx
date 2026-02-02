@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { FileCheck } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
+import { trustedByClipped } from "@/data/trustedby.data";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Thank You | Cynical Technology",
@@ -12,9 +14,8 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
   return (
     <div className="flex lg:min-h-screen items-center justify-center py-6 px-4 lg:-mt-16">
-      <div className="w-full max-w-lg">
-        <div className="flex flex-col items-center space-y-2 pb-4">
-          <FileCheck className="h-12 w-12 md:h-20 md:w-20 text-green-500" />
+      <div className="w-full">
+        <div className="flex flex-col items-center space-y-2 pb-4 max-w-lg mx-auto mt-16">
           <h1 className="text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
             Thank You
           </h1>
@@ -23,7 +24,7 @@ export default function ThankYouPage() {
           </p>
         </div>
 
-        <div className="space-y-6 pt-6">
+        <div className="space-y-6 pt-2 max-w-lg mx-auto">
           <p className="text-gray-700 dark:text-gray-300 text-center">
             We appreciate your trust in{" "}
             <a
@@ -47,14 +48,10 @@ export default function ThankYouPage() {
               </a>
             </Button>
           </div>
-
-          <div className="pt-4 text-xs text-gray-500 dark:text-gray-400 text-center">
-            <p>Confidential – For authorized recipients only</p>
-          </div>
         </div>
 
-        <div className="mt-8 border-t text-center pt-6">
-          <h2>Check out our other resources</h2>
+        <div className="mt-8 border-t border-b text-center py-6  max-w-lg mx-auto">
+          <h2>Explore more resources</h2>
           <div className="py-4 flex justify-center gap-4">
             <Link href="/blogs">
               <Button variant={"outline"}>Check Our Blogs</Button>
@@ -62,6 +59,42 @@ export default function ThankYouPage() {
             <Link href="/resources/case-studies">
               <Button variant={"outline"}>Read Case Studies</Button>
             </Link>
+            <Link href="/research">
+              <Button variant={"outline"}>Explore Research Papers</Button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-8 mx-auto flex flex-col justify-center">
+          <h2 className="text-lg text-center font-semibold tracking-wider text-muted-foreground">
+            TRUSTED BY INDUSTRY LEADERS
+          </h2>
+          <div className="flex justify-center flex-wrap gap-4 mt-4">
+            {trustedByClipped.map((brand) => {
+              return (
+                <Link
+                  key={brand.name}
+                  href={brand.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center justify-center p-2"
+                >
+                  <Image
+                    src={brand.image}
+                    alt={brand.name}
+                    width={120}
+                    height={80}
+                    className={`object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
+                      brand.name.toLowerCase() === "worldlink" ||
+                      brand.name.toLowerCase() == "worldbank" ||
+                      brand.name.toLowerCase() === "webpoint"
+                        ? ""
+                        : "dark:hover:invert-0 dark:hover:brightness-100"
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

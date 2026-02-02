@@ -97,7 +97,39 @@ export default function AboutUs() {
       social: {
         linkedin: "https://www.linkedin.com/in/nareshlamgade/",
       },
-      isFeatured: true,
+      message:
+        "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+    },
+    {
+      name: "A",
+      role: "AI ML Officer",
+      image: "/people/placeholder_person.jpg",
+      bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/nareshlamgade/",
+      },
+      message:
+        "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+    },
+    {
+      name: "B",
+      role: "AI ML Officer",
+      image: "/people/placeholder_person.jpg",
+      bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/nareshlamgade/",
+      },
+      message:
+        "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+    },
+    {
+      name: "C",
+      role: "AI ML Officer",
+      image: "/people/placeholder_person.jpg",
+      bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
+      social: {
+        linkedin: "https://www.linkedin.com/in/nareshlamgade/",
+      },
       message:
         "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
     },
@@ -205,7 +237,21 @@ export default function AboutUs() {
                 alt="Cynical Logo on a dark background"
                 className="hidden dark:block"
               />
-              <div className="absolute inset-0 dark:bg-linear-to-br from-background/80 via-background/50 to-background/20"></div>
+              <Image
+                src={"/about/cynical_hero_light.png"}
+                width={800}
+                height={600}
+                alt="Cynical Logo on a dark background"
+                className="block dark:hidden mask-[radial-gradient(circle,rgba(0,0,0,0.8)_50%,rgba(0,0,0,0)_100%)] [-webkit-mask-image:radial-gradient(circle,rgba(0,0,0,0.8)_50%,rgba(0,0,0,0)_100%)]"
+              />
+              <div className="absolute inset-0 hidden dark:block bg-linear-to-br from-background/80 via-background/50 to-background/20"></div>
+
+              {/* <div className="absolute inset-0 block dark:hidden bg-gradient-to-br from-[#e4e5df]/30 via-[#e4e5df]/30 to-[#e4e5df]/90"></div> */}
+
+              {/* Overlay for light mode */}
+              {/* <div className="absolute inset-0 block dark:hidden bg-linear-to-br from-background/70 via-background/70 to-background/40"></div> */}
+
+              {/* <div className="absolute inset-0 dark:bg-linear-to-br from-background/80 via-background/50 to-background/20"></div> */}
             </div>
           </div>
         </div>
@@ -356,42 +402,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
-              Awards & Recognition
-            </h2>
-            <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              Industry recognition for our excellence in cybersecurity services
-              and innovation.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-6">
-            {awards.map((award, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl w-64 lg:w-72 border border-border bg-card hover:border-foreground/20 transition-colors text-center"
-              >
-                <div className="w-12 h-12 rounded-full bg-yellow-400/20 flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-6 h-6 text-yellow-400" />
-                </div>
-                <h3 className="font-semibold mb-2">{award.title}</h3>
-                <p className="text-sm text-muted-foreground mb-2">
-                  {award.organization}
-                </p>
-                <p className="text-xs text-muted-foreground/60">
-                  {award.year} • {award.category}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 lg:py-32 mx-auto bg-secondary/20" id="our-team">
+      <section className="py-12 lg:py-20 mx-auto bg-secondary/20" id="our-team">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-6">
@@ -403,14 +414,12 @@ export default function AboutUs() {
             </p>
           </div>
 
-          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 place-content-between gap-4 gap-y-6 mb-16 mx-auto"> */}
-          <div className="flex justify-center gap-4 gap-y-6 mb-16 mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 max-w-7xl place-content-center gap-6 gap-y-6 mb-16 mx-auto">
+            {/* <div className="flex justify-center gap-4 gap-y-6 mb-16 mx-auto"> */}
             {teamMembers.map((member, index) => (
               <div key={index}>
                 <div
                   style={{
-                    width: 375,
-                    height: 400,
                     objectFit: "cover",
                     overflow: "hidden",
                     borderRadius: "0.75rem",
@@ -424,7 +433,7 @@ export default function AboutUs() {
                     alt={member.name}
                     className="rounded-xl transition-transform duration-500 hover:scale-105"
                     style={{
-                      width: 375,
+                      width: 320,
                       height: 400,
                       objectFit: "cover",
                     }}

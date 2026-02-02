@@ -86,11 +86,10 @@ export default function VisionPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="relative py-16">
-        <div className="absolute inset-0 bg-linear-to-r from-primary/5 via-transparent to-primary/5 rounded-3xl"></div>
+      <section className="relative py-8">
         <div className="relative max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission</h2>
-          <div className="bg-card/70 backdrop-blur-sm border border-border rounded-2xl p-8 md:p-12 shadow-lg">
+          <div className="bg-card/70 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg">
             <p className="text-xl md:text-2xl leading-relaxed font-medium">
               To accelerate global business growth and innovation by
               <span className="text-primary font-semibold"> simplifying </span>
@@ -103,7 +102,7 @@ export default function VisionPage() {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-12">
+      <section className="py-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
             Our Strategic Approach
@@ -120,43 +119,29 @@ export default function VisionPage() {
               title: "Integrated Cyber Assurance",
               description:
                 "Unified platform combining AI-driven analytics, automated monitoring, and expert oversight for comprehensive protection.",
-              highlight: true,
             },
             {
               title: "Frictionless Compliance",
               description:
                 "Automated compliance workflows that reduce review cycles by 70% while maintaining rigorous standards.",
-              highlight: false,
             },
             {
               title: "Trusted Partnership Enablement",
               description:
                 "Enterprise-grade frameworks that facilitate secure collaboration between organizations at scale.",
-              highlight: false,
             },
             {
               title: "Scalable Security Architecture",
               description:
                 "Modular solutions engineered for both agile startups and global enterprises with evolving needs.",
-              highlight: false,
             },
           ].map((solution, i) => (
             <div
               key={i}
-              className={`flex flex-col md:flex-row items-start md:items-center gap-6 p-6 rounded-2xl border transition-all duration-300 ${
-                solution.highlight
-                  ? "bg-primary/5 border-primary/30 shadow-md"
-                  : "bg-card/30 border-border hover:bg-card/50"
-              }`}
+              className="flex flex-col md:flex-row items-start md:items-center gap-6 p-6 rounded-2xl border transition-all duration-300 bg-card/30 border-border hover:bg-card/50"
             >
               <div className="shrink-0">
-                <div
-                  className={`w-14 h-14 rounded-xl flex items-center justify-center ${
-                    solution.highlight
-                      ? "bg-primary text-primary-foreground"
-                      : "bg-muted text-foreground"
-                  }`}
-                >
+                <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-muted text-foreground">
                   <svg
                     className="w-6 h-6"
                     fill="none"
@@ -184,11 +169,7 @@ export default function VisionPage() {
       {/* Vision Statement */}
       <section className="py-16">
         <div className="relative">
-          <div className="absolute -inset-1 bg-linear-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-3xl blur-xl opacity-50"></div>
-          <div className="relative bg-linear-to-br from-background to-card border border-primary/20 rounded-3xl p-10 md:p-16 shadow-2xl overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-16 translate-x-16"></div>
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary/5 rounded-full translate-y-20 -translate-x-20"></div>
-
+          <div className="rounded-xl p-10 md:p-16 shadow-2xl overflow-hidden">
             <div className="relative text-center space-y-8">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-4">

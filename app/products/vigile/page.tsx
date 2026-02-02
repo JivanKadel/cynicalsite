@@ -17,6 +17,7 @@ import {
   LogIn,
   ShieldAlert,
   ShieldPlus,
+  SquareArrowOutUpRight,
 } from "lucide-react";
 import PageCTA from "@/components/products/PageCTA";
 import Image from "next/image";
@@ -24,6 +25,8 @@ import { Badge } from "@/components/ui/badge";
 import { iconColors } from "@/lib/utils";
 import HeroImage from "./HeroImage";
 import { Metadata } from "next";
+import { Button } from "@/components/ui/button";
+import { Integration } from "./Integration";
 
 export const metadata: Metadata = {
   title: "Vigile.ai | Employee Data leak Assessment Powered by AI",
@@ -106,10 +109,10 @@ export default function Vigile() {
   ];
 
   const breachMetrics = [
-    { label: "Emails Exposed", value: "2.4M+", trend: "+12% this month" },
-    { label: "Passwords Leaked", value: "1.8M+", trend: "+8% this month" },
-    { label: "Malware Logs", value: "890K+", trend: "+15% this month" },
-    { label: "Domains Monitored", value: "45K+", trend: "+5% this month" },
+    { label: "Breached Data", value: "572", trend: "+12% this month" },
+    { label: "Breached Employees", value: "72", trend: "+8% this month" },
+    { label: "Malware Breaches", value: "60", trend: "+15% this month" },
+    { label: "Breached Subdomain", value: "25", trend: "+5% this month" },
   ];
 
   const useCases = [
@@ -156,8 +159,8 @@ export default function Vigile() {
       <section className="pt-6 pb-12 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div>
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-20">
-              <div className="col-span-2 flex flex-col gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-20 mx-auto">
+              <div className="col-span-2 w-full flex flex-col gap-4">
                 <div className="flex items-center gap-4 mb-6">
                   <div>
                     <a
@@ -179,6 +182,25 @@ export default function Vigile() {
                   detects credential theft, prevents account takeovers, and
                   blocks unauthorized access across your organization.
                 </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-2">
+                  <a
+                    href="https://vigile.ai/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="h-12 px-4 w-full">Visit Site</Button>
+                  </a>
+                  <a
+                    href="https://vigile.ai/check-my-exposure"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="h-12 px-4 w-full">
+                      Check My Exposure for Free
+                    </Button>
+                  </a>
+                </div>
               </div>
               <HeroImage />
             </div>
@@ -207,60 +229,66 @@ export default function Vigile() {
       <section className="py-16 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div className="grid lg:grid-cols-1 gap-8 items-center">
-            <div>
-              <Badge
-                variant={"outline"}
-                className="inline-flex items-center gap-2 px-4 py-2 mb-6"
-              >
-                <Mail className="w-4 h-4 text-foreground" />
-                <span className="text-sm font-medium">Core Integration</span>
-              </Badge>
+            <div className="lg:flex gap-8">
+              <div className="flex-1">
+                <Badge
+                  variant={"outline"}
+                  className="inline-flex items-center gap-2 px-4 py-2 mb-6"
+                >
+                  <Mail className="w-4 h-4 text-foreground" />
+                  <span className="text-sm font-medium">Core Integration</span>
+                </Badge>
 
-              <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                Office 365 Integration
-              </h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">
+                  Office 365 Integration
+                </h2>
 
-              <p className="text-lg text-muted-foreground font-body mb-8 leading-relaxed">
-                Our platform integrates seamlessly with your organization’s
-                Microsoft 365 environment to securely access employee directory
-                information, authentication activity, and risk indicators.
-                Leveraging our advanced AI engine, we correlate this data
-                against a proprietary database of over 15 billion breach records
-                to provide real-time visibility into potential exposures.
-              </p>
+                <p className="text-lg text-muted-foreground font-body mb-8 leading-relaxed">
+                  Our platform integrates seamlessly with your organization’s
+                  Microsoft 365 environment to securely access employee
+                  directory information, authentication activity, and risk
+                  indicators. Leveraging our advanced AI engine, we correlate
+                  this data against a proprietary database of over 15 billion
+                  breach records to provide real-time visibility into potential
+                  exposures.
+                </p>
 
-              <div className="space-y-4 mb-8">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                  <div>
-                    <span className="font-medium">One-click deployment</span>
-                    <p className="text-sm text-muted-foreground">
-                      Connect your Office365 tenant in minutes with our guided
-                      setup
-                    </p>
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
+                    <div>
+                      <span className="font-medium">One-click deployment</span>
+                      <p className="text-sm text-muted-foreground">
+                        Connect your Office365 tenant in minutes with our guided
+                        setup
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
+                    <div>
+                      <span className="font-medium">Real-time sync</span>
+                      <p className="text-sm text-muted-foreground">
+                        Employee changes reflected instantly across your
+                        security dashboard
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
+                    <div>
+                      <span className="font-medium">
+                        Privacy-first architecture
+                      </span>
+                      <p className="text-sm text-muted-foreground">
+                        Only fetch the metadata needed for breach correlation
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                  <div>
-                    <span className="font-medium">Real-time sync</span>
-                    <p className="text-sm text-muted-foreground">
-                      Employee changes reflected instantly across your security
-                      dashboard
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                  <div>
-                    <span className="font-medium">
-                      Privacy-first architecture
-                    </span>
-                    <p className="text-sm text-muted-foreground">
-                      Only fetch the metadata needed for breach correlation
-                    </p>
-                  </div>
-                </div>
+              </div>
+              <div className=" flex-1 lg:flex flex-col items-center justify-center">
+                <Integration />
               </div>
             </div>
 
@@ -334,7 +362,7 @@ export default function Vigile() {
       </section>
 
       {/* PDF Reports Section */}
-      <section className="py-24">
+      <section className="pt-16">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
@@ -358,16 +386,14 @@ export default function Vigile() {
                         key={metric.label}
                         className="p-4 rounded-xl bg-background border border-border/50  "
                       >
-                        <h2 className="text-2xl font-bold text-foreground">
+                        <h2 className="text-2xl font-bold text-orange-500">
                           {metric.value}
                         </h2>
-                        <p className="text-xs text-muted-foreground">
-                          {metric.label}
-                        </p>
-                        <div className="flex items-center gap-1 mt-2 text-xs text-foreground/70">
+                        <p className="text-xs text-red-500">{metric.label}</p>
+                        {/* <div className="flex items-center gap-1 mt-2 text-xs text-foreground/70">
                           <TrendingUp className="w-3 h-3 text-green-500" />
                           {metric.trend}
-                        </div>
+                        </div> */}
                       </div>
                     ))}
                   </div>
@@ -408,6 +434,54 @@ export default function Vigile() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-2xl mx-auto py-16 flex flex-col gap-8">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground text-center">
+          View Sample Reports
+        </h2>
+
+        <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+            {[
+              {
+                title: "Breach Report",
+                link: "https://vigile.ai/assets/file/Breach_Security_Report.pdf",
+              },
+              {
+                title: "Employee Report",
+                link: "https://vigile.ai/assets/file/Employee_Security_Report.pdf",
+              },
+              {
+                title: "Malware Report",
+                link: "https://vigile.ai/assets/file/Malware_Breach_Report.pdf",
+              },
+              {
+                title: "Breached Subdomains",
+                link: "https://vigile.ai/assets/file/Breached_Subdomain_Security_Report.pdf",
+              },
+              {
+                title: "AI Summary Report",
+                link: "https://vigile.ai/assets/file/AI_Summary_Report.pdf",
+              },
+              {
+                title: "Typesquat Domains",
+                link: "https://vigile.ai/assets/file/Typesquat_Domain_Report.pdf",
+              },
+            ].map((report) => (
+              <a
+                key={report.title}
+                href={report.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full h-12 text-base">
+                  {report.title} <SquareArrowOutUpRight />
+                </Button>
+              </a>
+            ))}
           </div>
         </div>
       </section>
