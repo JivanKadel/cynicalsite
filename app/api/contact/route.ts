@@ -2,8 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
   const body = await req.json();
-  //   const captchaToken = body.captchaToken;
-  const captchaToken = "faake-token";
+  const captchaToken = body.captchaToken;
 
   if (!captchaToken) {
     return NextResponse.json(

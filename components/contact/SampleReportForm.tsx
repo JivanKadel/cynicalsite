@@ -107,7 +107,7 @@ export default function SampleReportForm() {
           <Label className="block text-sm font-medium mb-2">Full Name*</Label>
           <Input
             type="text"
-            placeholder="Naresh Lamgade"
+            placeholder="John Doe"
             value={formData.fullName}
             name="fullName"
             onChange={(e) => {

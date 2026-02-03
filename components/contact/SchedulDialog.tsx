@@ -11,15 +11,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
+import { useState } from "react";
+import { sendEmail } from "@/lib/sendQuery";
+import { ArrowRight } from "lucide-react";
+
+interface FormErrors {
+  fullName?: string;
+  emailOrPhone?: string;
+  companyName?: string;
+}
 
 export function ScheduleCallDialog({
   open,
@@ -28,11 +30,125 @@ export function ScheduleCallDialog({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
-  const onSubmit = (e: React.FormEvent) => {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    emailOfPhone: "",
+    companyName: "",
+    message: "",
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    // Full name
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = "Full name is required";
+    } else if (formData.fullName.trim().length < 2) {
+      newErrors.fullName = "A valid name is required";
+    }
+
+    // Company Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[+]?[\d\s\-()]{7,20}$/;
+
+    if (!formData.emailOfPhone.trim()) {
+      newErrors.emailOrPhone = "Email or Phone is Required";
+    } else if (
+      !emailRegex.test(formData.emailOfPhone.trim()) &&
+      !phoneRegex.test(formData.emailOfPhone.trim())
+    ) {
+      newErrors.emailOrPhone = "Please enter a valid email or phone";
+    }
+
+    // Company Name
+    if (!formData.companyName.trim()) {
+      newErrors.companyName = "Company name is required";
+    } else if (formData.companyName.trim().length < 2) {
+      newErrors.companyName = "Please enter a valid Company Name";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    toast.success("Call request submitted!");
-    onOpenChange(false);
+    if (!validateForm()) {
+      toast.error("Please fill the form with Correct Values");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const templateParams = {
+      fullname: formData.fullName,
+      company_name: formData.companyName,
+      email: formData.emailOfPhone,
+      message: formData.message || "No message",
+      title: "Source: 'Schedule a Call' Form, Cynical Site",
+      time: new Date().toString(),
+    };
+
+    try {
+      // @ts-ignore
+      grecaptcha.ready(async () => {
+        try {
+          // @ts-ignore
+          const token = await grecaptcha.execute(
+            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string,
+            { action: "submit" },
+          );
+
+          const captchaRes = await fetch("/api/contact", {
+            method: "POST",
+            body: JSON.stringify({ captchaToken: token }),
+          });
+
+          if (!captchaRes.ok) {
+            toast.error("Captcha verification failed. Try again.");
+            return;
+          }
+
+          // const serviceID = process.env
+          //   .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+          // const templateID = process.env
+          //   .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+          // const publicKey = process.env
+          //   .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+
+          // await sendEmail({
+          //   serviceID,
+          //   templateID,
+          //   templateParams,
+          //   publicKey,
+          // });
+
+          toast.success("Request Submitted! We will reach out soon.");
+          console.log(formData);
+
+          setErrors({});
+          setFormData({
+            fullName: "",
+            companyName: "",
+            emailOfPhone: "",
+            message: "",
+          });
+          onOpenChange(false);
+        } catch (error) {
+          console.error("Captcha or EmailJS error", error);
+          toast.error("Submission Failed! Please try again");
+        } finally {
+          setIsSubmitting(false);
+        }
+      });
+    } catch (error) {
+      toast.error("Submission Failed! Please try again");
+      setIsSubmitting(false);
+    }
   };
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -48,61 +164,85 @@ export function ScheduleCallDialog({
           </DialogDescription>
         </DialogHeader>
 
-        <form className="space-y-4" onSubmit={onSubmit}>
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="space-y-2">
             <Label htmlFor="name" className="text-foreground/70">
               Full name
             </Label>
-            <Input id="name" placeholder="John Doe" required />
+            <Input
+              id="name"
+              placeholder="John Doe"
+              value={formData.fullName}
+              onChange={(e) => {
+                setFormData({ ...formData, fullName: e.target.value });
+                if (errors.fullName) {
+                  setErrors({ ...errors, fullName: undefined });
+                }
+              }}
+              className={`placeholder:opacity-50 border ${
+                errors.fullName
+                  ? "border-red-500 focus-visible:ring-red-500"
+                  : ""
+              }`}
+            />
+            {errors.fullName && (
+              <p className="text-xs text-red-500">{errors.fullName}</p>
+            )}
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="email" className="text-foreground/70">
-              Work email
+            <Label htmlFor="emailOrPhone" className="text-foreground/70">
+              Email or Phone
             </Label>
             <Input
-              id="email"
-              type="email"
-              placeholder="john@company.com"
-              required
+              id="emailOrPhone"
+              type="text"
+              placeholder="john@company.com or +1234567890"
+              value={formData.emailOfPhone}
+              name="emailOrPhone"
+              className={`placeholder:opacity-50 border ${
+                errors.emailOrPhone
+                  ? "border-red-500 focus-visible:ring-red-500"
+                  : ""
+              }`}
+              onChange={(e) => {
+                setFormData({ ...formData, emailOfPhone: e.target.value });
+                if (errors.emailOrPhone) {
+                  setErrors({ ...errors, emailOrPhone: undefined });
+                }
+              }}
             />
+            {errors.emailOrPhone && (
+              <p className="text-xs text-red-500">{errors.emailOrPhone}</p>
+            )}
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="company" className="text-foreground/70">
+            <Label htmlFor="companyName" className="text-foreground/70">
               Company
             </Label>
-            <Input id="company" placeholder="Company name" required />
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="date" className="text-foreground/70">
-                Preferred date
-              </Label>
-              <Input
-                id="date"
-                type="date"
-                required
-                className="text-foreground/70"
-              />
-            </div>
-
-            <div className="space-y-2">
-              <Label className="text-foreground/70">Preferred time</Label>
-              <Select required>
-                <SelectTrigger>
-                  <SelectValue placeholder="Select time" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="09:00">09:00 – 10:00</SelectItem>
-                  <SelectItem value="10:00">10:00 – 11:00</SelectItem>
-                  <SelectItem value="11:00">11:00 – 12:00</SelectItem>
-                  <SelectItem value="14:00">14:00 – 15:00</SelectItem>
-                  <SelectItem value="15:00">15:00 – 16:00</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+            <Input
+              id="companyName"
+              placeholder="Company Pvt. Ltd."
+              className={`placeholder:opacity-50 ${
+                errors.companyName
+                  ? "border-red-500 focus-visible:ring-red-500"
+                  : ""
+              }`}
+              value={formData.companyName}
+              name="companyName"
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  companyName: e.target.value,
+                });
+                if (errors.companyName)
+                  setErrors({ ...errors, companyName: undefined });
+              }}
+            />
+            {errors.companyName && (
+              <p className="text-xs text-red-500">{errors.companyName}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -111,12 +251,37 @@ export function ScheduleCallDialog({
             </Label>
             <Textarea
               id="message"
+              name="message"
+              rows={4}
+              value={formData.message}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  message: e.target.value,
+                });
+              }}
               placeholder="Briefly describe your security concerns"
+              className="placeholder:opacity-50"
             />
           </div>
 
-          <Button type="submit" className="w-full">
+          {/* <Button type="submit" className="w-full">
             Request Call
+          </Button> */}
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            size="lg"
+            className="w-full group border border-border duration-500 transition-colors"
+          >
+            {isSubmitting ? (
+              "Submitting..."
+            ) : (
+              <>
+                Request Call
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </>
+            )}
           </Button>
         </form>
       </DialogContent>

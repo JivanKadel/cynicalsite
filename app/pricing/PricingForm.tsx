@@ -77,30 +77,57 @@ export default function PricingForm() {
     };
 
     try {
-      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-      const templateID = process.env
-        .NEXT_PUBLIC_EMAILJS_PRICING_TEMPLATE_ID as string;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+      // @ts-ignore
+      grecaptcha.ready(async () => {
+        try {
+          // @ts-ignore
+          const token = await grecaptcha.execute(
+            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string,
+            { action: "submit" },
+          );
 
-      await sendEmail({
-        serviceID,
-        templateID,
-        templateParams,
-        publicKey,
-      });
+          const captchaRes = await fetch("/api/contact", {
+            method: "POST",
+            body: JSON.stringify({ captchaToken: token }),
+          });
 
-      toast.success("Request Submitted! We will reach out soon.");
+          if (!captchaRes.ok) {
+            toast.error("Captcha verification failed. Try again.");
+            return;
+          }
 
-      setTimeout(() => {
-        router.push("/pricing/thank-you");
-      }, 500);
+          const serviceID = process.env
+            .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+          const templateID = process.env
+            .NEXT_PUBLIC_EMAILJS_PRICING_TEMPLATE_ID as string;
+          const publicKey = process.env
+            .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
-      setErrors({});
-      setFormData({
-        fullName: "",
-        email: "",
-        company: "",
-        product: "Penetration Testing",
+          await sendEmail({
+            serviceID,
+            templateID,
+            templateParams,
+            publicKey,
+          });
+
+          toast.success("Request Submitted! We will reach out soon.");
+
+          setTimeout(() => {
+            router.push("/pricing/thank-you");
+          }, 500);
+
+          setErrors({});
+          setFormData({
+            fullName: "",
+            email: "",
+            company: "",
+            product: "Penetration Testing",
+          });
+        } catch (error) {
+          toast.error("Submission Failed! Please try again");
+        } finally {
+          setIsSubmitting(false);
+        }
       });
     } catch (error) {
       console.error("EmailJS error", error);
