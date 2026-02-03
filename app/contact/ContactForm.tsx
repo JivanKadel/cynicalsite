@@ -61,6 +61,78 @@ export default function ContactForm() {
     return Object.keys(newErrors).length === 0;
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+
+  //   if (!validateForm()) {
+  //     toast.error("Please fill the form with Correct Values");
+  //     return;
+  //   }
+
+  //   setIsSubmitting(true);
+
+  //   const templateParams = {
+  //     fullname: formData.fullName,
+  //     company_name: formData.companyName,
+  //     email: formData.email,
+  //     message: formData.message,
+  //     title: "Source: Contact Form, Cynical Site",
+  //     time: new Date().toString(),
+  //   };
+  //   try {
+  //     // @ts-ignore
+  //     grecaptcha.ready(function () {
+  //       // @ts-ignore
+  //       grecaptcha
+  //         .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {
+  //           action: "submit",
+  //         })
+  //         .then(function (token: string) {
+  //           fetch("/api/contact", {
+  //             method: "POST",
+  //             body: JSON.stringify({
+  //               captchaToken: token,
+  //             }),
+  //           })
+  //             .then(() => {
+  //               const serviceID = process.env
+  //                 .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+  //               const templateID = process.env
+  //                 .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+  //               const publicKey = process.env
+  //                 .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+
+  //               await sendEmail({
+  //                 serviceID,
+  //                 templateID,
+  //                 templateParams,
+  //                 publicKey,
+  //               });
+
+  //               toast.success("Request Submitted! We will reach out soon.");
+
+  //               setErrors({});
+  //               setFormData({
+  //                 fullName: "",
+  //                 companyName: "",
+  //                 email: "",
+  //                 message: "",
+  //               });
+  //             })
+  //             .catch((error) => {
+  //               alert("Failed Recaptcha, try again");
+  //               return;
+  //             });
+  //         });
+  //     });
+  //   } catch (error) {
+  //     console.error("EmailJS error", error);
+  //     toast.error("Submission Failed! Please try again");
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -79,30 +151,64 @@ export default function ContactForm() {
       title: "Source: Contact Form, Cynical Site",
       time: new Date().toString(),
     };
+
     try {
-      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-      const templateID = process.env
-        .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+      // @ts-ignore
+      grecaptcha.ready(async () => {
+        try {
+          // @ts-ignore
+          const token = await grecaptcha.execute(
+            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string,
+            { action: "submit" },
+          );
 
-      await sendEmail({ serviceID, templateID, templateParams, publicKey });
+          const captchaRes = await fetch("/api/contact", {
+            method: "POST",
+            body: JSON.stringify({ captchaToken: token }),
+          });
 
-      toast.success("Request Submitted! We will reach out soon.");
+          if (!captchaRes.ok) {
+            toast.error("Captcha verification failed. Try again.");
+            return;
+          }
 
-      setErrors({});
-      setFormData({
-        fullName: "",
-        companyName: "",
-        email: "",
-        message: "",
+          // const serviceID = process.env
+          //   .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+          // const templateID = process.env
+          //   .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+          // const publicKey = process.env
+          //   .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+
+          // await sendEmail({
+          //   serviceID,
+          //   templateID,
+          //   templateParams,
+          //   publicKey,
+          // });
+
+          toast.success("Request Submitted! We will reach out soon.");
+
+          setErrors({});
+          setFormData({
+            fullName: "",
+            companyName: "",
+            email: "",
+            message: "",
+          });
+        } catch (error) {
+          console.error("Captcha or EmailJS error", error);
+          toast.error("Submission Failed! Please try again");
+        } finally {
+          setIsSubmitting(false);
+        }
       });
     } catch (error) {
-      console.error("EmailJS error", error);
+      console.error("Unexpected error", error);
       toast.error("Submission Failed! Please try again");
-    } finally {
       setIsSubmitting(false);
     }
   };
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="flex flex-col gap-6">
