@@ -24,7 +24,6 @@ const SampleReportPage = () => {
           </div>
           <div className="relative mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8">
             <div className="relative w-[90%] lg:w-full max-w-sm mx-auto">
-              {/* Card 1 */}
               <Image
                 src="/vapt_sample.png"
                 alt="Card 1"
@@ -33,7 +32,6 @@ const SampleReportPage = () => {
                 className="lg:absolute top-8 right-0 rounded-xl shadow-lg transform origin-bottom-right -rotate-2 lg:-rotate-8"
               />
 
-              {/* Card 2 */}
               <Image
                 src="/vapt_sample.png"
                 alt="Card 2"
@@ -42,7 +40,6 @@ const SampleReportPage = () => {
                 className="hidden lg:block lg:absolute top-8 right-0 rounded-xl shadow-lg transform origin-bottom-right rotate-0"
               />
 
-              {/* Card 3 */}
               <Image
                 src="/vapt_sample.png"
                 alt="Card 3"
@@ -52,7 +49,7 @@ const SampleReportPage = () => {
               />
             </div>
 
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.06)] p-8 min-w-85 max-w-[450px] mx-auto w-full">
+            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-600 rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.06)] p-8 min-w-85 max-w-112.5 mx-auto w-full">
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-200 mb-2">
                   Get the Sample VAPT Report
