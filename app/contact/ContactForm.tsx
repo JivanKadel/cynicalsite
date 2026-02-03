@@ -138,6 +138,7 @@ export default function ContactForm() {
         }
       });
     } catch (error) {
+      console.error("Error submitting form ", error);
       toast.error("Submission Failed! Please try again");
       setIsSubmitting(false);
     }

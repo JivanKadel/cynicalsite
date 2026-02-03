@@ -1,7 +1,6 @@
 import { fetchBlogPosts, getAllCategories } from "@/lib/blog";
 import type { Metadata } from "next";
 import BlogList from "./BlogList";
-// import UnderConstruction from "@/components/UnderConstruction";
 
 export const metadata: Metadata = {
   title: "Blog | Cynical Blogs",

@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { FileCheck } from "lucide-react";
 import Link from "next/link";
 import { Metadata } from "next";
 import { trustedByClipped } from "@/data/trustedby.data";

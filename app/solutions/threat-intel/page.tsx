@@ -20,7 +20,6 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { Metadata } from "next";
-import Head from "next/head";
 import Link from "next/link";
 
 export const metadata: Metadata = {

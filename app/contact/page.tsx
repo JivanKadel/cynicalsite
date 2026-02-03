@@ -1,6 +1,5 @@
 import { Mail, Clock, Phone, MapPin, Globe, Calendar } from "lucide-react";
 import ContactForm from "./ContactForm";
-import Head from "next/head";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

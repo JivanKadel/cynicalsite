@@ -4,7 +4,6 @@ import {
   AlertTriangle,
   Lock,
   FileText,
-  TrendingUp,
   Globe,
   Mail,
   Database,
@@ -390,10 +389,6 @@ export default function Vigile() {
                           {metric.value}
                         </h2>
                         <p className="text-xs text-red-500">{metric.label}</p>
-                        {/* <div className="flex items-center gap-1 mt-2 text-xs text-foreground/70">
-                          <TrendingUp className="w-3 h-3 text-green-500" />
-                          {metric.trend}
-                        </div> */}
                       </div>
                     ))}
                   </div>

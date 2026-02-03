@@ -29,8 +29,6 @@ export async function POST(req: Request) {
 
   const data = await response.json();
 
-  console.log("Captcha verification result:", data);
-
   if (data.success && data.score >= 0.5) {
     return NextResponse.json({ success: true });
   } else {

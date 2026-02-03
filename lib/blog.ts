@@ -65,7 +65,7 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
 
 export async function getBlogPost(slug: string): Promise<BlogPost | null> {
   const posts = await fetchBlogPosts();
-  //   console.log(slug);
+
   return posts.find((post) => post.id === slug) || null;
 }
 

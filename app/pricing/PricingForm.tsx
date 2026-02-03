@@ -124,6 +124,7 @@ export default function PricingForm() {
             product: "Penetration Testing",
           });
         } catch (error) {
+          console.error("Failed submission", error);
           toast.error("Submission Failed! Please try again");
         } finally {
           setIsSubmitting(false);

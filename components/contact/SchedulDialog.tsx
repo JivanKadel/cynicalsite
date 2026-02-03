@@ -136,8 +136,6 @@ export function ScheduleCallDialog({
             router.push("/thank-you");
           }, 500);
 
-          console.log(formData);
-
           setErrors({});
           setFormData({
             fullName: "",

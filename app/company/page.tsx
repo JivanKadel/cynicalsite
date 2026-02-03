@@ -73,21 +73,6 @@ export default function AboutUs() {
     },
   ];
 
-  const awards = [
-    {
-      title: "Vulnerability Research Grant",
-      organization: "Google",
-      year: "2023",
-      category: "Security Research",
-    },
-    {
-      title: "ICT Top 11 Startup",
-      organization: "ICT Award",
-      year: "2019",
-      category: "Emerging Technology",
-    },
-  ];
-
   const teamMembers = [
     {
       name: "Naresh Lamgade",
@@ -408,7 +393,6 @@ export default function AboutUs() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 max-w-7xl place-content-center gap-6 gap-y-6 mb-16 mx-auto">
-            {/* <div className="flex justify-center gap-4 gap-y-6 mb-16 mx-auto"> */}
             {teamMembers.map((member, index) => (
               <div key={index}>
                 <div

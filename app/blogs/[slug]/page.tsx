@@ -1,4 +1,3 @@
-// app/blogs/[slug]/page.tsx
 import { fetchBlogPosts, getBlogPost } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
@@ -49,8 +48,6 @@ export default async function BlogPostPage({
       </Link>
 
       <header className="mb-8">
-        {/* <h1 className="text-4xl font-bold mb-4">{post.title}</h1> */}
-
         <div className="flex items-center gap-4 text-gray-600 dark:text-gray-300">
           <time>
             {new Date(post.pubDate).toLocaleDateString("en-US", {

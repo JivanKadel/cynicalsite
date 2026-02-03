@@ -74,24 +74,52 @@ export default function SampleReportForm() {
       time: new Date().toString(),
     };
     try {
-      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-      const templateID = process.env
-        .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+      // @ts-ignore
+      grecaptcha.ready(async () => {
+        try {
+          // @ts-ignore
+          const token = await grecaptcha.execute(
+            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string,
+            { action: "submit" },
+          );
 
-      await sendEmail({ serviceID, templateID, templateParams, publicKey });
+          const captchaRes = await fetch("/api/contact", {
+            method: "POST",
+            body: JSON.stringify({ captchaToken: token }),
+          });
 
-      toast.success("Your Download is Ready!");
+          if (!captchaRes.ok) {
+            toast.error("Captcha verification failed. Try again.");
+            return;
+          }
 
-      setTimeout(() => {
-        router.push("/downloads/thank-you");
-      }, 500);
+          const serviceID = process.env
+            .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+          const templateID = process.env
+            .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+          const publicKey = process.env
+            .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
-      setErrors({});
-      setFormData({
-        fullName: "",
-        companyName: "",
-        email: "",
+          await sendEmail({ serviceID, templateID, templateParams, publicKey });
+
+          toast.success("Your Download is Ready!");
+
+          setTimeout(() => {
+            router.push("/downloads/thank-you");
+          }, 500);
+
+          setErrors({});
+          setFormData({
+            fullName: "",
+            companyName: "",
+            email: "",
+          });
+        } catch (error) {
+          console.error("Captcha or EmailJS error", error);
+          toast.error("Submission Failed! Please try again");
+        } finally {
+          setIsSubmitting(false);
+        }
       });
     } catch (error) {
       console.error("EmailJS error", error);

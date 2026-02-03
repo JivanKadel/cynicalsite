@@ -98,9 +98,6 @@ export default function ResearchPage() {
                 key={item.title}
                 researchItem={item}
                 index={index}
-                // iconColor={iconColors[1].iconColor}
-                // gradient={iconColors[1].gradient}
-                // iconBg={iconColors[1].iconBg}
                 iconColor={iconColors[index % iconColors.length].iconColor}
                 gradient={iconColors[index % iconColors.length].gradient}
                 iconBg={iconColors[index % iconColors.length].iconBg}
