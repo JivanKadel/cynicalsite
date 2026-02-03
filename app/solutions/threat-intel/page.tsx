@@ -464,10 +464,6 @@ const ThreatIntelligence = () => {
         headline="Ready to enhance"
         highlightedText="your threat visibility?"
         description="Get actionable threat intelligence from our elite team of analysts. Stay ahead of emerging threats with real-time insights and strategic analysis."
-        primaryButtonText="Schedule Intelligence Briefing"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Contact Sales"
-        secondaryButtonLink="/contact"
       />
     </div>
   );

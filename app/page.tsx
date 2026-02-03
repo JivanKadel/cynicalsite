@@ -25,8 +25,6 @@ export default function Home() {
         description="Schedule a confidential security briefing. We'll run
                 reconnaissance on your attack surface and show you exactly what
                 an adversary would find—before they do."
-        primaryButtonText=" Request Security Briefing"
-        secondaryButtonText="Download Sample Report"
       />
     </main>
   );

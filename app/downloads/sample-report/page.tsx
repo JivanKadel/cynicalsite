@@ -4,7 +4,6 @@ import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
-import { Card } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Sample Report | Cynical Technology",
@@ -151,8 +150,8 @@ const SampleReportPage = () => {
               <h3 className="text-lg font-bold text-slate-900 dark:text-slate-300 uppercase tracking-widest mb-10">
                 What&apos;s inside the report
               </h3>
-              <div className="space-y-10 grid md:grid-cols-2 gap-2 items-start md:gap-8">
-                <div className="flex items-center group bg-card p-4 rounded-lg">
+              <div className="space-y-10 grid md:grid-cols-2 gap-2 items-start md:gap-4">
+                <div className="flex items-center group bg-card p-4 rounded-lg h-full">
                   <div className="shrink-0 w-12 h-12 bg-white dark:bg-black border border-slate-200 dark:border-slate-800 rounded-lg flex flex-col items-center justify-center text-slate-900 dark:text-slate-300 mr-6 shadow-sm group-hover:border-slate-400 dark:group-hover:border-slate-600 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +181,7 @@ const SampleReportPage = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center group bg-card p-4 rounded-lg">
+                <div className="flex items-center group bg-card p-4 rounded-lg h-full">
                   <div className="shrink-0 w-12 h-12 bg-white dark:bg-black border border-slate-200 dark:border-slate-800 rounded-lg flex items-center justify-center text-slate-900 dark:text-slate-300 mr-6 shadow-sm group-hover:border-slate-400 dark:group-hover:border-slate-600 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -211,7 +210,7 @@ const SampleReportPage = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center group bg-card p-4 rounded-lg">
+                <div className="flex items-center group bg-card p-4 rounded-lg h-full">
                   <div className="shrink-0 w-12 h-12 bg-white dark:bg-black border border-slate-200 dark:border-slate-800 rounded-lg flex items-center justify-center text-slate-900 dark:text-slate-300 mr-6 shadow-sm group-hover:border-slate-400 dark:group-hover:border-slate-600 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +239,7 @@ const SampleReportPage = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center group bg-card p-4 rounded-lg">
+                <div className="flex items-center group bg-card p-4 rounded-lg h-full">
                   <div className="shrink-0 w-12 h-12 bg-background border border-slate-200 dark:border-slate-800 rounded-lg flex items-center justify-center text-slate-900 dark:text-slate-300 mr-6 shadow-sm group-hover:border-slate-400 dark:group-hover:border-slate-600 transition-colors">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -266,8 +265,8 @@ const SampleReportPage = () => {
                       Context-Specific Intelligence
                     </h4>
                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-[15px]">
-                      No generic automated scans—findings tailored specifically
-                      to real-world environments.
+                      No generic automated scans-findings tailored for
+                      real-world environments.
                     </p>
                   </div>
                 </div>

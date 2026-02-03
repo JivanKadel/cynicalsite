@@ -571,10 +571,6 @@ export default function Vigile() {
         headline="Stop breaches"
         highlightedText="before they start."
         description="Join leading enterprises who trust Vigile.AI to protect their employees and prevent credential-based attacks."
-        primaryButtonText="Schedule Demo"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Contact Sales"
-        secondaryButtonLink="/contact"
       />
     </div>
   );

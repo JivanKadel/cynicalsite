@@ -462,10 +462,6 @@ const CloudSecurity = () => {
         headline="Ready to secure"
         highlightedText="your cloud infrastructure?"
         description="Get a comprehensive cloud security assessment from our certified cloud security specialists. Identify misconfigurations and vulnerabilities before they're exploited."
-        primaryButtonText="Schedule Cloud Assessment"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Contact Sales"
-        secondaryButtonLink="/contact"
       />
     </div>
   );

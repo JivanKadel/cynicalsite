@@ -242,16 +242,9 @@ export default function AboutUs() {
                 width={800}
                 height={600}
                 alt="Cynical Logo on a dark background"
-                className="block dark:hidden mask-[radial-gradient(circle,rgba(0,0,0,0.8)_50%,rgba(0,0,0,0)_100%)] [-webkit-mask-image:radial-gradient(circle,rgba(0,0,0,0.8)_50%,rgba(0,0,0,0)_100%)]"
+                className="block dark:hidden scale-125 md:-translate-y-4 mask-x-from-80% mask-x-to-90% mask-y-from-70% mask-y-to-90%"
               />
               <div className="absolute inset-0 hidden dark:block bg-linear-to-br from-background/80 via-background/50 to-background/20"></div>
-
-              {/* <div className="absolute inset-0 block dark:hidden bg-gradient-to-br from-[#e4e5df]/30 via-[#e4e5df]/30 to-[#e4e5df]/90"></div> */}
-
-              {/* Overlay for light mode */}
-              {/* <div className="absolute inset-0 block dark:hidden bg-linear-to-br from-background/70 via-background/70 to-background/40"></div> */}
-
-              {/* <div className="absolute inset-0 dark:bg-linear-to-br from-background/80 via-background/50 to-background/20"></div> */}
             </div>
           </div>
         </div>
@@ -482,8 +475,6 @@ export default function AboutUs() {
         highlightedText="Secure Your Future?"
         description="Join hundreds of organizations who trust Cynical to protect their
               digital assets and secure their future."
-        primaryButtonText="Get Started"
-        secondaryButtonText="Contact Sales"
       />
     </div>
   );

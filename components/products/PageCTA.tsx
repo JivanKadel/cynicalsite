@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -7,16 +9,14 @@ import {
   CircleCheckBigIcon,
 } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
+import { ScheduleCallDialog } from "../contact/SchedulDialog";
 
 interface PageCTAProps {
   badge?: string;
   headline: string;
   highlightedText: string;
   description: string;
-  primaryButtonText: string;
-  primaryButtonLink?: string;
-  secondaryButtonText?: string;
-  secondaryButtonLink?: string;
   showBenefits?: boolean;
   showTrustIndicators?: boolean;
 }
@@ -26,13 +26,11 @@ const PageCTA = ({
   headline,
   highlightedText,
   description,
-  primaryButtonText,
-  primaryButtonLink = "/contact",
-  secondaryButtonText,
-  secondaryButtonLink,
   showBenefits = true,
   showTrustIndicators = true,
 }: PageCTAProps) => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
   const benefits = [
     { icon: Clock, text: "Response within 24 hours" },
     { icon: Lock, text: "NDA-protected briefing" },
@@ -41,103 +39,97 @@ const PageCTA = ({
   ];
 
   return (
-    <section className="py-32 relative">
-      <div className="container mx-auto px-2 sm:px-6">
-        <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
-          {/* <div className="absolute inset-0 bg-linear-to-br from-background via-card to-background" /> */}
-          {/* <div className="absolute inset-0 opacity-30">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground) / 0.1) 1px, transparent 0)`,
-                backgroundSize: "32px 32px",
-              }}
-            />
-          </div> */}
-
-          <div className="relative z-10 p-12 lg:p-20">
-            <div className="max-w-5xl mx-auto text-center">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                {badge}
-              </div>
-
-              {/* Headline */}
-              <h2 className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
-                {headline}
-                <span className="block text-foreground">{highlightedText}</span>
-              </h2>
-
-              <p className="text-lg text-muted-foreground mb-10 mt-4 font-body max-w-2xl mx-auto">
-                {description}
-              </p>
-
-              {/* Benefits Grid */}
-              {showBenefits && (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-                  {benefits.map((benefit) => (
-                    <div
-                      key={benefit.text}
-                      className="flex items-center justify-start sm:justify-center gap-2 text-sm text-muted-foreground"
-                    >
-                      <benefit.icon className="w-4 h-4" />
-                      <span>{benefit.text}</span>
-                    </div>
-                  ))}
+    <>
+      <section className="py-32 relative">
+        <div className="container mx-auto px-2 sm:px-6">
+          <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
+            <div className="relative z-10 p-12 lg:p-20">
+              <div className="max-w-5xl mx-auto text-center">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  {badge}
                 </div>
-              )}
 
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href={primaryButtonLink}>
+                {/* Headline */}
+                <h2 className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+                  {headline}
+                  <span className="block text-foreground">
+                    {highlightedText}
+                  </span>
+                </h2>
+
+                <p className="text-lg text-muted-foreground mb-10 mt-4 font-body max-w-2xl mx-auto">
+                  {description}
+                </p>
+
+                {/* Benefits Grid */}
+                {showBenefits && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                    {benefits.map((benefit) => (
+                      <div
+                        key={benefit.text}
+                        className="flex items-center justify-start sm:justify-center gap-2 text-sm text-muted-foreground"
+                      >
+                        <benefit.icon className="w-4 h-4" />
+                        <span>{benefit.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
+                    onClick={() => setDialogOpen(true)}
                     size="lg"
                     className="h-12 bg-foreground text-background hover:bg-foreground/90"
                   >
-                    {primaryButtonText}
+                    Request Security Briefing
                     <ArrowRight className="w-4 h-4" />
                   </Button>
-                </Link>
-                {secondaryButtonText && (
-                  <Link href={secondaryButtonLink || "/contact"}>
+
+                  <Link href="/downloads/sample-report">
                     <Button variant="outline" size="lg" className="h-12">
-                      {secondaryButtonText}
+                      Download Sample Report
                     </Button>
                   </Link>
+                </div>
+
+                {/* Trust Indicators */}
+                {showTrustIndicators && (
+                  <div className="mt-16 pt-16 border-t border-border/30">
+                    <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
+                      Trusted By Critical Industries
+                    </p>
+                    <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
+                      {[
+                        "Banks",
+                        "Governments",
+                        "Healthcare",
+                        "Defense",
+                        "Critical Infrastructure",
+                        "Technology",
+                      ].map((name) => (
+                        <h2
+                          key={name}
+                          className="text-base text-foreground font-semibold tracking-wide uppercase"
+                        >
+                          {name}
+                        </h2>
+                      ))}
+                    </div>
+                  </div>
                 )}
               </div>
-
-              {/* Trust Indicators */}
-              {showTrustIndicators && (
-                <div className="mt-16 pt-16 border-t border-border/30">
-                  <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
-                    Trusted By Critical Industries
-                  </p>
-                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
-                    {[
-                      "Banks",
-                      "Governments",
-                      "Healthcare",
-                      "Defense",
-                      "Critical Infrastructure",
-                      "Technology",
-                    ].map((name) => (
-                      <h2
-                        key={name}
-                        className="text-base text-foreground font-semibold tracking-wide uppercase"
-                      >
-                        {name}
-                      </h2>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      {dialogOpen && (
+        <ScheduleCallDialog open={dialogOpen} onOpenChange={setDialogOpen} />
+      )}
+    </>
   );
 };
 

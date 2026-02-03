@@ -436,10 +436,6 @@ export default function BugV() {
         headline="Ready to find vulnerabilities"
         highlightedText="before attackers do?"
         description="Join the companies that trust Bugv to secure their most critical assets with continuous crowdsourced security testing."
-        primaryButtonText="Launch Your Program"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Talk to Security Expert"
-        secondaryButtonLink="/contact"
       />
     </div>
   );

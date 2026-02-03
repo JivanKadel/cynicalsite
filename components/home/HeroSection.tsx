@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BorderBeam } from "../ui/border-beam";
+import BookACall from "./BookACall";
 
 export default function HeroSection() {
   return (
@@ -21,7 +22,7 @@ export default function HeroSection() {
         </h2>
       </div>
       <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 max-w-sm">
-        <Link href={"/contact"}>
+        {/* <Link href={"/contact"}>
           <Button
             className="relative overflow-hidden w-50 h-12 border-0 border-transparent text-sm 
              text-white rounded-4xl 
@@ -38,7 +39,8 @@ export default function HeroSection() {
               duration={4}
             />
           </Button>
-        </Link>
+        </Link> */}
+        <BookACall />
         <Link href={"/downloads/sample-report"} className="flex-1">
           <Button className="w-54 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
             Download sample report <ArrowRight className="w-5! h-5!" />

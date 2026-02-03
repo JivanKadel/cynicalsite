@@ -103,19 +103,19 @@ export default function ContactForm() {
             return;
           }
 
-          // const serviceID = process.env
-          //   .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-          // const templateID = process.env
-          //   .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
-          // const publicKey = process.env
-          //   .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+          const serviceID = process.env
+            .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+          const templateID = process.env
+            .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+          const publicKey = process.env
+            .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
-          // await sendEmail({
-          //   serviceID,
-          //   templateID,
-          //   templateParams,
-          //   publicKey,
-          // });
+          await sendEmail({
+            serviceID,
+            templateID,
+            templateParams,
+            publicKey,
+          });
 
           toast.success("Request Submitted! We will reach out soon.");
 

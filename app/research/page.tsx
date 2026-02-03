@@ -115,10 +115,6 @@ export default function ResearchPage() {
         headline="Responsible"
         highlightedText="Disclosure Program"
         description="Found a vulnerability? We work with researchers worldwide to responsibly disclose security issues and protect users."
-        primaryButtonText="Report a Vulnerability"
-        primaryButtonLink="/contact"
-        secondaryButtonText="View Disclosure Policy"
-        secondaryButtonLink="/research"
         showBenefits={false}
       />
     </div>

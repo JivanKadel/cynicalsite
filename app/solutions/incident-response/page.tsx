@@ -465,10 +465,6 @@ const IncidentResponse = () => {
         headline="Facing a security"
         highlightedText="incident right now?"
         description="Call our emergency response hotline for immediate assistance. Our elite response team is standing by 24/7 to help you contain threats and restore operations."
-        primaryButtonText="Emergency Response Hotline"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Contact Sales"
-        secondaryButtonLink="/contact"
       />
     </div>
   );

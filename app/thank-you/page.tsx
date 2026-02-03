@@ -56,11 +56,11 @@ export default function PricingThankYouPage() {
           </div>
         </div>
 
-        <div className="mt-16 mx-auto flex flex-col justify-center">
+        <div className="mt-8 mx-auto flex flex-col justify-center">
           <h2 className="text-lg text-center font-semibold tracking-wider text-muted-foreground">
             TRUSTED BY INDUSTRY LEADERS
           </h2>
-          <div className="flex justify-center flex-wrap gap-4 mt-8">
+          <div className="flex justify-center flex-wrap gap-4 mt-4">
             {trustedByClipped.map((brand) => {
               return (
                 <Link

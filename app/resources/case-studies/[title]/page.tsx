@@ -405,10 +405,6 @@ const GlobalInvestmentBank = () => {
         highlightedText="your Organization?"
         description="Let's discuss how we can help protect your critical assets
               and achieve your security goals."
-        primaryButtonText="Schedule a Consultation"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Contact Sales"
-        secondaryButtonLink="/contact"
       />
     </div>
   );

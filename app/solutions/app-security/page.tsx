@@ -457,10 +457,6 @@ export default function ApplicationSecurity() {
         headline="Ready to secure"
         highlightedText="your applications?"
         description="Get a comprehensive security assessment from our elite team of security researchers. Identify vulnerabilities before attackers do."
-        primaryButtonText="Schedule Security Briefing"
-        primaryButtonLink="/contact"
-        secondaryButtonText="Contact Sales"
-        secondaryButtonLink="/contact"
       />
     </div>
   );
