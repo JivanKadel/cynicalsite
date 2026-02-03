@@ -471,6 +471,7 @@ export default function Vigile() {
                 href={report.link}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="mx-2 sm:mx-0"
               >
                 <Button className="w-full h-12 text-base">
                   {report.title} <SquareArrowOutUpRight />

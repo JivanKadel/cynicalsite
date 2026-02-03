@@ -1,4 +1,12 @@
-import { Mail, Clock, Phone, MapPin, Globe, Calendar } from "lucide-react";
+import {
+  Mail,
+  Clock,
+  Phone,
+  MapPin,
+  Globe,
+  Calendar,
+  Linkedin,
+} from "lucide-react";
 import ContactForm from "./ContactForm";
 import { Metadata } from "next";
 
@@ -34,12 +42,18 @@ const Contact = () => {
       content: "https://cynicaltechnology.com/",
       href: "https://cynicaltechnology.com/",
     },
+    {
+      icon: Linkedin,
+      title: "LinkedIn",
+      content: "Cynical Technology",
+      href: "https://www.linkedin.com/company/cynicaltechnology/",
+    },
   ];
 
   return (
     <main className="pt-12 pb-16">
       <div className="container mx-auto px-2 sm:px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-sm font-medium text-muted-foreground tracking-wider uppercase mb-4">
               Security Inquiry
@@ -53,8 +67,9 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-12">
-            <div className="lg:col-span-2">
+          <div className="grid lg:grid-cols-9 gap-12 mx-auto place-content-center">
+            <div className="lg:col-span-1"></div>
+            <div className="max-w-md lg:col-span-5 lg:max-w-none mx-auto w-full">
               <div className="p-4 py-5 sm:p-8 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl">
                 <div className="mb-6">
                   <h2 className="text-2xl font-bold mb-2">Get In Touch</h2>
@@ -67,7 +82,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 lg:col-span-3 lg:max-w-none mx-auto w-full">
               {/* Contact Information */}
               <div className="p-6 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
                 <h3 className="font-semibold mb-6 flex items-center gap-2">
@@ -97,7 +112,6 @@ const Contact = () => {
                   ))}
                 </address>
               </div>
-
               {/* Office Hours */}
               <div className="p-6 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
                 <h3 className="font-semibold mb-4 flex items-center gap-2">
@@ -105,13 +119,17 @@ const Contact = () => {
                   Office Hours
                 </h3>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                  <p>Sunday - Friday: 10:00 AM - 5:00 PM GMT +05:45</p>
+                  <p>
+                    <span className="font-bold">Sunday - Friday</span>: 10:00 AM
+                    - 5:00 PM
+                  </p>
+                  <p className="font-bold">GMT +05:45</p>
                   <p>Emergency Support: 24/7 Available</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="p-6 mt-16 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
+          <div className="p-6 max-w-4xl mx-auto mt-16 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
             <h3 className="font-semibold mb-4">What Happens Next</h3>
             <ol className="space-y-3 text-sm text-muted-foreground">
               <li className="flex gap-3">

@@ -45,7 +45,7 @@ export default function PricingThankYouPage() {
           {/* Footer */}
           <div className="mt-8 border-t border-b text-center py-6">
             <h2>In the meantime</h2>
-            <div className="py-4 flex justify-center gap-4">
+            <div className="py-4 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/blogs">
                 <Button variant={"outline"}>Check Our Blogs</Button>
               </Link>

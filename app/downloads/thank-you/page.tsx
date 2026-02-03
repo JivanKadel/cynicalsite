@@ -50,9 +50,9 @@ export default function ThankYouPage() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-b text-center py-6  max-w-lg mx-auto">
+        <div className="mt-8 border-t border-b text-center py-6 max-w-lg mx-auto">
           <h2>Explore more resources</h2>
-          <div className="py-4 flex justify-center gap-4">
+          <div className="py-4 flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/blogs">
               <Button variant={"outline"}>Check Our Blogs</Button>
             </Link>
