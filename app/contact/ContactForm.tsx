@@ -5,6 +5,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { sendEmail } from "@/lib/sendQuery";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -24,6 +25,8 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
+
+  const router = useRouter();
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -100,21 +103,25 @@ export default function ContactForm() {
             return;
           }
 
-          const serviceID = process.env
-            .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-          const templateID = process.env
-            .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
-          const publicKey = process.env
-            .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+          // const serviceID = process.env
+          //   .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+          // const templateID = process.env
+          //   .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+          // const publicKey = process.env
+          //   .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
-          await sendEmail({
-            serviceID,
-            templateID,
-            templateParams,
-            publicKey,
-          });
+          // await sendEmail({
+          //   serviceID,
+          //   templateID,
+          //   templateParams,
+          //   publicKey,
+          // });
 
           toast.success("Request Submitted! We will reach out soon.");
+
+          setTimeout(() => {
+            router.push("/pricing/thank-you");
+          }, 500);
 
           setErrors({});
           setFormData({

@@ -16,6 +16,7 @@ import { toast } from "sonner";
 import { useState } from "react";
 import { sendEmail } from "@/lib/sendQuery";
 import { ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface FormErrors {
   fullName?: string;
@@ -39,6 +40,8 @@ export function ScheduleCallDialog({
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
+
+  const router = useRouter();
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -128,6 +131,11 @@ export function ScheduleCallDialog({
           // });
 
           toast.success("Request Submitted! We will reach out soon.");
+
+          setTimeout(() => {
+            router.push("/thank-you");
+          }, 500);
+
           console.log(formData);
 
           setErrors({});

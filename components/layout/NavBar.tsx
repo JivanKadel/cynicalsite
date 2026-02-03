@@ -39,7 +39,7 @@ import { ScheduleCallDialog } from "../contact/SchedulDialog";
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [dialogOpen, setDialogOpen] = useState(true);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const products = [
     {

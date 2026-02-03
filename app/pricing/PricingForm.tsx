@@ -96,24 +96,24 @@ export default function PricingForm() {
             return;
           }
 
-          const serviceID = process.env
-            .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-          const templateID = process.env
-            .NEXT_PUBLIC_EMAILJS_PRICING_TEMPLATE_ID as string;
-          const publicKey = process.env
-            .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+          // const serviceID = process.env
+          //   .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+          // const templateID = process.env
+          //   .NEXT_PUBLIC_EMAILJS_PRICING_TEMPLATE_ID as string;
+          // const publicKey = process.env
+          //   .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
-          await sendEmail({
-            serviceID,
-            templateID,
-            templateParams,
-            publicKey,
-          });
+          // await sendEmail({
+          //   serviceID,
+          //   templateID,
+          //   templateParams,
+          //   publicKey,
+          // });
 
           toast.success("Request Submitted! We will reach out soon.");
 
           setTimeout(() => {
-            router.push("/pricing/thank-you");
+            router.push("/thank-you");
           }, 500);
 
           setErrors({});
@@ -171,7 +171,7 @@ export default function PricingForm() {
             }`}
           />
           {errors.fullName && (
-            <p className="text-sm text-red-500">{errors.fullName}</p>
+            <p className="text-xs text-red-500">{errors.fullName}</p>
           )}
         </div>
 
@@ -198,7 +198,7 @@ export default function PricingForm() {
             }}
           />
           {errors.email && (
-            <p className="text-sm text-red-500">{errors.email}</p>
+            <p className="text-xs text-red-500">{errors.email}</p>
           )}
         </div>
 
@@ -225,7 +225,7 @@ export default function PricingForm() {
             }}
           />
           {errors.company && (
-            <p className="text-sm text-red-500">{errors.company}</p>
+            <p className="text-xs text-red-500">{errors.company}</p>
           )}
         </div>
 
