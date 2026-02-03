@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { trustedByClipped } from "@/data/trustedby.data";
 import Image from "next/image";
+import { ConfettiFireworks } from "@/app/thank-you/Fireworks";
 
 export const metadata: Metadata = {
   title: "Thank You | Cynical Technology",
@@ -64,6 +65,8 @@ export default function ThankYouPage() {
             </Link>
           </div>
         </div>
+
+        <ConfettiFireworks />
 
         <div className="mt-8 mx-auto flex flex-col justify-center">
           <h2 className="text-lg text-center font-semibold tracking-wider text-muted-foreground">

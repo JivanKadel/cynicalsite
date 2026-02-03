@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import { trustedByClipped } from "@/data/trustedby.data";
 import Image from "next/image";
+import { ConfettiFireworks } from "./Fireworks";
 
 export const metadata: Metadata = {
   title: "Thank You | Cynical Technology",
@@ -39,6 +40,8 @@ export default function PricingThankYouPage() {
               . Our team will get back to you soon.
             </p>
           </div>
+
+          <ConfettiFireworks />
           {/* Footer */}
           <div className="mt-8 border-t border-b text-center py-6">
             <h2>In the meantime</h2>
