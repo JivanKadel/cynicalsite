@@ -136,10 +136,10 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      toast.error("Please fill the form with Correct Values");
-      return;
-    }
+    // if (!validateForm()) {
+    //   toast.error("Please fill the form with Correct Values");
+    //   return;
+    // }
 
     setIsSubmitting(true);
 
