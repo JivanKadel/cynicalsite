@@ -188,7 +188,7 @@ export default function BugV() {
               <a href={"https://bugv.io/request-a-demo/"} target="_blank">
                 <Button
                   size="lg"
-                  className="bg-foreground text-background hover:bg-foreground/90"
+                  className="h-12 bg-foreground text-background hover:bg-foreground/90"
                 >
                   Start Your Program
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -385,7 +385,7 @@ export default function BugV() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="https://bugv.io/contacts/">
-                  <Button>
+                  <Button className="h-10">
                     Contact
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
@@ -395,7 +395,9 @@ export default function BugV() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button variant="outline">Read Blogs</Button>
+                  <Button variant="outline" className="h-10">
+                    Read Blogs
+                  </Button>
                 </a>
               </div>
             </div>

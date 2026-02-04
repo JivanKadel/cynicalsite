@@ -195,7 +195,7 @@ export default function Vigile() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button className="h-12 px-4 w-full">
+                    <Button className="h-12 px-4 w-full" variant="outline">
                       Check My Exposure for Free
                     </Button>
                   </a>
@@ -473,7 +473,10 @@ export default function Vigile() {
                 rel="noopener noreferrer"
                 className="mx-2 sm:mx-0"
               >
-                <Button className="w-full h-12 text-base">
+                <Button
+                  className="w-full h-12 text-base hover:border"
+                  variant={"secondary"}
+                >
                   {report.title} <SquareArrowOutUpRight />
                 </Button>
               </a>
