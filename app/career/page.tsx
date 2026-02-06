@@ -7,18 +7,11 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Users,
   Briefcase,
-  Heart,
   Brain,
   Award,
-  Coffee,
-  Home,
-  Plane,
   Check,
   ArrowRight,
   Upload,
@@ -28,6 +21,7 @@ import {
 
 import { Metadata } from "next";
 import Link from "next/link";
+import { hiringProcess, Job, perks } from "@/data/career.data";
 
 export const metadata: Metadata = {
   title: "Career | Cynical Blogs",
@@ -36,223 +30,11 @@ export const metadata: Metadata = {
 };
 
 const Careers = () => {
-  // const jobOpenings = [
-  //   {
-  //     id: "java-dev-001",
-  //     title: "Senior Java Developer",
-  //     department: "Engineering",
-  //     location: "OnSite / Maitidevi, Kathmandu",
-  //     type: "Full-time",
-  //     experience: "5+ years",
-  //     salary: "120k - 180k NPR",
-  //     tools: [
-  //       "Java",
-  //       "Spring Boot",
-  //       "Microservices",
-  //       "AWS",
-  //       "Kubernetes",
-  //       "PostgreSQL",
-  //     ],
-  //     description:
-  //       "We're looking for an experienced Java developer to join our security platform team. You'll build scalable backend services for our threat detection and incident response platforms.",
-  //     requirements: [
-  //       "5+ years of Java development experience",
-  //       "Strong understanding of microservices architecture",
-  //       "Experience with cloud platforms (AWS/GCP/Azure)",
-  //       "Knowledge of security best practices",
-  //       "Excellent problem-solving skills",
-  //     ],
-  //     benefits: [
-  //       "Health insurance",
-  //       "401k matching",
-  //       "Stock options",
-  //       "Flexible hours",
-  //     ],
-  //     posted: "2026-01-10",
-  //     expires: "2026-02-15",
-  //     urgent: true,
-  //   },
-  //   {
-  //     id: "security-intern-002",
-  //     title: "Cybersecurity Intern",
-  //     department: "Security Operations",
-  //     location: "OnSite / Maitidevi, Kathmandu",
-  //     type: "Internship",
-  //     experience: "0-2 years",
-  //     salary: "5000 - 10000 NPR",
-  //     tools: [
-  //       "Python",
-  //       "SIEM",
-  //       "Wireshark",
-  //       "Nmap",
-  //       "Metasploit",
-  //       "Kali Linux",
-  //     ],
-  //     description:
-  //       "Great opportunity for students or recent graduates to gain hands-on experience in cybersecurity. Work alongside our elite security team on real-world projects.",
-  //     requirements: [
-  //       "Pursuing degree in Cybersecurity, Computer Science, or related field",
-  //       "Basic understanding of networking and security concepts",
-  //       "Eagerness to learn and strong work ethic",
-  //       "Available for 3-6 months",
-  //       "Excellent communication skills",
-  //     ],
-  //     benefits: [
-  //       "Mentorship",
-  //       "Learning stipend",
-  //       "Flexible schedule",
-  //       "Remote work",
-  //     ],
-  //     posted: "2026-01-08",
-  //     expires: "2026-02-28",
-  //     urgent: false,
-  //   },
-  //   {
-  //     id: "threat-analyst-003",
-  //     title: "Threat Intelligence Analyst",
-  //     department: "Threat Intelligence",
-  //     location: "OnSite / Maitidevi, Kathmandu",
-  //     type: "Full-time",
-  //     experience: "3+ years",
-  //     salary: "95k - 130k NPR",
-  //     tools: [
-  //       "Python",
-  //       "SIEM",
-  //       "Threat Intelligence Platforms",
-  //       "STIX/TAXII",
-  //       "Splunk",
-  //       "ELK",
-  //     ],
-  //     description:
-  //       "Analyze threat actor activities, produce intelligence reports, and support our global threat hunting operations. Work with cutting-edge threat intelligence tools.",
-  //     requirements: [
-  //       "3+ years in threat intelligence or related field",
-  //       "Understanding of threat actor TTPs and MITRE ATT&CK",
-  //       "Experience with threat intelligence platforms",
-  //       "Strong analytical and report writing skills",
-  //       "Security clearance preferred",
-  //     ],
-  //     benefits: [
-  //       "Security clearance sponsorship",
-  //       "Training budget",
-  //       "Conference attendance",
-  //       "Remote work",
-  //     ],
-  //     posted: "2026-01-05",
-  //     expires: "2026-02-20",
-  //     urgent: false,
-  //   },
-  //   {
-  //     id: "devops-eng-004",
-  //     title: "DevOps Engineer",
-  //     department: "Infrastructure",
-  //     location: "OnSite / Maitidevi, Kathmandu",
-  //     type: "Full-time",
-  //     experience: "4+ years",
-  //     salary: "110k - 150k NPR",
-  //     tools: [
-  //       "Docker",
-  //       "Kubernetes",
-  //       "Terraform",
-  //       "Jenkins",
-  //       "AWS",
-  //       "Prometheus",
-  //     ],
-  //     description:
-  //       "Build and maintain secure, scalable infrastructure for our security platforms. Implement DevSecOps practices and automate security controls.",
-  //     requirements: [
-  //       "4+ years of DevOps experience",
-  //       "Strong Kubernetes and containerization skills",
-  //       "Infrastructure as Code experience (Terraform/CloudFormation)",
-  //       "CI/CD pipeline development",
-  //       "Security-first mindset",
-  //     ],
-  //     benefits: [
-  //       "Health insurance",
-  //       "Stock options",
-  //       "Professional development",
-  //       "Gym membership",
-  //     ],
-  //     posted: "2026-01-12",
-  //     expires: "2026-02-29",
-  //     urgent: true,
-  //   },
-  // ];
-
-  const jobOpenings: any[] = [];
-  const perks = [
-    {
-      icon: Wallet,
-      title: "Competitive Compensation",
-      description: "Top-tier salaries, and performance bonuses",
-      details: ["Competitive Salary", "Annual bonuses", "Referral bonuses"],
-    },
-    {
-      icon: Brain,
-      title: "Learning & Growth",
-      description: "Continuous learning with generous education budgets",
-      details: [
-        "Trainings & certifications",
-        "Conference attendance",
-        "Events & workshops",
-      ],
-    },
-    {
-      icon: Coffee,
-      title: "Work-Life Balance",
-      description: "Supportive culture that values your personal time",
-      details: ["Team retreats", "Social events"],
-    },
-  ];
-
-  const hiringProcess = [
-    {
-      step: "01",
-      title: "Application Review",
-      description: "Our team reviews your application and qualifications",
-      duration: "2-3 days",
-    },
-    {
-      step: "02",
-      title: "Initial Screening",
-      description: "30-minute call to discuss your background and interest",
-      duration: "30 min",
-    },
-    {
-      step: "03",
-      title: "Technical Assessment",
-      description: "Skills-based evaluation relevant to the role",
-      duration: "1-2 hours",
-    },
-    {
-      step: "04",
-      title: "Team Interview",
-      description: "Meet with potential teammates and leadership",
-      duration: "1 hour",
-    },
-    {
-      step: "05",
-      title: "Final Interview",
-      description: "Discussion with executive team about fit and vision",
-      duration: "45 min",
-    },
-    {
-      step: "06",
-      title: "Offer & Onboarding",
-      description: "Congratulations! Welcome to the Cynical team",
-      duration: "1 week",
-    },
-  ];
+  const jobOpenings: Job[] = [];
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="pt-6 pb-12 lg:pb-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-foreground/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-foreground/3 rounded-full blur-3xl" />
-        </div>
-
+      <section className="pt-6 pb-6 lg:pb-12 md:py-20 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
@@ -260,7 +42,7 @@ const Careers = () => {
               <span className="text-sm font-medium">Join Our Team</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance">
+            <h1 className="mb-6 text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
               Build your career in
               <span className="block text-muted-foreground">cybersecurity</span>
             </h1>
@@ -436,7 +218,7 @@ const Careers = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Requirements</h4>
                         <ul className="space-y-1">
-                          {job.requirements.map((req: any, idx: any) => (
+                          {job.requirements.map((req, idx) => (
                             <li
                               key={idx}
                               className="flex items-start gap-2 text-sm text-muted-foreground"
@@ -451,7 +233,7 @@ const Careers = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Benefits</h4>
                         <ul className="space-y-1">
-                          {job.benefits.map((benefit: any, idx: any) => (
+                          {job.benefits.map((benefit, idx) => (
                             <li
                               key={idx}
                               className="flex items-start gap-2 text-sm text-muted-foreground"
@@ -469,7 +251,7 @@ const Careers = () => {
                         Tools & Technologies
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {job.tools.map((tool: any, idx: any) => (
+                        {job.tools.map((tool, idx) => (
                           <Badge
                             key={idx}
                             variant="outline"
@@ -528,9 +310,6 @@ const Careers = () => {
                       <Upload className="ml-2 w-4 h-4" />
                     </Button>
                   </a>
-                  {/* <Button>
-                    Submit Your CV
-                  </Button> */}
                 </CardContent>
               </Card>
             </div>

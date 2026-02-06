@@ -14,10 +14,11 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import { useState } from "react";
+import { createRef, useState } from "react";
 import { sendEmail } from "@/lib/sendQuery";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface FormErrors {
   fullName?: string;
@@ -38,6 +39,8 @@ export function ScheduleCallDialog({
     companyName: "",
     message: "",
   });
+
+  const recaptchaRef = createRef<ReCAPTCHA>();
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
@@ -78,11 +81,18 @@ export function ScheduleCallDialog({
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
+
     if (!validateForm()) {
       toast.error("Please fill the form with Correct Values");
+      return;
+    }
+
+    const token = recaptchaRef.current?.getValue();
+
+    if (!token) {
+      toast.error("Please complete the reCAPTCHA");
       return;
     }
 
@@ -95,68 +105,46 @@ export function ScheduleCallDialog({
       message: formData.message || "No message",
       title: "Source: 'Schedule a Call' Form, Cynical Site",
       time: new Date().toString(),
+      "g-recaptcha-response": token,
     };
 
     try {
-      // @ts-ignore
-      grecaptcha.ready(async () => {
-        try {
-          // @ts-ignore
-          const token = await grecaptcha.execute(
-            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string,
-            { action: "submit" },
-          );
+      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+      const templateID = process.env
+        .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
-          const captchaRes = await fetch("/api/contact", {
-            method: "POST",
-            body: JSON.stringify({ captchaToken: token }),
-          });
-
-          if (!captchaRes.ok) {
-            toast.error("Captcha verification failed. Try again.");
-            return;
-          }
-
-          const serviceID = process.env
-            .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-          const templateID = process.env
-            .NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID as string;
-          const publicKey = process.env
-            .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
-
-          await sendEmail({
-            serviceID,
-            templateID,
-            templateParams,
-            publicKey,
-          });
-
-          toast.success("Request Submitted! We will reach out soon.");
-
-          setTimeout(() => {
-            router.push("/thank-you");
-          }, 500);
-
-          setErrors({});
-          setFormData({
-            fullName: "",
-            companyName: "",
-            emailOfPhone: "",
-            message: "",
-          });
-          onOpenChange(false);
-        } catch (error) {
-          console.error("Captcha or EmailJS error", error);
-          toast.error("Submission Failed! Please try again");
-        } finally {
-          setIsSubmitting(false);
-        }
+      await sendEmail({
+        serviceID,
+        templateID,
+        templateParams,
+        publicKey,
       });
+
+      toast.success("Request Submitted! We will reach out soon.");
+
+      recaptchaRef?.current?.reset();
+
+      setTimeout(() => {
+        router.push("/thank-you");
+      }, 500);
+
+      setErrors({});
+      setFormData({
+        fullName: "",
+        companyName: "",
+        emailOfPhone: "",
+        message: "",
+      });
+      onOpenChange(false);
     } catch (error) {
+      console.error("Captcha or EmailJS error", error);
       toast.error("Submission Failed! Please try again");
+    } finally {
       setIsSubmitting(false);
     }
   };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
@@ -271,6 +259,11 @@ export function ScheduleCallDialog({
               className="placeholder:opacity-50"
             />
           </div>
+
+          <ReCAPTCHA
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+            ref={recaptchaRef}
+          />
 
           <Button
             type="submit"

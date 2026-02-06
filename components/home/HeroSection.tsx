@@ -4,7 +4,6 @@ import Marquee from "react-fast-marquee";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { BorderBeam } from "../ui/border-beam";
 import BookACall from "./BookACall";
 
 export default function HeroSection() {

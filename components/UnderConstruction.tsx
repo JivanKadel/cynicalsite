@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Construction, ShieldAlert } from "lucide-react";
+import { ArrowLeft, Construction } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function UnderConstruction() {

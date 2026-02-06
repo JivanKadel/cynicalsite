@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,8 @@ import { Label } from "@/components/ui/label";
 import { sendEmail } from "@/lib/sendQuery";
 import { ArrowRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { createRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { toast } from "sonner";
 
 interface FormErrors {
@@ -23,6 +25,9 @@ export default function PricingForm() {
     company: "",
     product: "Penetration Testing",
   });
+
+  const recaptchaRef = createRef<ReCAPTCHA>();
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<FormErrors>({});
 
@@ -65,6 +70,13 @@ export default function PricingForm() {
       return;
     }
 
+    const token = recaptchaRef.current?.getValue();
+
+    if (!token) {
+      toast.error("Please complete the reCAPTCHA");
+      return;
+    }
+
     setIsSubmitting(true);
 
     const templateParams = {
@@ -74,64 +86,39 @@ export default function PricingForm() {
       company_name: formData.company,
       message: "I'm interested in " + formData.product,
       time: new Date().toString(),
+      "g-recaptcha-response": token,
     };
 
     try {
-      // @ts-ignore
-      grecaptcha.ready(async () => {
-        try {
-          // @ts-ignore
-          const token = await grecaptcha.execute(
-            process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string,
-            { action: "submit" },
-          );
+      const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
+      const templateID = process.env
+        .NEXT_PUBLIC_EMAILJS_PRICING_TEMPLATE_ID as string;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
 
-          const captchaRes = await fetch("/api/contact", {
-            method: "POST",
-            body: JSON.stringify({ captchaToken: token }),
-          });
+      await sendEmail({
+        serviceID,
+        templateID,
+        templateParams,
+        publicKey,
+      });
 
-          if (!captchaRes.ok) {
-            toast.error("Captcha verification failed. Try again.");
-            return;
-          }
+      toast.success("Request Submitted! We will reach out soon.");
 
-          const serviceID = process.env
-            .NEXT_PUBLIC_EMAILJS_SERVICE_ID as string;
-          const templateID = process.env
-            .NEXT_PUBLIC_EMAILJS_PRICING_TEMPLATE_ID as string;
-          const publicKey = process.env
-            .NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string;
+      recaptchaRef?.current?.reset();
 
-          await sendEmail({
-            serviceID,
-            templateID,
-            templateParams,
-            publicKey,
-          });
+      setTimeout(() => {
+        router.push("/thank-you");
+      }, 500);
 
-          toast.success("Request Submitted! We will reach out soon.");
-
-          setTimeout(() => {
-            router.push("/thank-you");
-          }, 500);
-
-          setErrors({});
-          setFormData({
-            fullName: "",
-            email: "",
-            company: "",
-            product: "Penetration Testing",
-          });
-        } catch (error) {
-          console.error("Failed submission", error);
-          toast.error("Submission Failed! Please try again");
-        } finally {
-          setIsSubmitting(false);
-        }
+      setErrors({});
+      setFormData({
+        fullName: "",
+        email: "",
+        company: "",
+        product: "Penetration Testing",
       });
     } catch (error) {
-      console.error("EmailJS error", error);
+      console.error("Captcha or EmailJS error", error);
       toast.error("Submission Failed! Please try again");
     } finally {
       setIsSubmitting(false);
@@ -258,6 +245,11 @@ export default function PricingForm() {
             <option value="Other">Other</option>
           </select>
         </div>
+
+        <ReCAPTCHA
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string}
+          ref={recaptchaRef}
+        />
 
         <Button
           type="submit"

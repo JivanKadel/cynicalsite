@@ -48,10 +48,9 @@ const GlobalInvestmentBank = () => {
               <p className="text-lg text-muted-foreground font-body leading-relaxed max-w-xl mb-10">
                 How we identified 47 critical vulnerabilities, achieved SOC 2
                 compliance in 3 weeks, and established a zero-breach security
-                posture for a $2T asset manager.
+                posture for a $10 million asset manager.
               </p>
 
-              {/* Services Used */}
               <div className="flex flex-wrap gap-2">
                 {[
                   "Red Team Operations",

@@ -15,29 +15,41 @@ export async function POST(req: Request) {
     );
   }
 
-  const response = await fetch(
-    "https://www.google.com/recaptcha/api/siteverify",
-    {
-      method: "POST",
-      headers: { "content-type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({
-        secret: process.env.RECAPTCHA_SECRET_KEY || "",
-        response: captchaToken,
-      }).toString(),
-    },
-  );
+  try {
+    const response = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: { "content-type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          secret: process.env.RECAPTCHA_SECRET_KEY || "",
+          response: captchaToken,
+        }).toString(),
+      },
+    );
 
-  const data = await response.json();
+    const data = await response.json();
 
-  if (data.success && data.score >= 0.5) {
-    return NextResponse.json({ success: true });
-  } else {
+    if (data.success) {
+      return NextResponse.json({ success: true });
+    } else {
+      return NextResponse.json(
+        {
+          error: "Captcha verification failed",
+        },
+        {
+          status: 403,
+        },
+      );
+    }
+  } catch (error) {
+    console.error(error);
     return NextResponse.json(
       {
-        error: "Captcha verification failed",
+        error: "Internal Server Error",
       },
       {
-        status: 403,
+        status: 500,
       },
     );
   }
