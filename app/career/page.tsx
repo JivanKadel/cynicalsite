@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 
 import { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Career | Cynical Blogs",
@@ -35,206 +36,172 @@ export const metadata: Metadata = {
 };
 
 const Careers = () => {
-  const jobOpenings = [
-    {
-      id: "java-dev-001",
-      title: "Senior Java Developer",
-      department: "Engineering",
-      location: "OnSite / Maitidevi, Kathmandu",
-      type: "Full-time",
-      experience: "5+ years",
-      salary: "120k - 180k NPR",
-      tools: [
-        "Java",
-        "Spring Boot",
-        "Microservices",
-        "AWS",
-        "Kubernetes",
-        "PostgreSQL",
-      ],
-      description:
-        "We're looking for an experienced Java developer to join our security platform team. You'll build scalable backend services for our threat detection and incident response platforms.",
-      requirements: [
-        "5+ years of Java development experience",
-        "Strong understanding of microservices architecture",
-        "Experience with cloud platforms (AWS/GCP/Azure)",
-        "Knowledge of security best practices",
-        "Excellent problem-solving skills",
-      ],
-      benefits: [
-        "Health insurance",
-        "401k matching",
-        "Stock options",
-        "Flexible hours",
-      ],
-      posted: "2026-01-10",
-      expires: "2026-02-15",
-      urgent: true,
-    },
-    {
-      id: "security-intern-002",
-      title: "Cybersecurity Intern",
-      department: "Security Operations",
-      location: "OnSite / Maitidevi, Kathmandu",
-      type: "Internship",
-      experience: "0-2 years",
-      salary: "5000 - 10000 NPR",
-      tools: [
-        "Python",
-        "SIEM",
-        "Wireshark",
-        "Nmap",
-        "Metasploit",
-        "Kali Linux",
-      ],
-      description:
-        "Great opportunity for students or recent graduates to gain hands-on experience in cybersecurity. Work alongside our elite security team on real-world projects.",
-      requirements: [
-        "Pursuing degree in Cybersecurity, Computer Science, or related field",
-        "Basic understanding of networking and security concepts",
-        "Eagerness to learn and strong work ethic",
-        "Available for 3-6 months",
-        "Excellent communication skills",
-      ],
-      benefits: [
-        "Mentorship",
-        "Learning stipend",
-        "Flexible schedule",
-        "Remote work",
-      ],
-      posted: "2026-01-08",
-      expires: "2026-02-28",
-      urgent: false,
-    },
-    {
-      id: "threat-analyst-003",
-      title: "Threat Intelligence Analyst",
-      department: "Threat Intelligence",
-      location: "OnSite / Maitidevi, Kathmandu",
-      type: "Full-time",
-      experience: "3+ years",
-      salary: "95k - 130k NPR",
-      tools: [
-        "Python",
-        "SIEM",
-        "Threat Intelligence Platforms",
-        "STIX/TAXII",
-        "Splunk",
-        "ELK",
-      ],
-      description:
-        "Analyze threat actor activities, produce intelligence reports, and support our global threat hunting operations. Work with cutting-edge threat intelligence tools.",
-      requirements: [
-        "3+ years in threat intelligence or related field",
-        "Understanding of threat actor TTPs and MITRE ATT&CK",
-        "Experience with threat intelligence platforms",
-        "Strong analytical and report writing skills",
-        "Security clearance preferred",
-      ],
-      benefits: [
-        "Security clearance sponsorship",
-        "Training budget",
-        "Conference attendance",
-        "Remote work",
-      ],
-      posted: "2026-01-05",
-      expires: "2026-02-20",
-      urgent: false,
-    },
-    {
-      id: "devops-eng-004",
-      title: "DevOps Engineer",
-      department: "Infrastructure",
-      location: "OnSite / Maitidevi, Kathmandu",
-      type: "Full-time",
-      experience: "4+ years",
-      salary: "110k - 150k NPR",
-      tools: [
-        "Docker",
-        "Kubernetes",
-        "Terraform",
-        "Jenkins",
-        "AWS",
-        "Prometheus",
-      ],
-      description:
-        "Build and maintain secure, scalable infrastructure for our security platforms. Implement DevSecOps practices and automate security controls.",
-      requirements: [
-        "4+ years of DevOps experience",
-        "Strong Kubernetes and containerization skills",
-        "Infrastructure as Code experience (Terraform/CloudFormation)",
-        "CI/CD pipeline development",
-        "Security-first mindset",
-      ],
-      benefits: [
-        "Health insurance",
-        "Stock options",
-        "Professional development",
-        "Gym membership",
-      ],
-      posted: "2026-01-12",
-      expires: "2026-02-29",
-      urgent: true,
-    },
-  ];
+  // const jobOpenings = [
+  //   {
+  //     id: "java-dev-001",
+  //     title: "Senior Java Developer",
+  //     department: "Engineering",
+  //     location: "OnSite / Maitidevi, Kathmandu",
+  //     type: "Full-time",
+  //     experience: "5+ years",
+  //     salary: "120k - 180k NPR",
+  //     tools: [
+  //       "Java",
+  //       "Spring Boot",
+  //       "Microservices",
+  //       "AWS",
+  //       "Kubernetes",
+  //       "PostgreSQL",
+  //     ],
+  //     description:
+  //       "We're looking for an experienced Java developer to join our security platform team. You'll build scalable backend services for our threat detection and incident response platforms.",
+  //     requirements: [
+  //       "5+ years of Java development experience",
+  //       "Strong understanding of microservices architecture",
+  //       "Experience with cloud platforms (AWS/GCP/Azure)",
+  //       "Knowledge of security best practices",
+  //       "Excellent problem-solving skills",
+  //     ],
+  //     benefits: [
+  //       "Health insurance",
+  //       "401k matching",
+  //       "Stock options",
+  //       "Flexible hours",
+  //     ],
+  //     posted: "2026-01-10",
+  //     expires: "2026-02-15",
+  //     urgent: true,
+  //   },
+  //   {
+  //     id: "security-intern-002",
+  //     title: "Cybersecurity Intern",
+  //     department: "Security Operations",
+  //     location: "OnSite / Maitidevi, Kathmandu",
+  //     type: "Internship",
+  //     experience: "0-2 years",
+  //     salary: "5000 - 10000 NPR",
+  //     tools: [
+  //       "Python",
+  //       "SIEM",
+  //       "Wireshark",
+  //       "Nmap",
+  //       "Metasploit",
+  //       "Kali Linux",
+  //     ],
+  //     description:
+  //       "Great opportunity for students or recent graduates to gain hands-on experience in cybersecurity. Work alongside our elite security team on real-world projects.",
+  //     requirements: [
+  //       "Pursuing degree in Cybersecurity, Computer Science, or related field",
+  //       "Basic understanding of networking and security concepts",
+  //       "Eagerness to learn and strong work ethic",
+  //       "Available for 3-6 months",
+  //       "Excellent communication skills",
+  //     ],
+  //     benefits: [
+  //       "Mentorship",
+  //       "Learning stipend",
+  //       "Flexible schedule",
+  //       "Remote work",
+  //     ],
+  //     posted: "2026-01-08",
+  //     expires: "2026-02-28",
+  //     urgent: false,
+  //   },
+  //   {
+  //     id: "threat-analyst-003",
+  //     title: "Threat Intelligence Analyst",
+  //     department: "Threat Intelligence",
+  //     location: "OnSite / Maitidevi, Kathmandu",
+  //     type: "Full-time",
+  //     experience: "3+ years",
+  //     salary: "95k - 130k NPR",
+  //     tools: [
+  //       "Python",
+  //       "SIEM",
+  //       "Threat Intelligence Platforms",
+  //       "STIX/TAXII",
+  //       "Splunk",
+  //       "ELK",
+  //     ],
+  //     description:
+  //       "Analyze threat actor activities, produce intelligence reports, and support our global threat hunting operations. Work with cutting-edge threat intelligence tools.",
+  //     requirements: [
+  //       "3+ years in threat intelligence or related field",
+  //       "Understanding of threat actor TTPs and MITRE ATT&CK",
+  //       "Experience with threat intelligence platforms",
+  //       "Strong analytical and report writing skills",
+  //       "Security clearance preferred",
+  //     ],
+  //     benefits: [
+  //       "Security clearance sponsorship",
+  //       "Training budget",
+  //       "Conference attendance",
+  //       "Remote work",
+  //     ],
+  //     posted: "2026-01-05",
+  //     expires: "2026-02-20",
+  //     urgent: false,
+  //   },
+  //   {
+  //     id: "devops-eng-004",
+  //     title: "DevOps Engineer",
+  //     department: "Infrastructure",
+  //     location: "OnSite / Maitidevi, Kathmandu",
+  //     type: "Full-time",
+  //     experience: "4+ years",
+  //     salary: "110k - 150k NPR",
+  //     tools: [
+  //       "Docker",
+  //       "Kubernetes",
+  //       "Terraform",
+  //       "Jenkins",
+  //       "AWS",
+  //       "Prometheus",
+  //     ],
+  //     description:
+  //       "Build and maintain secure, scalable infrastructure for our security platforms. Implement DevSecOps practices and automate security controls.",
+  //     requirements: [
+  //       "4+ years of DevOps experience",
+  //       "Strong Kubernetes and containerization skills",
+  //       "Infrastructure as Code experience (Terraform/CloudFormation)",
+  //       "CI/CD pipeline development",
+  //       "Security-first mindset",
+  //     ],
+  //     benefits: [
+  //       "Health insurance",
+  //       "Stock options",
+  //       "Professional development",
+  //       "Gym membership",
+  //     ],
+  //     posted: "2026-01-12",
+  //     expires: "2026-02-29",
+  //     urgent: true,
+  //   },
+  // ];
 
+  const jobOpenings: any[] = [];
   const perks = [
-    {
-      icon: Heart,
-      title: "Health & Wellness",
-      description:
-        "Comprehensive health insurance, mental health support, and wellness stipends",
-      details: [
-        "Medical, dental, vision insurance",
-        "Mental health support",
-        "Paid sick leave",
-        "Paid Maternity/Paternity leave",
-      ],
-    },
     {
       icon: Wallet,
       title: "Competitive Compensation",
       description: "Top-tier salaries, and performance bonuses",
-      details: ["Above-market salaries", "Annual bonuses", "Referral bonuses"],
-    },
-    {
-      icon: Home,
-      title: "Flexible Work",
-      description: "Hybrid culture with remote options",
-      details: [
-        "Work from home options",
-        "Flexible hours",
-        "Home office setup",
-        "Co-working stipend",
-      ],
+      details: ["Competitive Salary", "Annual bonuses", "Referral bonuses"],
     },
     {
       icon: Brain,
       title: "Learning & Growth",
       description: "Continuous learning with generous education budgets",
       details: [
-        "Training budget",
+        "Trainings & certifications",
         "Conference attendance",
-        "Certifications",
-        "Mentorship programs",
+        "Events & workshops",
       ],
-    },
-    {
-      icon: Plane,
-      title: "Time Off",
-      description: "Generous vacation policy and time off",
-      details: ["Sick leave", "Parental leave", "Picnics & retreats"],
     },
     {
       icon: Coffee,
       title: "Work-Life Balance",
       description: "Supportive culture that values your personal time",
-      details: [
-        "No meeting Fridays",
-        "Summer hours",
-        "Team retreats",
-        "Social events",
-      ],
+      details: ["Team retreats", "Social events"],
     },
   ];
 
@@ -305,16 +272,20 @@ const Careers = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90"
-              >
-                View Openings
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button size="lg" variant="outline">
-                Submit CV
-              </Button>
+              <Link href="#current-openings">
+                <Button
+                  size="lg"
+                  className="bg-foreground text-background hover:bg-foreground/90"
+                >
+                  View Openings
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </Link>
+              <a href="mailto:hr@cynicaltechnology.com">
+                <Button size="lg" variant="outline">
+                  Submit CV
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -413,7 +384,7 @@ const Careers = () => {
       </section>
 
       {/* Current Openings Section */}
-      <section className="py-20 lg:py-32 bg-secondary/20">
+      <section className="py-20 lg:py-32 bg-secondary/20" id="current-openings">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-6">
@@ -465,7 +436,7 @@ const Careers = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Requirements</h4>
                         <ul className="space-y-1">
-                          {job.requirements.map((req, idx) => (
+                          {job.requirements.map((req: any, idx: any) => (
                             <li
                               key={idx}
                               className="flex items-start gap-2 text-sm text-muted-foreground"
@@ -480,7 +451,7 @@ const Careers = () => {
                       <div>
                         <h4 className="font-semibold mb-2">Benefits</h4>
                         <ul className="space-y-1">
-                          {job.benefits.map((benefit, idx) => (
+                          {job.benefits.map((benefit: any, idx: any) => (
                             <li
                               key={idx}
                               className="flex items-start gap-2 text-sm text-muted-foreground"
@@ -498,7 +469,7 @@ const Careers = () => {
                         Tools & Technologies
                       </h4>
                       <div className="flex flex-wrap gap-2">
-                        {job.tools.map((tool, idx) => (
+                        {job.tools.map((tool: any, idx: any) => (
                           <Badge
                             key={idx}
                             variant="outline"
@@ -551,10 +522,15 @@ const Careers = () => {
                     professionals. Submit your CV and we&apos;ll reach out when
                     suitable opportunities arise.
                   </p>
-                  <Button>
+                  <a href="mailto:hr@cynicaltechnology.com">
+                    <Button size="lg">
+                      Submit Your CV
+                      <Upload className="ml-2 w-4 h-4" />
+                    </Button>
+                  </a>
+                  {/* <Button>
                     Submit Your CV
-                    <Upload className="ml-2 w-4 h-4" />
-                  </Button>
+                  </Button> */}
                 </CardContent>
               </Card>
             </div>
@@ -562,135 +538,7 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Application Form Section */}
-      <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-5xl  font-bold tracking-tight mb-6">
-                Submit your application
-              </h2>
-              <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                Ready to join our team? Submit your application below and
-                we&apos;ll get back to you within 2-3 business days.
-              </p>
-            </div>
-
-            <Card className="border-border bg-background">
-              <CardContent className="p-8">
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName">First Name *</Label>
-                      <Input id="firstName" placeholder="John" required />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName">Last Name *</Label>
-                      <Input id="lastName" placeholder="Doe" required />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email Address *</Label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="john.doe@example.com"
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="+1 (555) 123-4567"
-                      required
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="position">Position Applying For</Label>
-                    <Input
-                      id="position"
-                      placeholder="e.g., Senior Java Developer"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="experience">Years of Experience *</Label>
-                    <Input id="experience" placeholder="5+ years" required />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="linkedin">LinkedIn Profile</Label>
-                    <Input
-                      id="linkedin"
-                      placeholder="https://linkedin.com/in/johndoe"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="resume">Upload Resume/CV *</Label>
-                    <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-foreground/50 transition-colors cursor-pointer">
-                      <Upload className="w-8 h-8 text-muted-foreground mx-auto mb-2" />
-                      <p className="text-sm text-muted-foreground">
-                        Click to upload or drag and drop
-                      </p>
-                      <p className="text-xs text-muted-foreground/60">
-                        PDF, DOC, DOCX (Max 5MB)
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="coverLetter">Cover Letter</Label>
-                    <Textarea
-                      id="coverLetter"
-                      placeholder="Tell us why you're interested in working at Cynical..."
-                      rows={6}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="skills">Key Skills & Technologies</Label>
-                    <Textarea
-                      id="skills"
-                      placeholder="e.g., Java, Python, AWS, Kubernetes, SIEM tools..."
-                      rows={3}
-                    />
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <input
-                      type="checkbox"
-                      id="authorize"
-                      className="mt-1"
-                      required
-                    />
-                    <Label
-                      htmlFor="authorize"
-                      className="text-sm text-muted-foreground"
-                    >
-                      I authorize Cynical to process my personal data for
-                      recruitment purposes and agree to the privacy policy.
-                    </Label>
-                  </div>
-
-                  <Button type="submit" className="w-full">
-                    Submit Application
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Life at Cynical Section */}
-      <section className="py-20 lg:py-32 bg-secondary/20">
+      <section className="py-12 lg:py-24 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-5xl  font-bold tracking-tight mb-6">
@@ -710,7 +558,7 @@ const Careers = () => {
                 </div>
                 <h3 className="font-semibold mb-2">Team Retreats</h3>
                 <p className="text-sm text-muted-foreground">
-                  Annual team retreats in exciting locations around the world
+                  Occasional team retreats in exciting locations
                 </p>
               </CardContent>
             </Card>
@@ -722,7 +570,7 @@ const Careers = () => {
                 </div>
                 <h3 className="font-semibold mb-2">Learning Culture</h3>
                 <p className="text-sm text-muted-foreground">
-                  Regular tech talks, workshops, and knowledge sharing sessions
+                  Regular events, workshops, and sessions
                 </p>
               </CardContent>
             </Card>
@@ -734,7 +582,7 @@ const Careers = () => {
                 </div>
                 <h3 className="font-semibold mb-2">Recognition</h3>
                 <p className="text-sm text-muted-foreground">
-                  Regular recognition of team achievements and contributions
+                  Recognition of achievements and contributions
                 </p>
               </CardContent>
             </Card>
@@ -755,16 +603,20 @@ const Careers = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-foreground text-background hover:bg-foreground/90"
-              >
-                Contact Talent Team
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
-              <Button size="lg" variant="outline">
-                More About Us
-              </Button>
+              <a href="mailto:hr@cynicaltechnology.com">
+                <Button
+                  size="lg"
+                  className="bg-foreground text-background hover:bg-foreground/90"
+                >
+                  Contact HR
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Button>
+              </a>
+              <Link href={"/company"}>
+                <Button size="lg" variant="outline">
+                  About Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

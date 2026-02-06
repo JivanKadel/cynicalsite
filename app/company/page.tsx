@@ -87,7 +87,7 @@ export default function AboutUs() {
     },
     {
       name: "A",
-      role: "AI ML Officer",
+      role: "Senior Security Auditor",
       image: "/people/placeholder_person.jpg",
       bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
       social: {
@@ -98,7 +98,7 @@ export default function AboutUs() {
     },
     {
       name: "B",
-      role: "AI ML Officer",
+      role: "Office Administrator",
       image: "/people/placeholder_person.jpg",
       bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
       social: {
@@ -109,7 +109,7 @@ export default function AboutUs() {
     },
     {
       name: "C",
-      role: "AI ML Officer",
+      role: "Sales Manager",
       image: "/people/placeholder_person.jpg",
       bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
       social: {

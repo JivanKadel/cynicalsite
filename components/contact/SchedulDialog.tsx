@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client";
 
 import {
@@ -271,9 +272,6 @@ export function ScheduleCallDialog({
             />
           </div>
 
-          {/* <Button type="submit" className="w-full">
-            Request Call
-          </Button> */}
           <Button
             type="submit"
             disabled={isSubmitting}
