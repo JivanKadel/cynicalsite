@@ -56,7 +56,7 @@ export default function BugV() {
               </a>
             </div>
           </div>
-          <div>
+          <a href="https://bugv.io/" target="_blank" rel="noopener noreferrer">
             <Image
               src="/products/bugv.png"
               alt="Bugv Platform"
@@ -64,7 +64,7 @@ export default function BugV() {
               height={500}
               className="dark:brightness-0 dark:invert"
             />
-          </div>
+          </a>
         </div>
       </section>
 
@@ -278,23 +278,22 @@ export default function BugV() {
                   className="flex items-center justify-between p-4 rounded-xl border border-border/50 bg-background hover:border-border transition-colors"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
-                  <div className="flex items-center gap-4">
-                    <span
-                      className={`px-2 py-1 text-xs font-medium rounded ${
-                        vuln.severity === "Critical"
-                          ? "bg-red-500/10 text-red-400"
-                          : vuln.severity === "High"
-                            ? "bg-orange-500/10 text-orange-400"
-                            : "bg-yellow-500/10 text-yellow-400"
-                      }`}
-                    >
-                      {vuln.severity}
-                    </span>
+                  <div className="flex items-center">
+                    <div className="w-18 mr-4 flex justify-center">
+                      <span
+                        className={`px-2 py-1 text-xs font-medium rounded ${
+                          vuln.severity === "Critical"
+                            ? "bg-red-500/10 text-red-400"
+                            : vuln.severity === "High"
+                              ? "bg-orange-500/10 text-orange-400"
+                              : "bg-yellow-500/10 text-yellow-400"
+                        }`}
+                      >
+                        {vuln.severity}
+                      </span>
+                    </div>
                     <span className="font-medium">{vuln.name}</span>
                   </div>
-                  <span className="text-sm text-muted-foreground font-mono">
-                    {vuln.count}
-                  </span>
                 </div>
               ))}
             </div>

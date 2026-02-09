@@ -18,7 +18,7 @@ export function TrustedByImage({
   logo,
   link,
   width = 100,
-  height = 80,
+  height = 100,
   style = {},
   className = "",
 }: TrustedByProps) {

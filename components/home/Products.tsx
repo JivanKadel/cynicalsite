@@ -1,4 +1,8 @@
+import Link from "next/link";
 import { ProductCard } from "./ProductCard";
+import { MoveUpRight } from "lucide-react";
+import Image from "next/image";
+import { Button } from "../ui/button";
 
 const Products = () => {
   const products = [
@@ -64,7 +68,7 @@ const Products = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {products.map((product) => (
             <ProductCard
               key={product.name}
@@ -80,6 +84,96 @@ const Products = () => {
               gradient={product.gradient}
               href={product.href}
             />
+          ))}
+        </div> */}
+        {/* <div className="grid grid-cols-1 gap-2">
+          {products.map((product) => (
+            <Link
+              key={product.title}
+              href={product.href || "#"}
+              className="group h-80 sm:h-70 md:h-105 rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
+            >
+              <div className="relative h-full p-2 lg:p-4 rounded-xl rounded-tr-[48px] overflow-hidden transition-all duration-300">
+                <div className="flex justify-between items-center">
+                  <h2 className="flex gap-1 text-green-900 dark:text-green-500 text-sm tracking-widest">
+                    {product.title}
+                  </h2>
+                  <div className="border border-foreground/20 p-2 rounded-full">
+                    <MoveUpRight className="h-4 w-4" />
+                  </div>
+                </div>
+                <div className="mt-2 flex flex-col h-full text-foreground relative z-10">
+                  <div className="mb-1">
+                    <h2 className="md:text-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik z-10 relative text-pretty max-w-96">
+                      {product.name}
+                    </h2>
+                    <p className="z-10 mb-8 leading-6 md:mb-18">
+                      {product.tagline}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="absolute -bottom-4 sm:bottom-4 right-4 left-4 h-[60%]">
+                  <div className="relative w-full h-full rounded-lg p-0 m-0">
+                    <Image
+                      src={product.dashboardImage}
+                      alt={product.name}
+                      width={1080}
+                      height={490}
+                      className="object-contain rounded-lg border-2 border-border"
+                    />
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div> */}
+
+        <div className="grid grid-cols-1 gap-6">
+          {products.map((product) => (
+            <Link
+              key={product.title}
+              href={product.href || "#"}
+              className="group rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
+            >
+              {/* Responsive grid: text left, image right on md+ */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full py-4 rounded-xl overflow-hidden transition-all duration-300">
+                {/* Text content */}
+                <div className="flex flex-col justify-center order-1 md:order-1 p-4 px-6">
+                  <div className="flex justify-between items-center mb-2">
+                    <h2 className="flex gap-1 text-green-900 dark:text-green-500 font-light text-sm tracking-widest -mt-6 mb-4">
+                      {product.title}
+                    </h2>
+                    {/* <div className="border border-foreground/20 p-2 rounded-full">
+                      <MoveUpRight className="h-4 w-4" />
+                    </div> */}
+                  </div>
+
+                  <h2 className="md:text-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik text-pretty max-w-96">
+                    {product.name}
+                  </h2>
+                  <p className="mb-4 leading-6">{product.tagline}</p>
+                  <p className="mb-6 text-sm">{product.description}</p>
+
+                  <a href={product.href}>
+                    <Button className="px-4 py-2 rounded-lg group">
+                      {product.cta}
+                    </Button>
+                  </a>
+                </div>
+
+                {/* Image content */}
+                <div className="order-2 md:order-2 flex items-center justify-center -mr-2 -mb-4 md:mt-0">
+                  <Image
+                    src={product.dashboardImage}
+                    alt={product.name}
+                    width={1080}
+                    height={490}
+                    className="object-contain rounded-lg border-2 border-border w-full h-auto"
+                  />
+                </div>
+              </div>
+            </Link>
           ))}
         </div>
 

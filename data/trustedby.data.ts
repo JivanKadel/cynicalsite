@@ -34,6 +34,31 @@ export const trustedBy = [
     image: "/brands/webpoint.svg",
     link: "https://webpoint.io/",
   },
+  {
+    name: "WorldBank",
+    image: "/brands/worldbank.svg",
+    link: "https://worldbank.org",
+  },
+  {
+    name: "foneloan",
+    image: "/brands/foneloan.png",
+    link: "https://foneloan.com.np/",
+  },
+  {
+    name: "foodmandu",
+    image: "/brands/foodmandu.png",
+    link: "https://foodmandu.com/",
+  },
+  {
+    name: "NAASA Securities",
+    image: "/brands/naasa_securities.webp",
+    link: "https://naasasecurities.com.np/",
+  },
+  {
+    name: "WorldLink",
+    image: "/brands/worldlink.svg",
+    link: "https://worldlink.com.np",
+  },
 ];
 
 export const trustedByClipped = [

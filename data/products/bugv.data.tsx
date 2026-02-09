@@ -137,12 +137,12 @@ export const process = [
 ];
 
 export const vulnerabilityTypes = [
-  { name: "SQL Injection", severity: "Critical", count: "1,240+" },
-  { name: "Authentication Bypass", severity: "Critical", count: "890+" },
-  { name: "Remote Code Execution", severity: "Critical", count: "450+" },
-  { name: "Cross-Site Scripting", severity: "High", count: "2,100+" },
-  { name: "IDOR / Broken Access Control", severity: "High", count: "1,800+" },
-  { name: "Server-Side Request Forgery", severity: "High", count: "620+" },
-  { name: "Information Disclosure", severity: "Medium", count: "3,200+" },
-  { name: "Business Logic Flaws", severity: "Medium", count: "980+" },
+  { name: "SQL Injection", severity: "Critical" },
+  { name: "Authentication Bypass", severity: "Critical" },
+  { name: "Remote Code Execution", severity: "Critical" },
+  { name: "Cross-Site Scripting", severity: "High" },
+  { name: "IDOR / Broken Access Control", severity: "High" },
+  { name: "Server-Side Request Forgery", severity: "High" },
+  { name: "Information Disclosure", severity: "Medium" },
+  { name: "Business Logic Flaws", severity: "Medium" },
 ];
