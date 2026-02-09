@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 const Products = () => {
   const products = [
     {
-      icon: "/products/bugv_logo.png",
+      icon: "/products/bugv.png",
       title: "CROWDSOURCED SECURITY",
       dashboardImage: "/bugv_product.png",
       name: "Bugv",
@@ -26,6 +26,7 @@ const Products = () => {
     },
     {
       icon: "/products/vigile_logo.png",
+      lightIcon: "/products/vigile_light_logo.png",
       title: "THREAT INTELLIGENCE",
       dashboardImage: "/products/vigile_1.png",
       name: "Vigile.AI",
@@ -136,24 +137,60 @@ const Products = () => {
               href={product.href || "#"}
               className="group rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
             >
-              {/* Responsive grid: text left, image right on md+ */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full py-4 rounded-xl overflow-hidden transition-all duration-300">
+              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 h-full rounded-xl overflow-hidden transition-all duration-300">
                 {/* Text content */}
-                <div className="flex flex-col justify-center order-1 md:order-1 p-4 px-6">
+                <div className="flex flex-col justify-center order-1 lg:order-1 lg:col-span-2 p-6 lg:p-8">
                   <div className="flex justify-between items-center mb-2">
-                    <h2 className="flex gap-1 text-green-900 dark:text-green-500 font-light text-sm tracking-widest -mt-6 mb-4">
+                    <h2 className="flex gap-1 text-green-900 dark:text-green-500 font-light text-sm tracking-widest mb-2">
                       {product.title}
                     </h2>
-                    {/* <div className="border border-foreground/20 p-2 rounded-full">
-                      <MoveUpRight className="h-4 w-4" />
-                    </div> */}
                   </div>
 
-                  <h2 className="md:text-[1.625rem] text-3.5xl leading-tight md:leading-8 mb-2 font-aeonik text-pretty max-w-96">
-                    {product.name}
-                  </h2>
-                  <p className="mb-4 leading-6">{product.tagline}</p>
-                  <p className="mb-6 text-sm">{product.description}</p>
+                  <div className="my-2">
+                    {product.lightIcon ? (
+                      <>
+                        <Image
+                          src={product.icon}
+                          alt={product.name}
+                          width={100}
+                          height={80}
+                          className="hidden dark:block"
+                        />
+
+                        <Image
+                          src={product.lightIcon}
+                          alt={`${product.name} light icon`}
+                          width={100}
+                          height={80}
+                          className="block dark:hidden"
+                        />
+                      </>
+                    ) : (
+                      <Image
+                        src={product.icon}
+                        alt={product.name}
+                        width={90}
+                        height={80}
+                        className="dark:invert dark:brightness-0"
+                      />
+                    )}
+                  </div>
+                  <p className="mb-4 font-extrabold leading-6">
+                    {product.tagline}
+                  </p>
+                  <p className="mb-6">{product.description}</p>
+
+                  <ul className="my-4">
+                    {product.features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 mb-2 text-sm text-muted-foreground"
+                      >
+                        <span className="w-1.5 h-1.5 mt-1 rounded-full bg-green-500 animate-pulse" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
 
                   <a href={product.href}>
                     <Button className="px-4 py-2 rounded-lg group">
@@ -163,13 +200,13 @@ const Products = () => {
                 </div>
 
                 {/* Image content */}
-                <div className="order-2 md:order-2 flex items-center justify-center -mr-2 -mb-4 md:mt-0">
+                <div className="order-2 lg:order-2 lg:col-span-3 flex items-end justify-end md:mt-0">
                   <Image
                     src={product.dashboardImage}
                     alt={product.name}
                     width={1080}
                     height={490}
-                    className="object-contain rounded-lg border-2 border-border w-full h-auto"
+                    className="object-fit rounded-lg w-full "
                   />
                 </div>
               </div>
