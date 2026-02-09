@@ -17,7 +17,7 @@ const Products = () => {
       features: [
         "Managed vulnerability disclosure",
         "Exploit-verified findings only",
-        "4-hour SLA on critical reports",
+        "Pay for results, not noise",
       ],
       stats: { value: "47", label: "Avg critical per engagement" },
       cta: "Learn More",
@@ -34,7 +34,7 @@ const Products = () => {
       description:
         "See your infrastructure the way attackers see it. Continuous discovery of shadow IT, leaked credentials, and exposed services across your entire digital footprint.",
       features: [
-        "Real-time asset discovery",
+        "Breach and malware scanning",
         "Credential leak monitoring",
         "Third-party risk scoring",
       ],
