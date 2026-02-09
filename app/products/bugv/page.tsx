@@ -11,6 +11,7 @@ import {
   stats,
   vulnerabilityTypes,
 } from "@/data/products/bugv.data";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Bugv | Crowdsourced Cyber Security Platform",
@@ -22,7 +23,7 @@ export default function BugV() {
   return (
     <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative">
+        <div className="container mx-auto px-6 relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-4xl">
             <div className="flex items-center gap-4 mb-6">
               <div>
@@ -54,6 +55,15 @@ export default function BugV() {
                 </Button>
               </a>
             </div>
+          </div>
+          <div>
+            <Image
+              src="/products/bugv.png"
+              alt="Bugv Platform"
+              width={800}
+              height={500}
+              className="dark:brightness-0 dark:invert"
+            />
           </div>
         </div>
       </section>
