@@ -137,9 +137,9 @@ const Products = () => {
               href={product.href || "#"}
               className="group rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 h-full rounded-xl overflow-hidden transition-all duration-300">
+              <div className="grid grid-cols-1 xl:grid-cols-10 gap-8 h-full rounded-xl overflow-hidden transition-all duration-300">
                 {/* Text content */}
-                <div className="flex flex-col justify-center order-1 lg:order-1 lg:col-span-2 p-6 lg:p-8">
+                <div className="flex flex-col justify-center order-1 xl:order-1 xl:col-span-3 p-6 lg:p-8">
                   <div className="flex justify-between items-center mb-2">
                     <h2 className="flex gap-1 text-green-900 dark:text-green-500 font-light text-sm tracking-widest mb-2">
                       {product.title}
@@ -200,7 +200,7 @@ const Products = () => {
                 </div>
 
                 {/* Image content */}
-                <div className="order-2 lg:order-2 lg:col-span-3 flex items-end justify-end md:mt-0">
+                <div className="order-2 xl:order-2 xl:col-span-7 flex items-end justify-end md:mt-0">
                   <Image
                     src={product.dashboardImage}
                     alt={product.name}
@@ -214,15 +214,15 @@ const Products = () => {
           ))}
         </div>
 
-        <div className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/30 bg-secondary/30">
+        <div className="mt-20 grid grid-cols-2 xl:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/30 bg-secondary/30">
           {[
             { value: "0", label: "Client breaches on our watch" },
             { value: "2.4K", label: "Vulnerabilities discovered" },
             { value: "<10h", label: "Critical finding triage" },
             { value: "24/7", label: "Active threat monitoring" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center lg:text-left">
-              <p className="text-3xl lg:text-4xl font-bold mb-1 text-foreground">
+            <div key={stat.label} className="text-center xl:text-left">
+              <p className="text-3xl xl:text-4xl font-bold mb-1 text-foreground">
                 {stat.value}
               </p>
               <p className="text-sm text-muted-foreground">{stat.label}</p>
