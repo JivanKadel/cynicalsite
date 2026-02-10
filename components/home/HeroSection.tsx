@@ -3,16 +3,18 @@ import { TrustedByImage } from "./TrustedByImage";
 import Marquee from "react-fast-marquee";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Star } from "lucide-react";
 import BookACall from "./BookACall";
 
 export default function HeroSection() {
   return (
     <section className="container min-h-screen flex flex-col justify-center items-center mx-auto relative z-10 pt-4 md:pt-0 md:-mt-16">
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8 py-8">
-        <div className="flex flex-col gap-2 justify-center mb-4 md:mb-8">
+        <div className="flex flex-col gap-3 justify-center mb-4 md:mb-8">
           <p className="text-muted-foreground uppercase tracking-widest text-sm font-bold flex items-center gap-2 justify-center">
-            ⭐ Trusted by industry leaders ⭐
+            <Star fill="#d08700" className="text-yellow-600" /> Trusted by
+            industry leaders
+            <Star fill="#d08700" className="text-yellow-600" />
           </p>
           <p className="text-muted-foreground">
             Comprehensive Penetration Testing and Compliance Solutions.

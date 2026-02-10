@@ -32,7 +32,7 @@ const Products = () => {
       name: "Vigile.AI",
       tagline: "Continuous Breaches and Malware Monitoring",
       description:
-        "See your infrastructure the way attackers see it. Continuous discovery of shadow IT, leaked credentials, and exposed services across your entire digital footprint.",
+        "Continuous discovery of shadow IT, leaked credentials, and exposed services across your entire digital footprint.",
       features: [
         "Breach and malware scanning",
         "Credential leak monitoring",
@@ -130,14 +130,14 @@ const Products = () => {
           ))}
         </div> */}
 
-        <div className="grid grid-cols-1 gap-6">
+        <div className="grid grid-cols-1 gap-12">
           {products.map((product) => (
             <Link
               key={product.title}
               href={product.href || "#"}
               className="group rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
             >
-              <div className="grid grid-cols-1 xl:grid-cols-10 gap-8 h-full rounded-xl overflow-hidden transition-all duration-300">
+              <div className="grid grid-cols-1 xl:grid-cols-10 gap-2 h-full rounded-xl overflow-hidden transition-all duration-300">
                 {/* Text content */}
                 <div className="flex flex-col justify-center order-1 xl:order-1 xl:col-span-3 p-6 lg:p-8">
                   <div className="flex justify-between items-center mb-2">
