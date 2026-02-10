@@ -59,6 +59,11 @@ export const trustedBy = [
     image: "/brands/worldlink.svg",
     link: "https://worldlink.com.np",
   },
+  {
+    name: "IMS Software",
+    image: "/brands/ims_software.png",
+    link: "https://imssoftware.com.np/",
+  },
 ];
 
 export const trustedByClipped = [
