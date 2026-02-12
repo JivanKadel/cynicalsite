@@ -6,10 +6,6 @@ const Footer = () => {
     Products: [
       { label: "Bugv Platform", href: "/products/bugv" },
       { label: "Vigile.AI", href: "/products/vigile" },
-      // {
-      //   label: "Falcon",
-      //   href: "https://webmonitoring.doit.gov.np/dashboard",
-      // },
     ],
     Solutions: [
       { label: "Application Security", href: "/solutions/app-security" },

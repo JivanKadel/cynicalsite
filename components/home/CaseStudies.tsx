@@ -13,10 +13,10 @@ export default function CaseStudies() {
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
             Case Studies
           </span>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-foreground">
+          <p className="text-2xl sm:text-3xl md:text-5xl font-aeonik font-bold text-foreground">
             Real engagements.
             <span className="block">Real findings.</span>
-          </h2>
+          </p>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Every case study represents a client who thought they were secure
             until we tested like real attackers.
@@ -36,10 +36,6 @@ export default function CaseStudies() {
           {caseStudies.map((study, index) => {
             const content = (
               <>
-                {/* <div
-                  className={`absolute inset-0 bg-linear-to-br ${"shadow-xl"} transition-opacity duration-500 dark:opacity-0`}
-                /> */}
-
                 <div className="relative bg-card shadow-xl p-6 lg:p-8 flex flex-col h-full">
                   <div className="flex items-start justify-between mb-3">
                     <div
@@ -64,12 +60,7 @@ export default function CaseStudies() {
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {study.tags.map((tag) => (
-                      <Badge
-                        key={tag}
-                        // className="text-xs px-2.5 py-1 rounded-md border border-border/50 text-muted-foreground"
-                      >
-                        {tag}
-                      </Badge>
+                      <Badge key={tag}>{tag}</Badge>
                     ))}
                   </div>
 
@@ -107,7 +98,6 @@ export default function CaseStudies() {
             return study.link ? (
               <Link
                 key={study.company}
-                // href={`/resources${study.link}`}
                 href="/resources/case-studies"
                 className={className}
                 style={style}

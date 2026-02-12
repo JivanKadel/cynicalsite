@@ -94,9 +94,9 @@ export default function BugV() {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               How It Works
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <p className="text-3xl md:text-5xl font-aeonik font-bold mb-4">
               From launch to remediation
-            </h2>
+            </p>
             <p className="text-lg text-muted-foreground font-body">
               A streamlined process that turns security chaos into actionable
               insights
@@ -136,7 +136,7 @@ export default function BugV() {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Platform Features
             </span>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-aeonik font-bold mb-4">
               Enterprise-grade bug bounty
             </h2>
             <p className="text-lg text-muted-foreground font-body">
@@ -174,9 +174,9 @@ export default function BugV() {
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
               Program Options
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <p className="text-3xl md:text-4xl font-aeonik font-bold mb-4">
               Choose your approach
-            </h2>
+            </p>
             <p className="text-lg text-muted-foreground font-body">
               Flexible program structures to match your security maturity and
               business needs
@@ -241,12 +241,12 @@ export default function BugV() {
               <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
                 Proven Results
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <p className="text-3xl md:text-4xl font-aeonik font-bold mb-4">
                 Real vulnerabilities.
                 <span className="block text-muted-foreground">
                   Real impact.
                 </span>
-              </h2>
+              </p>
               <p className="text-lg text-muted-foreground font-body mb-8">
                 Our researchers have uncovered thousands of critical
                 vulnerabilities across Fortune 500 companies, protecting

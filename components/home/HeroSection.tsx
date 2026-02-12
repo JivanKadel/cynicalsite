@@ -31,24 +31,6 @@ export default function HeroSection() {
         </h2>
       </div>
       <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 max-w-sm">
-        {/* <Link href={"/contact"}>
-          <Button
-            className="relative overflow-hidden w-50 h-12 border-0 border-transparent text-sm 
-             text-white rounded-4xl 
-             bg-linear-to-r from-blue-500 via-blue-600 to-blue-700 
-             hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 
-             transition-all duration-300 ease-in-out"
-          >
-            Book a 15-min call <ArrowRight className="w-5! h-5!" />
-            <BorderBeam
-              size={50}
-              borderWidth={2}
-              colorFrom="white"
-              colorTo="blue"
-              duration={4}
-            />
-          </Button>
-        </Link> */}
         <BookACall />
         <Link href={"/downloads/sample-report"} className="flex-1">
           <Button className="w-54 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
@@ -93,7 +75,6 @@ export default function HeroSection() {
                     ? ""
                     : "dark:hover:invert-0 dark:hover:brightness-100"
                 }`}
-                // className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
               />
             ))}
 
