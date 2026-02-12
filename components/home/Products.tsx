@@ -266,7 +266,7 @@ const Products = () => {
                     {products[0].features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-center gap-2 mb-2 text-muted-foreground font-bold text-sm"
+                        className="flex items-center gap-2 mb-2 text-muted-foreground font-bold"
                       >
                         <span className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center">
                           <Check className="h-4 w-4 text-green-500" />
@@ -296,42 +296,40 @@ const Products = () => {
                     className="object-cover border rounded-xl w-full shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
                   />
                   <div
-                    className="absolute -bottom-6 -left-6 w-40 animate-float-delayed preserve-3d"
+                    className="absolute -bottom-6 -left-6 w-20 sm:w-40 animate-float-delayed preserve-3d"
                     style={{ transform: "rotateY(-1.73deg) rotateX(-4.94deg)" }}
                   >
-                    <div className="bg-[#111827] rounded-xl p-4 border border-white/10 text-white">
-                      <div className="flex items-center gap-2 mb-2">
+                    <div className="bg-[#111827] rounded-xl p-1 sm:p-3 border border-white/10 text-white">
+                      <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
                         <div className="w-2 h-2 rounded-full bg-green-500 pulse-ring relative"></div>
-                        <span className="text-xs text-gray-400">
+                        <span className="text-[8px] sm:text-xs text-gray-400">
                           Live Activity
                         </span>
                       </div>
-                      <div className="text-2xl font-bold mb-1">12</div>
-                      <div className="text-xs text-gray-400">
+                      <div className="text-base sm:text-2xl font-bold mb-1">
+                        12
+                      </div>
+                      <div className="text-[8px] sm:text-xs text-gray-400">
                         Active hunters online
                       </div>
                     </div>
                   </div>
-                  <div
-                    className="absolute -top-6 -right-6 w-40 animate-float-delayed preserve-3d"
-                    style={{
-                      animationDelay: "2s",
-                      transform: "rotateY(11.625deg) rotateX(-2.61deg)",
-                    }}
-                  >
-                    <div className="bg-[#ffffff] rounded-xl p-3 border">
+                  <div className="absolute -top-6 -right-6 w-20 sm:w-40">
+                    <div className="bg-[#ffffff] rounded-xl p-1 sm:p-3 border">
                       <div className="flex items-center gap-2 mb-2">
-                        <div className="w-8 h-8 rounded-full bg-linear-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-xs font-bold">
+                        <div className="w-4 h-4 sm:w-8 sm:h-8 rounded-full bg-linear-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-xs font-bold">
                           $
                         </div>
                         <div>
-                          <div className="text-xs font-semibold text-gray-900">
+                          <div className="text-[8px] sm:text-xs font-semibold text-gray-900">
                             Bounty Paid
                           </div>
-                          <div className="text-xs text-gray-500">Just now</div>
+                          <div className="text-[8px] sm:text-xs text-gray-500">
+                            Just now
+                          </div>
                         </div>
                       </div>
-                      <div className="text-lg font-bold text-green-600">
+                      <div className="text-sm sm:text-lg font-bold text-green-600">
                         +$2,500
                       </div>
                     </div>
@@ -393,7 +391,7 @@ const Products = () => {
                     {products[1].features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-center gap-2 mb-2 text-muted-foreground font-bold text-sm"
+                        className="flex items-center gap-2 mb-2 text-muted-foreground font-bold"
                       >
                         <span className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center">
                           <Check className="h-4 w-4 text-green-500" />
@@ -423,42 +421,46 @@ const Products = () => {
                     className="object-cover border rounded-xl w-full xl:scale-105 shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
                   />
                   <div
-                    className="absolute -bottom-6 -left-6 w-40 animate-float-delayed preserve-3d"
+                    className="absolute -bottom-6 -left-6 w-20 sm:w-40 animate-float-delayed preserve-3d"
                     style={{ transform: "rotateY(-1.73deg) rotateX(-4.94deg)" }}
                   >
-                    <div className="bg-[#111827] rounded-xl p-4 border border-white/10 text-white">
-                      <div className="flex items-center gap-2 mb-2">
+                    <div className="bg-[#111827] rounded-xl p-1 sm:p-3 border border-white/10 text-white">
+                      <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
                         <div className="w-2 h-2 rounded-full bg-green-500 pulse-ring relative"></div>
-                        <span className="text-xs text-gray-400">
+                        <span className="text-[8px] sm:text-xs text-gray-400">
                           Live Activity
                         </span>
                       </div>
-                      <div className="text-2xl font-bold mb-1">21</div>
-                      <div className="text-xs text-gray-400">
+                      <div className="text-base sm:text-2xl font-bold mb-1">
+                        21
+                      </div>
+                      <div className="text-[8px] sm:text-xs text-gray-400">
                         Malware Breaches
                       </div>
                     </div>
                   </div>
                   <div
-                    className="absolute -top-6 -right-6 w-40 animate-float-delayed preserve-3d"
+                    className="absolute -top-6 -right-6 w-20 sm:w-40 animate-float-delayed preserve-3d"
                     style={{
                       animationDelay: "2s",
                       transform: "rotateY(11.625deg) rotateX(-2.61deg)",
                     }}
                   >
-                    <div className="bg-[#ffffff] rounded-xl p-3 border">
-                      <div className="flex items-center gap-2 mb-2">
-                        <div className="w-8 h-8 rounded-full bg-linear-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-xs font-bold">
+                    <div className="bg-[#ffffff] rounded-xl p-1 sm:p-3 border">
+                      <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
+                        <div className="w-4 h-4 sm:w-8 sm:h-8 rounded-full bg-linear-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-xs font-bold">
                           X
                         </div>
                         <div>
-                          <div className="text-xs font-semibold text-gray-900">
+                          <div className="text-[8px] sm:text-xs font-semibold text-gray-900">
                             Threats
                           </div>
-                          <div className="text-xs text-gray-500">Just now</div>
+                          <div className="text-[8px] sm:text-xs text-gray-500">
+                            Just now
+                          </div>
                         </div>
                       </div>
-                      <div className="ml-1 text-lg font-bold text-red-600">
+                      <div className="ml-1 text-base sm:text-2xl font-bold text-red-600">
                         5 Critical
                       </div>
                     </div>
