@@ -255,7 +255,7 @@ const Products = () => {
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
                 {/* Text content */}
                 <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
-                  <h3 className="text-2xl md:text-3xl xl:text-5xl font-aeonik mb-4 font-extrabold">
+                  <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
                     {products[0].tagline}
                   </h3>
                   <p className="text-xl mb-6 text-muted-foreground">
@@ -380,7 +380,7 @@ const Products = () => {
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
                 {/* Text content */}
                 <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
-                  <h3 className="text-2xl md:text-3xl xl:text-5xl font-aeonik mb-4 font-extrabold">
+                  <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
                     {products[1].tagline}
                   </h3>
                   <p className="text-xl mb-6 text-muted-foreground">
