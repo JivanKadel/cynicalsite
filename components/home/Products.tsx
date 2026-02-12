@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ProductCard } from "./ProductCard";
-import { Check, CheckCircle, MoveUpRight } from "lucide-react";
+import { Bug, Check, CheckCircle, MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
@@ -449,7 +449,7 @@ const Products = () => {
                     <div className="bg-[#ffffff] rounded-xl p-1 sm:p-3 border">
                       <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
                         <div className="w-4 h-4 sm:w-8 sm:h-8 rounded-full bg-linear-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-xs font-bold">
-                          X
+                          <Bug className="w-2.5 h-2.5 sm:w-5 sm:h-5" />
                         </div>
                         <div>
                           <div className="text-[8px] sm:text-xs font-semibold text-gray-900">
