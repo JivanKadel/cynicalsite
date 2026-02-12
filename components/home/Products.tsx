@@ -306,7 +306,7 @@ const Products = () => {
                           Live Activity
                         </span>
                       </div>
-                      <div className="text-base sm:text-2xl font-bold mb-1">
+                      <div className="text-sm sm:text-lg font-bold mb-1">
                         12
                       </div>
                       <div className="text-[8px] sm:text-xs text-gray-400">
@@ -431,7 +431,7 @@ const Products = () => {
                           Live Activity
                         </span>
                       </div>
-                      <div className="text-base sm:text-2xl font-bold mb-1">
+                      <div className="text-sm sm:text-lg font-bold mb-1">
                         21
                       </div>
                       <div className="text-[8px] sm:text-xs text-gray-400">
@@ -460,7 +460,7 @@ const Products = () => {
                           </div>
                         </div>
                       </div>
-                      <div className="ml-1 text-base sm:text-2xl font-bold text-red-600">
+                      <div className="ml-1 text-sm sm:text-lg font-bold text-red-600">
                         5 Critical
                       </div>
                     </div>
