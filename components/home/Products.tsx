@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ProductCard } from "./ProductCard";
-import { MoveUpRight } from "lucide-react";
+import { Check, CheckCircle, MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
@@ -9,11 +9,11 @@ const Products = () => {
     {
       icon: "/products/bugv.png",
       title: "CROWDSOURCED SECURITY",
-      dashboardImage: "/bugv_product.png",
+      dashboardImage: "/products/bugv_product_design.png",
       name: "Bugv",
       tagline: "Offensive Security Network of Security Researchers",
       description:
-        "500+ vetted hackers testing your systems around the clock. Not automated scanners—actual adversaries hunting for the flaws your tools miss.",
+        "500+ vetted hackers testing your systems around the clock. Not automated scanners, actual adversaries hunting for the flaws your tools miss.",
       features: [
         "Managed vulnerability disclosure",
         "Exploit-verified findings only",
@@ -28,7 +28,7 @@ const Products = () => {
       icon: "/products/vigile_logo.png",
       lightIcon: "/products/vigile_light_logo.png",
       title: "THREAT INTELLIGENCE",
-      dashboardImage: "/products/vigile_1.png",
+      dashboardImage: "/products/vigile_product_design_1.png",
       name: "Vigile.AI",
       tagline: "Continuous Breaches and Malware Monitoring",
       description:
@@ -130,7 +130,7 @@ const Products = () => {
           ))}
         </div> */}
 
-        <div className="grid grid-cols-1 gap-12">
+        {/* <div className="grid grid-cols-1 gap-12">
           {products.map((product) => (
             <Link
               key={product.title}
@@ -138,7 +138,7 @@ const Products = () => {
               className="group rounded-2xl bg-card opacity-90 shadow-2xl hover:border-border/80 transition-all duration-300"
             >
               <div className="grid grid-cols-1 xl:grid-cols-10 gap-2 h-full rounded-xl overflow-hidden transition-all duration-300">
-                {/* Text content */}
+               
                 <div className="flex flex-col justify-center order-1 xl:order-1 xl:col-span-3 p-6 lg:p-8">
                   <div className="flex justify-between items-center mb-2">
                     <h2 className="flex gap-1 text-green-900 dark:text-green-500 font-light text-sm tracking-widest mb-2">
@@ -199,7 +199,7 @@ const Products = () => {
                   </a>
                 </div>
 
-                {/* Image content */}
+               
                 <div className="order-2 xl:order-2 xl:col-span-7 flex items-end justify-end md:mt-0">
                   <Image
                     src={product.dashboardImage}
@@ -212,6 +212,261 @@ const Products = () => {
               </div>
             </Link>
           ))}
+        </div> */}
+
+        <div className="my-24">
+          {
+            <div className="mt-16 group">
+              <div className="flex flex-col justify-start items-start gap-3  px-6 lg:px-8">
+                <h2 className="bg-background border rounded-full p-2 shadow-sm  text-green-900 dark:text-green-500 font-light text-sm tracking-widest mb-2">
+                  {products[0].title}
+                </h2>
+
+                <div className="ml-2">
+                  {products[0].lightIcon ? (
+                    <>
+                      <Image
+                        src={products[0].icon}
+                        alt={products[0].name}
+                        width={100}
+                        height={80}
+                        className="hidden dark:block"
+                      />
+
+                      <Image
+                        src={products[0].lightIcon}
+                        alt={`${products[0].name} light icon`}
+                        width={100}
+                        height={80}
+                        className="block dark:hidden"
+                      />
+                    </>
+                  ) : (
+                    <Image
+                      src={products[0].icon}
+                      alt={products[0].name}
+                      width={90}
+                      height={80}
+                      className="dark:invert dark:brightness-0"
+                    />
+                  )}
+                </div>
+              </div>
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
+                {/* Text content */}
+                <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
+                  <h3 className="text-2xl md:text-3xl xl:text-5xl font-aeonik mb-4 font-extrabold">
+                    {products[0].tagline}
+                  </h3>
+                  <p className="text-xl mb-6 text-muted-foreground">
+                    {products[0].description}
+                  </p>
+
+                  <ul className="flex flex-col gap-3">
+                    {products[0].features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 mb-2 text-muted-foreground font-bold text-sm"
+                      >
+                        <span className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center">
+                          <Check className="h-4 w-4 text-green-500" />
+                        </span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a href={products[0].href}>
+                    <Button className="text-lg p-6 rounded-full group hover:bg-slate-900 dark:hover:bg-slate-300 transition-colors duration-300 mt-6">
+                      {products[0].cta}
+                    </Button>
+                  </a>
+                </div>
+
+                {/* Image content */}
+                <Link
+                  href={products[0].href}
+                  className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
+                >
+                  <Image
+                    src={products[0].dashboardImage}
+                    alt={products[0].name}
+                    width={1080}
+                    height={490}
+                    className="object-cover border rounded-xl w-full shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
+                  />
+                  <div
+                    className="absolute -bottom-6 -left-6 w-40 animate-float-delayed preserve-3d"
+                    style={{ transform: "rotateY(-1.73deg) rotateX(-4.94deg)" }}
+                  >
+                    <div className="bg-[#111827] rounded-xl p-4 border border-white/10 text-white">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-2 h-2 rounded-full bg-green-500 pulse-ring relative"></div>
+                        <span className="text-xs text-gray-400">
+                          Live Activity
+                        </span>
+                      </div>
+                      <div className="text-2xl font-bold mb-1">12</div>
+                      <div className="text-xs text-gray-400">
+                        Active hunters online
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="absolute -top-6 -right-6 w-40 animate-float-delayed preserve-3d"
+                    style={{
+                      animationDelay: "2s",
+                      transform: "rotateY(11.625deg) rotateX(-2.61deg)",
+                    }}
+                  >
+                    <div className="bg-[#ffffff] rounded-xl p-3 border">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-8 h-8 rounded-full bg-linear-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-xs font-bold">
+                          $
+                        </div>
+                        <div>
+                          <div className="text-xs font-semibold text-gray-900">
+                            Bounty Paid
+                          </div>
+                          <div className="text-xs text-gray-500">Just now</div>
+                        </div>
+                      </div>
+                      <div className="text-lg font-bold text-green-600">
+                        +$2,500
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          }
+        </div>
+        <div className="my-24">
+          {
+            <div className="mt-16 group">
+              <div className="flex flex-col justify-start items-start gap-3  px-6 lg:px-8">
+                <h2 className="bg-background border rounded-full p-2 shadow-lg  text-green-900 dark:text-green-500 font-light text-sm tracking-widest mb-2">
+                  {products[1].title}
+                </h2>
+
+                <div className="ml-2">
+                  {products[1].lightIcon ? (
+                    <>
+                      <Image
+                        src={products[1].icon}
+                        alt={products[1].name}
+                        width={100}
+                        height={80}
+                        className="hidden dark:block"
+                      />
+
+                      <Image
+                        src={products[1].lightIcon}
+                        alt={`${products[1].name} light icon`}
+                        width={100}
+                        height={80}
+                        className="block dark:hidden"
+                      />
+                    </>
+                  ) : (
+                    <Image
+                      src={products[1].icon}
+                      alt={products[1].name}
+                      width={90}
+                      height={80}
+                      className="dark:invert dark:brightness-0"
+                    />
+                  )}
+                </div>
+              </div>
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
+                {/* Text content */}
+                <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
+                  <h3 className="text-2xl md:text-3xl xl:text-5xl font-aeonik mb-4 font-extrabold">
+                    {products[1].tagline}
+                  </h3>
+                  <p className="text-xl mb-6 text-muted-foreground">
+                    {products[1].description}
+                  </p>
+
+                  <ul className="flex flex-col gap-3">
+                    {products[1].features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 mb-2 text-muted-foreground font-bold text-sm"
+                      >
+                        <span className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center">
+                          <Check className="h-4 w-4 text-green-500" />
+                        </span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a href={products[1].href}>
+                    <Button className="text-lg p-6 rounded-full group hover:bg-slate-900 dark:hover:bg-slate-300 transition-colors duration-300 mt-6">
+                      {products[1].cta}
+                    </Button>
+                  </a>
+                </div>
+
+                {/* Image content */}
+                <Link
+                  href={products[1].href}
+                  className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
+                >
+                  <Image
+                    src={products[1].dashboardImage}
+                    alt={products[1].name}
+                    width={1080}
+                    height={490}
+                    className="object-cover border rounded-xl w-full xl:scale-105 shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
+                  />
+                  <div
+                    className="absolute -bottom-6 -left-6 w-40 animate-float-delayed preserve-3d"
+                    style={{ transform: "rotateY(-1.73deg) rotateX(-4.94deg)" }}
+                  >
+                    <div className="bg-[#111827] rounded-xl p-4 border border-white/10 text-white">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-2 h-2 rounded-full bg-green-500 pulse-ring relative"></div>
+                        <span className="text-xs text-gray-400">
+                          Live Activity
+                        </span>
+                      </div>
+                      <div className="text-2xl font-bold mb-1">21</div>
+                      <div className="text-xs text-gray-400">
+                        Malware Breaches
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="absolute -top-6 -right-6 w-40 animate-float-delayed preserve-3d"
+                    style={{
+                      animationDelay: "2s",
+                      transform: "rotateY(11.625deg) rotateX(-2.61deg)",
+                    }}
+                  >
+                    <div className="bg-[#ffffff] rounded-xl p-3 border">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-8 h-8 rounded-full bg-linear-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-xs font-bold">
+                          X
+                        </div>
+                        <div>
+                          <div className="text-xs font-semibold text-gray-900">
+                            Threats
+                          </div>
+                          <div className="text-xs text-gray-500">Just now</div>
+                        </div>
+                      </div>
+                      <div className="ml-1 text-lg font-bold text-red-600">
+                        5 Critical
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          }
         </div>
 
         <div className="mt-20 grid grid-cols-2 xl:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/30 bg-secondary/30">
