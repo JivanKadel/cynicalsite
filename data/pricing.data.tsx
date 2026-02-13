@@ -98,11 +98,11 @@ export const pricingData = [
 ];
 
 export const Faqs = [
-  {
-    question: "Can I upgrade or downgrade my plan?",
-    answer:
-      "Yes, you can upgrade to a higher tier plan at any time. Downgrades are available and will be prorated based on your current billing cycle.",
-  },
+  // {
+  //   question: "Can I upgrade or downgrade my plan?",
+  //   answer:
+  //     "Yes, you can upgrade to a higher tier plan at any time. Downgrades are available and will be prorated based on your current billing cycle.",
+  // },
   {
     question: "What compliance frameworks do your reports cover?",
     answer:

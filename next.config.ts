@@ -18,6 +18,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/blogs",
+  //       destination: `${process.env.NEXT_PUBLIC_WORDPRESS_URL}/blogs`,
+  //     },
+  //     {
+  //       source: "/blogs/:path*",
+  //       destination: `${process.env.NEXT_PUBLIC_WORDPRESS_URL}/blogs/:path*`,
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
