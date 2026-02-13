@@ -95,6 +95,26 @@ export default function BugV() {
         </div>
       </section>
 
+      <section className="py-12 md:py-20">
+        <div className="flex flex-col gap-4">
+          <h3 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-aeonik font-bold mb-8">
+            Understanding how Bugv works
+          </h3>
+          <div className="flex justify-center items-center">
+            <iframe
+              width="1093"
+              height="615"
+              src="https://www.youtube.com/embed/Ktvc4L88ip0"
+              title="Bugv - Next Generation Pentest"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works */}
       <section className="py-24">
         <div className="container mx-auto px-6">
