@@ -13,10 +13,10 @@ export default function Home() {
       <HeroSection />
       <Products />
       <Solutions />
-      <CaseStudies />
+      {/* <CaseStudies /> */}
       <Stats />
       <Testimonials />
-      <Research />
+      {/* <Research /> */}
 
       <PageCTA
         badge="Limited capacity—3 enterprise slots remaining this quarter"
