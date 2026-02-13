@@ -30,10 +30,10 @@ export default function PricingPage() {
             Plans and Pricing
           </h1>
           <p className="font-sans text-base text-foreground/70 font-normal lg:text-lg mt-4">
-            Cynical offers security solutions built for every stage of growth.
-            From agile startups to global enterprises. With full access, you can
-            strengthen and safeguard your web applications continuously, without
-            compromise.
+            Our pricing is tailored to the scope, complexity, and risk profile
+            of your environment. Each engagement is structured to deliver
+            measurable security outcomes with clear reporting and verified
+            remediation.
           </p>
 
           <div className="mt-8 space-y-4 md:space-y-6 text-foreground/80">
@@ -41,16 +41,16 @@ export default function PricingPage() {
               Why Choose Cynical?
             </h2>
             <p className="flex gap-2 items-center">
-              <Check className="text-green-500" /> Detect threats before they
-              impact your business
+              <Check className="text-green-500" /> Experienced offensive
+              security specialist
             </p>
             <p className="flex gap-2 items-center">
-              <Check className="text-green-500" /> Automate protection across
-              every environment
+              <Check className="text-green-500" /> Structured engagement
+              methodology
             </p>
             <p className="flex gap-2 items-center">
-              <Check className="text-green-500" /> Build resilience with
-              enterprise-grade security
+              <Check className="text-green-500" /> Confidential and compliant
+              assessment process
             </p>
           </div>
         </section>

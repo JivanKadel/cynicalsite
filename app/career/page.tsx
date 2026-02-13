@@ -21,7 +21,7 @@ import {
 
 import { Metadata } from "next";
 import Link from "next/link";
-import { hiringProcess, Job, perks } from "@/data/career.data";
+import { hiringProcess, Job, perks } from "@/data/company/career.data";
 
 export const metadata: Metadata = {
   title: "Career | Cynical Blogs",
@@ -123,7 +123,7 @@ const Careers = () => {
       </section>
 
       {/* Hiring Process Section */}
-      <section className="py-20 lg:py-32">
+      {/* <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
@@ -163,7 +163,7 @@ const Careers = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Current Openings Section */}
       <section className="py-20 lg:py-32 bg-secondary/20" id="current-openings">

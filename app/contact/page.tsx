@@ -1,7 +1,7 @@
 import { Clock, Calendar } from "lucide-react";
 import ContactForm from "./ContactForm";
 import { Metadata } from "next";
-import { contactInfo } from "@/data/contactinfo.data";
+import { contactInfo } from "@/data/company/contactinfo.data";
 
 export const metadata: Metadata = {
   title: "Contact | Cynical Technology",

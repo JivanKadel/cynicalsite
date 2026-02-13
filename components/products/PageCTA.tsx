@@ -107,7 +107,7 @@ const PageCTA = ({
                         "Banks",
                         "Governments",
                         "Healthcare",
-                        "Defense",
+                        "Fintech",
                         "Critical Infrastructure",
                         "Technology",
                       ].map((name) => (

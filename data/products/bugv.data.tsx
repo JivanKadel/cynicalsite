@@ -1,5 +1,4 @@
 import {
-  Award,
   Bug,
   CheckCircle,
   Clock,
@@ -7,6 +6,7 @@ import {
   FileText,
   Globe,
   Headset,
+  Landmark,
   Layers,
   Lock,
   Target,
@@ -14,10 +14,14 @@ import {
 } from "lucide-react";
 
 export const stats = [
-  { value: "500+", label: "Elite Researchers", icon: Users },
-  { value: "10,000+", label: "Vulnerabilities Found", icon: Bug },
-  { value: "48hrs", label: "Avg. Response Time", icon: Clock },
-  { value: "$5M+", label: "Bounties Paid", icon: Award },
+  { value: "15000+", label: "Security Researchers", icon: Users },
+  { value: "150+", label: "Organizations Tested & Secured", icon: Landmark },
+  {
+    value: "10000+",
+    label: "Vulnerabilities Responsibly Disclosed",
+    icon: Bug,
+  },
+  { value: "48 Hours", label: "Average Triage Time", icon: Clock },
 ];
 
 export const features = [

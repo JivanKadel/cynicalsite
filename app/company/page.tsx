@@ -1,8 +1,12 @@
 import { TrustedByImage } from "@/components/home/TrustedByImage";
 import PageCTA from "@/components/products/PageCTA";
 import { Button } from "@/components/ui/button";
-import { departments, teamMembers, whyChooseItems } from "@/data/company.data";
-import { trustedByClipped } from "@/data/trustedby.data";
+import {
+  departments,
+  teamMembers,
+  whyChooseItems,
+} from "@/data/company/company.data";
+import { trustedBy, trustedByClipped } from "@/data/trustedby.data";
 import {
   Building,
   Target,
@@ -49,7 +53,7 @@ export default function AboutUs() {
                 </h1>
 
                 <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                  Founded in 2018, Cynical has rapidly become a trusted partner
+                  Founded in 2017, Cynical has rapidly become a trusted partner
                   for organizations worldwide seeking enterprise-grade
                   cybersecurity solutions. Our team of elite security
                   professionals combines years of experience working on
@@ -214,7 +218,7 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <Marquee
+          {/* <Marquee
             pauseOnHover={true}
             gradient={false}
             autoFill={true}
@@ -256,7 +260,61 @@ export default function AboutUs() {
                 className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
               />
             </div>
-          </Marquee>
+          </Marquee> */}
+          <div className="pt-6 max-w-7xl w-full mx-auto">
+            <p className="text-center text-xs md:text-sm text-foreground mb-4 uppercase tracking-widest">
+              Trusted by teams in SaaS, fintech, and enterprise
+            </p>
+            <Marquee
+              pauseOnHover={true}
+              gradient={false}
+              autoFill={true}
+              speed={10}
+              style={{
+                marginRight: 10,
+                overflow: "hidden",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  gap: 48,
+                  alignItems: "center",
+                  marginLeft: 48,
+                }}
+              >
+                {trustedBy.map((brand) => (
+                  <TrustedByImage
+                    key={brand.name}
+                    name={brand.name}
+                    logo={brand.image}
+                    link={brand.link}
+                    className={`object-contain hover:scale-105 xl:hover:scale-140 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
+                      brand.name.toLowerCase() === "worldlink" ||
+                      brand.name.toLowerCase() == "worldbank" ||
+                      brand.name.toLowerCase() === "webpoint" ||
+                      brand.name.toLowerCase() === "foodmandu" ||
+                      brand.name.toLowerCase() === "foneloan" ||
+                      brand.name.toLowerCase() === "trip turbo" ||
+                      brand.name.toLowerCase() === "ambition guru" ||
+                      brand.name.toLowerCase() === "careboarding"
+                        ? ""
+                        : "dark:hover:invert-0 dark:hover:brightness-100"
+                    }`}
+                  />
+                ))}
+
+                <TrustedByImage
+                  width={54}
+                  height={54}
+                  name="Swift Technology"
+                  logo="/brands/swift_tech.svg"
+                  link="https://swifttech.com.np/"
+                  className="object-contain hover:scale-105 transition-transform  dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
+                />
+              </div>
+            </Marquee>
+          </div>
         </div>
       </section>
 
@@ -272,7 +330,7 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 max-w-7xl place-content-center gap-6 gap-y-6 mb-16 mx-auto">
+          <div className="flex justify-center items-center gap-6 gap-y-6 mb-16 mx-auto">
             {teamMembers.map((member, index) => (
               <div key={index}>
                 <div

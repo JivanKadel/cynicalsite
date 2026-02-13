@@ -98,49 +98,54 @@ export const pricingData = [
 ];
 
 export const Faqs = [
-  // {
-  //   question: "Can I upgrade or downgrade my plan?",
-  //   answer:
-  //     "Yes, you can upgrade to a higher tier plan at any time. Downgrades are available and will be prorated based on your current billing cycle.",
-  // },
   {
-    question: "What compliance frameworks do your reports cover?",
+    question: "How is pricing determined? ",
     answer:
-      "Our reports are compliance-ready and support 40+ frameworks including SOC 2, ISO 27001, HIPAA, and GDPR. The Enterprise plan includes continuous compliance monitoring.",
+      "Pricing is based on asset scope, testing depth, infrastructure complexity, and compliance requirements. Each engagement is scoped individually to ensure accurate coverage and meaningful results.",
   },
   {
-    question: "Is retesting included in all plans?",
+    question: "Do you offer fixed pricing packages? ",
     answer:
-      "Retesting and patch validation are included in the Premium and Enterprise plans. The Starter and Essential plans can add this as an optional service.",
+      "For standard web and API assessments, we provide structured pricing tiers. Complex cloud, red team, and enterprise engagements are customized based on environment size and risk profile.",
   },
   {
-    question: "What does the Dedicated Project Manager provide?",
+    question: "What factors influence the cost of a penetration test? ",
     answer:
-      "Your dedicated project manager serves as the single point of contact, coordinates testing schedules, and ensures timely communication throughout the assessment process.",
+      "Key factors include the number of applications or APIs, authentication complexity, cloud architecture, user roles, integrations, and required compliance standards such as ISO 27001 or PCI-DSS.",
   },
   {
-    question: "How long does a typical assessment take?",
+    question: "Is retesting included in the engagement? ",
     answer:
-      "Timeline depends on the plan and application complexity. Contact our team for a detailed project timeline based on your specific requirements.",
+      "Retesting is included in extended and enterprise engagement models. Short-term or rapid assessments may require a separate retesting scope depending on the package selected.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "How long does a typical assessment take? ",
     answer:
-      "We accept all major credit cards, bank transfers, and digital payment methods. Enterprise customers can arrange custom payment terms.",
+      "Most web or API assessments take 1–3 weeks depending on scope. Cloud and red team engagements vary based on environment complexity.",
   },
   {
-    question: "Is there a contract period?",
+    question: "Do you sign NDAs and handle data confidentially? ",
     answer:
-      "Starter and Essential plans are available on a pay-as-you-go basis with no long-term contract. Premium and Enterprise plans typically involve a project-based engagement with defined timelines.",
+      "Yes. All engagements are conducted under strict confidentiality agreements. Client data and findings are securely handled and not shared externally.",
   },
   {
-    question: "Are there any hidden fees?",
+    question: "Do you support compliance audits? ",
     answer:
-      "No, all pricing is transparent. The quoted amount includes all listed features. Any optional add-ons will be clearly communicated upfront.",
+      "Yes. We support organizations preparing for ISO 27001, PCI-DSS, and regulatory audits by identifying and validating security gaps.",
   },
   {
-    question: "Can I get an invoice for my purchase?",
+    question: "Do you provide continuous security testing? ",
     answer:
-      "Yes, invoices are automatically generated and sent to your registered email after payment. You can also request invoices anytime from your account dashboard.",
+      "Yes. We offer recurring testing models and managed security programs for organizations requiring ongoing risk validation.",
+  },
+  {
+    question: "What deliverables can we expect? ",
+    answer:
+      "Each engagement includes an executive summary, technical findings report, risk severity classification, remediation guidance, and retest validation documentation.",
+  },
+  {
+    question: "How quickly will we receive a proposal? ",
+    answer:
+      "After reviewing your scope details, we typically provide a tailored proposal within one business day.",
   },
 ];

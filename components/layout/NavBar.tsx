@@ -30,6 +30,7 @@ import {
   BriefcaseBusiness,
   Building2,
   Eye,
+  Handshake,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -84,38 +85,38 @@ export default function Navbar() {
     },
     {
       icon: AlertTriangle,
-      label: "Incident Response",
-      description: "24/7 forensics & recovery",
-      href: "/solutions/incident-response",
+      label: "Vulnerability Management",
+      description: "Manage Your Organizations Vulnerabilities",
+      href: "/solutions/vulnerability-management",
     },
   ];
 
-  const resources = [
-    {
-      icon: FileText,
-      label: "Sample Report",
-      description: "See a Sample VAPT report from Bugv",
-      href: "/downloads/sample-report",
-    },
-    {
-      icon: BookOpen,
-      label: "Blog",
-      description: "Security insights & Research Reports",
-      href: "/blogs",
-    },
-    // {
-    //   icon: Calendar1,
-    //   label: "Events",
-    //   description: "Events in Bugv X Cynical",
-    //   href: "/events",
-    // },
-    // {
-    //   icon: Users,
-    //   label: "Case Studies",
-    //   description: "Customer success stories",
-    //   href: "/resources/case-studies",
-    // },
-  ];
+  // const resources = [
+  //   {
+  //     icon: FileText,
+  //     label: "Sample Report",
+  //     description: "See a Sample VAPT report from Bugv",
+  //     href: "/downloads/sample-report",
+  //   },
+  //   {
+  //     icon: BookOpen,
+  //     label: "Blog",
+  //     description: "Security insights & Research Reports",
+  //     href: "/blogs",
+  //   },
+  //   // {
+  //   //   icon: Calendar1,
+  //   //   label: "Events",
+  //   //   description: "Events in Bugv X Cynical",
+  //   //   href: "/events",
+  //   // },
+  //   // {
+  //   //   icon: Users,
+  //   //   label: "Case Studies",
+  //   //   description: "Customer success stories",
+  //   //   href: "/resources/case-studies",
+  //   // },
+  // ];
 
   const company = [
     {
@@ -141,6 +142,12 @@ export default function Navbar() {
       label: "Careers",
       description: "Join our team",
       href: "/career",
+    },
+    {
+      icon: Handshake,
+      label: "Partners",
+      description: "Our Company Partners",
+      href: "/company/partners",
     },
   ];
 
@@ -358,7 +365,7 @@ z"
                   </NavigationMenuItem>
 
                   {/* Resources */}
-                  <NavigationMenuItem>
+                  {/* <NavigationMenuItem>
                     <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                     <NavigationMenuContent className="backdrop-blur-3xl! bg-[#ffffff]! dark:bg-[#0a0909]! opacity-99">
                       <div className="grid sm:grid-cols-2 w-100 sm:w-150 gap-3 p-4">
@@ -367,7 +374,7 @@ z"
                         ))}
                       </div>
                     </NavigationMenuContent>
-                  </NavigationMenuItem>
+                  </NavigationMenuItem> */}
 
                   <NavigationMenuItem>
                     <NavigationMenuTrigger>Company</NavigationMenuTrigger>
@@ -439,7 +446,7 @@ z"
               <div className="flex flex-col gap-4">
                 <MobileNavSection title="Products" items={products} />
                 <MobileNavSection title="Solutions" items={solutions} />
-                <MobileNavSection title="Resources" items={resources} />
+                {/* <MobileNavSection title="Resources" items={resources} /> */}
 
                 <Link
                   href="/pricing"

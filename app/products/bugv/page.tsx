@@ -12,6 +12,7 @@ import {
   vulnerabilityTypes,
 } from "@/data/products/bugv.data";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Bugv | Crowdsourced Cyber Security Platform",
@@ -41,17 +42,24 @@ export default function BugV() {
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-body leading-relaxed max-w-3xl">
               The crowdsourced security platform that connects you with elite
               ethical hackers. Continuous testing from adversaries who think
-              like attackers—because they are.
+              like attackers, because they are.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <a href={"https://bugv.io/request-a-demo/"} target="_blank">
-                <Button
-                  size="lg"
-                  className="h-12 bg-foreground text-background hover:bg-foreground/90"
-                >
-                  Start Your Program
-                  <ArrowRight className="w-4 h-4 ml-2" />
+            <div className="grid max-w-md grid-cols-1 md:grid-cols-2 items-center gap-2">
+              <a
+                href="https://bugv.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="h-12 px-4 w-full">Visit Site</Button>
+              </a>
+              <a
+                href="https://bugv.io/request-a-demo/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="h-12 px-4 w-full" variant="outline">
+                  Get Started With bugv
                 </Button>
               </a>
             </div>
@@ -301,12 +309,91 @@ export default function BugV() {
         </div>
       </section>
 
-      <PageCTA
-        badge="500+ elite researchers ready to test your assets"
+      {/* <PageCTA
+        badge="15000+ elite researchers ready to test your assets"
         headline="Ready to find vulnerabilities"
         highlightedText="before attackers do?"
         description="Join the companies that trust Bugv to secure their most critical assets with continuous crowdsourced security testing."
-      />
+      /> */}
+      <section className="py-32 relative">
+        <div className="container mx-auto px-2 sm:px-6">
+          <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
+            <div className="relative z-10 p-12 lg:p-20">
+              <div className="max-w-5xl mx-auto text-center">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  15000+ elite researchers ready to test your assets
+                </div>
+
+                {/* Headline */}
+                <p className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+                  Ready to find vulnerabilities
+                  <span className="block text-foreground">
+                    before attackers do?
+                  </span>
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-10 mt-4 font-body max-w-2xl mx-auto">
+                  Join the companies that trust Bugv to secure their most
+                  critical assets with continuous crowdsourced security testing.
+                </p>
+
+                {/* Benefits Grid */}
+                {/* {showBenefits && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+                    {benefits.map((benefit) => (
+                      <div
+                        key={benefit.text}
+                        className="flex items-center justify-start sm:justify-center gap-2 text-sm text-muted-foreground"
+                      >
+                        <benefit.icon className="w-4 h-4" />
+                        <span>{benefit.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                )} */}
+
+                {/* CTAs */}
+                <div className="flex justify-center">
+                  <a
+                    href="https://bugv.io/request-a-demo/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant="default" size="lg" className="h-12">
+                      Get Started With bugv
+                    </Button>
+                  </a>
+                </div>
+
+                <div className="mt-16 pt-16 border-t border-border/30">
+                  <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
+                    Trusted By Critical Industries
+                  </p>
+                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
+                    {[
+                      "Banks",
+                      "Governments",
+                      "Healthcare",
+                      "Fintech",
+                      "Critical Infrastructure",
+                      "Technology",
+                    ].map((name) => (
+                      <h2
+                        key={name}
+                        className="text-base text-foreground font-semibold tracking-wide uppercase"
+                      >
+                        {name}
+                      </h2>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

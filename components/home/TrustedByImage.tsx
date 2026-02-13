@@ -35,7 +35,7 @@ export function TrustedByImage({
         width={width}
         height={height}
         style={style}
-        className={`object-contain hover:scale-105 transition-transform opacity-90 hover:opacity-100 ${className}`}
+        className={`object-contain hover:scale-105 xl:scale-130 xl:hover:scale-140 transition-transform opacity-90 hover:opacity-100 ${className}`}
       />
     </Link>
   );

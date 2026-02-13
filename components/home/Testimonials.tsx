@@ -19,13 +19,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-end justify-center mb-12">
           <div>
-            <span className="text-center text-md text-muted-foreground uppercase tracking-widest mb-4 block">
-              Client Results
-            </span>
             <p className="text-4xl md:text-6xl font-aeonik text-center">
-              What we found.
-              <br />
-              <span className="text-slate-500 text-center">What we fixed.</span>
+              Trusted by Security & Technology Leader
+              {/* <br />
+              <span className="text-slate-500 text-center">What we fixed.</span> */}
             </p>
           </div>
         </div>

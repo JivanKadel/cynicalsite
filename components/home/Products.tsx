@@ -13,11 +13,11 @@ const Products = () => {
       name: "Bugv",
       tagline: "Offensive Security Network of Security Researchers",
       description:
-        "500+ vetted hackers testing your systems around the clock. Not automated scanners, actual adversaries hunting for the flaws your tools miss.",
+        "15000+ vetted hackers testing your systems around the clock. Not automated scanners, actual adversaries hunting for the flaws your tools miss.",
       features: [
-        "Managed vulnerability disclosure",
-        "Exploit-verified findings only",
-        "Pay for results, not noise",
+        "15000+ security Researchers",
+        "Less than 15 minutes to get first report",
+        "Pay only for results",
       ],
       stats: { value: "47", label: "Avg critical per engagement" },
       cta: "Learn More",
@@ -30,13 +30,14 @@ const Products = () => {
       title: "THREAT INTELLIGENCE",
       dashboardImage: "/products/vigile_product_design_1.png",
       name: "Vigile.AI",
-      tagline: "Continuous Breaches and Malware Monitoring",
+      tagline:
+        "Identity Threat Detection and Response ( ITDR ) for Modern Enterprises",
       description:
-        "Continuous discovery of shadow IT, leaked credentials, and exposed services across your entire digital footprint.",
+        "Detect, investigate, and respond to identity-based threats across your cloud and enterprise environments.",
       features: [
-        "Breach and malware scanning",
-        "Credential leak monitoring",
-        "Third-party risk scoring",
+        "Compromised account detection",
+        "Privileged access monitorin",
+        "Suspicious authentication analysis",
       ],
       stats: { value: "12K", label: "Avg assets discovered" },
       cta: "Learn More",
@@ -326,7 +327,7 @@ const Products = () => {
           }
         </div>
 
-        <div className="mt-20 grid grid-cols-2 xl:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/30 bg-secondary/30">
+        {/* <div className="mt-20 grid grid-cols-2 xl:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/30 bg-secondary/30">
           {[
             { value: "0", label: "Client breaches on our watch" },
             { value: "2.4K", label: "Vulnerabilities discovered" },
@@ -340,7 +341,7 @@ const Products = () => {
               <p className="text-sm text-muted-foreground">{stat.label}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

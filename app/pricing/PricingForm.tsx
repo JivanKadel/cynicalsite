@@ -238,11 +238,26 @@ export default function PricingForm() {
               });
             }}
           >
-            <option value="Web Security">Web Security</option>
-            <option value="Penetration Testing">Penetration Testing</option>
-            <option value="API Protection">API Protection</option>
-            <option value="Compliance Suite">Compliance Suite</option>
-            <option value="Other">Other</option>
+            <option value="Web Application Penetration Testing">
+              Web Application Penetration Testing
+            </option>
+            <option value="API & Backend Security Testing">
+              API & Backend Security Testing
+            </option>
+            <option value="Mobile Application Testing">
+              Mobile Application Testing
+            </option>
+            <option value="Cloud Security Assessment">
+              Cloud Security Assessment
+            </option>
+            <option value="Red Team Engagement">Red Team Engagement</option>
+            <option value="Bug Bounty / Crowdsourced Testing">
+              Bug Bounty / Crowdsourced Testing
+            </option>
+            <option value="Compliance & Security Audit">
+              Compliance & Security Audit
+            </option>
+            <option value="Other Inquiry">Other Inquiry </option>
           </select>
         </div>
 
@@ -261,7 +276,7 @@ export default function PricingForm() {
             "Submitting..."
           ) : (
             <>
-              Submit Inquiry
+              Request Proposal
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </>
           )}

@@ -4,6 +4,8 @@ import { Metadata } from "next";
 import { trustedByClipped } from "@/data/trustedby.data";
 import Image from "next/image";
 import { ConfettiFireworks } from "@/app/thank-you/Fireworks";
+import { CheckCircle } from "lucide-react";
+import Socials from "@/app/thank-you/Socials";
 
 export const metadata: Metadata = {
   title: "Thank You | Cynical Technology",
@@ -16,6 +18,7 @@ export default function ThankYouPage() {
     <div className="flex lg:min-h-screen items-center justify-center py-6 px-4 lg:-mt-16">
       <div className="w-full">
         <div className="flex flex-col items-center space-y-2 pb-4 max-w-lg mx-auto mt-16">
+          <CheckCircle className="h-12 w-12 md:h-20 md:w-20 text-green-500" />
           <h1 className="text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
             Thank You
           </h1>
@@ -31,7 +34,7 @@ export default function ThankYouPage() {
               href="https://www.linkedin.com/company/cynicaltechnology/"
               className="font-semibold underline hover:text-blue-600"
             >
-              Cynical Technology
+              Us
             </a>
             . Your free sample of our Vulnerability Assessment & Pen Testing
             (VAPT) report is ready to download.
@@ -50,20 +53,7 @@ export default function ThankYouPage() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-b text-center py-6 max-w-lg mx-auto">
-          <h2>Explore more resources</h2>
-          <div className="py-4 flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/blogs">
-              <Button variant={"outline"}>Check Our Blogs</Button>
-            </Link>
-            <Link href="/resources/case-studies">
-              <Button variant={"outline"}>Read Case Studies</Button>
-            </Link>
-            <Link href="/research">
-              <Button variant={"outline"}>Explore Research Papers</Button>
-            </Link>
-          </div>
-        </div>
+        <Socials />
 
         <ConfettiFireworks />
 

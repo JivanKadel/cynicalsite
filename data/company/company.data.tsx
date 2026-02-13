@@ -57,39 +57,39 @@ export const teamMembers = [
     message:
       "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
   },
-  {
-    name: "A",
-    role: "Senior Security Auditor",
-    image: "/people/placeholder_person.jpg",
-    bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
-    social: {
-      linkedin: "https://www.linkedin.com/in/nareshlamgade/",
-    },
-    message:
-      "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
-  },
-  {
-    name: "B",
-    role: "Office Administrator",
-    image: "/people/placeholder_person.jpg",
-    bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
-    social: {
-      linkedin: "https://www.linkedin.com/in/nareshlamgade/",
-    },
-    message:
-      "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
-  },
-  {
-    name: "C",
-    role: "Sales Manager",
-    image: "/people/placeholder_person.jpg",
-    bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
-    social: {
-      linkedin: "https://www.linkedin.com/in/nareshlamgade/",
-    },
-    message:
-      "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
-  },
+  // {
+  //   name: "A",
+  //   role: "Senior Security Auditor",
+  //   image: "/people/placeholder_person.jpg",
+  //   bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
+  //   social: {
+  //     linkedin: "https://www.linkedin.com/in/nareshlamgade/",
+  //   },
+  //   message:
+  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+  // },
+  // {
+  //   name: "B",
+  //   role: "Office Administrator",
+  //   image: "/people/placeholder_person.jpg",
+  //   bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
+  //   social: {
+  //     linkedin: "https://www.linkedin.com/in/nareshlamgade/",
+  //   },
+  //   message:
+  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+  // },
+  // {
+  //   name: "C",
+  //   role: "Sales Manager",
+  //   image: "/people/placeholder_person.jpg",
+  //   bio: "Cybersecurity expert with 10+ years of experience leading elite security teams. Founded Cynical and Bugv to bring enterprise-grade security to organizations worldwide.",
+  //   social: {
+  //     linkedin: "https://www.linkedin.com/in/nareshlamgade/",
+  //   },
+  //   message:
+  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+  // },
 ];
 
 export const departments = [

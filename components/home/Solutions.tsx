@@ -20,7 +20,7 @@ export default function Solutions() {
           </p>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Every engagement is scoped to your threat model. We don&apos;t run
-            generic scans—we simulate the specific adversaries targeting your
+            generic scans, we simulate the specific adversaries targeting your
             industry.
           </p>
         </div>

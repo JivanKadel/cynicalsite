@@ -1,3 +1,4 @@
+import { socialLinks } from "@/data/company/socials.data";
 import { Linkedin, Mail, MapPin, Phone, Facebook, Twitter } from "lucide-react";
 import Link from "next/link";
 
@@ -10,22 +11,26 @@ const Footer = () => {
     Solutions: [
       { label: "Application Security", href: "/solutions/app-security" },
       { label: "Cloud Security", href: "/solutions/cloud-security" },
-      { label: "AI/ML Security", href: "/solutions/app-security" },
+      // { label: "AI/ML Security", href: "/solutions/app-security" },
       { label: "Threat Intelligence", href: "/solutions/threat-intel" },
-      { label: "Incident Response", href: "/solutions/incident-response" },
+      {
+        label: "Vulnerability Management",
+        href: "/solutions/vulnerability-management",
+      },
+      // { label: "Incident Response", href: "/solutions/incident-response" },
     ],
-    Resources: [
-      { label: "Blogs", href: "/blogs" },
-      { label: "VAPT Sample", href: "/downloads/sample-report" },
-      // { label: "Events", href: "#" },
-      // { label: "Case Studies", href: "#" },
-      // { label: "Pricing", href: "#" },
-      // { label: "Research", href: "/research" },
-      // { label: "Blog", href: "/blogs" },
-      // { label: "Events", href: "/events" },
-      // { label: "Case Studies", href: "/resources/case-studies" },
-      // { label: "Pricing", href: "/pricing" },
-    ],
+    // Resources: [
+    //   { label: "Blogs", href: "/blogs" },
+    //   { label: "VAPT Sample", href: "/downloads/sample-report" },
+    //   // { label: "Events", href: "#" },
+    //   // { label: "Case Studies", href: "#" },
+    //   // { label: "Pricing", href: "#" },
+    //   // { label: "Research", href: "/research" },
+    //   // { label: "Blog", href: "/blogs" },
+    //   // { label: "Events", href: "/events" },
+    //   // { label: "Case Studies", href: "/resources/case-studies" },
+    //   // { label: "Pricing", href: "/pricing" },
+    // ],
     Company: [
       { label: "Company", href: "/company" },
       { label: "Vision", href: "/vision" },
@@ -36,38 +41,14 @@ const Footer = () => {
     ],
   };
 
-  const socialLinks = [
-    {
-      icon: Facebook,
-      href: "https://www.facebook.com/cynicaltechnology",
-      label: "Facebook",
-      hoverColor: "hover:text-blue-400",
-      hoverBg: "hover:bg-blue-400/30",
-    },
-    {
-      icon: Linkedin,
-      href: "https://www.linkedin.com/company/cynicaltechnology/",
-      label: "LinkedIn",
-      hoverColor: "hover:text-blue-500",
-      hoverBg: "hover:bg-blue-700/30",
-    },
-    {
-      icon: Twitter,
-      href: "https://x.com/cynical_sec",
-      label: "X",
-      hoverColor: "hover:text-cyan-400",
-      hoverBg: "hover:bg-cyan-400/30",
-    },
-  ];
-
   return (
-    <footer className="p-4 lg:pt-16 border-t-2 border-border/30">
+    <footer className="p-4 lg:pt-16 border-t-2 border-border/30 bg-[#002e5b] text-white">
       {/* Main Footer */}
-      <div className="container mx-auto py-8 lg:py-20 md:px-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 content-start">
+      <div className="container max-w-6xl mx-auto py-8 lg:py-20 px-3 sm:px-8 md:px-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 content-start">
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="mb-4 text-xs font-medium tracking-widest uppercase text-foreground sm:text-sm md:mb-6">
+              <h3 className="mb-4 text-xs font-medium tracking-widest uppercase sm:text-sm md:mb-6">
                 {category}
               </h3>
               <ul className="space-y-3">
@@ -76,10 +57,7 @@ const Footer = () => {
                     key={link.label}
                     className="flex mb-3 text-xs md:text-sm md:mb-4"
                   >
-                    <a
-                      href={link.href}
-                      className="font-inter font-normal text-foreground/90 hover:text-foreground"
-                    >
+                    <a href={link.href} className="font-inter font-normal">
                       {link.label}
                     </a>
                   </li>
@@ -93,7 +71,7 @@ const Footer = () => {
               role="link"
               title="Cynical Home Page"
               href="/"
-              className="flex items-center gap-2 h-12 text-black dark:text-white  md:-mt-8"
+              className="flex items-center gap-2 h-12 md:-mt-8"
             >
               <svg
                 version="1.1"
@@ -109,7 +87,7 @@ const Footer = () => {
                 className="h-24"
               >
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   fill="inherit"
                   opacity="1.000000"
                   stroke="none"
@@ -131,7 +109,7 @@ const Footer = () => {
             z"
                 />
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   opacity="1.000000"
                   stroke="none"
                   d="
@@ -152,7 +130,7 @@ const Footer = () => {
             z"
                 />
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   opacity="1.000000"
                   stroke="none"
                   d="
@@ -174,7 +152,7 @@ const Footer = () => {
             z"
                 />
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   opacity="1.000000"
                   stroke="none"
                   d="
@@ -192,7 +170,7 @@ const Footer = () => {
             z"
                 />
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   opacity="1.000000"
                   stroke="none"
                   d="
@@ -212,7 +190,7 @@ const Footer = () => {
             z"
                 />
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   opacity="1.000000"
                   stroke="none"
                   d="
@@ -230,7 +208,7 @@ const Footer = () => {
             z"
                 />
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   opacity="1.000000"
                   stroke="none"
                   d="
@@ -244,7 +222,7 @@ const Footer = () => {
             z"
                 />
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   opacity="1.000000"
                   stroke="none"
                   d="
@@ -257,7 +235,7 @@ const Footer = () => {
             z"
                 />
                 <path
-                  className="fill-black dark:fill-white"
+                  className="fill-white"
                   opacity="1.000000"
                   stroke="none"
                   d="
@@ -270,7 +248,7 @@ const Footer = () => {
                 />
               </svg>
             </Link>
-            <div className="space-y-3 text-sm text-foreground">
+            <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 <span className="font-inter break-all">
@@ -312,19 +290,17 @@ const Footer = () => {
       <div className="pb-2 md:mx-20 border-t border-border">
         <div className="container mx-auto py-6">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2 text-sm">
               <span className="font-inter text-center">
-                Copyright © {new Date().getFullYear()} Cynical Technology. All
-                Rights Reserved.
+                Copyright © {new Date().getFullYear()} Cynical Technology Pvt.
+                Ltd. All Rights Reserved.
               </span>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground font-inter">
-              <Link href="#">Privacy Policy</Link>
-              <Link href="#">Terms of Service</Link>
-              <Link href="#">Security</Link>
-              <Link href="#">Cookie Settings</Link>
-              <Link href="#">Responsible Disclosure</Link>
+            <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-inter">
+              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="terms-of-service">Terms of Service</Link>
+              <Link href="/responsible-disclosure">Responsible Disclosure</Link>
             </div>
           </div>
         </div>

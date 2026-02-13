@@ -51,7 +51,7 @@ export const capabilities = [
     icon: Settings,
     title: "Compliance & Governance",
     description:
-      "SOC 2, ISO 27001, PCI DSS, HIPAA compliance assessments with automated compliance monitoring and reporting.",
+      "SOC 2, ISO 27001, PCI DSS assessments with automated compliance monitoring and reporting.",
   },
 ];
 
@@ -87,10 +87,10 @@ export const methodology = [
 ];
 
 export const stats = [
-  { value: "10K+", label: "Cloud Environments Secured" },
-  { value: "500+", label: "Enterprise Clients" },
-  { value: "99.9%", label: "Uptime Protection" },
-  { value: "<15min", label: "Incident Response SLA" },
+  { value: "50+", label: "Cloud Security Assessments Delivered" },
+  { value: "70+", label: "Cloud Environments Reviewed" },
+  { value: "800+", label: "Critical & High-Risk Cloud Findings Identified" },
+  { value: "100%", label: "Findings Retested Before Closure" },
 ];
 
 export const cloudProviders = [
@@ -168,7 +168,5 @@ export const securityFrameworks = [
   "ISO 27017/27018",
   "SOC 2 Type II",
   "PCI DSS Cloud Guidelines",
-  "GDPR Cloud Compliance",
   "HIPAA Cloud Security",
-  "FedRAMP Authorization",
 ];

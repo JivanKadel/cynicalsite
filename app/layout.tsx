@@ -66,7 +66,8 @@ const orgSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Cybersecurity, PenTest & AI Breach Analysis | Cynical Tech",
+  title:
+    "Enterprise Penetration Testing & Red Team Services | Cynical Technology",
   description:
     "Cynical Technology offers cybersecurity, Pentesting, incident response, and AI-powered breach analysis with security experts, and platforms: Bugv and Vigile.ai.",
   metadataBase: new URL("https://cynicalsite.vercel.app"),

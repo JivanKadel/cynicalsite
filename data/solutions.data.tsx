@@ -51,16 +51,16 @@ export const solutions = [
     iconColor: "text-red-500",
     href: "/solutions/cloud-security",
   },
-  {
-    icon: AlertTriangle,
-    title: "Incident Response & Forensics",
-    description:
-      "Under attack? Our IR team deploys within 4 hours. We contain, investigate, and eradicate threats while preserving evidence for legal proceedings.",
-    features: ["4-hour deployment", "Malware analysis", "Legal-ready reports"],
-    gradient: "from-pink-500/20 to-purple-500/10",
-    iconColor: "text-purple-500",
-    href: "/solutions/incident-response",
-  },
+  // {
+  //   icon: AlertTriangle,
+  //   title: "Incident Response & Forensics",
+  //   description:
+  //     "Under attack? Our IR team deploys within 4 hours. We contain, investigate, and eradicate threats while preserving evidence for legal proceedings.",
+  //   features: ["4-hour deployment", "Malware analysis", "Legal-ready reports"],
+  //   gradient: "from-pink-500/20 to-purple-500/10",
+  //   iconColor: "text-purple-500",
+  //   href: "/solutions/incident-response",
+  // },
   {
     icon: Bot,
     title: "AI/ML Security Assessment",

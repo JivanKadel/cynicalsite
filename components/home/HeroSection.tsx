@@ -3,7 +3,7 @@ import { TrustedByImage } from "./TrustedByImage";
 import Marquee from "react-fast-marquee";
 import { Button } from "../ui/button";
 import Link from "next/link";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import BookACall from "./BookACall";
 
 export default function HeroSection() {
@@ -12,29 +12,27 @@ export default function HeroSection() {
       <div className="max-w-4xl mx-auto text-center space-y-8 pb-8 py-8">
         <div className="flex flex-col gap-3 justify-center mb-4 md:mb-8">
           <p className="text-muted-foreground uppercase tracking-widest text-sm font-bold flex items-center gap-2 justify-center">
-            <Star fill="#d08700" className="text-yellow-600" /> Trusted by
-            industry leaders
-            <Star fill="#d08700" className="text-yellow-600" />
+            Trusted by industry leaders
           </p>
           <p className="text-muted-foreground">
             Comprehensive Penetration Testing and Compliance Solutions.
           </p>
         </div>
         <h1 className="text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
-          Attackers don&apos;t wait. Neither should you.
+          Protecting Enterprise Infrastructure from Real-World Threats
         </h1>
 
         <h2 className="my-6 text-base  text-foreground/80 sm:px-0 font-normal lg:my-5.5 md:text-lg lg:text-xl mx-auto text-balance text-center">
-          Real-world penetration <span className="sr-only">pentesting</span>{" "}
-          testing across your entire stack—Web, API, Mobile, Cloud, and Red
-          Team—backed by clear remediation and verified retesting.
+          Comprehensive security testing{" "}
+          <span className="sr-only">(PenTesting)</span> with clear reporting,
+          prioritized remediation, and verified closure.
         </h2>
       </div>
-      <section className="flex flex-col sm:flex-row gap-4 justify-center items-center mx-auto pb-8 max-w-sm">
+      <section className="flex flex-col md:flex-row gap-4 justify-center items-center mx-auto pb-8 max-w-sm">
         <BookACall />
         <Link href={"/downloads/sample-report"} className="flex-1">
-          <Button className="w-54 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
-            Download sample report <ArrowRight className="w-5! h-5!" />
+          <Button className="w-72 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
+            Download Real Pentest Report <ArrowRight className="w-5! h-5!" />
           </Button>
         </Link>
       </section>
@@ -52,6 +50,7 @@ export default function HeroSection() {
           speed={10}
           style={{
             marginRight: 10,
+            overflow: "hidden",
           }}
         >
           <div
@@ -68,10 +67,15 @@ export default function HeroSection() {
                 name={brand.name}
                 logo={brand.image}
                 link={brand.link}
-                className={`object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
+                className={`object-contain hover:scale-105 xl:hover:scale-140 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
                   brand.name.toLowerCase() === "worldlink" ||
                   brand.name.toLowerCase() == "worldbank" ||
-                  brand.name.toLowerCase() === "webpoint"
+                  brand.name.toLowerCase() === "webpoint" ||
+                  brand.name.toLowerCase() === "foodmandu" ||
+                  brand.name.toLowerCase() === "foneloan" ||
+                  brand.name.toLowerCase() === "trip turbo" ||
+                  brand.name.toLowerCase() === "ambition guru" ||
+                  brand.name.toLowerCase() === "careboarding"
                     ? ""
                     : "dark:hover:invert-0 dark:hover:brightness-100"
                 }`}
@@ -86,6 +90,22 @@ export default function HeroSection() {
               link="https://swifttech.com.np/"
               className="object-contain hover:scale-105 transition-transform  dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
             />
+            {/* <TrustedByImage
+              width={54}
+              height={54}
+              name="Government of Nepal"
+              logo="/brands/gov.png"
+              link="https://www.nepal.gov.np/"
+              className="object-contain dark:hidden hover:scale-105 transition-transform  dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
+            />
+            <TrustedByImage
+              width={54}
+              height={54}
+              name="IME Group"
+              logo="/brands/ime.svg"
+              link="https://imegroup.com/"
+              className="object-contain dark:hidden hover:scale-105 transition-transform  dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
+            /> */}
           </div>
         </Marquee>
       </div>
