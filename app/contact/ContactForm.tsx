@@ -20,8 +20,6 @@ interface FormErrors {
 }
 
 export default function ContactForm() {
-  const { theme } = useTheme();
-
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
