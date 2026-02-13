@@ -1,13 +1,13 @@
 export const testimonials = [
   {
     quote: [
-      "Cynical Technology team brings both levels of professionalism and skill that have satisfied us beyond expectations.",
-      "Their team is communicative and responsive, making them a reliable and trustworthy partner.",
+      "Cynical Technology is a remarkable cyber security company with skilled analysts. They have provided us with expertise in cyber security solutions for our web and mobile applications.",
+      "Their commitment to reaching deadlines on tight schedules is really commendable. I, highly recommend Cynical Technology to others.",
     ],
-    author: "Raghu Nath Bhandari",
-    role: "VP Tech",
-    company: "IME Group",
-    image: "/testimonials/mr_raghu_ime_group.jpg",
+    author: "Neeraj Dhungana",
+    role: "CEO",
+    company: "Swift Technology Pvt. Ltd.",
+    image: "/testimonials/neeraj_sir.jpg",
     bgColor: "bg-card-blue",
   },
   {
@@ -27,20 +27,9 @@ export const testimonials = [
     ],
     author: "Diwas Sapkota",
     role: "CEO",
-    company: "FonePay",
-    image: "/testimonials/mr_diwas_fonepay.jpg",
+    company: "eSewa Pvt. Ltd.",
+    image: "/testimonials/mr_diwas_esewa.jpg",
     bgColor: "bg-card-green",
-  },
-  {
-    quote: [
-      "A  Team of young cyber security professionals who are dedicated to strengthen Nepalese cyberspace. It has been a pleasant experience working with them in F1soft.",
-    ],
-    author: "Aslam Ali",
-    role: "Head of SOC",
-    company: "F1Soft",
-    image: "/testimonials/mr_aslam_f1soft.png",
-
-    bgColor: "bg-card-orange",
   },
   {
     quote: [
@@ -54,12 +43,22 @@ export const testimonials = [
   },
   {
     quote: [
-      "Cynical Technology Provided the best services for us. They delivered what they had promised. They had kept us updated on progress and delivered the reports on time. ",
+      "I would like to thank you for the professional services provided to merojob.com. The team at Cynical Technology has clarity in cyber security and its effective implementation. They managed to find critical vulnerabilities in our portal and provided the detail of these vulnerabilities which has helped us take corrective action and added more confidence in our portal. I would not hesitate to recommend Cynical Technology to anyone for their Information security needs.",
     ],
-    author: "Er. Prabin Chauhan",
-    role: "CTO",
-    company: "IME Pay",
-    image: "/testimonials/mr_prabin_nitc.jpg",
+    author: "Sailendra Raj Giri",
+    role: "Founder & MD",
+    company: "Merojob.com",
+    image: "/testimonials/sailendra_sir.jpg",
+    bgColor: "bg-card-pink",
+  },
+  {
+    quote: [
+      "Cynical Technology team brings both levels of professionalism and skill that has satisfied us beyond expectations. I would highly recommend Cynical..",
+    ],
+    author: "Santosh Tamrakar",
+    role: "Managing Director",
+    company: "IMS Softwares Pvt. Ltd.",
+    image: "/testimonials/santosh_sir.jpg",
     bgColor: "bg-card-pink",
   },
 ];
