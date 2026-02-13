@@ -56,12 +56,12 @@ export default function Navbar() {
         "Protect your organization from leaked credentials & breaches",
       href: "/products/vigile",
     },
-    {
-      icon: Infinity,
-      label: "Falcon",
-      description: "Continuous security and Uptime Monitoring",
-      href: "https://webmonitoring.doit.gov.np/dashboard",
-    },
+    // {
+    //   icon: Infinity,
+    //   label: "Falcon",
+    //   description: "Continuous security and Uptime Monitoring",
+    //   href: "https://webmonitoring.doit.gov.np/dashboard",
+    // },
   ];
 
   const solutions = [
