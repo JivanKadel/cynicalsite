@@ -37,7 +37,7 @@ export const testimonials = [
     ],
     author: "Ravi Shakya",
     role: "CTO",
-    company: "eSewa Fonepay Pvt. Ltd.",
+    company: "eSewa Pvt. Ltd.",
     image: "/testimonials/mr_ravi_esewa.jpg",
     bgColor: "bg-card-purple",
   },
