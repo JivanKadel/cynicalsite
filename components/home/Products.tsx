@@ -44,6 +44,24 @@ const Products = () => {
       gradient: "from-emerald-500/20 to-cyan-500/10",
       href: "/products/vigile",
     },
+    {
+      icon: "/products/falcon_logo.png",
+      title: "ASSETS MONITORING",
+      dashboardImage: "/products/falcon_dashboard.png",
+      name: "Falcon",
+      tagline: "Track your Digital Assets as Scale",
+      description:
+        "Centralized monitoring and notification system to track your public assets at scale",
+      features: [
+        "Endless Monitoring",
+        "Keyword-based Searching",
+        "Alerts & Notifications",
+      ],
+      stats: { value: "100+", label: "Government Assets being Monitored" },
+      cta: "Learn More",
+      gradient: "from-emerald-500/20 to-cyan-500/10",
+      href: "/products/falcon",
+    },
   ];
 
   return (
@@ -272,6 +290,137 @@ const Products = () => {
                   <Image
                     src={products[1].dashboardImage}
                     alt={products[1].name}
+                    width={1080}
+                    height={490}
+                    className="object-cover border rounded-xl w-full xl:scale-105 shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
+                  />
+                  <div
+                    className="absolute -bottom-6 -left-6 w-20 sm:w-40 animate-float-delayed preserve-3d"
+                    style={{ transform: "rotateY(-1.73deg) rotateX(-4.94deg)" }}
+                  >
+                    <div className="bg-[#111827] rounded-xl p-1 sm:p-3 border border-white/10 text-white">
+                      <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
+                        <div className="w-2 h-2 rounded-full bg-green-500 pulse-ring relative"></div>
+                        <span className="text-[8px] sm:text-xs text-gray-400">
+                          Live Activity
+                        </span>
+                      </div>
+                      <div className="text-sm sm:text-lg font-bold mb-1">
+                        21
+                      </div>
+                      <div className="text-[8px] sm:text-xs text-gray-400">
+                        Malware Breaches
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="absolute -top-6 -right-6 w-20 sm:w-40 animate-float-delayed preserve-3d"
+                    style={{
+                      animationDelay: "2s",
+                      transform: "rotateY(11.625deg) rotateX(-2.61deg)",
+                    }}
+                  >
+                    <div className="bg-[#ffffff] rounded-xl p-1 sm:p-3 border">
+                      <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
+                        <div className="w-4 h-4 sm:w-8 sm:h-8 rounded-full bg-linear-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-xs font-bold">
+                          <Bug className="w-2.5 h-2.5 sm:w-5 sm:h-5" />
+                        </div>
+                        <div>
+                          <div className="text-[8px] sm:text-xs font-semibold text-gray-900">
+                            Threats
+                          </div>
+                          <div className="text-[8px] sm:text-xs text-gray-500">
+                            Just now
+                          </div>
+                        </div>
+                      </div>
+                      <div className="ml-1 text-sm sm:text-lg font-bold text-red-600">
+                        5 Critical
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            </div>
+          }
+        </div>
+        <div className="my-24">
+          {
+            <div className="mt-16 group">
+              <div className="flex flex-col justify-start items-start gap-3  px-6 lg:px-8">
+                <h2 className="bg-background border rounded-full p-2 shadow-lg  text-green-900 dark:text-green-500 font-light text-sm tracking-widest mb-2">
+                  {products[2].title}
+                </h2>
+
+                <div className="ml-2">
+                  {products[2].lightIcon ? (
+                    <>
+                      <Image
+                        src={products[2].icon}
+                        alt={products[2].name}
+                        width={100}
+                        height={80}
+                        className="hidden dark:block"
+                      />
+
+                      <Image
+                        src={products[2].lightIcon}
+                        alt={`${products[2].name} light icon`}
+                        width={100}
+                        height={80}
+                        className="block dark:hidden"
+                      />
+                    </>
+                  ) : (
+                    <Image
+                      src={products[2].icon}
+                      alt={products[2].name}
+                      width={90}
+                      height={80}
+                      className="dark:invert dark:brightness-0"
+                    />
+                  )}
+                </div>
+              </div>
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
+                {/* Text content */}
+                <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
+                  <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
+                    {products[2].tagline}
+                  </h3>
+                  <p className="text-xl mb-6 text-muted-foreground">
+                    {products[2].description}
+                  </p>
+
+                  <ul className="flex flex-col gap-3">
+                    {products[2].features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-center gap-2 mb-2 text-muted-foreground font-bold"
+                      >
+                        <span className="w-6 h-6 rounded-full bg-green-500/10 flex items-center justify-center">
+                          <Check className="h-4 w-4 text-green-500" />
+                        </span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a href={products[2].href}>
+                    <Button className="text-lg p-6 rounded-full group hover:bg-slate-900 dark:hover:bg-slate-300 transition-colors duration-300 mt-6">
+                      {products[2].cta}
+                    </Button>
+                  </a>
+                </div>
+
+                {/* Image content */}
+                <Link
+                  href={products[2].href}
+                  className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
+                >
+                  <Image
+                    src={products[2].dashboardImage}
+                    alt={products[2].name}
                     width={1080}
                     height={490}
                     className="object-cover border rounded-xl w-full xl:scale-105 shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"

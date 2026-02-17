@@ -55,7 +55,7 @@ export const teamMembers = [
       linkedin: "https://www.linkedin.com/in/nareshlamgade/",
     },
     message:
-      "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+      "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure. It's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
   },
   // {
   //   name: "A",
@@ -66,7 +66,7 @@ export const teamMembers = [
   //     linkedin: "https://www.linkedin.com/in/nareshlamgade/",
   //   },
   //   message:
-  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure. It's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
   // },
   // {
   //   name: "B",
@@ -77,7 +77,7 @@ export const teamMembers = [
   //     linkedin: "https://www.linkedin.com/in/nareshlamgade/",
   //   },
   //   message:
-  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure. It's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
   // },
   // {
   //   name: "C",
@@ -88,7 +88,7 @@ export const teamMembers = [
   //     linkedin: "https://www.linkedin.com/in/nareshlamgade/",
   //   },
   //   message:
-  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure—it's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
+  //     "At Cynical, we believe that cybersecurity should not be an afterthought for any business  with critical data and infrastructure. It's about protecting people, businesses, and livelihoods. Our mission is to make enterprise-grade security accessible to every organization, regardless of size or industry.",
   // },
 ];
 

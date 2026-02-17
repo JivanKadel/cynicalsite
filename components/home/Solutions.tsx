@@ -47,7 +47,7 @@ export default function Solutions() {
               Technical Capabilities
             </p>
             <p className="text-muted-foreground font-body max-w-2xl mx-auto">
-              From source code to network perimeter—we test every layer
+              From source code to network perimeter, we test every layer
               attackers target.
             </p>
           </div>

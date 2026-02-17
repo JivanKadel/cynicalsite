@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { ScheduleCallDialog } from "../contact/SchedulDialog";
+import { usePathname, useRouter } from "next/navigation";
 
 interface PageCTAProps {
   badge?: string;
@@ -22,20 +23,22 @@ interface PageCTAProps {
 }
 
 const PageCTA = ({
-  badge = "Limited capacity—3 enterprise slots remaining this quarter",
+  badge = "Limited capacity: 3 enterprise slots remaining this quarter",
   headline,
   highlightedText,
   description,
   showBenefits = true,
   showTrustIndicators = true,
 }: PageCTAProps) => {
+  const path = usePathname();
+
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const benefits = [
     { icon: Clock, text: "Response within 24 hours" },
     { icon: Lock, text: "NDA-protected briefing" },
     { icon: FileText, text: "Free exposure report included" },
-    { icon: CircleCheckBigIcon, text: "No sales pitch—just findings" },
+    { icon: CircleCheckBigIcon, text: "No sales pitch, just findings" },
   ];
 
   return (
@@ -88,12 +91,13 @@ const PageCTA = ({
                     Request Security Briefing
                     <ArrowRight className="w-4 h-4" />
                   </Button>
-
-                  <Link href="/downloads/sample-report">
-                    <Button variant="outline" size="lg" className="h-12">
-                      Download Sample Report
-                    </Button>
-                  </Link>
+                  {path === "/" && (
+                    <Link href="/downloads/sample-report">
+                      <Button variant="outline" size="lg" className="h-12">
+                        Download Sample Report
+                      </Button>
+                    </Link>
+                  )}
                 </div>
 
                 {/* Trust Indicators */}

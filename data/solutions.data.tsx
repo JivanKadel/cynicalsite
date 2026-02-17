@@ -14,6 +14,7 @@ import {
   Shield,
   Smartphone,
   Webhook,
+  GraduationCap,
 } from "lucide-react";
 
 export const solutions = [
@@ -45,31 +46,39 @@ export const solutions = [
     icon: Network,
     title: "Red Team Operations",
     description:
-      "Full-scope adversary simulation. We compromise your environment the way APT groups would—phishing, initial access, persistence, and data exfiltration.",
+      "Full-scope adversary simulation. We compromise your environment the way APT groups would. Phishing, initial access, persistence, and data exfiltration.",
     features: ["Initial access", "Persistence", "Objective completion"],
     gradient: "from-orange-500/20 to-red-500/10",
     iconColor: "text-red-500",
-    href: "/solutions/cloud-security",
+    href: "/solutions/red-team-operations",
   },
-  // {
-  //   icon: AlertTriangle,
-  //   title: "Incident Response & Forensics",
-  //   description:
-  //     "Under attack? Our IR team deploys within 4 hours. We contain, investigate, and eradicate threats while preserving evidence for legal proceedings.",
-  //   features: ["4-hour deployment", "Malware analysis", "Legal-ready reports"],
-  //   gradient: "from-pink-500/20 to-purple-500/10",
-  //   iconColor: "text-purple-500",
-  //   href: "/solutions/incident-response",
-  // },
   {
-    icon: Bot,
-    title: "AI/ML Security Assessment",
+    icon: AlertTriangle,
+    title: "Vulnerability Management",
     description:
-      "Adversarial attacks on your models: prompt injection, training data extraction, model inversion, and API abuse testing for LLMs and ML systems.",
-    features: ["Prompt injection", "Model extraction", "Data poisoning"],
+      "Move beyond point-in-time scans. Our platform combines industry-leading vulnerability detection with expert validation to help you prioritize and remediate what matters most.",
+    features: [
+      "Continuous External Scanning",
+      "Configuration Review",
+      "Penetration Testing as a Service (PTaaS)",
+    ],
+    gradient: "from-pink-500/20 to-purple-500/10",
+    iconColor: "text-purple-500",
+    href: "/solutions/vulnerability-management",
+  },
+  {
+    icon: GraduationCap,
+    title: "Training & Consulting",
+    description:
+      "Expert-led cybersecurity training and strategic consulting services to empower your team and strengthen your security posture.",
+    features: [
+      "Developer secure coding",
+      "Red team tradecraft",
+      "CISO advisory",
+    ],
     gradient: "from-blue-500/20 to-indigo-500/10",
     iconColor: "text-indigo-500",
-    href: "/solutions/app-security",
+    href: "/solutions/training-and-consulting",
   },
   {
     icon: Search,

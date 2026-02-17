@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
 import PageCTA from "@/components/products/PageCTA";
 import { iconColors } from "@/lib/utils";
-import { Shield, CheckCircle } from "lucide-react";
+import { Cpu, CheckCircle, AlertTriangle } from "lucide-react";
 import Link from "next/link";
 import {
   capabilities,
   features,
   methodology,
-  solutionBenefits,
   stats,
-} from "@/data/solutions/vulnerability.data";
+  threatTypes,
+} from "@/data/solutions/ai-ml-security.data";
 
 export const metadata: Metadata = {
-  title: "Vulnerability Management | Cynical Technology",
+  title: "AI/ML Security | Cynical Technology",
   description:
-    "Continuous vulnerability management and prioritization. Reduce your attack surface and remediate critical risks faster with our expert-led platform.",
+    "Specialized security assessment for artificial intelligence and machine learning systems. Protect your models, data, and pipelines from emerging threats.",
 };
 
-export default function VulnerabilityManagement() {
+export default function AIMLSecurity() {
   return (
     <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
@@ -39,28 +39,28 @@ export default function VulnerabilityManagement() {
                 Solutions
               </Link>
               <span>/</span>
-              <span className="text-foreground">Vulnerability Management</span>
+              <span className="text-foreground">AI/ML Security</span>
             </div>
 
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Shield className="w-4 h-4 text-foreground" />
+              <Cpu className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">
-                Enterprise Vulnerability Management
+                AI & Machine Learning Security
               </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
-              Continuous threat exposure
+              Secure your AI systems
               <span className="block text-slate-500">
-                management for modern enterprises
+                from data to deployment
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 leading-relaxed">
-              Move beyond point-in-time scans. Our platform combines
-              industry-leading vulnerability detection with expert validation to
-              help you prioritize and remediate what matters most.
+              As AI adoption accelerates, so do the risks. Our specialized
+              assessments identify vulnerabilities in your ML pipelines, models,
+              and training data that traditional security tools miss.
             </p>
           </div>
         </div>
@@ -92,12 +92,12 @@ export default function VulnerabilityManagement() {
               Capabilities
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Full-spectrum exposure management
+              Comprehensive AI security assessment
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              From external attack surface to deep internal networks, we provide
-              continuous visibility and context across your entire hybrid
-              infrastructure.
+              From adversarial machine learning to supply chain attacks, we
+              evaluate every component of your AI infrastructure against the
+              latest threat vectors.
             </p>
           </div>
 
@@ -130,24 +130,24 @@ export default function VulnerabilityManagement() {
         </div>
       </section>
 
-      {/* Solution Benefits Section (replaces Testing Types) */}
+      {/* Threat Types Section (replaces Testing Types) */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              The Cynical Advantage
+              AI/ML Attack Vectors
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight mb-6">
-              Beyond traditional vulnerability scanning
+              Emerging threats to intelligent systems
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              We combine automation with human intelligence to eliminate alert
-              fatigue and provide actionable remediation paths.
+              AI systems introduce a new attack surface. We assess your
+              resilience against these novel threats.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {solutionBenefits.map((benefit, index) => (
+            {threatTypes.map((threat, index) => (
               <div
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
@@ -155,14 +155,14 @@ export default function VulnerabilityManagement() {
                 <div className="text-6xl font-bold text-foreground/20 mb-4">
                   0{index + 1}
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{benefit.title}</h3>
+                <h3 className="text-2xl font-bold mb-4">{threat.title}</h3>
                 <p className="text-muted-foreground font-body mb-6 leading-relaxed">
-                  {benefit.description}
+                  {threat.description}
                 </p>
                 <ul className="space-y-3">
-                  {benefit.features.map((feature, fIndex) => (
+                  {threat.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-center gap-3">
-                      <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
+                      <AlertTriangle className="w-5 h-5 text-amber-500 shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>
                     </li>
                   ))}
@@ -182,12 +182,12 @@ export default function VulnerabilityManagement() {
                 Our Process
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-                Continuous lifecycle, not a one-off test
+                Specialized methodology for AI systems
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
-                Vulnerability management is a continuous process of discovery,
-                validation, and remediation. Our approach ensures your security
-                posture improves over time.
+                Built on emerging frameworks like MITRE ATLAS and OWASP ML Top
+                10, our methodology combines data science expertise with
+                offensive security techniques.
               </p>
             </div>
 
@@ -225,7 +225,7 @@ export default function VulnerabilityManagement() {
               Why Cynical?
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Platform + expertise = better security
+              Data scientists who think like attackers
             </h2>
           </div>
 
@@ -258,36 +258,35 @@ export default function VulnerabilityManagement() {
         </div>
       </section>
 
-      {/* Prioritization Framework Section (replaces OWASP) */}
+      {/* ML Top 10 Coverage Section (replaces OWASP) */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-                Prioritization
+                Coverage
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-                Risk-based vulnerability management
+                Complete OWASP ML Top 10 coverage
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                We don&apos;t just find vulnerabilities; we help you fix the
-                right ones first by combining threat intelligence, business
-                context, and exploitability analysis.
+                Our assessments map directly to industry-standard frameworks for
+                machine learning security, ensuring comprehensive coverage.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "CVSS Scoring & Contextualization",
-                "Exploit Intelligence & Threat Feeds",
-                "Asset Criticality & Business Impact",
-                "Automated False-Positive Elimination",
-                "Remediation Roadmaps & Guidance",
-                "Compliance Mapping (SOC2, ISO 27001, etc.)",
-                "Attack Path Validation",
-                "Temporal & Environmental Scoring",
-                "Integration with Ticketing Systems",
-                "Continuous Post-Remediation Validation",
+                "ML01: Input Manipulation Attacks",
+                "ML02: Data Poisoning",
+                "ML03: Model Inversion",
+                "ML04: Membership Inference",
+                "ML05: Model Theft",
+                "ML06: AI Supply Chain Attacks",
+                "ML07: Transfer Learning Attacks",
+                "ML08: Model Skewing",
+                "ML09: Output Integrity Violations",
+                "ML10: Model Poisoning",
               ].map((item, index) => (
                 <div
                   key={index}
@@ -305,10 +304,10 @@ export default function VulnerabilityManagement() {
       </section>
 
       <PageCTA
-        badge="Managed by our 24/7 Security Operations Center"
-        headline="Stop chasing"
-        highlightedText="critical vulnerabilities"
-        description="Get continuous, validated vulnerability management that reduces risk and frees your team to focus on development."
+        badge="Protect your competitive advantage"
+        headline="Secure your AI"
+        highlightedText="before it's exploited"
+        description="Get a specialized security assessment for your machine learning models, training pipelines, and AI infrastructure."
       />
     </div>
   );

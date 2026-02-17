@@ -35,7 +35,7 @@ export const features = [
     icon: Layers,
     title: "Managed Programs",
     description:
-      "We handle triage, validation, and communication—so your team can focus on fixing vulnerabilities, not managing reports.",
+      "We handle triage, validation, and communication, so your team can focus on fixing vulnerabilities, not managing reports.",
   },
   {
     icon: Target,

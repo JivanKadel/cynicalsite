@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
 import PageCTA from "@/components/products/PageCTA";
 import { iconColors } from "@/lib/utils";
-import { Shield, CheckCircle } from "lucide-react";
+import { Skull, CheckCircle, Target } from "lucide-react"; // Added Skull, Target, Eye
 import Link from "next/link";
 import {
   capabilities,
+  engagementTypes,
   features,
   methodology,
-  solutionBenefits,
   stats,
-} from "@/data/solutions/vulnerability.data";
+} from "@/data/solutions/red-team-ops.data";
 
 export const metadata: Metadata = {
-  title: "Vulnerability Management | Cynical Technology",
+  title: "Red Team Operations | Cynical Technology",
   description:
-    "Continuous vulnerability management and prioritization. Reduce your attack surface and remediate critical risks faster with our expert-led platform.",
+    "Advanced adversarial simulation services. Test your people, processes, and technology against real-world attacker tactics, techniques, and procedures.",
 };
 
-export default function VulnerabilityManagement() {
+export default function RedTeamOperations() {
   return (
     <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
@@ -39,28 +39,29 @@ export default function VulnerabilityManagement() {
                 Solutions
               </Link>
               <span>/</span>
-              <span className="text-foreground">Vulnerability Management</span>
+              <span className="text-foreground">Red Team Operations</span>
             </div>
 
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Shield className="w-4 h-4 text-foreground" />
+              <Skull className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">
-                Enterprise Vulnerability Management
+                Advanced Adversarial Simulation
               </span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 text-balance">
-              Continuous threat exposure
+              Think like an attacker
               <span className="block text-slate-500">
-                management for modern enterprises
+                to defend like none other
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 leading-relaxed">
-              Move beyond point-in-time scans. Our platform combines
-              industry-leading vulnerability detection with expert validation to
-              help you prioritize and remediate what matters most.
+              Our elite red team emulates real-world adversaries to test your
+              organization&apos;s detection and response capabilities. We
+              don&apos;t just find vulnerabilities, we uncover gaps in your
+              security operations.
             </p>
           </div>
         </div>
@@ -92,12 +93,12 @@ export default function VulnerabilityManagement() {
               Capabilities
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Full-spectrum exposure management
+              Full-scope adversary emulation
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              From external attack surface to deep internal networks, we provide
-              continuous visibility and context across your entire hybrid
-              infrastructure.
+              From initial access to data exfiltration, we simulate the full
+              attack lifecycle to test your people, processes, and technology
+              against sophisticated adversaries.
             </p>
           </div>
 
@@ -130,24 +131,24 @@ export default function VulnerabilityManagement() {
         </div>
       </section>
 
-      {/* Solution Benefits Section (replaces Testing Types) */}
+      {/* Engagement Types Section (replaces Testing Types) */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              The Cynical Advantage
+              Engagement Models
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold tracking-tight mb-6">
-              Beyond traditional vulnerability scanning
+              Tailored to your threat model
             </h2>
             <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              We combine automation with human intelligence to eliminate alert
-              fatigue and provide actionable remediation paths.
+              Choose the engagement type that aligns with your security
+              objectives and adversary profile.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {solutionBenefits.map((benefit, index) => (
+            {engagementTypes.map((type, index) => (
               <div
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
@@ -155,12 +156,12 @@ export default function VulnerabilityManagement() {
                 <div className="text-6xl font-bold text-foreground/20 mb-4">
                   0{index + 1}
                 </div>
-                <h3 className="text-2xl font-bold mb-4">{benefit.title}</h3>
+                <h3 className="text-2xl font-bold mb-4">{type.title}</h3>
                 <p className="text-muted-foreground font-body mb-6 leading-relaxed">
-                  {benefit.description}
+                  {type.description}
                 </p>
                 <ul className="space-y-3">
-                  {benefit.features.map((feature, fIndex) => (
+                  {type.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
                       <span className="text-muted-foreground">{feature}</span>
@@ -182,12 +183,12 @@ export default function VulnerabilityManagement() {
                 Our Process
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-                Continuous lifecycle, not a one-off test
+                Operation lifecycle
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
-                Vulnerability management is a continuous process of discovery,
-                validation, and remediation. Our approach ensures your security
-                posture improves over time.
+                Every engagement follows a structured yet flexible methodology
+                designed to emulate real-world adversaries while ensuring safety
+                and business continuity.
               </p>
             </div>
 
@@ -225,7 +226,7 @@ export default function VulnerabilityManagement() {
               Why Cynical?
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Platform + expertise = better security
+              Former operators, current threats
             </h2>
           </div>
 
@@ -258,36 +259,40 @@ export default function VulnerabilityManagement() {
         </div>
       </section>
 
-      {/* Prioritization Framework Section (replaces OWASP) */}
+      {/* MITRE ATT&CK Coverage Section (replaces OWASP) */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-                Prioritization
+                Framework Alignment
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-                Risk-based vulnerability management
+                Full MITRE ATT&CK coverage
               </h2>
               <p className="text-lg text-muted-foreground font-body leading-relaxed">
-                We don&apos;t just find vulnerabilities; we help you fix the
-                right ones first by combining threat intelligence, business
-                context, and exploitability analysis.
+                Our operations are mapped to the MITRE ATT&CK framework,
+                ensuring comprehensive testing against real-world adversary
+                TTPs.
               </p>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                "CVSS Scoring & Contextualization",
-                "Exploit Intelligence & Threat Feeds",
-                "Asset Criticality & Business Impact",
-                "Automated False-Positive Elimination",
-                "Remediation Roadmaps & Guidance",
-                "Compliance Mapping (SOC2, ISO 27001, etc.)",
-                "Attack Path Validation",
-                "Temporal & Environmental Scoring",
-                "Integration with Ticketing Systems",
-                "Continuous Post-Remediation Validation",
+                "TA0043: Reconnaissance",
+                "TA0042: Resource Development",
+                "TA0001: Initial Access",
+                "TA0002: Execution",
+                "TA0003: Persistence",
+                "TA0004: Privilege Escalation",
+                "TA0005: Defense Evasion",
+                "TA0006: Credential Access",
+                "TA0007: Discovery",
+                "TA0008: Lateral Movement",
+                "TA0009: Collection",
+                "TA0011: Command & Control",
+                "TA0010: Exfiltration",
+                "TA0040: Impact",
               ].map((item, index) => (
                 <div
                   key={index}
@@ -305,10 +310,10 @@ export default function VulnerabilityManagement() {
       </section>
 
       <PageCTA
-        badge="Managed by our 24/7 Security Operations Center"
-        headline="Stop chasing"
-        highlightedText="critical vulnerabilities"
-        description="Get continuous, validated vulnerability management that reduces risk and frees your team to focus on development."
+        badge="Operational security guaranteed"
+        headline="Test your defenses"
+        highlightedText="against the best"
+        description="See how your blue team responds to sophisticated, multi-stage attacks. Schedule a red team engagement today."
       />
     </div>
   );
