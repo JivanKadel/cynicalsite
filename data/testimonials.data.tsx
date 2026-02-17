@@ -9,6 +9,7 @@ export const testimonials = [
     company: "Swift Technology Pvt. Ltd.",
     image: "/testimonials/neeraj_sir.jpg",
     bgColor: "bg-card-blue",
+    brandLogo: "/brands/swift_tech.svg",
   },
   {
     quote: [
@@ -20,6 +21,7 @@ export const testimonials = [
     company: "GoFundMe",
     image: "/testimonials/mr_jon_gofundme.jpg",
     bgColor: "bg-card-yellow",
+    brandLogo: "/brands/gofundme.svg",
   },
   {
     quote: [
@@ -30,6 +32,7 @@ export const testimonials = [
     company: "FonePay Payment Service Limited",
     image: "/testimonials/mr_diwas_esewa.jpg",
     bgColor: "bg-card-green",
+    brandLogo: "/brands/fonepay.webp",
   },
   {
     quote: [
@@ -40,6 +43,7 @@ export const testimonials = [
     company: "eSewa Pvt. Ltd.",
     image: "/testimonials/mr_ravi_esewa.jpg",
     bgColor: "bg-card-purple",
+    brandLogo: "/brands/esewa.png",
   },
   {
     quote: [
@@ -50,6 +54,7 @@ export const testimonials = [
     company: "Merojob.com",
     image: "/testimonials/sailendra_sir.jpg",
     bgColor: "bg-card-pink",
+    brandLogo: "/brands/mero_job.svg",
   },
   {
     quote: [
@@ -60,5 +65,6 @@ export const testimonials = [
     company: "IMS Softwares Pvt. Ltd.",
     image: "/testimonials/santosh_sir.jpg",
     bgColor: "bg-card-pink",
+    brandLogo: "/brands/ims_software.png",
   },
 ];

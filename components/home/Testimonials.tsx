@@ -64,7 +64,7 @@ const Testimonials = () => {
                       ”
                     </span>
                   </div>
-                  <div className="flex items-center gap-4 mt-auto">
+                  <div className="flex items-center gap-1 sm:gap-4 mt-auto">
                     <div className="relative inline-block">
                       <Image
                         alt={testimonial.author}
@@ -74,13 +74,23 @@ const Testimonials = () => {
                         src={testimonial.image}
                       />
                     </div>
-                    <div>
-                      <h3 className="font-bold text-gray-900 dark:text-slate-100 text-lg">
-                        {testimonial.author}
-                      </h3>
-                      <p className="text-sm text-gray-800 dark:text-slate-300">
-                        {testimonial.role}, {testimonial.company}
-                      </p>
+                    <div className="w-full flex justify-between items-center gap-1 sm:gap-2">
+                      <div>
+                        <h3 className="font-bold text-gray-900 dark:text-slate-100 text-lg">
+                          {testimonial.author}
+                        </h3>
+                        <p className="text-sm text-gray-800 dark:text-slate-300">
+                          {testimonial.role}, {testimonial.company}
+                        </p>
+                      </div>
+                      <div>
+                        <Image
+                          src={testimonial.brandLogo}
+                          alt={`${testimonial.company}-logo`}
+                          width={80}
+                          height={50}
+                        />
+                      </div>
                     </div>
                   </div>
                 </article>

@@ -11,6 +11,7 @@ import {
   securityFrameworks,
   stats,
 } from "@/data/solutions/cloud-security.data";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Cloud Security | Cynical Technology",
@@ -92,18 +93,29 @@ const CloudSecurity = () => {
       {/* Capabilities Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mb-16">
-            <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              Capabilities
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Comprehensive cloud security coverage
-            </h2>
-            <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              From infrastructure hardening to compliance management, our cloud
-              security services cover every aspect of your cloud environment
-              across AWS, Azure, and Google Cloud Platform.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 py-6">
+            <div className="max-w-3xl mb-16">
+              <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+                Capabilities
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                Comprehensive cloud security coverage
+              </h2>
+              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                From infrastructure hardening to compliance management, our
+                cloud security services cover every aspect of your cloud
+                environment across AWS, Azure, and Google Cloud Platform.
+              </p>
+            </div>
+            <div>
+              <Image
+                src={"/generic/server_room.jpg"}
+                alt="A woman in a server room, working on cloud security assessments."
+                width={500}
+                height={400}
+                className="rounded-lg mb-6"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -153,8 +165,18 @@ const CloudSecurity = () => {
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
               >
-                <div className="text-6xl font-bold text-foreground/20 mb-4">
-                  0{index + 1}
+                <div className="flex justify-between items-center">
+                  <div className="text-6xl font-bold text-foreground/20 mb-4">
+                    0{index + 1}
+                  </div>
+                  <div>
+                    <Image
+                      src={provider.logo}
+                      alt={`${provider.title} logo`}
+                      width={48}
+                      height={48}
+                    />
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{provider.title}</h3>
                 <p className="text-muted-foreground font-body mb-6 leading-relaxed">
@@ -185,6 +207,13 @@ const CloudSecurity = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Cloud-native security methodology
               </h2>
+              <Image
+                src={"/generic/thinking.avif"}
+                alt="A man thinking in front of a laptop, thinking."
+                width={600}
+                height={400}
+                className="rounded-lg mb-6"
+              />
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
                 Our cloud-first approach combines industry frameworks like CSA
                 Cloud Controls Matrix, NIST, and CIS benchmarks with

@@ -10,6 +10,7 @@ import {
   stats,
   testingTypes,
 } from "@/data/solutions/app-security.data";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "App Security | Cynical Technology",
@@ -87,18 +88,29 @@ export default function ApplicationSecurity() {
       {/* Capabilities Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mb-16">
-            <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              Capabilities
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Full-spectrum application security
-            </h2>
-            <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              From web applications to APIs to mobile apps, our comprehensive
-              testing methodology covers every attack vector across your
-              application landscape.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 py-6">
+            <div className="max-w-3xl mb-16">
+              <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+                Capabilities
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                Full-spectrum application security
+              </h2>
+              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                From web applications to APIs to mobile apps, our comprehensive
+                testing methodology covers every attack vector across your
+                application landscape.
+              </p>
+            </div>
+            <div>
+              <Image
+                src={"/generic/apps.jpg"}
+                alt="A phone with various app icons"
+                width={500}
+                height={400}
+                className="rounded-lg mb-6"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -148,8 +160,17 @@ export default function ApplicationSecurity() {
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
               >
-                <div className="text-6xl font-bold text-foreground/20 mb-4">
-                  0{index + 1}
+                <div className="flex justify-between">
+                  <div className="text-6xl font-bold text-foreground/20 mb-4">
+                    0{index + 1}
+                  </div>
+                  <Image
+                    src={"/generic/black_box_testing.png"}
+                    alt={type.title}
+                    width={54}
+                    height={48}
+                    className="mb-6 dark:invert dark:opacity-50 object-cover"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{type.title}</h3>
                 <p className="text-muted-foreground font-body mb-6 leading-relaxed">
@@ -180,6 +201,13 @@ export default function ApplicationSecurity() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Rigorous methodology, proven results
               </h2>
+              <Image
+                src={"/generic/zooming.jpg"}
+                alt="A map with a zooming effect, symbolizing our deep and thorough testing methodology."
+                width={600}
+                height={400}
+                className="rounded-lg mb-6"
+              />
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
                 Our battle-tested methodology combines industry-standard
                 frameworks like OWASP, PTES, and NIST with proprietary

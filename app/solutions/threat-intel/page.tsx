@@ -10,6 +10,7 @@ import {
 import { iconColors } from "@/lib/utils";
 import { Radar, CheckCircle } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -94,18 +95,30 @@ const ThreatIntelligence = () => {
       {/* Capabilities Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mb-16">
-            <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              Capabilities
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Multi-dimensional threat intelligence
-            </h2>
-            <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              From dark web monitoring to nation-state tracking, our threat
-              intelligence covers the entire threat landscape with actionable
-              insights for strategic, tactical, and operational decision-making.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 py-6">
+            <div className="max-w-3xl mb-16">
+              <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+                Capabilities
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                Multi-dimensional threat intelligence
+              </h2>
+              <p className="text-lg text-muted-foreground font-body leading-relaxed lg:pr-8">
+                From dark web monitoring to nation-state tracking, our threat
+                intelligence covers the entire threat landscape with actionable
+                insights for strategic, tactical, and operational
+                decision-making.
+              </p>
+            </div>
+            <div>
+              <Image
+                src={"/generic/multi_discipline.jpg"}
+                alt="A visual representation of threat trends and patterns."
+                width={600}
+                height={400}
+                className="rounded-lg mb-6"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -187,6 +200,13 @@ const ThreatIntelligence = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Intelligence-driven security operations
               </h2>
+              <Image
+                src={"/generic/trends.jpg"}
+                alt="A visual representation of threat trends and patterns."
+                width={600}
+                height={400}
+                className="rounded-lg mb-6"
+              />
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
                 Our intelligence cycle combines automated collection with expert
                 analysis using STIX/TAXII frameworks, MITRE ATT&CK mapping, and

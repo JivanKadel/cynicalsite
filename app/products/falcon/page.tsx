@@ -400,6 +400,13 @@ export default function Falcon() {
                   Respond immediately.
                 </span>
               </p>
+              <Image
+                src={"/generic/monitor.jpg"}
+                alt="Monitoring Illustration"
+                width={600}
+                height={400}
+                className="rounded-lg mb-6"
+              />
               <p className="text-lg text-muted-foreground font-body mb-8">
                 Falcon continuously monitors your assets for downtime and
                 sensitive keyword matches, creating incidents and sending alerts

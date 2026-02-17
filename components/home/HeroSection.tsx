@@ -9,7 +9,7 @@ import BookACall from "./BookACall";
 export default function HeroSection() {
   return (
     <section className="container min-h-screen flex flex-col justify-center items-center mx-auto relative z-10 pt-4 md:pt-0 md:-mt-16">
-      <div className="max-w-4xl mx-auto text-center space-y-8 pb-8 py-8">
+      <div className="max-w-7xl mx-auto text-center space-y-8 pb-8 py-8">
         <div className="flex flex-col gap-3 justify-center mb-4 md:mb-8">
           <p className="text-muted-foreground uppercase tracking-widest text-sm font-bold flex items-center gap-2 justify-center">
             Trusted by industry leaders

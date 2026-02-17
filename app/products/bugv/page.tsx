@@ -273,6 +273,13 @@ export default function BugV() {
                   Real impact.
                 </span>
               </p>
+              <Image
+                src={"/generic/meeting.jpg"}
+                alt="Image of Generic Meeting"
+                width={600}
+                height={400}
+                className="rounded-lg mb-6"
+              />
               <p className="text-lg text-muted-foreground font-body mb-8">
                 Our researchers have uncovered thousands of critical
                 vulnerabilities across Fortune 500 companies, protecting

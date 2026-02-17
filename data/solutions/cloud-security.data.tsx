@@ -104,6 +104,7 @@ export const cloudProviders = [
       "S3 bucket security",
       "Lambda function analysis",
     ],
+    logo: "/generic/aws_logo.svg",
   },
   {
     title: "Microsoft Azure",
@@ -115,6 +116,7 @@ export const cloudProviders = [
       "Key Vault configuration",
       "Network security groups",
     ],
+    logo: "/generic/azure_logo.svg",
   },
   {
     title: "Google Cloud Platform",
@@ -126,6 +128,7 @@ export const cloudProviders = [
       "Cloud SQL security",
       "BigQuery data protection",
     ],
+    logo: "/generic/google_cloud_logo.svg",
   },
 ];
 

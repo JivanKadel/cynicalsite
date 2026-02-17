@@ -10,6 +10,7 @@ import {
   methodology,
   stats,
 } from "@/data/solutions/red-team-ops.data";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Red Team Operations | Cynical Technology",
@@ -88,18 +89,29 @@ export default function RedTeamOperations() {
       {/* Capabilities Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mb-16">
-            <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              Capabilities
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
-              Full-scope adversary emulation
-            </h2>
-            <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              From initial access to data exfiltration, we simulate the full
-              attack lifecycle to test your people, processes, and technology
-              against sophisticated adversaries.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 py-6">
+            <div className="max-w-3xl mb-16">
+              <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+                Capabilities
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+                Full-scope adversary emulation
+              </h2>
+              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+                From initial access to data exfiltration, we simulate the full
+                attack lifecycle to test your people, processes, and technology
+                against sophisticated adversaries.
+              </p>
+            </div>
+            <div>
+              <Image
+                src={"/generic/horse.jpg"}
+                alt="A generic image to show choices and probabilities."
+                width={600}
+                height={400}
+                className="rounded-lg mb-6"
+              />
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -185,6 +197,13 @@ export default function RedTeamOperations() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Operation lifecycle
               </h2>
+              <Image
+                src={"/generic/hacking.jpg"}
+                alt="An image showing a cybersecurity professional working on a hacking simulation."
+                width={600}
+                height={400}
+                className="rounded-lg mb-6"
+              />
               <p className="text-lg text-muted-foreground font-body leading-relaxed mb-8">
                 Every engagement follows a structured yet flexible methodology
                 designed to emulate real-world adversaries while ensuring safety
