@@ -33,6 +33,7 @@ export const testimonials = [
     image: "/testimonials/mr_diwas_esewa.jpg",
     bgColor: "bg-card-green",
     brandLogo: "/brands/fonepay.webp",
+    whiteLogo: true,
   },
   {
     quote: [
@@ -44,6 +45,7 @@ export const testimonials = [
     image: "/testimonials/mr_ravi_esewa.jpg",
     bgColor: "bg-card-purple",
     brandLogo: "/brands/esewa.png",
+    whiteLogo: true,
   },
   {
     quote: [

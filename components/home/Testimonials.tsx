@@ -89,6 +89,11 @@ const Testimonials = () => {
                           alt={`${testimonial.company}-logo`}
                           width={80}
                           height={50}
+                          className={`w-20 h-auto ${
+                            testimonial.whiteLogo
+                              ? "object-contain bg-black"
+                              : "object-contain"
+                          } dark:bg-none`}
                         />
                       </div>
                     </div>
