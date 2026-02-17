@@ -1,76 +1,229 @@
 import { Button } from "@/components/ui/button";
-
-import { ArrowRight, CheckCircle } from "lucide-react";
+import {
+  CheckCircle,
+  Activity,
+  Search,
+  Bell,
+  Shield,
+  Globe,
+  Zap,
+  Clock,
+  Eye,
+  AlertTriangle,
+  Server,
+  Lock,
+  BarChart3,
+} from "lucide-react";
 import { iconColors } from "@/lib/utils";
 import { Metadata } from "next";
-import {
-  features,
-  process,
-  programTypes,
-  stats,
-  vulnerabilityTypes,
-} from "@/data/products/bugv.data";
 import Image from "next/image";
 
+import Link from "next/link";
+
 export const metadata: Metadata = {
-  title: "Bugv | Crowdsourced Cyber Security Platform",
+  title: "Falcon | Continuous Site Monitoring Platform",
   description:
-    "Bugv is a crowdsourcing cybersecurity platform powered by human intelligence where we connect businesses with cyber security experts from all around the world.",
+    "Falcon is a centralized monitoring and notification system designed to help large-scale organizations & government track their public assets at scale. Monitor every asset every minute for downtime and keyword-based threats.",
 };
 
-export default function BugV() {
+// Stats data
+const stats = [
+  { label: "Assets Monitored", value: "100+", icon: Globe },
+  { label: "Uptime Check Frequency", value: "60s", icon: Clock },
+  { label: "Incidents Detected", value: "1000+", icon: AlertTriangle },
+  { label: "Government Domains", value: "200+", icon: Shield },
+];
+
+// How it works process
+const process = [
+  {
+    step: "01",
+    title: "Create Monitor",
+    description:
+      "Set up monitors for your public assets with custom configurations",
+    icon: Activity,
+  },
+  {
+    step: "02",
+    title: "Set Timer",
+    description: "Configure check frequency - every minute for critical assets",
+    icon: Clock,
+  },
+  {
+    step: "03",
+    title: "Keyword Detection",
+    description: "Automated keyword scanning across all monitored assets",
+    icon: Search,
+  },
+  {
+    step: "04",
+    title: "Incident Creation",
+    description: "Automatic incident generation when issues are detected",
+    icon: AlertTriangle,
+  },
+  {
+    step: "05",
+    title: "Instant Alerts",
+    description: "Multi-channel notifications via Email & SMS",
+    icon: Bell,
+  },
+];
+
+// Features data
+const features = [
+  {
+    title: "Per-Minute Monitoring",
+    description:
+      "Check every public asset every 60 seconds for maximum uptime assurance",
+    icon: Zap,
+  },
+  {
+    title: "Keyword-Based Detection",
+    description:
+      "Scan all assets for specific keywords and trigger incidents automatically",
+    icon: Search,
+  },
+  {
+    title: "Multi-Channel Alerts",
+    description:
+      "Instant notifications via Email and SMS for critical incidents",
+    icon: Bell,
+  },
+  {
+    title: "Asset Discovery",
+    description:
+      "Automatically discover and catalog all your public-facing assets",
+    icon: Eye,
+  },
+  {
+    title: "Incident Management",
+    description: "Centralized incident tracking and resolution workflow",
+    icon: AlertTriangle,
+  },
+  {
+    title: "Government-Grade Security",
+    description:
+      "Built to meet the strict security requirements of government agencies",
+    icon: Lock,
+  },
+  {
+    title: "Real-time Dashboard",
+    description:
+      "Comprehensive visibility into all monitored assets and incidents",
+    icon: BarChart3,
+  },
+  {
+    title: "Historical Analytics",
+    description: "Track uptime trends and incident patterns over time",
+    icon: Activity,
+  },
+  {
+    title: "Scalable Architecture",
+    description:
+      "Designed to monitor thousands of assets across large organizations",
+    icon: Server,
+  },
+];
+
+// Program/Pricing options
+const programTypes = [
+  {
+    title: "Essential",
+    description: "For small teams starting with asset monitoring",
+    features: [
+      "Monitor up to 50 assets",
+      "5-minute check intervals",
+      "Email notifications",
+      "Basic keyword monitoring",
+      "7-day data retention",
+    ],
+    recommended: false,
+  },
+  {
+    title: "Enterprise",
+    description: "For large organizations with critical assets",
+    features: [
+      "Unlimited assets",
+      "1-minute check intervals",
+      "Email & SMS notifications",
+      "Advanced keyword detection",
+      "24/7 priority support",
+      "Custom reporting",
+      "SLA guarantee",
+    ],
+    recommended: true,
+  },
+  {
+    title: "Government",
+    description: "For public sector and government agencies",
+    features: [
+      "Everything in Enterprise",
+      "FedRAMP compliant",
+      "On-premise deployment",
+      "Dedicated security team",
+      "Custom integrations",
+      "Unlimited data retention",
+    ],
+    recommended: false,
+  },
+];
+
+// Incident types detected
+const incidentTypes = [
+  { name: "Site Downtime", severity: "Critical" },
+  { name: "Keyword Match - Sensitive Data", severity: "Critical" },
+  { name: "SSL Certificate Expiry", severity: "High" },
+  { name: "Content Defacement", severity: "Critical" },
+  { name: "DNS Resolution Failure", severity: "High" },
+  { name: "Unauthorized Content", severity: "Medium" },
+  { name: "Slow Response Time", severity: "Medium" },
+];
+
+export default function Falcon() {
   return (
     <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-4 mb-6">
-              <div>
-                <a
-                  href="https://bugv.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-4xl md:text-5xl font-bold mt-4"
-                >
-                  Bugv
-                </a>
+        <div className="container mx-auto px-6 relative">
+          <div>
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-20 mx-auto">
+              <div className="col-span-2 w-full flex flex-col gap-4">
+                <div className="flex items-center gap-4 mb-6">
+                  <div>
+                    <div className="font-aeonik text-4xl md:text-5xl font-bold mt-4">
+                      Falcon
+                    </div>
+                  </div>
+                </div>
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground/80 mb-4">
+                  Centralized monitoring and notification system
+                </h2>
+
+                <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-body leading-relaxed ">
+                  Falcon is designed to help large-scale organizations &
+                  government track their public assets at scale. Every asset,
+                  every minute, always protected.
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-2">
+                  <Link
+                    href="/contact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="h-12 px-4 w-full">Request a Demo</Button>
+                  </Link>
+                </div>
+              </div>
+              <div className="relative col-span-3 xl:ml-8 lg:mt-0 scale-105 transform-[translateY(25%)_translateX(15%)_scale(1.2)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)]">
+                <Image
+                  src="/products/falcon_dashboard_1.png"
+                  width={1920}
+                  height={924}
+                  alt="Falcon Dashboard Screenshot"
+                />
               </div>
             </div>
-
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 font-body leading-relaxed max-w-3xl">
-              The crowdsourced security platform that connects you with elite
-              ethical hackers. Continuous testing from adversaries who think
-              like attackers, because they are.
-            </p>
-
-            <div className="grid max-w-md grid-cols-1 md:grid-cols-2 items-center gap-2">
-              <a
-                href="https://bugv.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="h-12 px-4 w-full">Visit Site</Button>
-              </a>
-              <a
-                href="https://bugv.io/request-a-demo/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="h-12 px-4 w-full" variant="outline">
-                  Get Started With bugv
-                </Button>
-              </a>
-            </div>
           </div>
-          <a href="https://bugv.io/" target="_blank" rel="noopener noreferrer">
-            <Image
-              src="/products/bugv.png"
-              alt="Bugv Platform"
-              width={800}
-              height={500}
-              className="dark:brightness-0 dark:invert"
-            />
-          </a>
         </div>
       </section>
 
@@ -93,26 +246,6 @@ export default function BugV() {
         </div>
       </section>
 
-      <section className="py-12 md:py-20">
-        <div className="flex flex-col gap-4">
-          <h3 className="text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-aeonik font-bold mb-8">
-            Understanding how Bugv works
-          </h3>
-          <div className="flex justify-center items-center">
-            <iframe
-              width="1093"
-              height="615"
-              src="https://www.youtube.com/embed/Ktvc4L88ip0"
-              title="Bugv - Next Generation Pentest"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      </section>
-
       {/* How It Works */}
       <section className="py-24">
         <div className="container mx-auto px-6">
@@ -121,11 +254,10 @@ export default function BugV() {
               How It Works
             </span>
             <p className="text-3xl md:text-5xl font-aeonik font-bold mb-4">
-              From launch to remediation
+              Continuous Protection
             </p>
             <p className="text-lg text-muted-foreground font-body">
-              A streamlined process that turns security chaos into actionable
-              insights
+              From monitor creation to incident resolution - a seamless workflow
             </p>
           </div>
 
@@ -163,10 +295,10 @@ export default function BugV() {
               Platform Features
             </span>
             <h2 className="text-3xl md:text-5xl font-aeonik font-bold mb-4">
-              Enterprise-grade bug bounty
+              Enterprise-grade monitoring
             </h2>
             <p className="text-lg text-muted-foreground font-body">
-              Everything you need to run a successful security program
+              Everything you need to track and protect your public assets
             </p>
           </div>
 
@@ -198,14 +330,13 @@ export default function BugV() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
-              Program Options
+              Plans & Pricing
             </span>
             <p className="text-3xl md:text-4xl font-aeonik font-bold mb-4">
-              Choose your approach
+              Scale with your needs
             </p>
             <p className="text-lg text-muted-foreground font-body">
-              Flexible program structures to match your security maturity and
-              business needs
+              Flexible plans designed for organizations of all sizes
             </p>
           </div>
 
@@ -241,11 +372,7 @@ export default function BugV() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="https://bugv.io/request-a-demo/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="/contact">
                   <Button
                     variant={program.recommended ? "default" : "outline"}
                     className="w-full"
@@ -259,48 +386,31 @@ export default function BugV() {
         </div>
       </section>
 
-      {/* Vulnerability Types */}
+      {/* Incident Types */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="inline-flex items-center gap-2 text-sm text-muted-foreground uppercase tracking-widest mb-4">
-                Proven Results
+                Real-time Detection
               </span>
               <p className="text-3xl md:text-4xl font-aeonik font-bold mb-4">
-                Real vulnerabilities.
+                Detect threats instantly.
                 <span className="block text-muted-foreground">
-                  Real impact.
+                  Respond immediately.
                 </span>
               </p>
               <p className="text-lg text-muted-foreground font-body mb-8">
-                Our researchers have uncovered thousands of critical
-                vulnerabilities across Fortune 500 companies, protecting
-                millions of users worldwide.
+                Falcon continuously monitors your assets for downtime and
+                sensitive keyword matches, creating incidents and sending alerts
+                before your users even notice.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <a href="https://bugv.io/contacts/">
-                  <Button className="h-10">
-                    Contact
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </a>
-                <a
-                  href="https://blog.bugv.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button variant="outline" className="h-10">
-                    Read Blogs
-                  </Button>
-                </a>
-              </div>
             </div>
 
             <div className="space-y-3">
-              {vulnerabilityTypes.map((vuln, index) => (
+              {incidentTypes.map((incident, index) => (
                 <div
-                  key={vuln.name}
+                  key={incident.name}
                   className="flex items-center justify-between p-4 rounded-xl border border-border/50 bg-background hover:border-border transition-colors"
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
@@ -308,17 +418,17 @@ export default function BugV() {
                     <div className="w-18 mr-4 flex justify-center">
                       <span
                         className={`px-2 py-1 text-xs font-medium rounded ${
-                          vuln.severity === "Critical"
+                          incident.severity === "Critical"
                             ? "bg-red-500/10 text-red-400"
-                            : vuln.severity === "High"
+                            : incident.severity === "High"
                               ? "bg-orange-500/10 text-orange-400"
                               : "bg-yellow-500/10 text-yellow-400"
                         }`}
                       >
-                        {vuln.severity}
+                        {incident.severity}
                       </span>
                     </div>
-                    <span className="font-medium">{vuln.name}</span>
+                    <span className="font-medium">{incident.name}</span>
                   </div>
                 </div>
               ))}
@@ -327,66 +437,22 @@ export default function BugV() {
         </div>
       </section>
 
-      <section className="py-32 relative">
-        <div className="container mx-auto px-2 sm:px-6">
-          <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
-            <div className="relative z-10 p-12 lg:p-20">
-              <div className="max-w-5xl mx-auto text-center">
-                {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
-                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  15000+ elite researchers ready to test your assets
-                </div>
-
-                {/* Headline */}
-                <p className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
-                  Ready to find vulnerabilities
-                  <span className="block text-foreground">
-                    before attackers do?
-                  </span>
-                </p>
-
-                <p className="text-lg text-muted-foreground mb-10 mt-4 font-body max-w-2xl mx-auto">
-                  Join the companies that trust Bugv to secure their most
-                  critical assets with continuous crowdsourced security testing.
-                </p>
-
-                {/* CTAs */}
-                <div className="flex justify-center">
-                  <a
-                    href="https://bugv.io/request-a-demo/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button variant="default" size="lg" className="h-12">
-                      Get Started With bugv
-                    </Button>
-                  </a>
-                </div>
-
-                <div className="mt-16 pt-16 border-t border-border/30">
-                  <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
-                    Trusted By Critical Industries
-                  </p>
-                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
-                    {[
-                      "Banks",
-                      "Governments",
-                      "Healthcare",
-                      "Fintech",
-                      "Critical Infrastructure",
-                      "Technology",
-                    ].map((name) => (
-                      <h2
-                        key={name}
-                        className="text-base text-foreground font-semibold tracking-wide uppercase"
-                      >
-                        {name}
-                      </h2>
-                    ))}
-                  </div>
-                </div>
-              </div>
+      <section className="py-24">
+        <div className="container mx-auto px-6 text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-aeonik font-bold mb-6">
+              Start monitoring your assets
+            </h2>
+            <p className="text-lg text-muted-foreground font-body mb-8">
+              Join leading organizations and government agencies that trust
+              Falcon for continuous site monitoring.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="h-12 px-8">
+                  Contact Sales
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -7,17 +7,21 @@ const Footer = () => {
     Products: [
       { label: "Bugv Platform", href: "/products/bugv" },
       { label: "Vigile.AI", href: "/products/vigile" },
+      { label: "Falcon", href: "/products/falcon" },
     ],
     Solutions: [
       { label: "Application Security", href: "/solutions/app-security" },
       { label: "Cloud Security", href: "/solutions/cloud-security" },
-      // { label: "AI/ML Security", href: "/solutions/app-security" },
       { label: "Threat Intelligence", href: "/solutions/threat-intel" },
       {
         label: "Vulnerability Management",
         href: "/solutions/vulnerability-management",
       },
-      // { label: "Incident Response", href: "/solutions/incident-response" },
+      { label: "Red Team Operations", href: "/solutions/red-team-operations" },
+      {
+        label: "Training & Consulting",
+        href: "/solutions/training-and-consulting",
+      },
     ],
     // Resources: [
     //   { label: "Blogs", href: "/blogs" },
@@ -36,7 +40,6 @@ const Footer = () => {
       { label: "Vision", href: "/vision" },
       { label: "Team", href: "/company#our-team" },
       { label: "Partners", href: "/company/partners" },
-      { label: "Careers", href: "/career" },
       { label: "Contact", href: "/contact" },
       { label: "Pricing", href: "/pricing" },
     ],

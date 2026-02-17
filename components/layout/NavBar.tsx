@@ -31,6 +31,7 @@ import {
   Building2,
   Eye,
   Handshake,
+  GraduationCap,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -56,31 +57,31 @@ export default function Navbar() {
         "Protect your organization from leaked credentials & breaches",
       href: "/products/vigile",
     },
-    // {
-    //   icon: Infinity,
-    //   label: "Falcon",
-    //   description: "Continuous security and Uptime Monitoring",
-    //   href: "https://webmonitoring.doit.gov.np/dashboard",
-    // },
+    {
+      icon: Infinity,
+      label: "Falcon",
+      description: "Continuous security and Uptime Monitoring",
+      href: "/products/falcon",
+    },
   ];
 
   const solutions = [
     {
       icon: Code,
       label: "Application Security",
-      description: "Web, API & mobile testing",
+      description: "Web, API & mobile testing services",
       href: "/solutions/app-security",
     },
     {
       icon: Cloud,
       label: "Cloud Security",
-      description: "Assess AWS, GCP, Azure",
+      description: "Assess AWS, GCP, Azure environments",
       href: "/solutions/cloud-security",
     },
     {
       icon: Search,
       label: "Threat Intelligence",
-      description: "Dark web & breach monitoring",
+      description: "Dark web & breach monitoring services",
       href: "/solutions/threat-intel",
     },
     {
@@ -88,6 +89,18 @@ export default function Navbar() {
       label: "Vulnerability Management",
       description: "Manage Your Organizations Vulnerabilities",
       href: "/solutions/vulnerability-management",
+    },
+    {
+      icon: Radar,
+      label: "Red Team Operations",
+      description: "Simulated attacks to test your defenses",
+      href: "/solutions/red-team-operations",
+    },
+    {
+      icon: GraduationCap,
+      label: "Training & Consulting",
+      description: "Security training and consulting services",
+      href: "/solutions/training-and-consulting",
     },
   ];
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ProductCard } from "./ProductCard";
-import { Bug, Check, CheckCircle, MoveUpRight } from "lucide-react";
+import { Bug, Check, CheckCircle, Link2Off, MoveUpRight } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
@@ -45,9 +45,9 @@ const Products = () => {
       href: "/products/vigile",
     },
     {
-      icon: "/products/falcon_logo.png",
+      icon: "/products/falcon_logo_1.png",
       title: "ASSETS MONITORING",
-      dashboardImage: "/products/falcon_dashboard.png",
+      dashboardImage: "/products/falcon_dashboard_1.png",
       name: "Falcon",
       tagline: "Track your Digital Assets as Scale",
       description:
@@ -376,8 +376,8 @@ const Products = () => {
                       src={products[2].icon}
                       alt={products[2].name}
                       width={90}
-                      height={80}
-                      className="dark:invert dark:brightness-0"
+                      height={70}
+                      className="invert dark:invert-0"
                     />
                   )}
                 </div>
@@ -437,10 +437,10 @@ const Products = () => {
                         </span>
                       </div>
                       <div className="text-sm sm:text-lg font-bold mb-1">
-                        21
+                        47
                       </div>
                       <div className="text-[8px] sm:text-xs text-gray-400">
-                        Malware Breaches
+                        Sites Being Monitored
                       </div>
                     </div>
                   </div>
@@ -454,11 +454,11 @@ const Products = () => {
                     <div className="bg-[#ffffff] rounded-xl p-1 sm:p-3 border">
                       <div className="flex items-center gap-1 sm:gap-2 mb-1 sm:mb-2">
                         <div className="w-4 h-4 sm:w-8 sm:h-8 rounded-full bg-linear-to-br from-red-400 to-red-600 flex items-center justify-center text-white text-xs font-bold">
-                          <Bug className="w-2.5 h-2.5 sm:w-5 sm:h-5" />
+                          <Link2Off className="w-2.5 h-2.5 sm:w-5 sm:h-5" />
                         </div>
                         <div>
                           <div className="text-[8px] sm:text-xs font-semibold text-gray-900">
-                            Threats
+                            Sites Down
                           </div>
                           <div className="text-[8px] sm:text-xs text-gray-500">
                             Just now
@@ -466,7 +466,7 @@ const Products = () => {
                         </div>
                       </div>
                       <div className="ml-1 text-sm sm:text-lg font-bold text-red-600">
-                        5 Critical
+                        5 Sites Down
                       </div>
                     </div>
                   </div>
