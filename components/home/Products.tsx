@@ -47,7 +47,7 @@ const Products = () => {
     {
       icon: "/products/falcon_logo_1.png",
       title: "ASSETS MONITORING",
-      dashboardImage: "/products/falcon_dashboard_1.png",
+      dashboardImage: "/products/web_monitoring_light.png",
       name: "Falcon",
       tagline: "Track your Digital Assets as Scale",
       description:
