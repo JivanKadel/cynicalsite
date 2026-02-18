@@ -32,7 +32,7 @@ const DataFlowDiagram = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center">
-                <h4 className="text-slate-900 font-bold mb-1 text-xs text-center">
+                <h4 className="font-bold mb-1 text-xs text-center">
                   Microsoft 365
                 </h4>
               </div>
@@ -40,8 +40,8 @@ const DataFlowDiagram = () => {
           </div>
 
           <div className="col-span-1 flex justify-center h-64 relative">
-            <div className="absolute top-[30%] w-full h-0.5 bg-gradient-to-r from-blue-500/10 via-blue-500/40 to-blue-500/10" />
-            <div className="absolute top-[70%] w-full h-0.5 bg-gradient-to-r from-blue-500/10 via-blue-500/40 to-blue-500/10" />
+            <div className="absolute top-[30%] w-full h-0.5 bg-gradient-to-r from-blue-500/10 via-blue-500/40 to-blue-500/10 animate-pulse scale-x-125" />
+            <div className="absolute top-[65%] w-full h-0.5 bg-gradient-to-r from-blue-500/10 via-blue-500/40 to-blue-500/10 animate-pulse scale-x-125" />
           </div>
 
           {/* Center Processing */}
@@ -67,12 +67,12 @@ const DataFlowDiagram = () => {
           </div>
 
           <div className="col-span-1 flex justify-center h-64 relative">
-            <div className="absolute top-1/2 w-full h-0.5 bg-gradient-to-r from-green-500/10 via-green-500/40 to-green-500/10" />
+            <div className="absolute top-1/2 w-full h-0.5 bg-gradient-to-r from-green-500/10 via-green-500/40 to-green-500/10 animate-pulse scale-x-125" />
           </div>
 
           <div className="col-span-1 flex justify-end z-10">
             <div className="relative w-full max-w-[280px]">
-              <div className="w-14 h-14 bg-black rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-14 h-14 bg-black dark:border rounded-2xl flex items-center justify-center shadow-lg">
                 <Image
                   src={"/products/vigile_logo.png"}
                   alt="Vigile.ai"
