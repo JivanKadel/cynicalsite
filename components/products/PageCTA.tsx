@@ -46,7 +46,7 @@ const PageCTA = ({
       <section className="py-32 relative">
         <div className="container mx-auto px-2 sm:px-6">
           <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
-            <div className="relative z-10 p-12 lg:p-20">
+            <div className="relative z-10 p-4 sm:p-12 lg:p-20">
               <div className="max-w-5xl mx-auto text-center">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
@@ -102,11 +102,11 @@ const PageCTA = ({
 
                 {/* Trust Indicators */}
                 {showTrustIndicators && (
-                  <div className="mt-16 pt-16 border-t border-border/30">
-                    <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
+                  <div className="mt-4 pt-4 sm:mt-16 sm:pt-16 border-t border-border/30">
+                    <p className="text-sm text-foreground/90 text-center mb-6 sm:mb-12 uppercase tracking-widest">
                       Trusted By Critical Industries
                     </p>
-                    <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
+                    <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-12 lg:gap-16">
                       {[
                         "Banks",
                         "Governments",
@@ -117,7 +117,7 @@ const PageCTA = ({
                       ].map((name) => (
                         <h2
                           key={name}
-                          className="text-base text-foreground font-semibold tracking-wide uppercase"
+                          className="text-sm sm:text-base text-foreground font-semibold tracking-wide uppercase"
                         >
                           {name}
                         </h2>

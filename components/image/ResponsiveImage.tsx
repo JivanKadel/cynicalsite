@@ -12,7 +12,9 @@ export default function ResponsiveImage({
   className,
 }: ResponsiveImageProps) {
   return (
-    <div className={`relative w-full h-full max-h-110 ${className ?? ""}`}>
+    <div
+      className={`relative w-full h-full min-h-64 max-h-110 ${className ?? ""}`}
+    >
       <Image
         src={src}
         alt={alt}

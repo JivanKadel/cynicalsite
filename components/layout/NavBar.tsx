@@ -459,6 +459,7 @@ z"
               <div className="flex flex-col gap-4">
                 <MobileNavSection title="Products" items={products} />
                 <MobileNavSection title="Solutions" items={solutions} />
+                <MobileNavSection title="Company" items={company} />
                 {/* <MobileNavSection title="Resources" items={resources} /> */}
 
                 <Link

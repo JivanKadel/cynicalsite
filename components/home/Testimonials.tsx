@@ -42,13 +42,13 @@ const Testimonials = () => {
                 key={testimonial.author}
                 className={`md:basis-1/2 lg:basis-1/3 pl-4 py-4 flex flex-col items-stretch`}
               >
-                <article className="p-4 flex-1 rounded-2xl flex flex-col bg-card border-2 border-border/10">
+                <article className="p-2 sm:p-4 flex-1 rounded-2xl flex flex-col bg-card border-2 border-border/10">
                   <div className="mb-0 sm:mb-2">
                     <span className="text-6xl text-gray-400 font-serif leading-none opacity-60">
                       “
                     </span>
                   </div>
-                  <p className="flex-1 self-center text-gray-800 dark:text-slate-300 text-lg leading-relaxed mb-6">
+                  <p className="flex-1 self-center text-gray-800 dark:text-slate-300 text-base sm:text-lg leading-relaxed mb-6">
                     “
                     {testimonial.quote.map((part, index) => (
                       <span key={index}>
@@ -70,16 +70,16 @@ const Testimonials = () => {
                         alt={testimonial.author}
                         width={50}
                         height={50}
-                        className="w-14 h-14 rounded-full object-cover"
+                        className="w-10 h-10 sm:w-14 sm:h-14 rounded-full object-cover"
                         src={testimonial.image}
                       />
                     </div>
                     <div className="w-full flex justify-between items-center gap-1 sm:gap-2">
                       <div>
-                        <h3 className="font-bold text-gray-900 dark:text-slate-100 text-lg">
+                        <h3 className="font-bold text-gray-900 dark:text-slate-100 text-sm sm:text-lg">
                           {testimonial.author}
                         </h3>
-                        <p className="text-sm text-gray-800 dark:text-slate-300">
+                        <p className="text-xs sm:text-sm text-gray-800 dark:text-slate-300">
                           {testimonial.role}, {testimonial.company}
                         </p>
                       </div>
@@ -89,7 +89,7 @@ const Testimonials = () => {
                           alt={`${testimonial.company}-logo`}
                           width={80}
                           height={50}
-                          className={`w-20 h-auto ${
+                          className={`w-16 sm:w-20 h-auto ${
                             testimonial.whiteLogo
                               ? "object-contain bg-black p-1"
                               : "object-contain"
