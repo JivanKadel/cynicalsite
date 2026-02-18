@@ -22,6 +22,8 @@ import {
 import { Metadata } from "next";
 import Link from "next/link";
 import { hiringProcess, Job, perks } from "@/data/company/career.data";
+import Image from "next/image";
+import ResponsiveImage from "@/components/image/ResponsiveImage";
 
 export const metadata: Metadata = {
   title: "Career | Cynical Blogs",
@@ -36,39 +38,48 @@ const Careers = () => {
     <div>
       <section className="pt-6 pb-6 lg:pb-12 md:py-20 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
-              <Users className="w-4 h-4 text-foreground" />
-              <span className="text-sm font-medium">Join Our Team</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
+            <Users className="w-4 h-4 text-foreground" />
+            <span className="text-sm font-medium">Join Our Team</span>
+          </div>
+          <div className="grid lg:grid-cols-2">
+            <div className="max-w-4xl">
+              <h1 className="mb-6 text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+                Build your career in
+                <span className="block text-muted-foreground">
+                  cybersecurity
+                </span>
+              </h1>
+
+              <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mb-10 leading-relaxed">
+                Join our elite team of security professionals working to protect
+                organizations worldwide. We&apos;re always looking for talented
+                individuals passionate about cybersecurity.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="#current-openings">
+                  <Button
+                    size="lg"
+                    className="h-12 bg-foreground text-background hover:bg-foreground/90"
+                  >
+                    View Openings
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </Link>
+                <a href="mailto:hr@cynicaltechnology.com">
+                  <Button size="lg" variant="outline" className="h-12">
+                    Submit CV
+                  </Button>
+                </a>
+              </div>
             </div>
 
-            <h1 className="mb-6 text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
-              Build your career in
-              <span className="block text-muted-foreground">cybersecurity</span>
-            </h1>
-
-            <p className="text-lg md:text-xl text-muted-foreground font-body max-w-2xl mx-auto mb-10 leading-relaxed">
-              Join our elite team of security professionals working to protect
-              organizations worldwide. We&apos;re always looking for talented
-              individuals passionate about cybersecurity.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href="#current-openings">
-                <Button
-                  size="lg"
-                  className="bg-foreground text-background hover:bg-foreground/90"
-                >
-                  View Openings
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
-              <a href="mailto:hr@cynicaltechnology.com">
-                <Button size="lg" variant="outline">
-                  Submit CV
-                </Button>
-              </a>
-            </div>
+            <ResponsiveImage
+              src={"/generic/welcome.jpg"}
+              alt="A welcoming hand ready to shake."
+              className="rounded-lg mt-6 min-h-100"
+            />
           </div>
         </div>
       </section>
@@ -76,21 +87,35 @@ const Careers = () => {
       {/* Perks & Benefits Section */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
-              Perks & Benefits
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-6">
-              Why work at Cynical?
-            </h2>
-            <p className="text-lg text-muted-foreground font-body leading-relaxed">
-              We believe in taking care of our team so they can focus on
-              protecting our clients. Comprehensive benefits designed for your
-              success.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 py-6">
+            <div className="max-w-3xl mx-auto mb-16 lg:order-2">
+              <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
+                Perks & Benefits
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-6">
+                Why work at Cynical?
+              </h2>
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed mb-2">
+                We believe in taking care of our team so they can focus on
+                protecting our clients. Comprehensive benefits designed for your
+                success.
+              </p>
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed">
+                From competitive salaries and flexible work arrangements to
+                professional development opportunities and wellness programs, we
+                offer a range of perks to support your career growth and
+                work-life balance. Join us and experience the Cynical
+                difference.
+              </p>
+            </div>
+            <ResponsiveImage
+              src={"/generic/cynical_office.jpg"}
+              alt="Cynical Office Space Image."
+              className="rounded-lg mt-6 lg:order-1 min-h-100"
+            />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 lg:mt-16">
             {perks.map((perk, index) => (
               <Card
                 key={index}
@@ -333,7 +358,13 @@ const Careers = () => {
             <Card className="border-border bg-background">
               <CardContent className="p-6">
                 <div className="aspect-video rounded-lg bg-linear-to-br from-secondary to-background border border-border mb-4 flex items-center justify-center">
-                  <Users className="w-12 h-12 text-foreground/60" />
+                  <Image
+                    src={"/generic/retreat.jpg"}
+                    alt="Team event image"
+                    width={400}
+                    height={200}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
                 <h3 className="font-semibold mb-2">Team Retreats</h3>
                 <p className="text-sm text-muted-foreground">
@@ -345,7 +376,13 @@ const Careers = () => {
             <Card className="border-border bg-background">
               <CardContent className="p-6">
                 <div className="aspect-video rounded-lg bg-linear-to-br from-secondary to-background border border-border mb-4 flex items-center justify-center">
-                  <Brain className="w-12 h-12 text-foreground/60" />
+                  <Image
+                    src={"/generic/learning.jpg"}
+                    alt="Team event image"
+                    width={400}
+                    height={200}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
                 <h3 className="font-semibold mb-2">Learning Culture</h3>
                 <p className="text-sm text-muted-foreground">
@@ -357,7 +394,13 @@ const Careers = () => {
             <Card className="border-border bg-background">
               <CardContent className="p-6">
                 <div className="aspect-video rounded-lg bg-linear-to-br from-secondary to-background border border-border mb-4 flex items-center justify-center">
-                  <Award className="w-12 h-12 text-foreground/60" />
+                  <Image
+                    src={"/generic/recognition.jpg"}
+                    alt="Team event image"
+                    width={400}
+                    height={200}
+                    className="w-full h-full object-cover rounded-lg"
+                  />
                 </div>
                 <h3 className="font-semibold mb-2">Recognition</h3>
                 <p className="text-sm text-muted-foreground">

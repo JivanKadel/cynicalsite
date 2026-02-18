@@ -11,6 +11,7 @@ import {
   testingTypes,
 } from "@/data/solutions/app-security.data";
 import Image from "next/image";
+import ResponsiveImage from "@/components/image/ResponsiveImage";
 
 export const metadata: Metadata = {
   title: "App Security | Cynical Technology",
@@ -96,21 +97,38 @@ export default function ApplicationSecurity() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Full-spectrum application security
               </h2>
-              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed mb-2">
                 From web applications to APIs to mobile apps, our comprehensive
                 testing methodology covers every attack vector across your
                 application landscape.
               </p>
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed mb-2">
+                We go beyond OWASP Top 10 vulnerabilities to identify complex
+                logic flaws, chained exploits, and emerging threats that put
+                your applications at risk.
+              </p>
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed">
+                Our team of elite security researchers uses a combination of
+                manual testing techniques and custom-built tools to uncover
+                vulnerabilities that automated scanners miss. We pride ourselves
+                on our ability to find the hidden weaknesses that attackers
+                would exploit in the real world.
+              </p>
             </div>
-            <div>
+            {/* <div>
               <Image
                 src={"/generic/apps.jpg"}
                 alt="A phone with various app icons"
-                width={500}
+                width={600}
                 height={400}
                 className="rounded-lg mb-6"
               />
-            </div>
+            </div> */}
+            <ResponsiveImage
+              src={"/generic/apps.jpg"}
+              alt="A phone with various app icons"
+              className="mt-6"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

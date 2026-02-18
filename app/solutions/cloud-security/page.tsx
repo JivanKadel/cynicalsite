@@ -12,6 +12,7 @@ import {
   stats,
 } from "@/data/solutions/cloud-security.data";
 import Image from "next/image";
+import ResponsiveImage from "@/components/image/ResponsiveImage";
 
 export const metadata: Metadata = {
   title: "Cloud Security | Cynical Technology",
@@ -101,21 +102,25 @@ const CloudSecurity = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Comprehensive cloud security coverage
               </h2>
-              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed mb-2">
                 From infrastructure hardening to compliance management, our
                 cloud security services cover every aspect of your cloud
                 environment across AWS, Azure, and Google Cloud Platform.
               </p>
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed">
+                Our certified cloud security specialists use a combination of
+                automated tools and manual assessments to identify
+                misconfigurations, vulnerabilities, and compliance gaps that
+                could lead to data breaches or service disruptions. We provide
+                actionable recommendations to strengthen your cloud security
+                posture and protect your critical assets.
+              </p>
             </div>
-            <div>
-              <Image
-                src={"/generic/server_room.jpg"}
-                alt="A woman in a server room, working on cloud security assessments."
-                width={500}
-                height={400}
-                className="rounded-lg mb-6"
-              />
-            </div>
+            <ResponsiveImage
+              src={"/generic/server_room.jpg"}
+              alt="A woman in a server room, working on cloud security assessments."
+              className="rounded-lg mt-6"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

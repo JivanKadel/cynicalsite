@@ -214,12 +214,21 @@ export default function Falcon() {
                   </Link>
                 </div>
               </div>
-              <div className="relative col-span-3 xl:ml-8 lg:mt-0 scale-105 transform-[translateY(25%)_translateX(15%)_scale(1.2)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)]">
+              {/* <div className="relative col-span-3 xl:ml-8 lg:mt-0 scale-105 transform-[translateY(25%)_translateX(15%)_scale(1.2)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)]"> */}
+              <div className="col-span-3 xl:ml-8 lg:mt-0">
                 <Image
-                  src="/products/falcon_dashboard_1.png"
+                  src="/products/web_monitoring_light.png"
                   width={1920}
                   height={924}
                   alt="Falcon Dashboard Screenshot"
+                  className="block dark:hidden"
+                />
+                <Image
+                  src="/products/web_monitoring_dark.png"
+                  width={1920}
+                  height={924}
+                  alt="Falcon Dashboard Screenshot"
+                  className="hidden dark:block"
                 />
               </div>
             </div>

@@ -354,3 +354,7 @@ p iframe {
 .wp-block-image {
   display: none;
 }
+
+image {
+  object-fit: cover;
+}

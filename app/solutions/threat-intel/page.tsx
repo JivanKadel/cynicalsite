@@ -1,3 +1,4 @@
+import ResponsiveImage from "@/components/image/ResponsiveImage";
 import PageCTA from "@/components/products/PageCTA";
 import {
   capabilities,
@@ -103,22 +104,25 @@ const ThreatIntelligence = () => {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Multi-dimensional threat intelligence
               </h2>
-              <p className="text-lg text-muted-foreground font-body leading-relaxed lg:pr-8">
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed lg:pr-8 mb-2">
                 From dark web monitoring to nation-state tracking, our threat
                 intelligence covers the entire threat landscape with actionable
                 insights for strategic, tactical, and operational
                 decision-making.
               </p>
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed mt-4 lg:pr-8">
+                Our intelligence is enriched with context, including attack
+                techniques, indicators of compromise (IOCs), and threat actor
+                profiles, enabling you to understand the who, what, when, where,
+                and why of emerging threats.
+              </p>
             </div>
-            <div>
-              <Image
-                src={"/generic/multi_discipline.jpg"}
-                alt="A visual representation of threat trends and patterns."
-                width={600}
-                height={400}
-                className="rounded-lg mb-6"
-              />
-            </div>
+
+            <ResponsiveImage
+              src={"/generic/multi_discipline.jpg"}
+              alt="A visual representation of threat trends and patterns."
+              className="rounded-lg mt-6"
+            />
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -168,8 +172,13 @@ const ThreatIntelligence = () => {
                 key={index}
                 className="p-8 rounded-2xl border border-border bg-background hover:border-foreground/20 transition-all duration-300"
               >
-                <div className="text-6xl font-bold text-foreground/20 mb-4">
-                  0{index + 1}
+                <div className="flex justify-between items-center">
+                  <div className="text-6xl font-bold text-foreground/20 mb-4">
+                    0{index + 1}
+                  </div>
+                  <div>
+                    <type.icon className="w-9 h-9 text-foreground/30 mb-4" />
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold mb-4">{type.title}</h3>
                 <p className="text-muted-foreground font-body mb-6 leading-relaxed">

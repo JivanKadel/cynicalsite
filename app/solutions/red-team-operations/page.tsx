@@ -11,6 +11,7 @@ import {
   stats,
 } from "@/data/solutions/red-team-ops.data";
 import Image from "next/image";
+import ResponsiveImage from "@/components/image/ResponsiveImage";
 
 export const metadata: Metadata = {
   title: "Red Team Operations | Cynical Technology",
@@ -97,24 +98,26 @@ export default function RedTeamOperations() {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
                 Full-scope adversary emulation
               </h2>
-              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed mb-2">
                 From initial access to data exfiltration, we simulate the full
                 attack lifecycle to test your people, processes, and technology
                 against sophisticated adversaries.
               </p>
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed">
+                Our red team engagements are tailored to your specific threat
+                landscape, ensuring that we test the controls and detection
+                capabilities that matter most to your organization.
+              </p>
             </div>
-            <div>
-              <Image
-                src={"/generic/horse.jpg"}
-                alt="A generic image to show choices and probabilities."
-                width={600}
-                height={400}
-                className="rounded-lg mb-6"
-              />
-            </div>
+
+            <ResponsiveImage
+              src="/generic/horse.jpg"
+              alt="A generic image to show choices and probabilities."
+              className="rounded-lg mt-6"
+            />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {capabilities.map((capability, index) => (
               <div
                 key={index}

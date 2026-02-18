@@ -91,7 +91,7 @@ const Testimonials = () => {
                           height={50}
                           className={`w-20 h-auto ${
                             testimonial.whiteLogo
-                              ? "object-contain bg-black"
+                              ? "object-contain bg-black p-1"
                               : "object-contain"
                           } dark:bg-none`}
                         />

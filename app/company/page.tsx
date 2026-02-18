@@ -206,7 +206,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="py-20 lg:py-32 bg-secondary/20">
+      {/* <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
@@ -218,49 +218,6 @@ export default function AboutUs() {
             </p>
           </div>
 
-          {/* <Marquee
-            pauseOnHover={true}
-            gradient={false}
-            autoFill={true}
-            speed={10}
-            style={{
-              marginRight: 10,
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                gap: 48,
-                alignItems: "center",
-                marginLeft: 48,
-              }}
-            >
-              {trustedByClipped.map((brand) => (
-                <TrustedByImage
-                  key={brand.name}
-                  name={brand.name}
-                  logo={brand.image}
-                  link={brand.link}
-                  className={`object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert  opacity-90 ${
-                    brand.name.toLowerCase() === "worldlink" ||
-                    brand.name.toLowerCase() == "worldbank" ||
-                    brand.name.toLowerCase() === "webpoint"
-                      ? ""
-                      : "dark:hover:invert-0 dark:hover:brightness-100"
-                  }`}
-                />
-              ))}
-
-              <TrustedByImage
-                width={54}
-                height={54}
-                name="Swift Technology"
-                logo="/brands/swift_tech.svg"
-                link="https://swifttech.com.np/"
-                className="object-contain hover:scale-105 transition-transform dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
-              />
-            </div>
-          </Marquee> */}
           <div className="pt-6 max-w-7xl w-full mx-auto">
             <p className="text-center text-xs md:text-sm text-foreground mb-4 uppercase tracking-widest">
               Trusted by teams in SaaS, fintech, and enterprise
@@ -316,7 +273,7 @@ export default function AboutUs() {
             </Marquee>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-12 lg:py-20 mx-auto bg-secondary/20" id="our-team">
         <div className="container mx-auto px-6">

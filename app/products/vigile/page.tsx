@@ -3,8 +3,8 @@ import {
   Mail,
   CheckCircle,
   SquareArrowOutUpRight,
+  ArrowRight,
 } from "lucide-react";
-import PageCTA from "@/components/products/PageCTA";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { iconColors } from "@/lib/utils";
@@ -19,9 +19,10 @@ import {
   stats,
   useCases,
 } from "@/data/products/vigile.data";
+import DataFlowDiagram from "./DataFlow";
 
 export const metadata: Metadata = {
-  title: "Vigile.ai | Employee Data leak Assessment Powered by AI",
+  title: "Vigile.AI | Employee Data leak Assessment Powered by AI",
   description:
     "Discover Employee Data Breaches Before They Happen with Vigile.AI. Detect credential theft, prevent account takeovers, and block unauthorized access across your organization.",
 };
@@ -161,7 +162,8 @@ export default function Vigile() {
                 </div>
               </div>
               <div className=" flex-1 lg:flex flex-col items-center justify-center">
-                <Integration />
+                {/* <Integration /> */}
+                <DataFlowDiagram />
               </div>
             </div>
 
@@ -439,12 +441,79 @@ export default function Vigile() {
         </div>
       </section>
 
-      <PageCTA
+      {/* <PageCTA
         badge="Protecting 100,000+ employees across enterprises"
         headline="Stop breaches"
         highlightedText="before they start."
         description="Join leading enterprises who trust Vigile.AI to protect their employees and prevent credential-based attacks."
-      />
+      /> */}
+      <section className="py-32 relative">
+        <div className="container mx-auto px-2 sm:px-6">
+          <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
+            <div className="relative z-10 p-12 lg:p-20">
+              <div className="max-w-5xl mx-auto text-center">
+                {/* Badge */}
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  Protecting employees across enterprises
+                </div>
+
+                {/* Headline */}
+                <p className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+                  Stop breaches
+                  <span className="block text-foreground">
+                    before they start.
+                  </span>
+                </p>
+
+                <p className="text-lg text-muted-foreground mb-10 mt-4 font-body max-w-2xl mx-auto">
+                  Join leading enterprises who trust Vigile.AI to protect their
+                  employees and prevent credential-based attacks.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="https://vigile.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button
+                      size="lg"
+                      className="h-12 bg-foreground text-background hover:bg-foreground/90"
+                    >
+                      Visit Vigile.AI
+                      <ArrowRight className="w-4 h-4" />
+                    </Button>
+                  </a>
+                </div>
+
+                <div className="mt-16 pt-16 border-t border-border/30">
+                  <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
+                    Trusted By Critical Industries
+                  </p>
+                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
+                    {[
+                      "Banks",
+                      "Governments",
+                      "Healthcare",
+                      "Fintech",
+                      "Critical Infrastructure",
+                      "Technology",
+                    ].map((name) => (
+                      <h2
+                        key={name}
+                        className="text-base text-foreground font-semibold tracking-wide uppercase"
+                      >
+                        {name}
+                      </h2>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

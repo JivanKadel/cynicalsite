@@ -14,6 +14,9 @@ import {
   Clock,
   Users,
   Shield,
+  CirclePile,
+  ScanSearch,
+  SquareStack,
 } from "lucide-react";
 
 export const capabilities = [
@@ -103,6 +106,7 @@ export const intelligenceTypes = [
       "Industry-specific threat reports",
       "Geopolitical risk analysis",
     ],
+    icon: CirclePile,
   },
   {
     title: "Tactical Intelligence",
@@ -113,6 +117,7 @@ export const intelligenceTypes = [
       "Malware analysis reports",
       "Attack pattern documentation",
     ],
+    icon: ScanSearch,
   },
   {
     title: "Operational Intelligence",
@@ -123,6 +128,7 @@ export const intelligenceTypes = [
       "Automated IOC blocking",
       "Incident response support",
     ],
+    icon: SquareStack,
   },
 ];
 

@@ -370,7 +370,7 @@ export default function TrainingConsulting() {
               </h1>
 
               <p className="text-base md:text-lg xl:text-xl text-muted-foreground font-body max-w-2xl mb-4 leading-relaxed">
-                Whether you're training your entire workforce on security
+                Whether you&apos;re training your entire workforce on security
                 awareness or upskilling your technical teams in offensive and
                 defensive techniques, we have a program for you.
               </p>
@@ -382,15 +382,12 @@ export default function TrainingConsulting() {
                 your organization against real-world threats.
               </p>
             </div>
-            <div className="lg:flex lg:justify-center">
-              <Image
-                src={"/generic/training.jpg"}
-                alt="A group of people in a training session."
-                width={640}
-                height={420}
-                className="rounded-lg mb-6"
-              />
-            </div>
+
+            <ResponsiveImage
+              src={"/generic/training.jpg"}
+              alt="A group of people in a training session."
+              className="rounded-lg mt-6"
+            />
           </div>
         </div>
       </section>
@@ -693,26 +690,30 @@ export default function TrainingConsulting() {
               <span className="text-lg font-medium text-muted-foreground uppercase tracking-wider mb-4 block">
                 Consulting
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide mb-6">
                 Expert guidance when you need it
               </h2>
-              <p className="text-lg text-muted-foreground font-body leading-relaxed">
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed mb-2">
                 Sometimes you need more than training. Our consultants work
                 alongside your team to solve specific security challenges.
               </p>
+              <p className="text-lg lg:text-xl text-muted-foreground font-body leading-relaxed">
+                Whether you need help building a security program, conducting a
+                risk assessment, or running a tabletop exercise, we have the
+                expertise to guide you through it. Our consulting services are
+                designed to be flexible and tailored to your organization&apos;s
+                unique needs.
+              </p>
             </div>
-            <div>
-              <Image
-                src={"/generic/consulting.jpg"}
-                alt="A team providing consulting services to a client."
-                width={500}
-                height={400}
-                className="rounded-lg mb-6"
-              />
-            </div>
+
+            <ResponsiveImage
+              src={"/generic/consulting.jpg"}
+              alt="A team providing consulting services to a client."
+              className="rounded-lg mt-6"
+            />
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 mt-8">
             {/* Program Development */}
             <div className="flex gap-4 p-6 rounded-xl border border-border bg-card hover:border-foreground/20 transition-colors">
               <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center shrink-0">
@@ -847,3 +848,4 @@ export default function TrainingConsulting() {
 // Missing imports
 import { Briefcase, Code } from "lucide-react";
 import Image from "next/image";
+import ResponsiveImage from "@/components/image/ResponsiveImage";
