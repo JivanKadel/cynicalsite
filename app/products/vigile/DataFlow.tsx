@@ -4,95 +4,117 @@ import Image from "next/image";
 
 const DataFlowDiagram = () => {
   return (
-    <section className="relative py-12 sm:py-16 md:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-5 items-center gap-4">
-          <div className="col-span-1 flex flex-col gap-12 items-start z-10">
-            <div className="relative w-full max-w-[200px] mt-6 ml-4">
-              <div className="flex flex-col items-center">
-                <h4 className="text-xs font-bold text-center">Dark Web</h4>
-              </div>
-              <div className="relative flex flex-col items-center text-center">
-                <div className="text-foreground">
-                  <HatGlasses className="w-8 h-8" />
-                </div>
-              </div>
+    <section className="relative py-28 bg-background">
+      <div className="max-w-7xl mx-auto px-6 relative">
+        <svg
+          className="absolute inset-0 w-full h-full pointer-events-none z-0 scale-150"
+          viewBox="0 0 1000 400"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M140 110 C 320 110, 380 200, 500 200"
+            className="flow-blue"
+          />
+
+          <path
+            d="M140 290 C 320 290, 380 200, 500 200"
+            className="flow-blue delay"
+          />
+
+          <path
+            d="M500 200 C 650 200, 750 200, 780 200"
+            className="flow-green"
+          />
+        </svg>
+
+        <div className="relative grid grid-cols-5 items-center z-10 -ml-18">
+          {/* LEFT SOURCES */}
+          <div className="col-span-1 flex flex-col gap-28 items-start">
+            <div className="flex flex-col items-center">
+              <HatGlasses className="w-9 h-9 text-muted-foreground bg-background" />
+              <span className="text-xs font-semibold">Dark Web</span>
             </div>
 
-            <div className="relative w-full max-w-[250px]  mb-6 ml-4">
-              <div className="absolute -inset-1 rounded-xl blur opacity-25 hover:opacity-100 transition duration-1000" />
-              <div className="relative flex flex-col items-center text-center">
-                <div className=" text-blue-600">
-                  <Image
-                    src={"/products/outlook.svg"}
-                    alt="Microsoft 365"
-                    width={40}
-                    height={40}
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col items-center">
-                <h4 className="font-bold mb-1 text-xs text-center">
-                  Microsoft 365
-                </h4>
-              </div>
+            <div className="flex flex-col items-center">
+              <Image
+                src="/products/outlook.svg"
+                alt="Microsoft 365"
+                width={36}
+                height={36}
+                className="bg-background"
+              />
+              <span className="text-xs font-semibold">Microsoft 365</span>
             </div>
           </div>
 
-          <div className="col-span-1 flex justify-center h-64 relative">
-            <div className="absolute top-[30%] w-full h-0.5 bg-gradient-to-r from-blue-500/10 via-blue-500/40 to-blue-500/10 animate-pulse scale-x-125" />
-            <div className="absolute top-[65%] w-full h-0.5 bg-gradient-to-r from-blue-500/10 via-blue-500/40 to-blue-500/10 animate-pulse scale-x-125" />
-          </div>
+          <div className="col-span-3 flex justify-center">
+            <div className="relative flex flex-col justify-center items-center">
+              <div className="absolute w-20 h-20 rounded-full bg-background border border-green-500/30 shadow-sm" />
 
-          {/* Center Processing */}
-          <div className="col-span-1 flex justify-center z-10">
-            <div className="relative z-10 text-center">
-              <Cpu className="w-8 h-8 mx-auto mb-2 text-green-500" />
-              <div className="font-bold text-[10px] uppercase tracking-widest">
+              <Cpu className="w-7 h-7 text-green-500 relative z-10" />
+
+              <div className="text-[8px] font-bold uppercase tracking-widest mt-1 text-center relative z-10">
                 Vigile.AI
                 <span className="block">Engine</span>
               </div>
-              <div className="flex gap-1 justify-center mt-2">
-                <div className="w-1 h-3 bg-green-500 animate-bounce" />
-                <div
-                  className="w-1 h-5 bg-green-500 animate-bounce"
-                  style={{ animationDelay: "0.2s" }}
-                />
-                <div
-                  className="w-1 h-2 bg-green-500 animate-bounce"
-                  style={{ animationDelay: "0.4s" }}
-                />
-              </div>
             </div>
           </div>
 
-          <div className="col-span-1 flex justify-center h-64 relative">
-            <div className="absolute top-1/2 w-full h-0.5 bg-gradient-to-r from-green-500/10 via-green-500/40 to-green-500/10 animate-pulse scale-x-125" />
-          </div>
-
-          <div className="col-span-1 flex justify-end z-10">
-            <div className="relative w-full max-w-[280px]">
-              <div className="w-14 h-14 bg-black dark:border rounded-2xl flex items-center justify-center shadow-lg">
-                <Image
-                  src={"/products/vigile_logo.png"}
-                  alt="Vigile.ai"
-                  width={40}
-                  height={40}
-                />
-              </div>
+          <div className="col-span-1 flex justify-end">
+            <div className="w-16 h-16 bg-black border rounded-2xl flex items-center justify-center shadow-sm">
+              <Image
+                src="/products/vigile_logo.png"
+                alt="Vigile.ai"
+                width={38}
+                height={38}
+              />
             </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
+        .flow-blue,
+        .flow-green {
+          fill: none;
+          stroke-width: 2.5;
+          stroke-linecap: round;
+          stroke-dasharray: 10 10;
+          animation: flow 3s linear infinite;
+        }
+
+        .flow-blue {
+          stroke: rgba(59, 130, 246, 0.85);
+        }
+
+        .flow-green {
+          stroke: rgba(34, 197, 94, 0.85);
+        }
+
+        .delay {
+          animation-delay: 0.6s;
+        }
+
         @keyframes flow {
-          0% {
-            transform: translateY(-100%);
+          from {
+            stroke-dashoffset: 0;
           }
-          100% {
-            transform: translateY(100%);
+          to {
+            stroke-dashoffset: -20;
           }
+        }
+
+        @keyframes spinSlow {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        .animate-spin-slow {
+          animation: spinSlow 10s linear infinite;
         }
       `}</style>
     </section>

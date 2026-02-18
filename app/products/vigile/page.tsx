@@ -161,8 +161,7 @@ export default function Vigile() {
                   </div>
                 </div>
               </div>
-              <div className=" flex-1 lg:flex flex-col items-center justify-center">
-                {/* <Integration /> */}
+              <div className="flex-1 lg:flex flex-col items-center justify-center ml-10">
                 <DataFlowDiagram />
               </div>
             </div>
@@ -441,12 +440,6 @@ export default function Vigile() {
         </div>
       </section>
 
-      {/* <PageCTA
-        badge="Protecting 100,000+ employees across enterprises"
-        headline="Stop breaches"
-        highlightedText="before they start."
-        description="Join leading enterprises who trust Vigile.AI to protect their employees and prevent credential-based attacks."
-      /> */}
       <section className="py-32 relative">
         <div className="container mx-auto px-2 sm:px-6">
           <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
