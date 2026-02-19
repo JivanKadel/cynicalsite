@@ -18,7 +18,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About | Cynical Technology",
+  title: "About Us | Cynical Technology",
   description:
     "Learn more about Cynical Technology, our mission, team, and values in cybersecurity.",
 };
