@@ -439,7 +439,7 @@ export default function Vigile() {
       <section className="py-32 relative">
         <div className="container mx-auto px-2 sm:px-6">
           <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
-            <div className="relative z-10 p-12 lg:p-20">
+            <div className="relative z-10 p-6 sm:p-12 lg:p-20">
               <div className="max-w-5xl mx-auto text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -466,7 +466,7 @@ export default function Vigile() {
                   >
                     <Button
                       size="lg"
-                      className="h-12 bg-foreground text-background hover:bg-foreground/90"
+                      className="w-full h-12 bg-foreground text-background hover:bg-foreground/90"
                     >
                       Visit Vigile.AI
                       <ArrowRight className="w-4 h-4" />
@@ -474,11 +474,11 @@ export default function Vigile() {
                   </a>
                 </div>
 
-                <div className="mt-16 pt-16 border-t border-border/30">
-                  <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
+                <div className="mt-8 pt-8 sm:mt-16 sm:pt-16 border-t border-border/30">
+                  <p className="text-sm text-foreground/90 text-center mb-6 sm:mb-12 uppercase tracking-widest">
                     Trusted By Critical Industries
                   </p>
-                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
+                  <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-12 lg:gap-16">
                     {[
                       "Banks",
                       "Governments",

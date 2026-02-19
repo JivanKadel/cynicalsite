@@ -425,7 +425,21 @@ z"
             {/* Desktop CTA Buttons */}
             <div className="hidden lg:flex gap-2">
               {/* <Link href="/contact"> */}
-              <Button
+              <a
+                href="https://calendly.com/nareshlamgade-daet/30min?back=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-primary text-background rounded-md group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2">
+                  <div className="font-medium text-sm font-inter">
+                    Schedule a Call
+                    <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-inter">
+                      →
+                    </span>
+                  </div>
+                </Button>
+              </a>
+              {/* <Button
                 onClick={() => setDialogOpen(true)}
                 className="bg-primary text-background rounded-md group justify-center flex flex-nowrap whitespace-nowrap cursor-pointer group items-center h-full group leading-[150%] px-4.25 py-2"
               >
@@ -435,7 +449,7 @@ z"
                     →
                   </span>
                 </div>
-              </Button>
+              </Button> */}
               {/* </Link> */}
               <ThemeSwitcher />
             </div>
@@ -479,12 +493,19 @@ z"
 
                 <div className="flex gap-2 pt-4 mt-2 border-t border-border">
                   {/* <Link href={"/contact"}> */}
-                  <Button
+                  <a
+                    href="https://calendly.com/nareshlamgade-daet/30min?back=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="flex-1">Schedule a Call</Button>
+                  </a>
+                  {/* <Button
                     onClick={() => setDialogOpen(true)}
                     className="flex-1"
                   >
                     Schedule a Call
-                  </Button>
+                  </Button> */}
                   {/* </Link> */}
                   <ThemeSwitcher />
                 </div>
