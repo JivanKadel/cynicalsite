@@ -1,3 +1,11 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Cynical Technology",
+  description:
+    "Learn how Cynical Technology collects, uses, and protects your personal information in accordance with our privacy policy.",
+};
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="bg-background text-foreground min-h-screen">

@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Responsible Disclosure | Cynical Technology",
+  description:
+    "Learn about our responsible disclosure policy and how to report vulnerabilities in a secure and ethical manner.",
+};
 export default function ResponsibleDisclosurePage() {
   return (
     <div className="bg-background text-foreground min-h-screen">

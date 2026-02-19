@@ -1,3 +1,11 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Cynical Technology",
+  description:
+    "Review the terms and conditions governing the use of Cynical Technology's cybersecurity services.",
+};
+
 export default function TermsOfServicePage() {
   return (
     <div className="bg-background text-foreground min-h-screen">
