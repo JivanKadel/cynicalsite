@@ -31,7 +31,7 @@ export default function HeroSection() {
       <section className="flex flex-col md:flex-row gap-4 justify-center items-center mx-auto pb-8 max-w-sm">
         <BookACall />
         <Link href={"/downloads/sample-report"} className="flex-1">
-          <Button className="w-72 h-12 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
+          <Button className="w-72 h-14 text-sm hover:opacity-95 rounded-4xl bg-background hover:bg-background/80 text-foreground hover:text-foreground/80 border-2 border-border">
             Download Real Pentest Report <ArrowRight className="w-5! h-5!" />
           </Button>
         </Link>
