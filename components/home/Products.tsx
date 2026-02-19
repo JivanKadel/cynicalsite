@@ -90,7 +90,7 @@ const Products = () => {
         <div className="my-24">
           {
             <div className="mt-16 group">
-              <div className="flex flex-col justify-start items-start gap-3  px-6 lg:px-8">
+              <div className="flex flex-col justify-start items-start gap-3 px-6 lg:px-8">
                 <h2 className="bg-background border rounded-full p-2 shadow-sm  text-green-900 dark:text-green-500 font-light text-sm tracking-widest mb-2">
                   {products[0].title}
                 </h2>
@@ -125,7 +125,7 @@ const Products = () => {
                   )}
                 </div>
               </div>
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 h-full rounded-xl transition-all duration-300 mx-auto">
                 <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
                   <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
                     {products[0].tagline}
@@ -157,7 +157,7 @@ const Products = () => {
 
                 <Link
                   href={products[0].href}
-                  className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
+                  className="flex p-1 group relative xl:w-170 xl:h-102.5"
                 >
                   <Image
                     src={products[0].dashboardImage}
@@ -248,7 +248,7 @@ const Products = () => {
                   )}
                 </div>
               </div>
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 h-full rounded-xl transition-all duration-300">
                 <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
                   <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
                     {products[1].tagline}
@@ -280,7 +280,7 @@ const Products = () => {
 
                 <Link
                   href={products[1].href}
-                  className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
+                  className="flex items-end p-1 group relative xl:w-170 xl:h-102.5"
                 >
                   <Image
                     src={products[1].dashboardImage}
@@ -377,7 +377,7 @@ const Products = () => {
                   )}
                 </div>
               </div>
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 h-full rounded-xl transition-all duration-300">
                 <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
                   <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
                     {products[2].tagline}
@@ -409,7 +409,7 @@ const Products = () => {
 
                 <Link
                   href={products[2].href}
-                  className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
+                  className="flex items-end p-1 group relative xl:w-170 xl:h-102.5"
                 >
                   <Image
                     src={products[2].dashboardImage}
