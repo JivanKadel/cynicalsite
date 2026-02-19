@@ -1,6 +1,13 @@
 import { partners } from "@/data/company/partners.data";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Partners | Cynical Technology",
+  description:
+    "Discover our trusted partners in the cybersecurity industry. Collaborate with leading organizations to enhance your security posture.",
+};
 
 export default function PartnersPage() {
   return (
