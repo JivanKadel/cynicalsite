@@ -157,7 +157,7 @@ const Products = () => {
 
                 <Link
                   href={products[0].href}
-                  className="flex p-1 group relative xl:w-170 xl:h-102.5"
+                  className="flex p-1 group relative xl:w-2xl xl:h-100"
                 >
                   <Image
                     src={products[0].dashboardImage}
@@ -280,14 +280,14 @@ const Products = () => {
 
                 <Link
                   href={products[1].href}
-                  className="flex items-end p-1 group relative xl:w-170 xl:h-102.5"
+                  className="flex items-end p-1 group relative xl:w-2xl xl:h-100"
                 >
                   <Image
                     src={products[1].dashboardImage}
                     alt={products[1].name}
                     width={1080}
                     height={490}
-                    className="object-cover border rounded-xl w-full xl:scale-105 shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
+                    className="object-cover border rounded-xl w-full xl:scale-102 shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
                   />
                   <div
                     className="absolute -bottom-6 -left-6 w-20 sm:w-40 animate-float-delayed preserve-3d"
@@ -409,14 +409,14 @@ const Products = () => {
 
                 <Link
                   href={products[2].href}
-                  className="flex items-end p-1 group relative xl:w-170 xl:h-102.5"
+                  className="flex items-end p-1 group relative xl:w-2xl xl:h-100"
                 >
                   <Image
                     src={products[2].dashboardImage}
                     alt={products[2].name}
                     width={1080}
                     height={490}
-                    className="object-cover border rounded-xl w-full xl:scale-105 shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
+                    className="object-cover border rounded-xl w-full xl:scale-102 shadow-2xl group-hover:shadow-3xl transition-shadow duration-300 float-animation"
                   />
                   <div
                     className="absolute -bottom-6 -left-6 w-20 sm:w-40 animate-float-delayed preserve-3d"

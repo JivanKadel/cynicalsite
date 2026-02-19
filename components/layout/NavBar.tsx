@@ -78,12 +78,12 @@ export default function Navbar() {
       description: "Assess AWS, GCP, Azure environments",
       href: "/solutions/cloud-security",
     },
-    {
-      icon: Search,
-      label: "Threat Intelligence",
-      description: "Dark web & breach monitoring services",
-      href: "/solutions/threat-intel",
-    },
+    // {
+    //   icon: Search,
+    //   label: "Threat Intelligence",
+    //   description: "Dark web & breach monitoring services",
+    //   href: "/solutions/threat-intel",
+    // },
     {
       icon: AlertTriangle,
       label: "Vulnerability Management",

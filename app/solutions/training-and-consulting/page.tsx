@@ -73,7 +73,7 @@ export default function TrainingConsulting() {
             </div>
 
             <ResponsiveImage
-              src={"/generic/training.jpg"}
+              src={"/generic/consult.jpg"}
               alt="A group of people in a training session."
               className="rounded-lg mt-6"
             />

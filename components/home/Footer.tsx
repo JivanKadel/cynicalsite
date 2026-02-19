@@ -12,7 +12,7 @@ const Footer = () => {
     Solutions: [
       { label: "Application Security", href: "/solutions/app-security" },
       { label: "Cloud Security", href: "/solutions/cloud-security" },
-      { label: "Threat Intelligence", href: "/solutions/threat-intel" },
+      // { label: "Threat Intelligence", href: "/solutions/threat-intel" },
       {
         label: "Vulnerability Management",
         href: "/solutions/vulnerability-management",
