@@ -309,7 +309,7 @@ const Products = () => {
                     </div>
                   </div>
                   <div
-                    className="absolute -top-6 -right-6 w-20 sm:w-40 animate-float-delayed preserve-3d"
+                    className="absolute top-2 -right-6 w-20 sm:w-40 animate-float-delayed preserve-3d"
                     style={{
                       animationDelay: "2s",
                       transform: "rotateY(11.625deg) rotateX(-2.61deg)",
