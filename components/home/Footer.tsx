@@ -75,7 +75,7 @@ const Footer = () => {
               role="link"
               title="Cynical Home Page"
               href="/"
-              className="flex items-center gap-2 h-12 md:-mt-8"
+              className="flex items-center gap-2 h-12 md:-mt-3"
             >
               <svg
                 version="1.1"
