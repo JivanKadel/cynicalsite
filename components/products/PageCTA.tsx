@@ -89,7 +89,11 @@ const PageCTA = ({
                   </Button>
                   {path === "/" && (
                     <Link href="/downloads/sample-report">
-                      <Button variant="outline" size="lg" className="h-12">
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="h-12 w-full"
+                      >
                         Download Sample Report
                       </Button>
                     </Link>
