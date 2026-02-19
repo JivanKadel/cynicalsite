@@ -14,7 +14,7 @@ export default function PartnersPage() {
               key={partner.name}
               className="flex flex-col md:flex-row items-start md:items-center gap-2 md:gap-6 border-b border-muted pb-8"
             >
-              <div className="w-32 h-32 relative flex-shrink-0">
+              <div className="w-32 h-32 relative shrink-0">
                 <Image
                   src={partner.logo}
                   alt={partner.name}
@@ -24,7 +24,7 @@ export default function PartnersPage() {
               </div>
               <div className="flex-1">
                 <h2 className="text-xl font-semibold">{partner.name}</h2>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm font-semibold text-muted-foreground">
                   {partner.address}
                 </p>
                 <p className="mt-2 text-sm text-foreground/80 leading-relaxed">

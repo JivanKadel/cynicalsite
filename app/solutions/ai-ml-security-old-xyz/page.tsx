@@ -42,7 +42,6 @@ export default function AIMLSecurity() {
               <span className="text-foreground">AI/ML Security</span>
             </div>
 
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
               <Cpu className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">
@@ -66,7 +65,6 @@ export default function AIMLSecurity() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-16 border-y border-border">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -84,7 +82,6 @@ export default function AIMLSecurity() {
         </div>
       </section>
 
-      {/* Capabilities Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mb-16">
@@ -130,7 +127,6 @@ export default function AIMLSecurity() {
         </div>
       </section>
 
-      {/* Threat Types Section (replaces Testing Types) */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto mb-16">
@@ -173,7 +169,6 @@ export default function AIMLSecurity() {
         </div>
       </section>
 
-      {/* Methodology Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -217,7 +212,6 @@ export default function AIMLSecurity() {
         </div>
       </section>
 
-      {/* Features Grid */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -258,7 +252,6 @@ export default function AIMLSecurity() {
         </div>
       </section>
 
-      {/* ML Top 10 Coverage Section (replaces OWASP) */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">

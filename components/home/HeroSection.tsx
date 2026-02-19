@@ -90,22 +90,6 @@ export default function HeroSection() {
               link="https://swifttech.com.np/"
               className="object-contain hover:scale-105 transition-transform  dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
             />
-            {/* <TrustedByImage
-              width={54}
-              height={54}
-              name="Government of Nepal"
-              logo="/brands/gov.png"
-              link="https://www.nepal.gov.np/"
-              className="object-contain dark:hidden hover:scale-105 transition-transform  dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
-            />
-            <TrustedByImage
-              width={54}
-              height={54}
-              name="IME Group"
-              logo="/brands/ime.svg"
-              link="https://imegroup.com/"
-              className="object-contain dark:hidden hover:scale-105 transition-transform  dark:grayscale-0 dark:hover:grayscale-0 dark:brightness-0 dark:invert dark:hover:invert-0 dark:hover:brightness-100 opacity-90"
-            /> */}
           </div>
         </Marquee>
       </div>

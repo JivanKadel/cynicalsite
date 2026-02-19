@@ -89,7 +89,6 @@ export default function ResearchPage() {
         </div>
       </section>
 
-      {/* Research Grid */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid gap-6">

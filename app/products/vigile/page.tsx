@@ -11,7 +11,6 @@ import { iconColors } from "@/lib/utils";
 import HeroImage from "./HeroImage";
 import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
-import { Integration } from "./Integration";
 import {
   breachMetrics,
   outlookFeatures,
@@ -33,8 +32,8 @@ export default function Vigile() {
       <section className="pt-6 pb-12 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div>
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-20 mx-auto">
-              <div className="col-span-2 w-full flex flex-col gap-4">
+            <div className="lg:grid lg:grid-cols-5 gap-20 sm:mx-auto">
+              <div className="lg:col-span-2 w-full flex flex-col gap-4 mb-8 lg:mb-0">
                 <div className="flex items-center gap-4 mb-6">
                   <div>
                     <a
@@ -235,12 +234,11 @@ export default function Vigile() {
         </div>
       </section>
 
-      {/* PDF Reports Section */}
       <section className="pt-16">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <div className="relative p-8 rounded-3xl border border-border/50 bg-linear-to-br from-secondary/30 to-background">
+              <div className="relative p-4 sm:p-8 rounded-3xl border border-border/50 bg-linear-to-br from-secondary/30 to-background">
                 <div className="space-y-4">
                   <div className="flex items-center gap-3 pb-4 border-b border-border/50">
                     <FileText className="w-8 h-8 text-foreground/70" />
@@ -360,7 +358,6 @@ export default function Vigile() {
         </div>
       </section>
 
-      {/* Use Cases */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -398,7 +395,6 @@ export default function Vigile() {
         </div>
       </section>
 
-      {/* Integration Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
@@ -445,13 +441,11 @@ export default function Vigile() {
           <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
             <div className="relative z-10 p-12 lg:p-20">
               <div className="max-w-5xl mx-auto text-center">
-                {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   Protecting employees across enterprises
                 </div>
 
-                {/* Headline */}
                 <p className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
                   Stop breaches
                   <span className="block text-foreground">

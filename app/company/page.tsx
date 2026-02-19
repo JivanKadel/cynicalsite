@@ -1,4 +1,3 @@
-import { TrustedByImage } from "@/components/home/TrustedByImage";
 import PageCTA from "@/components/products/PageCTA";
 import { Button } from "@/components/ui/button";
 import {
@@ -6,7 +5,6 @@ import {
   teamMembers,
   whyChooseItems,
 } from "@/data/company/company.data";
-import { trustedBy, trustedByClipped } from "@/data/trustedby.data";
 import {
   Building,
   Target,
@@ -18,7 +16,6 @@ import {
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Marquee from "react-fast-marquee";
 
 export const metadata: Metadata = {
   title: "About | Cynical Technology",
@@ -29,7 +26,6 @@ export const metadata: Metadata = {
 export default function AboutUs() {
   return (
     <div>
-      {/* Hero Section */}
       <section className="pt-6 pb-12 lg:pb-20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-foreground/5 rounded-full blur-3xl" />
@@ -61,18 +57,18 @@ export default function AboutUs() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex justify-stretch flex-col sm:flex-row gap-4">
                 <Link href="#our-team">
                   <Button
                     size="lg"
-                    className="bg-foreground text-background hover:bg-foreground/90"
+                    className="w-full bg-foreground text-background hover:bg-foreground/90"
                   >
                     Meet Our Team
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href={"/#solutions"}>
-                  <Button size="lg" variant="outline">
+                  <Button size="lg" variant="outline" className="w-full">
                     View Our Services
                   </Button>
                 </Link>

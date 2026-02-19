@@ -1,24 +1,17 @@
 import { Button } from "@/components/ui/button";
-import {
-  CheckCircle,
-  Activity,
-  Search,
-  Bell,
-  Shield,
-  Globe,
-  Zap,
-  Clock,
-  Eye,
-  AlertTriangle,
-  Server,
-  Lock,
-  BarChart3,
-} from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { iconColors } from "@/lib/utils";
 import { Metadata } from "next";
 import Image from "next/image";
 
 import Link from "next/link";
+import {
+  stats,
+  process,
+  features,
+  programTypes,
+  incidentTypes,
+} from "@/data/products/falcon.data";
 
 export const metadata: Metadata = {
   title: "Falcon | Continuous Site Monitoring Platform",
@@ -26,167 +19,14 @@ export const metadata: Metadata = {
     "Falcon is a centralized monitoring and notification system designed to help large-scale organizations & government track their public assets at scale. Monitor every asset every minute for downtime and keyword-based threats.",
 };
 
-// Stats data
-const stats = [
-  { label: "Assets Monitored", value: "100+", icon: Globe },
-  { label: "Uptime Check Frequency", value: "60s", icon: Clock },
-  { label: "Incidents Detected", value: "1000+", icon: AlertTriangle },
-  { label: "Government Domains", value: "200+", icon: Shield },
-];
-
-// How it works process
-const process = [
-  {
-    step: "01",
-    title: "Create Monitor",
-    description:
-      "Set up monitors for your public assets with custom configurations",
-    icon: Activity,
-  },
-  {
-    step: "02",
-    title: "Set Timer",
-    description: "Configure check frequency - every minute for critical assets",
-    icon: Clock,
-  },
-  {
-    step: "03",
-    title: "Keyword Detection",
-    description: "Automated keyword scanning across all monitored assets",
-    icon: Search,
-  },
-  {
-    step: "04",
-    title: "Incident Creation",
-    description: "Automatic incident generation when issues are detected",
-    icon: AlertTriangle,
-  },
-  {
-    step: "05",
-    title: "Instant Alerts",
-    description: "Multi-channel notifications via Email & SMS",
-    icon: Bell,
-  },
-];
-
-// Features data
-const features = [
-  {
-    title: "Per-Minute Monitoring",
-    description:
-      "Check every public asset every 60 seconds for maximum uptime assurance",
-    icon: Zap,
-  },
-  {
-    title: "Keyword-Based Detection",
-    description:
-      "Scan all assets for specific keywords and trigger incidents automatically",
-    icon: Search,
-  },
-  {
-    title: "Multi-Channel Alerts",
-    description:
-      "Instant notifications via Email and SMS for critical incidents",
-    icon: Bell,
-  },
-  {
-    title: "Asset Discovery",
-    description:
-      "Automatically discover and catalog all your public-facing assets",
-    icon: Eye,
-  },
-  {
-    title: "Incident Management",
-    description: "Centralized incident tracking and resolution workflow",
-    icon: AlertTriangle,
-  },
-  {
-    title: "Government-Grade Security",
-    description:
-      "Built to meet the strict security requirements of government agencies",
-    icon: Lock,
-  },
-  {
-    title: "Real-time Dashboard",
-    description:
-      "Comprehensive visibility into all monitored assets and incidents",
-    icon: BarChart3,
-  },
-  {
-    title: "Historical Analytics",
-    description: "Track uptime trends and incident patterns over time",
-    icon: Activity,
-  },
-  {
-    title: "Scalable Architecture",
-    description:
-      "Designed to monitor thousands of assets across large organizations",
-    icon: Server,
-  },
-];
-
-// Program/Pricing options
-const programTypes = [
-  {
-    title: "Essential",
-    description: "For small teams starting with asset monitoring",
-    features: [
-      "Monitor up to 50 assets",
-      "5-minute check intervals",
-      "Email notifications",
-      "Basic keyword monitoring",
-      "7-day data retention",
-    ],
-    recommended: false,
-  },
-  {
-    title: "Enterprise",
-    description: "For large organizations with critical assets",
-    features: [
-      "Unlimited assets",
-      "1-minute check intervals",
-      "Email & SMS notifications",
-      "Advanced keyword detection",
-      "24/7 priority support",
-      "Custom reporting",
-      "SLA guarantee",
-    ],
-    recommended: true,
-  },
-  {
-    title: "Government",
-    description: "For public sector and government agencies",
-    features: [
-      "Everything in Enterprise",
-      "FedRAMP compliant",
-      "On-premise deployment",
-      "Dedicated security team",
-      "Custom integrations",
-      "Unlimited data retention",
-    ],
-    recommended: false,
-  },
-];
-
-// Incident types detected
-const incidentTypes = [
-  { name: "Site Downtime", severity: "Critical" },
-  { name: "Keyword Match - Sensitive Data", severity: "Critical" },
-  { name: "SSL Certificate Expiry", severity: "High" },
-  { name: "Content Defacement", severity: "Critical" },
-  { name: "DNS Resolution Failure", severity: "High" },
-  { name: "Unauthorized Content", severity: "Medium" },
-  { name: "Slow Response Time", severity: "Medium" },
-];
-
 export default function Falcon() {
   return (
     <div>
       <section className="pt-6 pb-12 relative overflow-hidden">
         <div className="container mx-auto px-6 relative">
           <div>
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-20 mx-auto">
-              <div className="col-span-2 w-full flex flex-col gap-4">
+            <div className="lg:grid lg:grid-cols-5 gap-20 mx-auto">
+              <div className="lg:col-span-2 w-full flex flex-col gap-4 mb-8 lg:mb-0">
                 <div className="flex items-center gap-4 mb-6">
                   <div>
                     <div className="font-aeonik text-4xl md:text-5xl font-bold mt-4">
@@ -214,8 +54,7 @@ export default function Falcon() {
                   </Link>
                 </div>
               </div>
-              {/* <div className="relative col-span-3 xl:ml-8 lg:mt-0 scale-105 transform-[translateY(25%)_translateX(15%)_scale(1.2)_rotateX(30deg)_rotateY(20deg)_rotate(345deg)]"> */}
-              <div className="col-span-3 xl:ml-8 lg:mt-0">
+              <div className="lg:col-span-3 xl:ml-8 lg:mt-0">
                 <Image
                   src="/products/web_monitoring_light.png"
                   width={1920}
@@ -236,7 +75,6 @@ export default function Falcon() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-12 lg:py-24 lg:mt-16 border-y border-border/50 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -255,7 +93,6 @@ export default function Falcon() {
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -271,7 +108,6 @@ export default function Falcon() {
           </div>
 
           <div className="relative">
-            {/* Connection Line */}
             <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
             <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -296,7 +132,6 @@ export default function Falcon() {
         </div>
       </section>
 
-      {/* Features Grid */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -334,7 +169,6 @@ export default function Falcon() {
         </div>
       </section>
 
-      {/* Program Types */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -349,7 +183,7 @@ export default function Falcon() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programTypes.map((program) => (
               <div
                 key={program.title}
@@ -395,7 +229,6 @@ export default function Falcon() {
         </div>
       </section>
 
-      {/* Incident Types */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -454,9 +287,9 @@ export default function Falcon() {
       </section>
 
       <section className="py-24">
-        <div className="container mx-auto px-6 text-center">
+        <div className="container mx-auto px-2 sm:px-6 text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-aeonik font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-aeonik font-bold mb-6">
               Start monitoring your assets
             </h2>
             <p className="text-lg text-muted-foreground font-body mb-8">

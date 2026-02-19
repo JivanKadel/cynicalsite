@@ -16,7 +16,6 @@ export default function PricingThankYouPage() {
   return (
     <div className="flex lg:min-h-screen items-center justify-center py-6 px-4 lg:-mt-16">
       <div className="w-full">
-        {/* Header */}
         <div className="max-w-lg mx-auto mt-16">
           <div className="flex flex-col items-center space-y-2 pb-4">
             <CheckCircle className="h-12 w-12 md:h-20 md:w-20 text-green-500" />
@@ -27,7 +26,7 @@ export default function PricingThankYouPage() {
               Your pricing request has been received
             </p>
           </div>
-          {/* Body */}
+
           <div className="space-y-6 pt-6">
             <p className="text-gray-700 dark:text-gray-300 text-center">
               We appreciate your trust in{" "}

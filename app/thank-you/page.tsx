@@ -27,7 +27,7 @@ export default function PricingThankYouPage() {
               Your Request has been received
             </p>
           </div>
-          {/* Body */}
+
           <div className="space-y-6 pt-6">
             <p className="text-gray-700 dark:text-gray-300 text-center">
               We appreciate your trust in{" "}

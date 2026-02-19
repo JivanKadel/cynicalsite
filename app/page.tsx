@@ -1,7 +1,6 @@
 import HeroSection from "@/components/home/HeroSection";
 import Products from "@/components/home/Products";
 import Solutions from "@/components/home/Solutions";
-import Stats from "@/components/home/Stats";
 import Testimonials from "@/components/home/Testimonials";
 import PageCTA from "@/components/products/PageCTA";
 

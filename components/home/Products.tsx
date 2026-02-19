@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { ProductCard } from "./ProductCard";
-import { Bug, Check, CheckCircle, Link2Off, MoveUpRight } from "lucide-react";
+import { Bug, Check, Link2Off } from "lucide-react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 
@@ -127,7 +126,6 @@ const Products = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
-                {/* Text content */}
                 <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
                   <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
                     {products[0].tagline}
@@ -157,7 +155,6 @@ const Products = () => {
                   </a>
                 </div>
 
-                {/* Image content */}
                 <Link
                   href={products[0].href}
                   className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
@@ -252,7 +249,6 @@ const Products = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
-                {/* Text content */}
                 <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
                   <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
                     {products[1].tagline}
@@ -282,7 +278,6 @@ const Products = () => {
                   </a>
                 </div>
 
-                {/* Image content */}
                 <Link
                   href={products[1].href}
                   className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
@@ -383,7 +378,6 @@ const Products = () => {
                 </div>
               </div>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 h-full rounded-xl transition-all duration-300">
-                {/* Text content */}
                 <div className="flex flex-col justify-center gap-4 self-start p-6 lg:p-8">
                   <h3 className="text-xl md:text-2xl xl:text-4xl font-aeonik mb-4 font-extrabold">
                     {products[2].tagline}
@@ -413,7 +407,6 @@ const Products = () => {
                   </a>
                 </div>
 
-                {/* Image content */}
                 <Link
                   href={products[2].href}
                   className="flex items-end p-1 group relative xl:w-180 xl:h-102.5"
@@ -475,22 +468,6 @@ const Products = () => {
             </div>
           }
         </div>
-
-        {/* <div className="mt-20 grid grid-cols-2 xl:grid-cols-4 gap-6 p-8 rounded-2xl border border-border/30 bg-secondary/30">
-          {[
-            { value: "0", label: "Client breaches on our watch" },
-            { value: "2.4K", label: "Vulnerabilities discovered" },
-            { value: "<10h", label: "Critical finding triage" },
-            { value: "24/7", label: "Active threat monitoring" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center xl:text-left">
-              <p className="text-3xl xl:text-4xl font-bold mb-1 text-foreground">
-                {stat.value}
-              </p>
-              <p className="text-sm text-muted-foreground">{stat.label}</p>
-            </div>
-          ))}
-        </div> */}
       </div>
     </section>
   );

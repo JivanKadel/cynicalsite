@@ -14,7 +14,6 @@ export default function NotFound() {
           </h1>
         </div>
 
-        {/* Headline */}
         <h2 className="text-2xl font-aeonik text-foreground font-bold">
           Page Not Found
         </h2>
@@ -23,7 +22,6 @@ export default function NotFound() {
           security policy.
         </p>
 
-        {/* Actions */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
             variant="outline"
@@ -37,7 +35,6 @@ export default function NotFound() {
           </Button>
         </div>
 
-        {/* Decorative pulse line */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 400 20"

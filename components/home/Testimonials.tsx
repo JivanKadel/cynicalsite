@@ -21,8 +21,6 @@ const Testimonials = () => {
           <div>
             <p className="text-4xl md:text-6xl font-aeonik text-center">
               Trusted by Security & Technology Leader
-              {/* <br />
-              <span className="text-slate-500 text-center">What we fixed.</span> */}
             </p>
           </div>
         </div>

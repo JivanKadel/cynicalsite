@@ -31,7 +31,6 @@ const ThreatIntelligence = () => {
 
         <div className="container mx-auto px-6 relative">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Breadcrumb */}
             <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-8  ">
               <Link
                 href="/"
@@ -50,7 +49,6 @@ const ThreatIntelligence = () => {
               <span className="text-foreground">Threat Intelligence</span>
             </div>
 
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-secondary/50 mb-8">
               <Radar className="w-4 h-4 text-foreground" />
               <span className="text-sm font-medium">
@@ -75,7 +73,6 @@ const ThreatIntelligence = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-16 border-y border-border">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -93,7 +90,6 @@ const ThreatIntelligence = () => {
         </div>
       </section>
 
-      {/* Capabilities Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 py-6">
@@ -121,11 +117,11 @@ const ThreatIntelligence = () => {
             <ResponsiveImage
               src={"/generic/multi_discipline.jpg"}
               alt="A visual representation of threat trends and patterns."
-              className="rounded-lg mt-6"
+              className="rounded-lg mt-6 lg:mt-12"
             />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {capabilities.map((capability, index) => (
               <div
                 key={index}
@@ -150,7 +146,6 @@ const ThreatIntelligence = () => {
         </div>
       </section>
 
-      {/* Intelligence Types Section */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto mb-16">
@@ -166,7 +161,7 @@ const ThreatIntelligence = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {intelligenceTypes.map((type, index) => (
               <div
                 key={index}
@@ -198,7 +193,6 @@ const ThreatIntelligence = () => {
         </div>
       </section>
 
-      {/* Methodology Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -249,7 +243,6 @@ const ThreatIntelligence = () => {
         </div>
       </section>
 
-      {/* Features Grid */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -286,7 +279,6 @@ const ThreatIntelligence = () => {
         </div>
       </section>
 
-      {/* Threat Categories Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">

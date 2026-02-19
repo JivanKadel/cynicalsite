@@ -129,15 +129,15 @@ export default function PricingForm() {
     <section
       role="form"
       aria-labelledby="Pricing Inquiry Form Section"
-      className=" p-4 py-5 sm:p-8  border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl"
+      className="p-4 py-5 sm:p-8 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm shadow-xl"
     >
       <h2
         id="Pricing Inquiry Form Section"
-        className="font-aeonik text-xl md:text-2xl lg:text-3xl font-semibold mb-6 text-center"
+        className="font-aeonik text-xl md:text-2xl font-semibold mb-4 text-center"
       >
         Request Pricing Details
       </h2>
-      <form className="space-y-4 p-6" onSubmit={handleSubmit}>
+      <form className="space-y-4 p-2 sm:p-6" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-2">
           <Label
             htmlFor="fullName"

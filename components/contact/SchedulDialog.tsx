@@ -155,7 +155,7 @@ export function ScheduleCallDialog({
         <DialogHeader>
           <DialogTitle>Schedule a Call</DialogTitle>
           <DialogDescription>
-            15-minute discovery call with a cybersecurity expert.
+            A brief discovery call with a cybersecurity expert.
           </DialogDescription>
         </DialogHeader>
 

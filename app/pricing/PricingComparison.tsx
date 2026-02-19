@@ -151,7 +151,6 @@ export default function PricingPage() {
             </tr>
           </thead>
 
-          {/* Table Body */}
           <tbody>
             {comparisonBasis.map((basis) => (
               <tr key={basis} className="border-t border-border/60">

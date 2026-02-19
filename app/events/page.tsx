@@ -91,7 +91,6 @@ export default function EventsPage() {
                       {event.description}
                     </p>
 
-                    {/* Event Details */}
                     <div className="space-y-4 mb-6">
                       <div className="flex items-start gap-3">
                         <div className="flex-1 space-y-2">

@@ -63,12 +63,9 @@ export default function EventDetailsPage() {
   return (
     <div>
       <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        {/* Hero Section */}
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
-              {/* Event Header */}
               <div>
                 <div className="flex flex-wrap items-center gap-3 mb-4">
                   {event.tags.map((tag) => (
@@ -139,7 +136,6 @@ export default function EventDetailsPage() {
 
               <Separator className="bg-gray-200 dark:bg-gray-800" />
 
-              {/* Description */}
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
                   <BookOpen className="w-6 h-6 text-blue-600 dark:text-blue-400" />
@@ -150,7 +146,6 @@ export default function EventDetailsPage() {
                 </p>
               </section>
 
-              {/* Skills Section */}
               <section>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                   <Award className="w-6 h-6 text-green-600 dark:text-green-400" />
@@ -171,9 +166,7 @@ export default function EventDetailsPage() {
                 </div>
               </section>
 
-              {/* Opportunities & Requirements Grid */}
               <div className="grid md:grid-cols-2 gap-8">
-                {/* Opportunities */}
                 <section>
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <Briefcase className="w-6 h-6 text-purple-600 dark:text-purple-400" />
@@ -193,7 +186,6 @@ export default function EventDetailsPage() {
                   </ul>
                 </section>
 
-                {/* Requirements */}
                 <section>
                   <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                     <CheckCircle className="w-6 h-6 text-amber-600 dark:text-amber-400" />
@@ -215,10 +207,8 @@ export default function EventDetailsPage() {
               </div>
             </div>
 
-            {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
-                {/* Registration Card */}
                 <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 shadow-lg">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3">
@@ -277,7 +267,6 @@ export default function EventDetailsPage() {
                   </p>
                 </div>
 
-                {/* Facilitators Card */}
                 <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                     Meet Your Facilitators
@@ -313,7 +302,6 @@ export default function EventDetailsPage() {
                   </div>
                 </div>
 
-                {/* Share Card */}
                 <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                     Share This Event

@@ -31,7 +31,6 @@ export default function VisionPage() {
         </div>
       </section>
 
-      {/* Challenges Section */}
       <section className="py-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
@@ -85,7 +84,6 @@ export default function VisionPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
       <section className="relative py-8">
         <div className="relative max-w-4xl mx-auto text-center px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission</h2>
@@ -101,7 +99,6 @@ export default function VisionPage() {
         </div>
       </section>
 
-      {/* Solutions Section */}
       <section className="py-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-3">
@@ -166,7 +163,6 @@ export default function VisionPage() {
         </div>
       </section>
 
-      {/* Vision Statement */}
       <section className="py-16">
         <div className="relative">
           <div className="rounded-xl p-10 md:p-16 shadow-2xl overflow-hidden">

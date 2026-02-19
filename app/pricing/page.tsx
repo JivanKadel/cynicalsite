@@ -22,9 +22,8 @@ export default function PricingPage() {
       <section
         role="region"
         aria-labelledby="Pricing Details Section"
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 p-2 md:p-12"
+        className="grid grid-cols-1 md:grid-cols-2 gap-12 p-2 md:p-12 max-w-7xl mx-auto"
       >
-        {/* Left Section */}
         <section className="p-2">
           <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
             Plans and Pricing
@@ -58,7 +57,7 @@ export default function PricingPage() {
         <PricingForm />
       </section>
 
-      <div className="mt-16 mx-auto flex flex-col justify-center">
+      <div className="mt-16 p-2 mx-auto flex flex-col justify-center">
         <h2 className="text-lg text-center font-semibold tracking-wider text-muted-foreground">
           JOIN MANY COMPANIES THAT TRUST CYNICAL
         </h2>

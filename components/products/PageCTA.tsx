@@ -11,7 +11,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { ScheduleCallDialog } from "../contact/SchedulDialog";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 interface PageCTAProps {
   badge?: string;
@@ -48,13 +48,11 @@ const PageCTA = ({
           <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
             <div className="relative z-10 p-4 sm:p-12 lg:p-20">
               <div className="max-w-5xl mx-auto text-center">
-                {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
                   {badge}
                 </div>
 
-                {/* Headline */}
                 <p className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
                   {headline}
                   <span className="block text-foreground">
@@ -66,7 +64,6 @@ const PageCTA = ({
                   {description}
                 </p>
 
-                {/* Benefits Grid */}
                 {showBenefits && (
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
                     {benefits.map((benefit) => (
@@ -81,7 +78,6 @@ const PageCTA = ({
                   </div>
                 )}
 
-                {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     onClick={() => setDialogOpen(true)}
@@ -100,7 +96,6 @@ const PageCTA = ({
                   )}
                 </div>
 
-                {/* Trust Indicators */}
                 {showTrustIndicators && (
                   <div className="mt-4 pt-4 sm:mt-16 sm:pt-16 border-t border-border/30">
                     <p className="text-sm text-foreground/90 text-center mb-6 sm:mb-12 uppercase tracking-widest">

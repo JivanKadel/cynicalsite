@@ -43,7 +43,6 @@ const Contact = () => {
             </div>
 
             <div className="space-y-8 lg:col-span-3 lg:max-w-none mx-auto w-full">
-              {/* Contact Information */}
               <div className="p-6 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
                 <h3 className="font-semibold mb-6 flex items-center gap-2">
                   <Calendar className="w-5 h-5 text-primary" />
@@ -72,7 +71,7 @@ const Contact = () => {
                   ))}
                 </address>
               </div>
-              {/* Office Hours */}
+
               <div className="p-6 border border-border/50 rounded-xl bg-card/50 backdrop-blur-sm">
                 <h3 className="font-semibold mb-4 flex items-center gap-2">
                   <Clock className="w-5 h-5 text-primary" />

@@ -47,7 +47,6 @@ export default function ResearchDetailPage() {
         </div>
       </section>
 
-      {/* Stats */}
       <section className="py-12 border-y border-border">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
@@ -72,7 +71,6 @@ export default function ResearchDetailPage() {
         </div>
       </section>
 
-      {/* Content */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
@@ -90,10 +88,8 @@ export default function ResearchDetailPage() {
               </p>
             </div>
 
-            {/* Divider */}
             <div className="w-16 h-px bg-border mx-auto mb-20" />
 
-            {/* Affected Systems */}
             <div className="mb-20">
               <h2 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-8 text-center">
                 Affected Systems
@@ -149,7 +145,6 @@ export default function ResearchDetailPage() {
               </div>
             </div>
 
-            {/* Technical Analysis */}
             <div className="mb-20">
               <div className="text-center mb-20">
                 <h2 className="text-xl md:text-3xl font-semibold uppercase tracking-widest mb-6 text-center">
@@ -163,7 +158,6 @@ export default function ResearchDetailPage() {
                 </p>
               </div>
 
-              {/* Code Block */}
               <div className="rounded-xl bg-secondary/50 border border-border overflow-hidden mb-10">
                 <div className="flex items-center justify-center gap-2 px-4 py-3 border-b border-border">
                   <Code className="w-4 h-4 text-muted-foreground" />
@@ -195,10 +189,8 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
               </div>
             </div>
 
-            {/* Divider */}
             <div className="w-16 h-px bg-border mx-auto mb-20" />
 
-            {/* Impact */}
             <div className="mb-20">
               <h2 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-8 text-center">
                 Potential Impact
@@ -246,7 +238,6 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
               </div>
             </div>
 
-            {/* Remediation */}
             <div className="mb-20">
               <h2 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-8 text-center">
                 Remediation Steps
@@ -272,10 +263,8 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
               </div>
             </div>
 
-            {/* Divider */}
             <div className="w-16 h-px bg-border mx-auto mb-20" />
 
-            {/* Timeline */}
             <div className="mb-20">
               <h2 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-8 text-center">
                 Disclosure Timeline
@@ -320,7 +309,6 @@ SELECT * FROM users WHERE username = 'admin'--' AND password = ''`}</code>
               </div>
             </div>
 
-            {/* Resources */}
             <div className="text-center">
               <h2 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-8">
                 Resources

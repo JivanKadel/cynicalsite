@@ -122,7 +122,6 @@ const GlobalInvestmentBank = () => {
         </div>
       </section>
 
-      {/* Client Overview Bar */}
       <section className="py-16 mt-20 border-y border-border/50 mx-auto">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-8">
@@ -151,12 +150,10 @@ const GlobalInvestmentBank = () => {
         </div>
       </section>
 
-      {/* Challenge Section */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-12 gap-8 lg:gap-20">
-              {/* Section Label */}
               <div className="lg:col-span-4">
                 <div className="lg:sticky lg:top-32">
                   <Badge>01 — The Challenge</Badge>
@@ -166,7 +163,6 @@ const GlobalInvestmentBank = () => {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="lg:col-span-8 space-y-4 sm:space-y-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   As one of the world&apos;s largest investment banks, our
@@ -211,7 +207,6 @@ const GlobalInvestmentBank = () => {
         </div>
       </section>
 
-      {/* Approach Section */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
@@ -231,7 +226,6 @@ const GlobalInvestmentBank = () => {
               </div>
             </div>
 
-            {/* Timeline */}
             <div className="relative">
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
@@ -301,7 +295,6 @@ const GlobalInvestmentBank = () => {
         </div>
       </section>
 
-      {/* Quote Section */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
@@ -333,7 +326,6 @@ const GlobalInvestmentBank = () => {
         </div>
       </section>
 
-      {/* Results Section */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">

@@ -74,7 +74,6 @@ export default function BugV() {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-12 lg:py-24 lg:mt-16 border-y border-border/50 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -113,7 +112,6 @@ export default function BugV() {
         </div>
       </section>
 
-      {/* How It Works */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -130,7 +128,6 @@ export default function BugV() {
           </div>
 
           <div className="relative">
-            {/* Connection Line */}
             <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-px bg-linear-to-r from-transparent via-border to-transparent" />
 
             <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -155,7 +152,6 @@ export default function BugV() {
         </div>
       </section>
 
-      {/* Features Grid */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -193,7 +189,6 @@ export default function BugV() {
         </div>
       </section>
 
-      {/* Program Types */}
       <section className="py-24">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -209,7 +204,7 @@ export default function BugV() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programTypes.map((program) => (
               <div
                 key={program.title}
@@ -259,7 +254,6 @@ export default function BugV() {
         </div>
       </section>
 
-      {/* Vulnerability Types */}
       <section className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -337,7 +331,7 @@ export default function BugV() {
       <section className="py-32 relative">
         <div className="container mx-auto px-2 sm:px-6">
           <div className="relative overflow-hidden rounded-3xl bg-card shadow-[0_0_4px_rgba(0,0,0,0.3)]">
-            <div className="relative z-10 p-12 lg:p-20">
+            <div className="relative z-10 p-4 sm:p-12 lg:p-20">
               <div className="max-w-5xl mx-auto text-center">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-sm text-sm text-muted-foreground mb-8">
@@ -358,7 +352,6 @@ export default function BugV() {
                   critical assets with continuous crowdsourced security testing.
                 </p>
 
-                {/* CTAs */}
                 <div className="flex justify-center">
                   <a
                     href="https://bugv.io/request-a-demo/"
@@ -371,11 +364,11 @@ export default function BugV() {
                   </a>
                 </div>
 
-                <div className="mt-16 pt-16 border-t border-border/30">
-                  <p className="text-sm text-foreground/90 text-center mb-12 uppercase tracking-widest">
+                <div className="mt-16 pt-4 sm:pt-16 border-t border-border/30">
+                  <p className="text-sm text-foreground/90 text-center mb-4 sm:mb-12 uppercase tracking-widest">
                     Trusted By Critical Industries
                   </p>
-                  <div className="flex flex-wrap justify-center items-center gap-12 lg:gap-16">
+                  <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-12 lg:gap-16">
                     {[
                       "Banks",
                       "Governments",
@@ -386,7 +379,7 @@ export default function BugV() {
                     ].map((name) => (
                       <h2
                         key={name}
-                        className="text-base text-foreground font-semibold tracking-wide uppercase"
+                        className="text-sm sm:text-base text-foreground font-semibold tracking-wide uppercase"
                       >
                         {name}
                       </h2>

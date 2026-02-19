@@ -6,7 +6,6 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { sendEmail } from "@/lib/sendQuery";
 import { ArrowRight } from "lucide-react";
-import { useTheme } from "next-themes";
 import { useRouter } from "next/navigation";
 import { createRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";

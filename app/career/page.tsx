@@ -10,8 +10,6 @@ import { Badge } from "@/components/ui/badge";
 import {
   Users,
   Briefcase,
-  Brain,
-  Award,
   Check,
   ArrowRight,
   Upload,
@@ -21,7 +19,7 @@ import {
 
 import { Metadata } from "next";
 import Link from "next/link";
-import { hiringProcess, Job, perks } from "@/data/company/career.data";
+import { Job, perks } from "@/data/company/career.data";
 import Image from "next/image";
 import ResponsiveImage from "@/components/image/ResponsiveImage";
 
@@ -44,7 +42,7 @@ const Careers = () => {
           </div>
           <div className="grid lg:grid-cols-2">
             <div className="max-w-4xl">
-              <h1 className="mb-6 text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+              <h1 className="mb-6 text-[2rem] capitalize font-aeonik font-bold text-foreground leading-none sm:text-2xl md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
                 Build your career in
                 <span className="block text-muted-foreground">
                   cybersecurity
@@ -61,14 +59,14 @@ const Careers = () => {
                 <Link href="#current-openings">
                   <Button
                     size="lg"
-                    className="h-12 bg-foreground text-background hover:bg-foreground/90"
+                    className="w-full h-12 bg-foreground text-background hover:bg-foreground/90"
                   >
                     View Openings
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <a href="mailto:hr@cynicaltechnology.com">
-                  <Button size="lg" variant="outline" className="h-12">
+                  <Button size="lg" variant="outline" className="w-full h-12">
                     Submit CV
                   </Button>
                 </a>
@@ -84,7 +82,6 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Perks & Benefits Section */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 py-6">
@@ -190,9 +187,8 @@ const Careers = () => {
         </div>
       </section> */}
 
-      {/* Current Openings Section */}
       <section className="py-20 lg:py-32 bg-secondary/20" id="current-openings">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-2 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight mb-6">
               Current openings
@@ -316,7 +312,7 @@ const Careers = () => {
           ) : (
             <div className="text-center max-w-2xl mx-auto">
               <Card className="border-border bg-background">
-                <CardContent className="p-12">
+                <CardContent className="p-4 sm:p-12">
                   <div className="w-16 h-16 rounded-full bg-secondary flex items-center justify-center mx-auto mb-6">
                     <Briefcase className="w-8 h-8 text-foreground/60" />
                   </div>
@@ -330,7 +326,7 @@ const Careers = () => {
                     suitable opportunities arise.
                   </p>
                   <a href="mailto:hr@cynicaltechnology.com">
-                    <Button size="lg">
+                    <Button size="lg" className="w-full sm:w-auto">
                       Submit Your CV
                       <Upload className="ml-2 w-4 h-4" />
                     </Button>
@@ -354,7 +350,7 @@ const Careers = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card className="border-border bg-background">
               <CardContent className="p-6">
                 <div className="aspect-video rounded-lg bg-linear-to-br from-secondary to-background border border-border mb-4 flex items-center justify-center">
@@ -412,9 +408,8 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-20 lg:py-32">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-3 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-3xl md:text-5xl  font-bold tracking-tight mb-6">
               Questions about careers at Cynical?
@@ -428,14 +423,14 @@ const Careers = () => {
               <a href="mailto:hr@cynicaltechnology.com">
                 <Button
                   size="lg"
-                  className="bg-foreground text-background hover:bg-foreground/90"
+                  className="bg-foreground text-background hover:bg-foreground/90 w-full"
                 >
                   Contact HR
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </a>
               <Link href={"/company"}>
-                <Button size="lg" variant="outline">
+                <Button size="lg" variant="outline" className="w-full">
                   About Us
                 </Button>
               </Link>

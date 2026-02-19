@@ -73,7 +73,6 @@ const CloudSecurity = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-16 border-y border-border">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -91,7 +90,6 @@ const CloudSecurity = () => {
         </div>
       </section>
 
-      {/* Capabilities Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-4 lg:gap-12 py-6">
@@ -119,11 +117,11 @@ const CloudSecurity = () => {
             <ResponsiveImage
               src={"/generic/server_room.jpg"}
               alt="A woman in a server room, working on cloud security assessments."
-              className="rounded-lg mt-6"
+              className="rounded-lg mt-6 lg:mt-12"
             />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {capabilities.map((capability, index) => (
               <div
                 key={index}
@@ -148,7 +146,6 @@ const CloudSecurity = () => {
         </div>
       </section>
 
-      {/* Cloud Providers Section */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto mb-16">
@@ -164,7 +161,7 @@ const CloudSecurity = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {cloudProviders.map((provider, index) => (
               <div
                 key={index}
@@ -201,7 +198,6 @@ const CloudSecurity = () => {
         </div>
       </section>
 
-      {/* Methodology Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -252,7 +248,6 @@ const CloudSecurity = () => {
         </div>
       </section>
 
-      {/* Features Grid */}
       <section className="py-20 lg:py-32 bg-secondary/20">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -289,7 +284,6 @@ const CloudSecurity = () => {
         </div>
       </section>
 
-      {/* Security Frameworks Section */}
       <section className="py-20 lg:py-32">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
