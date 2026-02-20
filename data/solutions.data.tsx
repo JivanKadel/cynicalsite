@@ -80,20 +80,20 @@ export const solutions = [
     iconColor: "text-indigo-500",
     href: "/solutions/training-and-consulting",
   },
-  {
-    icon: Search,
-    title: "Threat Intelligence & Recon",
-    description:
-      "Attacker-eye view of your organization. We monitor dark web forums, paste sites, and criminal marketplaces for leaked credentials and mentions of your assets.",
-    features: [
-      "Dark web monitoring",
-      "Credential alerts",
-      "Brand impersonation",
-    ],
-    gradient: "from-slate-500/20 to-gray-500/10",
-    iconColor: "text-green-500",
-    href: "/solutions/threat-intel",
-  },
+  // {
+  //   icon: Search,
+  //   title: "Threat Intelligence & Recon",
+  //   description:
+  //     "Attacker-eye view of your organization. We monitor dark web forums, paste sites, and criminal marketplaces for leaked credentials and mentions of your assets.",
+  //   features: [
+  //     "Dark web monitoring",
+  //     "Credential alerts",
+  //     "Brand impersonation",
+  //   ],
+  //   gradient: "from-slate-500/20 to-gray-500/10",
+  //   iconColor: "text-green-500",
+  //   href: "/solutions/threat-intel",
+  // },
 ];
 
 export const capabilities = [
