@@ -156,6 +156,6 @@ export const features = [
   {
     icon: Shield,
     title: "Compliance Ready",
-    description: "PCI DSS, SOC 2, HIPAA, GDPR",
+    description: "PCI DSS, SOC 2, ISO 27001, and more",
   },
 ];
