@@ -137,28 +137,32 @@ export const engagementTypes = [
 export const features = [
   {
     icon: Users,
-    title: "Former Intelligence Operators",
-    description: "Veterans from intelligence community and military units",
+    title: "Expert Operators",
+    description:
+      "Seasoned red team professionals with diverse backgrounds and real-world experience",
   },
   {
     icon: Radar,
     title: "Stealth Operations",
-    description: "OPSEC-focused approach to avoid premature detection",
+    description: "Stealth-focused approach to avoid premature detection",
   },
   {
     icon: ShieldOff,
     title: "Control Bypass Expertise",
-    description: "Deep knowledge of EDR, XDR, and SIEM evasion",
+    description:
+      "Deep knowledge of bypassing EDR, AV, and other security controls",
   },
   {
     icon: Building2,
-    title: "Physical Penetration",
-    description: "Tailgating, lockpicking, and badge cloning capabilities",
+    title: "Access to Realistic Infrastructure",
+    description:
+      "Access to realistic test environments that mirror production systems.",
   },
   {
     icon: Wifi,
-    title: "Wireless & Radio",
-    description: "RF exploitation, WPA2/3 attacks, and SDR capabilities",
+    title: "Network Exploitation",
+    description:
+      "Exploiting network vulnerabilities and misconfigurations to gain unauthorized access.",
   },
   {
     icon: Phone,
