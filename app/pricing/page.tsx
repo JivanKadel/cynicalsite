@@ -22,7 +22,7 @@ export default function PricingPage() {
       <section
         role="region"
         aria-labelledby="Pricing Details Section"
-        className="grid grid-cols-1 md:grid-cols-2 gap-12 p-2 md:p-12 max-w-7xl mx-auto"
+        className="grid grid-cols-1 min-[880px]:grid-cols-2 gap-12 p-2 md:p-12 max-w-7xl mx-auto"
       >
         <section className="p-2">
           <h1 className="text-[2.7rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
