@@ -347,7 +347,7 @@ const Products = () => {
                   {products[2].title}
                 </h2>
 
-                <div className="ml-2">
+                <div className="ml-2 flex items-center gap-2">
                   {products[2].lightIcon ? (
                     <>
                       <Image
@@ -375,6 +375,7 @@ const Products = () => {
                       className="invert dark:invert-0"
                     />
                   )}
+                  <span className="text-2xl">Flacon</span>
                 </div>
               </div>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 h-full rounded-xl transition-all duration-300">

@@ -47,7 +47,7 @@ export default function HeroSection() {
           pauseOnHover={true}
           gradient={false}
           autoFill={true}
-          speed={10}
+          speed={16}
           style={{
             marginRight: 10,
             overflow: "hidden",
