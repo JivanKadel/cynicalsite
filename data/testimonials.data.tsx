@@ -10,6 +10,7 @@ export const testimonials = [
     image: "/testimonials/neeraj_sir.jpg",
     bgColor: "bg-card-blue",
     brandLogo: "/brands/swift_tech.svg",
+    brandLightLogo: "/brands/swift_tech.svg",
   },
   {
     quote: [
@@ -22,6 +23,7 @@ export const testimonials = [
     image: "/testimonials/mr_jon_gofundme.jpg",
     bgColor: "bg-card-yellow",
     brandLogo: "/brands/gofundme.svg",
+    brandLightLogo: "/brands/gofundme.svg",
   },
   {
     quote: [
@@ -33,7 +35,7 @@ export const testimonials = [
     image: "/testimonials/mr_diwas_esewa.jpg",
     bgColor: "bg-card-green",
     brandLogo: "/brands/fonepay.webp",
-    whiteLogo: true,
+    brandLightLogo: "/brands/fonepay_light.png",
   },
   {
     quote: [
@@ -45,7 +47,7 @@ export const testimonials = [
     image: "/testimonials/mr_ravi_esewa.jpg",
     bgColor: "bg-card-purple",
     brandLogo: "/brands/esewa.png",
-    whiteLogo: true,
+    brandLightLogo: "/brands/esewa_light.png",
   },
   {
     quote: [
@@ -57,6 +59,7 @@ export const testimonials = [
     image: "/testimonials/sailendra_sir.jpg",
     bgColor: "bg-card-pink",
     brandLogo: "/brands/mero_job.svg",
+    brandLightLogo: "/brands/mero_job.svg",
   },
   {
     quote: [
@@ -68,5 +71,6 @@ export const testimonials = [
     image: "/testimonials/santosh_sir.jpg",
     bgColor: "bg-card-pink",
     brandLogo: "/brands/ims_software.png",
+    brandLightLogo: "/brands/ims_software.png",
   },
 ];

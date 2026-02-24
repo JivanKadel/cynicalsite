@@ -83,15 +83,18 @@ const Testimonials = () => {
                       </div>
                       <div>
                         <Image
+                          src={testimonial.brandLightLogo}
+                          alt={`${testimonial.company}-logo-light`}
+                          width={80}
+                          height={50}
+                          className="w-16 sm:w-20 h-auto object-contain block dark:hidden"
+                        />
+                        <Image
                           src={testimonial.brandLogo}
                           alt={`${testimonial.company}-logo`}
                           width={80}
                           height={50}
-                          className={`w-16 sm:w-20 h-auto ${
-                            testimonial.whiteLogo
-                              ? "object-contain bg-black p-1"
-                              : "object-contain"
-                          } dark:bg-none`}
+                          className="w-16 sm:w-20 h-auto object-contain hidden dark:block"
                         />
                       </div>
                     </div>
