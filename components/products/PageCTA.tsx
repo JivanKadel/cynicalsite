@@ -53,7 +53,7 @@ const PageCTA = ({
                   {badge}
                 </div>
 
-                <p className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+                <p className="text-[2rem] font-aeonik font-bold leading-none md:leading-tight xl:leading-20 lg:text-5xl xl:text-6xl -tracking-[1%] text-balance">
                   {headline}
                   <span className="block text-foreground">
                     {highlightedText}

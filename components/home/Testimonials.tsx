@@ -19,7 +19,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-end justify-center mb-12">
           <div>
-            <p className="text-4xl md:text-6xl font-aeonik text-center">
+            <p className="font-aeonik text-2xl sm:text-3xl md:text-5xl font-bold mb-4 text-foreground text-center">
               Trusted by Security & Technology Leader
             </p>
           </div>
