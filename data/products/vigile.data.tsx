@@ -4,6 +4,7 @@ import {
   BarChart3,
   Clock,
   Database,
+  FilePieChart,
   FileText,
   FileWarning,
   Globe,
@@ -20,7 +21,7 @@ export const stats = [
   { value: "250B+", label: "Breach Records Indexed", icon: Database },
   { value: "24/7", label: "Real-time Monitoring", icon: Activity },
   { value: "<5min", label: "Alert Response Time", icon: Clock },
-  { value: "99.9%", label: "Detection Accuracy", icon: ShieldPlus },
+  { value: "99.9%", label: "Detection Accuracy", icon: FilePieChart },
 ];
 
 export const outlookFeatures = [

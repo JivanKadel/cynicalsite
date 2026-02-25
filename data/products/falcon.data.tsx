@@ -8,16 +8,16 @@ import {
   Globe,
   Search,
   Server,
-  Shield,
   Zap,
   Lock,
+  Link,
 } from "lucide-react";
 
 export const stats = [
   { label: "Assets Monitored", value: "100+", icon: Globe },
   { label: "Uptime Check Frequency", value: "60s", icon: Clock },
   { label: "Incidents Detected", value: "1000+", icon: AlertTriangle },
-  { label: "Government Domains", value: "200+", icon: Shield },
+  { label: "Government Domains", value: "200+", icon: Link },
 ];
 
 export const process = [
