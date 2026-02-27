@@ -12,6 +12,12 @@ import {
   CheckCircle,
   Users,
   Sparkles,
+  Building2,
+  GraduationCap,
+  Megaphone,
+  Gift,
+  Shield,
+  Eye,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
@@ -27,8 +33,8 @@ export default function CamLockPage() {
   return (
     <div className="max-w-7xl mx-auto">
       <section className="pt-6 pb-12 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="max-w-4xl">
+        <div className="container mx-auto px-6 relative grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="max-w-4xl lg:col-span-1">
             <div className="flex items-center gap-4 mb-6">
               <div>
                 <h1 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight">
@@ -51,12 +57,12 @@ export default function CamLockPage() {
             </div>
 
             <div className="flex flex-wrap gap-4 mb-8">
-              <div className="bg-secondary/50 rounded-lg px-4 py-2">
+              {/* <div className="bg-secondary/50 rounded-lg px-4 py-2">
                 <span className="text-2xl font-bold">Rs. 99</span>
                 <span className="text-sm text-muted-foreground ml-2">
                   per piece
                 </span>
-              </div>
+              </div> */}
               <div className="bg-secondary/50 rounded-lg px-4 py-2 flex items-center gap-2">
                 <Printer className="w-4 h-4" />
                 <span className="text-sm">Custom logo printing available</span>
@@ -77,7 +83,7 @@ export default function CamLockPage() {
             </div>
           </div>
 
-          <div className="relative">
+          <div className="relative lg:col-span-2">
             <div className="relative bg-background rounded-2xl border border-border p-4">
               <Image
                 src="/products/camlock_showcase.png"
@@ -91,119 +97,164 @@ export default function CamLockPage() {
         </div>
       </section>
 
-      <section className="py-12 border-y border-border">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-background rounded-xl p-6 border border-border">
-              <Package className="w-8 h-8 mb-4 text-muted-foreground" />
-              <h3 className="font-semibold mb-2">Bulk Orders</h3>
-              <p className="text-2xl font-bold mb-1">
-                Rs. 99
-                <span className="text-sm font-normal text-muted-foreground">
-                  /unit
-                </span>
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Minimum order: 25 units
-              </p>
-            </div>
+      <section className="py-24 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative z-10">
+          {/* Header - Made Big and Prominent */}
+          <div className="text-center max-w-4xl mx-auto mb-16">
+            <h2 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+              YOUR LAPTOP IS A
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">
+                TWO-WAY MIRROR
+              </span>
+            </h2>
 
-            <div className="bg-background rounded-xl p-6 border border-border">
-              <div className="absolute -mt-8">
-                <span className="bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full">
-                  Popular
-                </span>
-              </div>
-              <Sparkles className="w-8 h-8 mb-4 text-muted-foreground" />
-              <h3 className="font-semibold mb-2">With Your Logo</h3>
-              <p className="text-2xl font-bold mb-1">Negotiated</p>
-              <p className="text-sm text-muted-foreground">
-                Pricing based on order volume
-              </p>
-            </div>
-
-            <div className="bg-background rounded-xl p-6 border border-border">
-              <Users className="w-8 h-8 mb-4 text-muted-foreground" />
-              <h3 className="font-semibold mb-2">Enterprise</h3>
-              <p className="text-2xl font-bold mb-1">10,000+ units</p>
-              <p className="text-sm text-muted-foreground">
-                Special pricing for large organizations
-              </p>
-            </div>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light">
+              That little light on your webcam? It's been lying to you.
+              <span className="block font-semibold text-foreground mt-2">
+                Hackers bypassed it years ago. Your camera is always watching.
+              </span>
+            </p>
           </div>
-        </div>
-      </section>
 
-      {/* Reality Check Section */}
-      <section className="py-16 bg-secondary/30 border-y border-border">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center">
-                  <AlertTriangle className="w-5 h-5 text-red-400" />
+          {/* Two Column Layout */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Left Column - Security Reasons */}
+            <div className="space-y-8">
+              {/* Security Cards */}
+              <div className="grid gap-6">
+                <div className="bg-background/80 backdrop-blur rounded-2xl border-2 border-red-500/20 p-8 shadow-xl">
+                  <div className="flex flex-col sm:flex-row items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center shrink-0">
+                      <XCircle className="w-6 h-6 text-red-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">
+                        The "Privacy Light" Lie
+                      </h3>
+                      <p className="text-muted-foreground text-lg mb-4">
+                        Malware can activate your camera without triggering the
+                        LED.
+                        <span className="block text-foreground font-semibold mt-1">
+                          It's been demonstrated in labs. It's happening in the
+                          wild.
+                        </span>
+                      </p>
+                      <div className="bg-red-500/5 rounded-lg p-4 border border-red-500/10">
+                        <p className="text-sm font-mono">
+                          "In 2014, researchers proved iSight cameras could be
+                          activated without the green light. In 2020, Zoom
+                          bombing became mainstream. In 2024, are you still
+                          trusting a $0.05 LED?"
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <span className="text-sm font-medium text-red-400 uppercase tracking-wider">
-                  Reality Check
-                </span>
+
+                <div className="bg-background/80 backdrop-blur rounded-2xl border-2 border-orange-500/20 p-8 shadow-xl">
+                  <div className="flex flex-col sm:flex-row items-start gap-4">
+                    <div className="w-12 h-12 rounded-full bg-orange-500/10 flex items-center justify-center shrink-0">
+                      <Eye className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2">
+                        Always Watching. Always.
+                      </h3>
+                      <p className="text-muted-foreground text-lg">
+                        Even when your laptop is closed. Even in "sleep mode."
+                        Modern laptops can wake for updates, and malware can
+                        wake for you.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Your laptop is basically{" "}
-                <span className="text-muted-foreground">a two-way mirror</span>
-              </h2>
-
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <XCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-medium">
-                      That &quot;privacy light&quot; means nothing
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Malware can turn on your camera without triggering the
-                      LED. It&apos;s been demonstrated. Repeatedly.
-                    </p>
-                  </div>
+              {/* Stats/Proof */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="text-center p-4">
+                  <div className="text-3xl font-black text-red-400">89%</div>
+                  <p className="text-xs text-muted-foreground">
+                    of webcams can be remotely activated
+                  </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <XCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-medium">
-                      Your camera may always be watching
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Even when you think it&apos;s off. Even when your laptop
-                      is closed.
-                    </p>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-black text-orange-400">
+                    15M+
                   </div>
+                  <p className="text-xs text-muted-foreground">
+                    malware attacks targeting cameras yearly
+                  </p>
+                </div>
+                <div className="text-center p-4">
+                  <div className="text-3xl font-black text-green-500">
+                    Rs. 99
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    cost of protection vs. cost of breach
+                  </p>
                 </div>
               </div>
             </div>
 
-            {/* Logo Showcase */}
-            <div className="space-y-4">
-              <div className="bg-background rounded-xl p-6 border border-border">
-                <h3 className="font-semibold mb-4 flex items-center gap-2">
-                  <Printer className="w-4 h-4" />
-                  Custom Logo Printing
+            <div className="space-y-8">
+              <div className="rounded-2xl border border-border p-8 shadow-xl">
+                <h3 className="text-3xl font-bold mb-6 flex items-center gap-3">
+                  <Building2 className="w-8 h-8 hidden sm:block" />
+                  More Than Just Security
                 </h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Have your company logo printed on each CamLock. Perfect for:
+
+                <p className="text-lg text-muted-foreground mb-8">
+                  Protect your team, reward your employees, or promoting your
+                  brand. CamLock delivers your message every time someone looks
+                  at their laptop.
                 </p>
-                <ul className="space-y-6">
-                  {[
-                    "Employee onboarding kits",
-                    "Corporate gifts",
-                    "Security awareness programs",
-                    "Conference giveaways",
-                  ].map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-sm">
-                      <CheckCircle className="w-4 h-4 text-green-500" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                {/* Use Cases Grid */}
+                <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                  <div className="bg-background rounded-xl p-4 border">
+                    <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mb-3">
+                      <Users className="w-5 h-5 text-blue-400" />
+                    </div>
+                    <h4 className="font-bold mb-1">Employee Appreciation</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Show you care about their privacy. Best Rs. 99 gift
+                      they'll actually use.
+                    </p>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-4 border">
+                    <div className="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center mb-3">
+                      <Gift className="w-5 h-5 text-green-400" />
+                    </div>
+                    <h4 className="font-bold mb-1">Corporate Gifts</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Useful. Memorable. Branded with your logo. Actually gets
+                      used.
+                    </p>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-4 border">
+                    <div className="w-10 h-10 rounded-full bg-purple-500/10 flex items-center justify-center mb-3">
+                      <Megaphone className="w-5 h-5 text-purple-400" />
+                    </div>
+                    <h4 className="font-bold mb-1">Conference Swag</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Better than another stress ball. Your logo, daily
+                      visibility.
+                    </p>
+                  </div>
+
+                  <div className="bg-background rounded-xl p-4 border">
+                    <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center mb-3">
+                      <GraduationCap className="w-5 h-5 text-amber-400" />
+                    </div>
+                    <h4 className="font-bold mb-1">Security Training</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Tangible reminder of your security-first culture.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -215,7 +266,7 @@ export default function CamLockPage() {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="inline-flex items-center gap-2 text-xl sm:text-2xl text-muted-foreground uppercase tracking-widest mb-4">
-              The Solution
+              Why CamLock?
             </span>
           </div>
 
@@ -360,6 +411,48 @@ export default function CamLockPage() {
           </div>
         </div>
       </section>
+      <section className="py-12 border-y border-border">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-background rounded-xl p-6 border border-border">
+              <Package className="w-8 h-8 mb-4 text-muted-foreground" />
+              <h3 className="font-semibold mb-2">Bulk Orders</h3>
+              <p className="text-2xl font-bold mb-1">
+                Rs. 99
+                <span className="text-sm font-normal text-muted-foreground">
+                  /unit
+                </span>
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Minimum order: 25 units
+              </p>
+            </div>
+
+            <div className="bg-background rounded-xl p-6 border border-border">
+              <div className="absolute -mt-8">
+                <span className="bg-primary text-primary-foreground text-xs px-3 py-1 rounded-full">
+                  Popular
+                </span>
+              </div>
+              <Sparkles className="w-8 h-8 mb-4 text-muted-foreground" />
+              <h3 className="font-semibold mb-2">With Your Logo</h3>
+              <p className="text-2xl font-bold mb-1">Negotiable</p>
+              <p className="text-sm text-muted-foreground">
+                Pricing based on order volume
+              </p>
+            </div>
+
+            <div className="bg-background rounded-xl p-6 border border-border">
+              <Users className="w-8 h-8 mb-4 text-muted-foreground" />
+              <h3 className="font-semibold mb-2">Enterprise</h3>
+              <p className="text-2xl font-bold mb-1">10,000+ units</p>
+              <p className="text-sm text-muted-foreground">
+                Special pricing for large organizations
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Bulk Order CTA */}
       <section className="py-20">
@@ -377,7 +470,7 @@ export default function CamLockPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button size="lg" className="h-14 px-8 text-base">
+              <Button size="lg" className="h-12 px-8 text-base">
                 <ShoppingCart className="w-4 h-4 mr-2" />
                 Order Now
               </Button>
