@@ -29,7 +29,7 @@ export default function TrustAuthority1() {
           </p>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Every engagement is a simulated attack campaign, not a checklist.
-            Our methodology mirrors real-world adversaries—because that's who
+            Our methodology mirrors real-world adversaries because that's who
             you're defending against.
           </p>
         </div>
