@@ -1,259 +1,3 @@
-// import {
-//   Package,
-//   MapPin,
-//   AlertTriangle,
-//   XCircle,
-//   Bandage,
-//   SlidersHorizontal,
-//   RulerDimensionLine,
-//   VectorSquare,
-// } from "lucide-react";
-// import { Metadata } from "next";
-// import Image from "next/image";
-
-// export const metadata: Metadata = {
-//   title: "CamLock | Protect Your Privacy",
-//   description:
-//     "Protect your privacy with a camera protection for laptops and tablets with CamLock by Cynical Technology.",
-// };
-
-// export default function CamLock() {
-//   return (
-//     <div>
-//       <section className="pt-6 pb-12 relative overflow-hidden">
-//         <div className="container mx-auto px-6 relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-//           <div className="max-w-4xl">
-//             <div className="flex items-center gap-4 mb-6">
-//               <div>
-//                 <h1 className="text-4xl md:text-6xl font-bold mt-4 tracking-tight">
-//                   Cam<span className="text-muted-foreground">Lock</span>
-//                 </h1>
-//               </div>
-//             </div>
-
-//             <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-body leading-relaxed max-w-3xl">
-//               <span className="text-foreground font-semibold">
-//                 Protect Your Privacy.
-//               </span>
-//             </p>
-
-//             <div className="flex items-center gap-2 mb-6">
-//               <MapPin className="w-4 h-4 text-muted-foreground" />
-//               <span className="text-sm text-muted-foreground">
-//                 Proudly Made in Nepal
-//               </span>
-//             </div>
-//           </div>
-
-//           <div className="relative">
-//             <div className="relative bg-background rounded-2xl border border-border p-4">
-//               <Image
-//                 src="/products/camlock_showcase.png"
-//                 alt="CamLock - A tiny piece of plastic that slides over your webcam"
-//                 width={800}
-//                 height={500}
-//                 className="rounded-xl dark:brightness-90"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//       <section className="py-16 bg-secondary/30 border-y border-border">
-//         <div className="container mx-auto px-6">
-//           <div className="grid md:grid-cols-2 gap-12 items-center">
-//             <div className="space-y-6">
-//               <div className="flex items-center gap-3">
-//                 <div className="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center">
-//                   <AlertTriangle className="w-5 h-5 text-red-400" />
-//                 </div>
-//                 <span className="text-sm font-medium text-red-400 uppercase tracking-wider">
-//                   Reality Check
-//                 </span>
-//               </div>
-
-//               <h2 className="text-3xl md:text-4xl font-bold">
-//                 Your laptop is basically{" "}
-//                 <span className="text-muted-foreground">a two-way mirror</span>
-//               </h2>
-
-//               <p className="text-lg text-muted-foreground">
-//                 Remember when Mark Zuckerberg put tape over his webcam? Well,
-//                 you&apos;re reading this on a device that can spy on you.
-//               </p>
-
-//               <div className="space-y-4">
-//                 <div className="flex items-start gap-3">
-//                   <XCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-//                   <div>
-//                     <p className="font-medium">
-//                       That &quot;privacy light&quot; means nothing
-//                     </p>
-//                     <p className="text-sm text-muted-foreground">
-//                       Malware can turn on your camera without triggering the
-//                       LED. It&apos;s been demonstrated. Repeatedly.
-//                     </p>
-//                   </div>
-//                 </div>
-//                 <div className="flex items-start gap-3">
-//                   <XCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-//                   <div>
-//                     <p className="font-medium">
-//                       Your camera is always watching
-//                     </p>
-//                     <p className="text-sm text-muted-foreground">
-//                       Even when you think it&apos;s off. Even when your laptop
-//                       is closed.
-//                     </p>
-//                   </div>
-//                 </div>
-//                 <div className="flex items-start gap-3">
-//                   <XCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
-//                   <div>
-//                     <p className="font-medium">Nobody is coming to save you</p>
-//                     <p className="text-sm text-muted-foreground">
-//                       Not the government. Not your IT department. Not the nice
-//                       people at Apple/ Microsoft.
-//                     </p>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Product Details */}
-//       <section className="py-20">
-//         <div className="container mx-auto px-6">
-//           <div className="text-center max-w-2xl mx-auto mb-12">
-//             <span className="inline-flex items-center gap-2 text-xl sm:text-2xl text-muted-foreground uppercase tracking-widest mb-4">
-//               The Solution
-//             </span>
-//           </div>
-
-//           <div className="grid md:grid-cols-2 gap-6 mb-16">
-//             <div className="flex flex-col gap-3 md:justify-between">
-//               <div className="p-6 rounded-xl border border-border bg-background">
-//                 <RulerDimensionLine className="w-8 h-8 mb-4 text-muted-foreground" />
-//                 <h3 className="font-semibold mb-2">Ultra-Thin</h3>
-//                 <p className="text-sm text-muted-foreground">
-//                   0.7mm thin. Its so thin, you might forget it&apos;s there.
-//                   Until you need it.
-//                 </p>
-//               </div>
-//               <div className="p-6 rounded-xl border border-border bg-background">
-//                 <SlidersHorizontal className="w-8 h-8 mb-4 text-muted-foreground" />
-//                 <h3 className="font-semibold mb-2">Sliding Mechanism</h3>
-//                 <p className="text-sm text-muted-foreground">
-//                   Slides open when you want to be seen.
-//                 </p>
-//               </div>
-//               <div className="p-6 rounded-xl border border-border bg-background">
-//                 <Bandage className="w-8 h-8 mb-4 text-muted-foreground" />
-//                 <h3 className="font-semibold mb-2">Zero Adhesive Residue</h3>
-//                 <p className="text-sm text-muted-foreground">
-//                   The Residue always comes off clean.
-//                 </p>
-//               </div>
-//               <div className="p-6 rounded-xl border border-border bg-background">
-//                 <VectorSquare className="w-8 h-8 mb-4 text-muted-foreground" />
-//                 <h3 className="font-semibold mb-2">Universal Fit</h3>
-//                 <p className="text-sm text-muted-foreground">
-//                   Fits all laptops and tablets.
-//                 </p>
-//               </div>
-//             </div>
-//             <div className="relative">
-//               <div className="relative bg-background rounded-2xl border border-border p-4">
-//                 <Image
-//                   src="/products/camlock_desc.png"
-//                   alt="CamLock - A tiny piece of plastic that slides over your webcam"
-//                   width={800}
-//                   height={500}
-//                   className="rounded-xl dark:brightness-90"
-//                 />
-//               </div>
-//             </div>
-//           </div>
-
-//           <div className="grid lg:grid-cols-2 items-center gap-12">
-//             <div className="bg-secondary/30 rounded-2xl p-8 border border-border">
-//               <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-//                 <Package className="w-5 h-5" />
-//                 Installation
-//               </h3>
-
-//               <div className="space-y-6">
-//                 <div className="flex gap-4">
-//                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-//                     <span className="text-sm font-bold">1</span>
-//                   </div>
-//                   <div>
-//                     <p className="font-medium mb-1">
-//                       Clean your device camera surface
-//                     </p>
-//                   </div>
-//                 </div>
-
-//                 <div className="flex gap-4">
-//                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-//                     <span className="text-sm font-bold">2</span>
-//                   </div>
-//                   <div>
-//                     <p className="font-medium mb-1">Remove the Tape</p>
-//                   </div>
-//                 </div>
-
-//                 <div className="flex gap-4">
-//                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-//                     <span className="text-sm font-bold">3</span>
-//                   </div>
-//                   <div>
-//                     <p className="font-medium mb-1">Align with your camera</p>
-//                   </div>
-//                 </div>
-
-//                 <div className="flex gap-4">
-//                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-//                     <span className="text-sm font-bold">4</span>
-//                   </div>
-//                   <div>
-//                     <p className="font-medium mb-1">
-//                       Press firmly for a few seconds
-//                     </p>
-//                   </div>
-//                 </div>
-
-//                 <div className="flex gap-4">
-//                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
-//                     <span className="text-sm font-bold">5</span>
-//                   </div>
-//                   <div>
-//                     <p className="font-medium mb-1">Test the slider</p>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-
-//             <div className="relative">
-//               <div className="relative bg-background rounded-2xl border border-border p-4">
-//                 <Image
-//                   src="/products/camlock_how.png"
-//                   alt="CamLock - A tiny piece of plastic that slides over your webcam"
-//                   width={800}
-//                   height={500}
-//                   className="rounded-xl dark:brightness-90"
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
-
 import {
   Package,
   MapPin,
@@ -264,12 +8,9 @@ import {
   RulerDimensionLine,
   VectorSquare,
   Printer,
-  Building2,
   ShoppingCart,
   CheckCircle,
-  Shield,
   Users,
-  CreditCard,
   Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -323,10 +64,16 @@ export default function CamLockPage() {
             </div>
 
             <div className="grid max-w-md grid-cols-1 md:grid-cols-2 gap-3">
-              <Button className="h-12 px-4 w-full text-base">
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Order Now
-              </Button>
+              <a
+                href="https://forms.gle/uHf6FSsfDYJE4VBQ9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="h-12 px-4 w-full text-base">
+                  <ShoppingCart className="w-4 h-4 mr-2" />
+                  Order Now
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -544,10 +291,16 @@ export default function CamLockPage() {
                 ))}
               </div>
 
-              <Button className="w-full mt-6">
-                <ShoppingCart className="w-4 h-4 mr-2" />
-                Order Now
-              </Button>
+              <a
+                href="https://forms.gle/uHf6FSsfDYJE4VBQ9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="w-full mt-6">
+                  <ShoppingCart className="w-4 h-4 mr-2" />
+                  Order Now
+                </Button>
+              </a>
             </div>
 
             {/* Product Showcase */}
@@ -618,14 +371,16 @@ export default function CamLockPage() {
             starting at Rs. 99 per piece.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" className="h-14 px-8 text-base">
-              <ShoppingCart className="w-4 h-4 mr-2" />
-              Place Bulk Order
-            </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-base">
-              <Printer className="w-4 h-4 mr-2" />
-              Request Logo Sample
-            </Button>
+            <a
+              href="https://forms.gle/uHf6FSsfDYJE4VBQ9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="h-14 px-8 text-base">
+                <ShoppingCart className="w-4 h-4 mr-2" />
+                Order Now
+              </Button>
+            </a>
           </div>
           <p className="text-sm text-muted-foreground mt-6">
             *Minimum bulk order: 25 units.
