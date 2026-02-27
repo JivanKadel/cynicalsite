@@ -19,19 +19,16 @@ import {
   Radar,
   Code,
   Cloud,
-  Search,
   AlertTriangle,
   Users,
-  FileText,
-  BookOpen,
   ChevronDown,
   Infinity,
-  Calendar1,
   BriefcaseBusiness,
   Building2,
   Eye,
   Handshake,
   GraduationCap,
+  CameraOff,
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -62,6 +59,12 @@ export default function Navbar() {
       label: "Falcon",
       description: "Continuous security and Uptime Monitoring",
       href: "/products/falcon",
+    },
+    {
+      icon: CameraOff,
+      label: "CamLock",
+      description: "Protect your webcam from potential spying",
+      href: "/products/camlock",
     },
   ];
 

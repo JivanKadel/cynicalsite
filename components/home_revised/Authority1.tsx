@@ -24,13 +24,13 @@ export default function TrustAuthority1() {
             Offensive Security Excellence
           </span>
           <p className="font-aeonik text-2xl sm:text-3xl md:text-5xl font-bold text-foreground">
-            We don't just find bugs.
+            We don&apos;t just find bugs.
             <span className="block">We understand adversaries.</span>
           </p>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             Every engagement is a simulated attack campaign, not a checklist.
             Our methodology mirrors real-world adversaries because that's who
-            you're defending against.
+            you&apos;re defending against.
           </p>
         </div>
 

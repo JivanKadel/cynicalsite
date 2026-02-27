@@ -4,6 +4,7 @@ import Solutions from "@/components/home/Solutions";
 import Testimonials from "@/components/home/Testimonials";
 import TrustAuthority1 from "@/components/home_revised/Authority1";
 import TrustAuthority2 from "@/components/home_revised/Authority2";
+import TrustAuthority3 from "@/components/home_revised/Authority3";
 import TrustAuthority from "@/components/home_revised/TrustAuthority";
 import PageCTA from "@/components/products/PageCTA";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <TrustAuthority />
       <TrustAuthority1 />
       <TrustAuthority2 />
+      <TrustAuthority3 />
       <Products />
       {/* <CaseStudies /> */}
       {/* <Stats /> */}
