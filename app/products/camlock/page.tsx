@@ -98,7 +98,7 @@ export default function CamLockPage() {
               <Package className="w-8 h-8 mb-4 text-muted-foreground" />
               <h3 className="font-semibold mb-2">Bulk Orders</h3>
               <p className="text-2xl font-bold mb-1">
-                ₹99{" "}
+                Rs. 99
                 <span className="text-sm font-normal text-muted-foreground">
                   /unit
                 </span>
@@ -233,7 +233,8 @@ export default function CamLockPage() {
                 <SlidersHorizontal className="w-8 h-8 mb-4 text-muted-foreground" />
                 <h3 className="font-semibold mb-2">Sliding Mechanism</h3>
                 <p className="text-sm text-muted-foreground">
-                  Slides open when you want to be seen. Closed when you don't.
+                  Slides open when you want to be seen. Closed when you
+                  don&apos;t.
                 </p>
               </div>
               <div className="p-6 rounded-xl border border-border bg-background">
