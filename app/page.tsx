@@ -2,14 +2,20 @@ import HeroSection from "@/components/home/HeroSection";
 import Products from "@/components/home/Products";
 import Solutions from "@/components/home/Solutions";
 import Testimonials from "@/components/home/Testimonials";
+import TrustAuthority1 from "@/components/home_revised/Authority1";
+import TrustAuthority2 from "@/components/home_revised/Authority2";
+import TrustAuthority from "@/components/home_revised/TrustAuthority";
 import PageCTA from "@/components/products/PageCTA";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <HeroSection />
+      {/* <Solutions /> */}
+      <TrustAuthority />
+      <TrustAuthority1 />
+      <TrustAuthority2 />
       <Products />
-      <Solutions />
       {/* <CaseStudies /> */}
       {/* <Stats /> */}
       <Testimonials />
