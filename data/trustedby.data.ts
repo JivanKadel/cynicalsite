@@ -56,7 +56,11 @@ export const trustedBy = [
     image: "/brands/webpoint.svg",
     link: "https://webpoint.io/",
   },
-
+  // {
+  //   name: "fonepay",
+  //   image: "/brands/fonepay_light.png",
+  //   link: "https://fonepay.com/",
+  // },
   {
     name: "foneloan",
     image: "/brands/foneloan.png",
