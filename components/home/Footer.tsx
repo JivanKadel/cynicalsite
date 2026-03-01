@@ -8,6 +8,7 @@ const Footer = () => {
       { label: "Bugv Platform", href: "/products/bugv" },
       { label: "Vigile.AI", href: "/products/vigile" },
       { label: "Falcon", href: "/products/falcon" },
+      { label: "CamLock", href: "/products/camlock" },
     ],
     Solutions: [
       { label: "Application Security", href: "/solutions/app-security" },

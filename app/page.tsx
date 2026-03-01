@@ -15,9 +15,9 @@ export default function Home() {
       {/* <Solutions /> */}
       <TrustAuthority />
       <TrustAuthority1 />
-      <TrustAuthority2 />
+      {/* <TrustAuthority2 /> */}
       <TrustAuthority3 />
-      <Products />
+      {/* <Products /> */}
       {/* <CaseStudies /> */}
       {/* <Stats /> */}
       <Testimonials />

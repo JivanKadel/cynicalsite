@@ -2,23 +2,17 @@ import {
   ArrowRight,
   Terminal,
   Map,
-  Shield,
   Eye,
-  Users,
   GitBranch,
   AlertCircle,
 } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function TrustAuthority3() {
   return (
     <section id="trust-authority" className="py-10 relative overflow-hidden">
-      {/* Background pattern - subtle grid or circuit board effect */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(0,255,0,0.03),transparent_50%)]" />
 
       <div className="container mx-auto px-6 relative">
-        {/* Hero section - more editorial feel */}
         <div className="max-w-4xl mx-auto text-center mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 mb-8">
             <Terminal className="w-4 h-4 text-green-500" />
@@ -36,10 +30,9 @@ export default function TrustAuthority3() {
           </p>
         </div>
 
-        {/* Feature Story: Zero-Day Discovery */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-24">
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-red-500/10 to-transparent rounded-3xl blur-2xl" />
+            <div className="absolute -inset-4 bg-linear-to-r from-red-500/10 to-transparent rounded-3xl blur-2xl" />
             <div className="relative bg-card border border-border/30 rounded-2xl p-1">
               <div className="bg-secondary/30 rounded-xl p-4 font-mono text-sm">
                 <div className="flex items-center gap-2 text-green-500 mb-3">
@@ -62,7 +55,7 @@ export default function TrustAuthority3() {
                 </div>
               </div>
             </div>
-            {/* Floating badge */}
+
             <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-full shadow-2xl">
               <span className="text-sm font-mono">0-day → patch: 48hrs</span>
             </div>
@@ -74,12 +67,12 @@ export default function TrustAuthority3() {
               <span>Real story. March 2024.</span>
             </div>
             <h2 className="font-aeonik text-3xl sm:text-4xl font-bold text-foreground">
-              We find what scanners can't.
+              We find what scanners can&apos;t.
             </h2>
             <p className="text-lg text-muted-foreground">
-              A major fintech's authentication service had been vulnerable for
-              18 months. No scanner detected it. No auditor flagged it. We found
-              it in 4 hours.
+              A major fintech&apos;s authentication service had been vulnerable
+              for 18 months. No scanner detected it. No auditor flagged it. We
+              found it in 4 hours.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               {["Business logic flaw", "Zero logs", "Production impact"].map(
@@ -96,21 +89,19 @@ export default function TrustAuthority3() {
           </div>
         </div>
 
-        {/* The Approach - Visual Journey */}
         <div className="mb-24">
           <div className="text-center mb-12">
             <h2 className="font-aeonik text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              The attacker's journey
+              The attacker&apos;s journey
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We don't follow checklists. We follow the path of least
+              We don&apos;t follow checklists. We follow the path of least
               resistance.
             </p>
           </div>
 
           <div className="relative">
-            {/* Connecting line */}
-            <div className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-border to-transparent hidden lg:block" />
+            <div className="absolute left-0 right-0 top-1/2 h-px bg-linear-to-r from-transparent via-border to-transparent hidden lg:block" />
 
             <div className="grid grid-cols-1 lg:grid-cols-4 items-stretch gap-4">
               {[
@@ -159,7 +150,6 @@ export default function TrustAuthority3() {
                       </p>
                     </div>
 
-                    {/* Arrow between phases */}
                     {i < 3 && (
                       <div className="hidden lg:block absolute -right-2 top-1/2 transform -translate-y-1/2 z-10">
                         <ArrowRight className="w-4 h-4 text-muted-foreground" />
@@ -172,10 +162,8 @@ export default function TrustAuthority3() {
           </div>
         </div>
 
-        {/* Trust through transparency */}
-        <div className="rounded-3xl border border-border/30 bg-gradient-to-br from-secondary/20 to-secondary/5 overflow-hidden mb-24">
+        <div className="rounded-3xl border border-border/30 bg-linear-to-br from-secondary/20 to-secondary/5 overflow-hidden mb-24">
           <div className="grid lg:grid-cols-2">
-            {/* Left: Narrative */}
             <div className="p-8 lg:p-12">
               <h2 className="font-aeonik text-3xl sm:text-4xl font-bold text-foreground mb-6">
                 Full disclosure. <br />
@@ -201,10 +189,9 @@ export default function TrustAuthority3() {
               </ul>
             </div>
 
-            {/* Right: Visual proof */}
-            <div className="relative min-h-[300px] bg-secondary/30 p-8 lg:p-12 flex items-center">
+            <div className="relative min-h-75 bg-secondary/30 p-8 lg:p-12 flex items-center">
               <div className="relative w-full">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-primary/5 to-transparent" />
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-card rounded-xl p-4 border border-border/30">
                     <div className="font-mono text-xs text-green-500 mb-2">

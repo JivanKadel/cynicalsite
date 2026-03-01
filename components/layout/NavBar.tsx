@@ -30,7 +30,7 @@ import {
   GraduationCap,
   CameraOff,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 
 import { ThemeSwitcher } from "../theme-switcher";
@@ -39,6 +39,10 @@ import { ScheduleCallDialog } from "../contact/SchedulDialog";
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const products = [
     {
