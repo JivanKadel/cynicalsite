@@ -8,7 +8,6 @@ import {
   ShoppingCart,
   Users,
   Sparkles,
-  Building2,
   GraduationCap,
   Megaphone,
   Gift,
@@ -327,7 +326,6 @@ export default function CamLockPage() {
               laptop.
             </p>
 
-            {/* Use Cases Grid */}
             <div className="grid sm:grid-cols-2 gap-4 mb-8">
               <div className="bg-background rounded-xl p-4 border">
                 <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mb-3">
