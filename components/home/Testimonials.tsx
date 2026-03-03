@@ -15,7 +15,7 @@ const Testimonials = () => {
   const autoplay = Autoplay({ delay: 3000, stopOnInteraction: false });
 
   return (
-    <section className="py-12 lg:mt-12 bg-background overflow-hidden">
+    <section className="py-6 sm:py-12 lg:mt-12 bg-background overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="flex items-end justify-center mb-12">
           <div>

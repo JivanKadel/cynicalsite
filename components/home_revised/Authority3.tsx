@@ -162,7 +162,7 @@ export default function TrustAuthority3() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-border/30 bg-linear-to-br from-secondary/20 to-secondary/5 overflow-hidden mb-24">
+        <div className="rounded-3xl border border-border/30 bg-linear-to-br from-secondary/20 to-secondary/5 overflow-hidden mb-12 md:mb-24">
           <div className="grid lg:grid-cols-2">
             <div className="p-8 lg:p-12">
               <h2 className="font-aeonik text-3xl sm:text-4xl font-bold text-foreground mb-6">
@@ -189,10 +189,10 @@ export default function TrustAuthority3() {
               </ul>
             </div>
 
-            <div className="relative min-h-75 bg-secondary/30 p-8 lg:p-12 flex items-center">
-              <div className="relative w-full">
+            <div className="relative min-h-75 bg-secondary/30 p-6 lg:p-12 flex items-center">
+              <div className="relative w-full h-full">
                 <div className="absolute inset-0 bg-linear-to-r from-transparent via-primary/5 to-transparent" />
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid h-full grid-cols-2 gap-4">
                   <div className="bg-card rounded-xl p-4 border border-border/30">
                     <div className="font-mono text-xs text-green-500 mb-2">
                       exploit.py

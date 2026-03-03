@@ -58,7 +58,7 @@ export const trustedBy = [
   },
   // {
   //   name: "fonepay",
-  //   image: "/brands/fonepay_light.png",
+  //   image: "/brands/fonepay.png",
   //   link: "https://fonepay.com/",
   // },
   {
