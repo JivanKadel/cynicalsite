@@ -191,9 +191,8 @@ export default function TrustAuthority3() {
 
             <div className="relative min-h-75 bg-secondary/30 p-6 lg:p-12 flex items-center">
               <div className="relative w-full h-full">
-                <div className="absolute inset-0 bg-linear-to-r from-transparent via-primary/5 to-transparent" />
                 <div className="grid h-full grid-cols-2 gap-4">
-                  <div className="bg-card rounded-xl p-4 border border-border/30">
+                  <div className="bg-card rounded-xl p-4 border border-border">
                     <div className="font-mono text-xs text-green-500 mb-2">
                       exploit.py
                     </div>
@@ -203,7 +202,7 @@ export default function TrustAuthority3() {
                       <div className="h-2 w-full bg-secondary rounded" />
                     </div>
                   </div>
-                  <div className="bg-card rounded-xl p-4 border border-border/30">
+                  <div className="bg-card rounded-xl p-4 border border-border">
                     <div className="font-mono text-xs text-blue-500 mb-2">
                       impact.md
                     </div>
