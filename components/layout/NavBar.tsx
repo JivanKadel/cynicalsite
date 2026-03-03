@@ -48,7 +48,7 @@ export default function Navbar() {
     {
       icon: Bug,
       label: "Bugv",
-      description: "World's No 1. Crowdsourced security platform",
+      description: "#1 Crowdsourced security platform",
       href: "/products/bugv",
     },
     {
