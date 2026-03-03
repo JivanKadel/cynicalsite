@@ -1,5 +1,5 @@
 "use client";
-import { Cpu, HatGlasses, Settings } from "lucide-react";
+import { Cpu, HatGlasses } from "lucide-react";
 import Image from "next/image";
 
 const DataFlowDiagram = () => {
