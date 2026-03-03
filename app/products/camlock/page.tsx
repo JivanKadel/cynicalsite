@@ -31,7 +31,7 @@ export default function CamLockPage() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-1">
               <div>
-                <p className="text-2xl md:text-4xl lg:text-5xl font-aeonik">
+                <p className="text-2xl/normal md:text-4xl/normal lg:text-5xl/normal font-aeonik">
                   Take control of your Digital Privacy
                 </p>
                 <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mt-4 tracking-tight">
