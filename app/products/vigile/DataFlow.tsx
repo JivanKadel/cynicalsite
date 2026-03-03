@@ -1,5 +1,5 @@
 "use client";
-import { HatGlasses, Settings } from "lucide-react";
+import { Cpu, HatGlasses, Settings } from "lucide-react";
 import Image from "next/image";
 
 const DataFlowDiagram = () => {
@@ -51,7 +51,7 @@ const DataFlowDiagram = () => {
             <div className="relative flex flex-col justify-center items-center">
               <div className="absolute w-12 h-12 rounded-full bg-background border border-green-500/30 shadow-sm" />
 
-              <Settings className="w-7 h-7 text-green-500 relative z-10" />
+              <Cpu className="w-7 h-7 text-green-500 relative z-10" />
             </div>
           </div>
 

@@ -13,7 +13,7 @@ import {
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Bugv | Crowdsourced Cyber Security Platform",
+  title: "Bugv | #1 Crowdsourced CyberSecurity & Pentesting Platform",
   description:
     "Bugv is a crowdsourcing cybersecurity platform powered by human intelligence where we connect businesses with cyber security experts from all around the world.",
 };
