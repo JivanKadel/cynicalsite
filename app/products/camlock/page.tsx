@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 export default function CamLockPage() {
   return (
     <div className="max-w-7xl mx-auto">
-      <section className="pt-6 pb-12 relative overflow-hidden">
-        <div className="container mx-auto px-6 relative grid grid-cols-1 lg:grid-cols-5 items-center gap-8">
+      <section className="pt-6 pb-4 sm:pb-12 relative overflow-hidden">
+        <div className="container mx-auto px-6 relative grid grid-cols-1 lg:grid-cols-5 items-center gap-4 sm:gap-8">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-1">
               <div>
@@ -61,7 +61,7 @@ export default function CamLockPage() {
         </div>
       </section>
 
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-8 sm:py-24 relative overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <h2 className="text-2xl sm:text-5xl md:text-7xl font-black mb-6 leading-tight">
