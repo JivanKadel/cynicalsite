@@ -135,7 +135,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
       </head>
-      <body>
+      <body className="pointer-events-auto!">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

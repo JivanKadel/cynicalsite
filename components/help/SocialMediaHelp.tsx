@@ -89,54 +89,55 @@ export default function HelpWidget() {
   if (!mounted || pathname !== "/" || shouldHide) return null;
 
   return (
-    <div className="fixed bottom-6 right-0 z-20 flex items-end">
-      <AnimatePresence mode="wait">
-        {!collapsed ? (
-          <motion.div
-            key="content"
-            initial={{ x: "100%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "100%", opacity: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-          >
-            <div className="bg-background border border-border text-foreground p-4 rounded-l-xl shadow-lg w-48 sm:w-64 lg:w-72">
-              <p className="text-sm mb-3">
-                Need help recovering hacked social media accounts?
-              </p>
+    <>
+      <div className="fixed bottom-6 right-0 z-10 flex items-end">
+        <AnimatePresence mode="wait">
+          {!collapsed ? (
+            <motion.div
+              key="content"
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <div className="bg-background border border-border text-foreground p-4 rounded-l-xl shadow-lg w-48 sm:w-64 lg:w-72">
+                <p className="text-sm mb-3">
+                  Need help recovering hacked social media accounts?
+                </p>
 
-              <Button className="w-full" onClick={() => setShowDialog(true)}>
-                Get Help
-              </Button>
-
-              <HelpDialog
-                open={showDialog}
-                onOpenChange={(open) => {
-                  setShowDialog(open);
-                  if (!open && isMobile) {
-                    setVisible(false);
-                    setHasDismissedMobile(true);
-                  }
-                }}
-              />
-            </div>
-          </motion.div>
-        ) : (
-          <motion.button
-            key="button"
-            initial={{ x: "100%", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "100%", opacity: 0 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            onClick={handleExpand}
-            className="hidden sm:flex items-center justify-center
+                <Button className="w-full" onClick={() => setShowDialog(true)}>
+                  Get Help
+                </Button>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.button
+              key="button"
+              initial={{ x: "100%", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              onClick={handleExpand}
+              className="hidden sm:flex items-center justify-center
             w-12 h-12 rounded-l-xl border border-border
             bg-background shadow-lg hover:bg-muted
             transition-colors"
-          >
-            <MessageSquareLock size={20} />
-          </motion.button>
-        )}
-      </AnimatePresence>
-    </div>
+            >
+              <MessageSquareLock size={20} />
+            </motion.button>
+          )}
+        </AnimatePresence>
+      </div>
+      <HelpDialog
+        open={showDialog}
+        onOpenChange={(open) => {
+          setShowDialog(open);
+          if (!open && isMobile) {
+            setVisible(false);
+            setHasDismissedMobile(true);
+          }
+        }}
+      />
+    </>
   );
 }
