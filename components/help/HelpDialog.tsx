@@ -153,7 +153,7 @@ export function HelpDialog({
   };
 
   return (
-    <Dialog modal={false} open={open} onOpenChange={onOpenChange}>
+    <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent
         className="sm:max-w-md"
         onInteractOutside={(e) => {
