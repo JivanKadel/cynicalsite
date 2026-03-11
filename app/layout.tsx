@@ -7,6 +7,7 @@ import Footer from "@/components/home/Footer";
 import LayoutClient from "./layout-client";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/theme-provider";
+import HelpWidget from "@/components/help/SocialMediaHelp";
 
 const noto = Noto_Serif({
   variable: "--font-noto",
@@ -148,6 +149,7 @@ export default function RootLayout({
               <Navbar />
               <div className="mt-16 lg:mt-20">{children}</div>
               <Footer />
+              <HelpWidget />
             </div>
           </LayoutClient>
         </ThemeProvider>

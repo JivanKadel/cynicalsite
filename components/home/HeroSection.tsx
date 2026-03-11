@@ -18,7 +18,7 @@ export default function HeroSection() {
             Comprehensive Penetration Testing and Compliance Solutions.
           </p>
         </div>
-        <h1 className="text-[2.7rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
+        <h1 className="text-[2rem] capitalize font-aeonik font-bold text-foreground leading-none md:leading-tight xl:leading-20 lg:text-6xl xl:text-7xl -tracking-[1%] text-balance">
           Protecting Enterprise Infrastructure from Real-World Threats
         </h1>
 
