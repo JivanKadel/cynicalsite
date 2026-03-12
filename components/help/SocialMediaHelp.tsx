@@ -48,7 +48,6 @@ export default function HelpWidget() {
 
     const collapseTimer = setTimeout(() => {
       if (showDialog) {
-        // Mark that we need to collapse after dialog closes
         pendingCollapseRef.current = true;
         return;
       }
@@ -133,16 +132,6 @@ export default function HelpWidget() {
           )}
         </AnimatePresence>
       </div>
-      {/* <HelpDialog
-        open={showDialog}
-        onOpenChange={(open) => {
-          setShowDialog(open);
-          if (!open && isMobile) {
-            setVisible(false);
-            setHasDismissedMobile(true);
-          }
-        }}
-      /> */}
     </>
   );
 }

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import {
-  Shield,
   AlertCircle,
   Mail,
   Phone,
@@ -13,8 +12,10 @@ import {
   Youtube,
   Instagram,
   Facebook,
+  HatGlasses,
 } from "lucide-react";
 import { HelpForm } from "./HelpForm";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Account Recovery Services | Cynical Technology",
@@ -48,95 +49,108 @@ export default function AccountRecoveryPage() {
 
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-balance">
               Professional Account Recovery
-              {/* <span className="block text-slate-500 text-2xl md:text-3xl mt-2">
+              <span className="block text-2xl md:text-3xl mt-2">
                 & Content Removal Services
-              </span> */}
+              </span>
             </h1>
 
             <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Legal-compliant solutions for suspended accounts, hacked profiles,
-              {/* and urgent content removal across major platforms. */}
+              and urgent content removal across major platforms.
             </p>
           </div>
         </div>
       </section>
-
       <section className="py-8">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 max-w-6xl mx-auto gap-4">
-            <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
-              <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500 shrink-0 mt-0.5" />
-              <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-base">Account Recovery</h3>
-                <p className="text-xs text-muted-foreground">
-                  Time-sensitive restoration of any page, profile, or account
-                  across all major platforms.
-                </p>
+          <div className="grid md:grid-cols-2 max-w-6xl mx-auto gap-4 md:gap-8">
+            <div className="order-1 md:order-2 md:sticky md:top-24 md:self-start">
+              <div className="rounded-xl border-2 overflow-hidden">
+                <Image
+                  src="/generic/social_media.jpg"
+                  alt="social media apps in a phone"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
 
-            <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
-              <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-red-500 shrink-0 mt-0.5" />
-              <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-base">
-                  Copyright Dispute Resolution
-                </h3>
-                <p className="text-xs text-muted-foreground">
-                  Restoration of accounts suspended due to fake or multiple
-                  copyright strikes.
-                </p>
+            <div className="order-2 md:order-1 space-y-4">
+              <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
+                <RefreshCw className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-semibold text-base">Account Recovery</h3>
+                  <p className="text-xs text-muted-foreground">
+                    Time-sensitive restoration of any page, profile, or account
+                    across all major platforms.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
-              <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 shrink-0 mt-0.5" />
-              <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-base">
-                  Suspended Account Recovery
-                </h3>
-                <p className="text-xs text-muted-foreground">
-                  Recovery of disabled Facebook, Instagram, YouTube channels,
-                  and Gmail accounts.
-                </p>
+              <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
+                <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-red-500 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-semibold text-base">
+                    Copyright Dispute Resolution
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Restoration of accounts suspended due to fake or multiple
+                    copyright strikes.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
-              <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 shrink-0 mt-0.5" />
-              <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-base">
-                  Urgent Content Removal
-                </h3>
-                <p className="text-xs text-muted-foreground">
-                  Expedited removal of posts, videos, and photos from any
-                  platform.
-                </p>
+              <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
+                <Lock className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-semibold text-base">
+                    Suspended Account Recovery
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Recovery of disabled Facebook, Instagram, YouTube channels,
+                    and Gmail accounts.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
-              <Users className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500 shrink-0 mt-0.5" />
-              <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-base">
-                  Monetization Restoration
-                </h3>
-                <p className="text-xs text-muted-foreground">
-                  Resolution of Facebook and YouTube monetization issues and
-                  eligibility problems.
-                </p>
+              <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
+                <Globe className="w-5 h-5 sm:w-6 sm:h-6 text-green-500 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-semibold text-base">
+                    Urgent Content Removal
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Expedited removal of posts, videos, and photos from any
+                    platform.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
-              <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-500 shrink-0 mt-0.5" />
-              <div className="flex flex-col gap-1">
-                <h3 className="font-semibold text-base">
-                  Hacked Account Recovery
-                </h3>
-                <p className="text-xs text-muted-foreground">
-                  Restoration of compromised YouTube channels, Facebook and
-                  Gmail accounts.
-                </p>
+              <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
+                <Users className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-semibold text-base">
+                    Monetization Restoration
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Resolution of Facebook and YouTube monetization issues and
+                    eligibility problems.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 p-4 sm:p-6 rounded-lg border border-border bg-card">
+                <HatGlasses className="w-5 h-5 sm:w-6 sm:h-6 text-indigo-500 shrink-0 mt-0.5" />
+                <div className="flex flex-col gap-1">
+                  <h3 className="font-semibold text-base">
+                    Hacked Account Recovery
+                  </h3>
+                  <p className="text-xs text-muted-foreground">
+                    Restoration of compromised YouTube channels, Facebook and
+                    Gmail accounts.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
