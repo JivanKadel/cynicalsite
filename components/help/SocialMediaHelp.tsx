@@ -4,7 +4,6 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { MessageSquareLock } from "lucide-react";
-import { HelpDialog } from "./HelpDialog";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
