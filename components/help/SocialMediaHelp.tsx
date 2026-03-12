@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { MessageSquareLock } from "lucide-react";
 import { HelpDialog } from "./HelpDialog";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HelpWidget() {
   const pathname = usePathname();
@@ -105,9 +106,14 @@ export default function HelpWidget() {
                   Need help recovering hacked social media accounts?
                 </p>
 
-                <Button className="w-full" onClick={() => setShowDialog(true)}>
-                  Get Help
-                </Button>
+                <Link href={"/solutions/account-recovery"}>
+                  <Button
+                    className="w-full"
+                    onClick={() => setShowDialog(true)}
+                  >
+                    Get Help
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           ) : (
@@ -128,7 +134,7 @@ export default function HelpWidget() {
           )}
         </AnimatePresence>
       </div>
-      <HelpDialog
+      {/* <HelpDialog
         open={showDialog}
         onOpenChange={(open) => {
           setShowDialog(open);
@@ -137,7 +143,7 @@ export default function HelpWidget() {
             setHasDismissedMobile(true);
           }
         }}
-      />
+      /> */}
     </>
   );
 }
