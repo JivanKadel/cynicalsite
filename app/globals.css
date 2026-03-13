@@ -226,13 +226,13 @@ html {
 }
 
 html {
-  /* For Firefox */
+  /* Firefox */
   scrollbar-width: none;
-  /* For Internet Explorer and Edge */
+  /* Edge */
   -ms-overflow-style: none;
 }
 
-/* For Chrome, Safari, Opera, and other Webkit browsers */
+/* Webkit browsers */
 html::-webkit-scrollbar {
   display: none;
 }
@@ -309,8 +309,13 @@ a {
   animation: float 5s ease-in-out infinite;
 }
 
-/* Styles below are for sanitizing blog content */
+/* 
 
+  Styles for Blog content in the old blog page. Used tailwind topography.
+
+*/
+
+/* Styles below are for sanitizing blog content */
 .prose h1:empty,
 .prose h2:empty,
 .prose h3:empty,
